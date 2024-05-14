@@ -9,6 +9,8 @@
 #include "iostream"
 #include <functional>
 #include <mutex>
+// #include "utils.hpp"
+
 class CVl53l8Oper
 {
 private:
@@ -24,6 +26,8 @@ private:
     int generate_resquest(uint8_t *buf,int id);
     int parse_response(uint8_t *buf,int len,int id);
     uint16_t tof_data[64];
+
+    // uint16_t CRC16_Modbus(volatile uint8_t *puchMsg, uint16_t usDataLen);
 public:
     CVl53l8Oper(std::string portName = nullptr);
     ~CVl53l8Oper();
