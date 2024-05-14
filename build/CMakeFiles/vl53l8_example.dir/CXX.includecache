@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cjs/VL53L8CX/main.cpp
+vl53l8_oper.hpp
+/home/cjs/VL53L8CX/vl53l8_oper.hpp
+iostream
+-
+thread
+-
+chrono
+-
+
+/home/cjs/VL53L8CX/vl53l8_oper.cpp
+vl53l8_oper.hpp
+/home/cjs/VL53L8CX/vl53l8_oper.hpp
+
+/home/cjs/VL53L8CX/vl53l8_oper.hpp
+termios.h
+/home/cjs/VL53L8CX/termios.h
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+unistd.h
+-
+string.h
+/home/cjs/VL53L8CX/string.h
+thread
+-
+iostream
+/home/cjs/VL53L8CX/iostream
+functional
+-
+mutex
+-
+

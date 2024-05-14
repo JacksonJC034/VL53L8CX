@@ -1,0 +1,3 @@
+/home/cjs/VL53L8CX/build/CMakeFiles/rebuild_cache.dir
+/home/cjs/VL53L8CX/build/CMakeFiles/edit_cache.dir
+/home/cjs/VL53L8CX/build/CMakeFiles/vl53l8.dir
