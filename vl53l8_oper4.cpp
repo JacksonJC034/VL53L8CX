@@ -1,6 +1,5 @@
 #include "vl53l8_oper.hpp"
 #include <chrono>
-#include <iostream>
 
 using namespace std;
 using namespace std::chrono_literals;
@@ -28,8 +27,7 @@ static const uint8_t auchCRCHi[] = {
     0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 
     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 
     0x00, 0xC1, 0x81, 0x40
- };
- 
+};
 static const uint8_t auchCRCLo[] = { 
     0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06, 0x07, 0xC7, 
     0x05, 0xC5, 0xC4, 0x04, 0xCC, 0x0C, 0x0D, 0xCD, 0x0F, 0xCF, 0xCE, 0x0E, 
@@ -52,7 +50,7 @@ static const uint8_t auchCRCLo[] = {
     0x5A, 0x9A, 0x9B, 0x5B, 0x99, 0x59, 0x58, 0x98, 0x88, 0x48, 0x49, 0x89, 
     0x4B, 0x8B, 0x8A, 0x4A, 0x4E, 0x8E, 0x8F, 0x4F, 0x8D, 0x4D, 0x4C, 0x8C, 
     0x44, 0x84, 0x85, 0x45, 0x87, 0x47, 0x46, 0x86, 0x82, 0x42, 0x43, 0x83, 
-    0x41, 0x81, 0x80, 0x40
+    0x41, 0x81, 0x80, 0x40 
 };
 
 uint16_t CVl53l8Oper::CRC16_Modbus(volatile uint8_t *puchMsg, uint16_t usDataLen) {
@@ -132,7 +130,7 @@ int CVl53l8Oper::OpenPort(std::string port)
 
 void CVl53l8Oper::read_vl53l8_thread(int fd)
 {
-    uint8_t slave_id = 3; // Assuming the single slave ID is 1
+    uint8_t slave_id = 1;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
     while (1)
@@ -155,19 +153,14 @@ void CVl53l8Oper::read_vl53l8_thread(int fd)
 
         if (recv_length > 0)
         {
-            cout << "Calling parse_response..." << endl;
-            int result = parse_response(serial_recv_buffer, recv_length, slave_id);
-            if (result == -1) {
-                cout << "数据解析失败" << endl;
-            } else {
-                cout << "Data successfully parsed" << endl;
-            }
+            parse_response(serial_recv_buffer, recv_length, slave_id);
         }
         else {
             cout << "获取数据失败" << endl;
         }
-
-        std::this_thread::sleep_for(100ms); // Adjust the sleep duration here if needed
+        slave_id++;
+        if (slave_id > 4) slave_id = 1;
+        std::this_thread::sleep_for(10ms);
     }
 }
 
@@ -181,49 +174,22 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id)
     buf[4] = 0x00;
     buf[5] = 0x40;
     uint16_t crc = CRC16_Modbus(buf, 6);
-    buf[6] = (crc >> 8) & 0xff; // High byte first
-    buf[7] = crc & 0xff;        // Low byte second
+    buf[6] = crc & 0xff;
+    buf[7] = (crc >> 8) & 0xff;
     len = 8;
     return len;
 }
 
 int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id)
 {
-    cout << "Parsing response for slave " << int(id) << ": ";
-    for (int i = 0; i < len; ++i) {
-        printf("%02X ", buf[i]);
-    }
-    cout << endl;
-
-    if (len < 133) {
-        // Response length must be at least 133 bytes (1 ID + 1 Function Code + 1 Byte Count + 128 Data + 2 CRC)
-        cout << "Invalid response length: expected at least 133 but got " << len << endl;
-        return -1;
-    }
-
-    if (buf[0] != id) {
-        cout << "Invalid ID: expected " << int(id) << " but got " << int(buf[0]) << endl;
-        return -1;
-    }
-    if (buf[1] != 0x03) {
-        cout << "Invalid function code: expected 0x03 but got " << int(buf[1]) << endl;
-        return -1;
-    }
-    if (buf[2] != 128) { // 0x80 in hex
-        cout << "Invalid data length: expected 128 (0x80) but got " << int(buf[2]) << endl;
-        return -1;
-    }
-
-    uint16_t crc = CRC16_Modbus(buf, 131); // Calculate CRC for the first 131 bytes
-    if (((crc >> 8) & 0xff) != buf[131] || (crc & 0xff) != buf[132]) {
-        cout << "CRC check failed: expected " << ((crc >> 8) & 0xff) << " " << (crc & 0xff) << " but got " << buf[131] << " " << buf[132] << endl;
-        return -1;
-    }
-
-    cout << "CRC check passed, copying TOF data..." << endl;
+    if (buf[0] != id) return -1;
+    if (buf[1] != 0x03) return -1;
+    if (buf[2] != 128) return -1;
+    uint16_t crc = CRC16_Modbus(buf, 131);
+    if ((crc & 0xff) != buf[131] || ((crc >> 8) & 0xff) != buf[132]) return -1;
 
     mutex_cp.lock();
-    memcpy(tof_data, buf + 3, 128); // Copy 128 bytes of data
+    memcpy(tof_data, buf + 3, 128);
     mutex_cp.unlock();
     return 1;
 }
