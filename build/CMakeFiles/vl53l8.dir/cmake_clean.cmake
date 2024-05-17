@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/vl53l8.dir/BestFit.cpp.o"
   "CMakeFiles/vl53l8.dir/main.cpp.o"
   "CMakeFiles/vl53l8.dir/vl53l8_oper.cpp.o"
   "vl53l8"

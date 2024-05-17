@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/cjs/VL53L8CX 
+CXX_INCLUDES = -isystem /usr/local/include/opencv4 
 

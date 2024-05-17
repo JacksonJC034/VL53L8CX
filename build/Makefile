@@ -123,6 +123,33 @@ vl53l8/fast:
 	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/build
 .PHONY : vl53l8/fast
 
+BestFit.o: BestFit.cpp.o
+
+.PHONY : BestFit.o
+
+# target to build an object file
+BestFit.cpp.o:
+	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/BestFit.cpp.o
+.PHONY : BestFit.cpp.o
+
+BestFit.i: BestFit.cpp.i
+
+.PHONY : BestFit.i
+
+# target to preprocess a source file
+BestFit.cpp.i:
+	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/BestFit.cpp.i
+.PHONY : BestFit.cpp.i
+
+BestFit.s: BestFit.cpp.s
+
+.PHONY : BestFit.s
+
+# target to generate assembly for a file
+BestFit.cpp.s:
+	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/BestFit.cpp.s
+.PHONY : BestFit.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... vl53l8"
+	@echo "... BestFit.o"
+	@echo "... BestFit.i"
+	@echo "... BestFit.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

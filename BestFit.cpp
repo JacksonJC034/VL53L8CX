@@ -1,26 +1,16 @@
-#include <opencv2/opencv.hpp>
-#include <iostream>
+#include "BestFit.hpp"
+#include <vector>
+#include <stdexcept>
 #include <cmath>
 
-int main() {
-    // Define the matrix A
-    cv::Mat A = (cv::Mat_<uint8_t>(8, 8) << 
-        1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 1, 1,
-        1, 1, 1, 1, 1, 1, 0, 0,
-        1, 1, 1, 1, 0, 0, 0, 0,
-        1, 1, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0,
-        0, 0, 0, 0, 0, 0, 0, 0
-    );
+double findBestFitLineAngle(const cv::Mat& matrix) {
+    // Enlarge the matrix for better visualization
+    cv::Mat enlargedMatrix;
+    cv::resize(matrix, enlargedMatrix, cv::Size(), 50, 50, cv::INTER_NEAREST);
 
-    // Convert the matrix to an image (enlarge it for better visualization)
-    cv::resize(A, A, cv::Size(), 50, 50, cv::INTER_NEAREST);
-    
     // Convert the binary matrix to a binary image
     cv::Mat binaryImage;
-    A.convertTo(binaryImage, CV_8U);
+    enlargedMatrix.convertTo(binaryImage, CV_8U);
     binaryImage = binaryImage * 255;
 
     // Find the contours of the regions
@@ -36,11 +26,8 @@ int main() {
         // Calculate the angle of the line
         double angle = std::atan2(line[1], line[0]) * 180.0 / CV_PI;
 
-        // Print the angle
-        std::cout << "Angle of the best fit line: " << angle << " degrees" << std::endl;
+        return angle;
     } else {
-        std::cout << "No contours found" << std::endl;
+        throw std::runtime_error("No contours found");
     }
-
-    return 0;
 }

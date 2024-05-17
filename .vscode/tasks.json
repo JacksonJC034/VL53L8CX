@@ -1,7 +1,7 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "shell",
             "label": "C/C++: g++ build active file",
             "command": "/usr/bin/g++",
             "args": [
@@ -10,8 +10,8 @@
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}",
-                "`pkg-config --cflags opencv4`",
-                "`pkg-config --libs opencv4`"
+                "${command:pkg-config --cflags opencv4}",
+                "${command:pkg-config --libs opencv4}"
             ],
             "options": {
                 "cwd": "${fileDirname}"
