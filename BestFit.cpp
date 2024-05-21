@@ -19,8 +19,8 @@ double BestFit::check(const cv::Mat &matrix) {
 }
 
 std::pair<double, double> BestFit::analyze(const cv::Mat &A) {
-    if (A.size() != cv::Size(8, 8) || A.type() != CV_16UC1) {
-        throw std::invalid_argument("Input must be an 8x8 matrix with type CV_16UC1.");
+    if (A.size() != cv::Size(8, 8) || A.type() != CV_8UC1) {
+        throw std::invalid_argument("Input must be an 8x8 matrix with type CV_8UC1.");
     }
 
     cv::Mat A_smoothed;

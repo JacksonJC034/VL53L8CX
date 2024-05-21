@@ -7,8 +7,9 @@
 #include <cmath>
 #include <vector>
 
-void binarizeMatrix(cv::Mat& matrix, uint8_t threshold = 70) {
+void binarizeMatrix(cv::Mat& matrix, uint8_t threshold = 22) {
     cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
+    matrix.convertTo(matrix, CV_8UC1);
 }
 
 void arrangeTOFData(uint8_t* raw_data, cv::Mat& matrix) {
@@ -55,7 +56,7 @@ int main() {
             binarizeMatrix(A);
             binarizeMatrix(C);
 
-            std::cout << "Binarized Matrix A:" << A << std::endl;
+            std::cout << A << std::endl;
 
             double h = 19.5; // Distance from sensor to tray [mm]
             double a = sqrt(2) * h * tan(32.5 * M_PI / 180); // Side length of scanning area [mm]
@@ -69,19 +70,20 @@ int main() {
             } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 1) {
                 std::cout << "Move Forward!" << std::endl;
             } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
-                auto result_A = BestFit::analyze(A);
-                auto result_C = BestFit::analyze(C);
-                double angle_A = result_A.first;
-                double angle_C = result_C.first;
-                double intercept_A = result_A.second;
-                double intercept_C = result_C.second;
+                // auto result_A = BestFit::analyze(A);
+                // auto result_C = BestFit::analyze(C);
+                // double angle_A = result_A.first;
+                // double angle_C = result_C.first;
+                // double intercept_A = result_A.second;
+                // double intercept_C = result_C.second;
 
-                double slope = tan((angle_A + angle_C) / 2);
+                // double slope = tan((angle_A + angle_C) / 2);
 
-                double angle = (angle_A + angle_C) / 2;
-                double intercept = intercept_A + a / 2 * slope - (a - intercept_C - a / 2 * slope);
+                // double angle = (angle_A + angle_C) / 2;
+                // double intercept = intercept_A + a / 2 * slope - (a - intercept_C - a / 2 * slope);
 
-                std::cout << "Angle = " << angle << " degrees, Drift = " << intercept << " mm" << std::endl;
+                // std::cout << "Angle = " << angle << " degrees, Drift = " << intercept << " mm" << std::endl;
+                std::cout << "Calculating..." << std::endl;
             } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0) {
                 std::cout << "Move Backward!" << std::endl;
             } else if (BestFit::check(A) == 0 && BestFit::check(C) == 1) {
