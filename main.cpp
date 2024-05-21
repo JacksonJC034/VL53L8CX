@@ -7,50 +7,57 @@
 #include <cmath>
 #include <vector>
 
-// Function to binarize the matrix
 void binarizeMatrix(cv::Mat& matrix, uint8_t threshold = 70) {
     cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
 }
 
-// Function to arrange TOF data into the matrix
-void arrangeTOFData(uint16_t* tof_data, cv::Mat& matrix) {
+void arrangeTOFData(uint8_t* raw_data, cv::Mat& matrix) {
     for (int i = 0; i < 64; ++i) {
         int row = 7 - (i / 8);
         int col = i % 8;
-        matrix.at<uint8_t>(row, col) = static_cast<uint8_t>(tof_data[i]);
+        uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
+        matrix.at<uint16_t>(row, col) = value;
+    }
+}
+
+void printMatrix(const cv::Mat& matrix) {
+    for (int i = 0; i < matrix.rows; ++i) {
+        for (int j = 0; j < matrix.cols; ++j) {
+            std::cout << static_cast<int>(matrix.at<uint16_t>(i, j)) << " ";
+        }
+        std::cout << std::endl;
     }
 }
 
 int main() {
-    std::string portName = "/dev/ttyUSB0";  // Replace with your actual port
+    std::string portName = "/dev/ttyUSB0";
     CVl53l8Oper vl53l8Sensor(portName);
 
-    uint16_t tof_data[64];
+    uint8_t raw_data[128];
 
     while (true) {
-        if (vl53l8Sensor.getTof(tof_data) == 1) {
-            cv::Mat A(8, 8, CV_8UC1); // Initialize matrix A
-            arrangeTOFData(tof_data, A); // Arrange TOF data into matrix A
-            
-            std::cout << "Matrix A: " << A << std::endl;
-
-            cv::Mat C = A.clone(); // Duplicate A to C
-
-            // Binarize the matrices
-            binarizeMatrix(A);
-            binarizeMatrix(C);
+        if (vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data)) == 1) {
+            cv::Mat A(8, 8, CV_16UC1);
+            arrangeTOFData(raw_data, A);
 
             std::cout << "TOF Data: ";
             for (int i = 0; i < 64; ++i) {
-                std::cout << tof_data[i] << " ";
+                uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
+                std::cout << value << " ";
             }
             std::cout << std::endl;
 
+            std::cout << "Matrix A before binarization:" << A << std::endl;
+
+            cv::Mat C = A.clone();
+
+            binarizeMatrix(A);
+            binarizeMatrix(C);
+
+            std::cout << "Binarized Matrix A:" << A << std::endl;
+
             double h = 19.5; // Distance from sensor to tray [mm]
             double a = sqrt(2) * h * tan(32.5 * M_PI / 180); // Side length of scanning area [mm]
-
-            // std::cout << "Binary Matrix A: " << A << std::endl;
-            // std::cout << "Binary Matrix C: " << C << std::endl;
 
             if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
                 std::cout << "Pose NOT Accessible!" << std::endl;

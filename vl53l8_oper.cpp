@@ -152,10 +152,10 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
             }
         }
 
-        cout << "Received response: ";
-        for (int i = 0; i < total_length; ++i) {
-            printf("%02X ", recv_buffer[i]);
-        }
+        cout << "Received response from slave";
+        // for (int i = 0; i < total_length; ++i) {
+        //     printf("%02X ", recv_buffer[i]);
+        // }
         cout << endl;
 
         if (total_length > 0) {
@@ -188,10 +188,10 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
 }
 
 int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
-    cout << "Parsing response for slave " << int(id) << ": ";
-    for (int i = 0; i < len; ++i) {
-        printf("%02X ", buf[i]);
-    }
+    cout << "Parsing response for slave." << int(id) << ": ";
+    // for (int i = 0; i < len; ++i) {
+    //     printf("%02X ", buf[i]);
+    // }
     cout << endl;
 
     if (len < 133) {
@@ -225,10 +225,7 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     cout << "CRC check passed, copying TOF data..." << endl;
     
     mutex_cp.lock();
-    // Parse TOF data into 2-byte integers and rearrange into an 8x8 matrix
-    for (int i = 0; i < 64; ++i) {
-        tof_data[i] = (buf[3 + 2*i] << 8) | buf[4 + 2*i];
-    }
+    memcpy(tof_data, buf + 3, 128);
     data_ready = true;
     mutex_cp.unlock();
     return 1;
