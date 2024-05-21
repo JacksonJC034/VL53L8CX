@@ -122,16 +122,16 @@ int CVl53l8Oper::OpenPort(std::string port) {
 }
 
 void CVl53l8Oper::read_vl53l8_thread(int fd) {
-    uint8_t slave_id = 3;
+    uint8_t slave_id = 2;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
     while (true) {
         send_length = generate_resquest(serial_send_buffer, slave_id);
-        cout << "Sending request to slave " << int(slave_id) << ": ";
-        for (int i = 0; i < send_length; ++i) {
-            printf("%02X ", serial_send_buffer[i]);
-        }
-        cout << endl;
+        // cout << "Sending request to slave " << int(slave_id) << ": ";
+        // for (int i = 0; i < send_length; ++i) {
+        //     printf("%02X ", serial_send_buffer[i]);
+        // }
+        // cout << endl;
 
         write(fd, serial_send_buffer, send_length);
         tcflush(fd, TCIOFLUSH);
@@ -152,19 +152,19 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
             }
         }
 
-        cout << "Received response from slave";
+        // cout << "Received response from slave";
         // for (int i = 0; i < total_length; ++i) {
         //     printf("%02X ", recv_buffer[i]);
         // }
-        cout << endl;
+        // cout << endl;
 
         if (total_length > 0) {
-            cout << "Calling parse_response..." << endl;
+            // cout << "Calling parse_response..." << endl;
             int result = parse_response(recv_buffer, total_length, slave_id);
             if (result == -1) {
                 cout << "Failed parsing" << endl;
             } else {
-                cout << "Data successfully parsed" << endl;
+                // cout << "Data successfully parsed" << endl;
             }
         } else {
             cout << "Failed to obatin data" << endl;
@@ -188,11 +188,11 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
 }
 
 int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
-    cout << "Parsing response for slave." << int(id) << ": ";
-    // for (int i = 0; i < len; ++i) {
-    //     printf("%02X ", buf[i]);
-    // }
-    cout << endl;
+    // cout << "Parsing response for slave." << int(id) << ": ";
+    // // for (int i = 0; i < len; ++i) {
+    // //     printf("%02X ", buf[i]);
+    // // }
+    // cout << endl;
 
     if (len < 133) {
         cout << "Invalid response length: expected at least 133 but got " << len << endl;
@@ -222,7 +222,7 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
         return -1;
     }
 
-    cout << "CRC check passed, copying TOF data..." << endl;
+    // cout << "CRC check passed, copying TOF data..." << endl;
     
     mutex_cp.lock();
     memcpy(tof_data, buf + 3, 128);

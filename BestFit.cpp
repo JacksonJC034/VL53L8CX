@@ -7,9 +7,11 @@
 #include <numeric>
 
 double BestFit::check(const cv::Mat &matrix) {
-    if (cv::countNonZero(matrix) == matrix.rows * matrix.cols) {
+    int nonZeroCount = cv::countNonZero(matrix);
+    int totalCount = matrix.rows * matrix.cols;
+    if (nonZeroCount == totalCount) {
         return 1.0;
-    } else if (cv::countNonZero(matrix) == 0) {
+    } else if (nonZeroCount == 0) {
         return 0.0;
     } else {
         return 0.5;
@@ -17,8 +19,8 @@ double BestFit::check(const cv::Mat &matrix) {
 }
 
 std::pair<double, double> BestFit::analyze(const cv::Mat &A) {
-    if (A.size() != cv::Size(8, 8) || cv::countNonZero((A != 0) & (A != 1)) != 0) {
-        throw std::invalid_argument("Input must be an 8x8 binary matrix.");
+    if (A.size() != cv::Size(8, 8) || A.type() != CV_16UC1) {
+        throw std::invalid_argument("Input must be an 8x8 matrix with type CV_16UC1.");
     }
 
     cv::Mat A_smoothed;

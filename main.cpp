@@ -37,20 +37,21 @@ int main() {
 
     while (true) {
         if (vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data)) == 1) {
-            cv::Mat A(8, 8, CV_16UC1);
-            arrangeTOFData(raw_data, A);
+            cv::Mat A(8, 8, CV_16UC1); // Initialize matrix A
+            arrangeTOFData(raw_data, A); // Arrange TOF data into matrix A
 
-            std::cout << "TOF Data: ";
-            for (int i = 0; i < 64; ++i) {
-                uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
-                std::cout << value << " ";
-            }
-            std::cout << std::endl;
+            // std::cout << "TOF Data: ";
+            // for (int i = 0; i < 64; ++i) {
+            //     uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
+            //     std::cout << value << " ";
+            // }
+            // std::cout << std::endl;
 
             std::cout << "Matrix A before binarization:" << A << std::endl;
 
-            cv::Mat C = A.clone();
+            cv::Mat C = A.clone(); // Duplicate A to C
 
+            // Binarize the matrices
             binarizeMatrix(A);
             binarizeMatrix(C);
 
@@ -95,7 +96,7 @@ int main() {
             std::cout << "Failed to get TOF data." << std::endl;
         }
 
-        std::this_thread::sleep_for(std::chrono::seconds(1));
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
     return 0;
