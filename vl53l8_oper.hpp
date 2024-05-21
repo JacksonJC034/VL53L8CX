@@ -11,8 +11,7 @@
 #include <mutex>
 #include <chrono>
 
-class CVl53l8Oper
-{
+class CVl53l8Oper {
 private:
     int serialportFd;
     uint8_t serial_send_buffer[20];
@@ -20,7 +19,7 @@ private:
     std::mutex mutex_cp;
     std::shared_ptr<std::thread> seiralThread;
     uint16_t tof_data[64];
-    std::chrono::milliseconds communication_interval;
+    bool data_ready = false; // Flag to indicate if data is ready
 
     int OpenPort(std::string port);
     void read_vl53l8_thread(int fd);

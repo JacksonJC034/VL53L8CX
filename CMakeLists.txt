@@ -18,3 +18,4 @@ add_executable(vl53l8 main.cpp vl53l8_oper.cpp BestFit.cpp)
 
 # Link libraries
 target_link_libraries(vl53l8 ${OpenCV_LIBS} pthread)
+

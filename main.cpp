@@ -5,45 +5,89 @@
 #include <thread>
 #include <chrono>
 #include <cmath>
+#include <vector>
+
+// Function to binarize the matrix
+void binarizeMatrix(cv::Mat& matrix, uint8_t threshold = 70) {
+    cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
+}
+
+// Function to arrange TOF data into the matrix
+void arrangeTOFData(uint16_t* tof_data, cv::Mat& matrix) {
+    for (int i = 0; i < 64; ++i) {
+        int row = 7 - (i / 8);
+        int col = i % 8;
+        matrix.at<uint8_t>(row, col) = static_cast<uint8_t>(tof_data[i]);
+    }
+}
 
 int main() {
-    // Create an instance of the CVl53l8Oper class with the appropriate serial port.
-    // Adjust the port name to the actual port connected to your sensor.
     std::string portName = "/dev/ttyUSB0";  // Replace with your actual port
     CVl53l8Oper vl53l8Sensor(portName);
 
-    // Buffer to hold the TOF data
     uint16_t tof_data[64];
 
-    // Loop to read and process the TOF data
     while (true) {
-        // Get the TOF data
         if (vl53l8Sensor.getTof(tof_data) == 1) {
+            cv::Mat A(8, 8, CV_8UC1); // Initialize matrix A
+            arrangeTOFData(tof_data, A); // Arrange TOF data into matrix A
+            
+            std::cout << "Matrix A: " << A << std::endl;
+
+            cv::Mat C = A.clone(); // Duplicate A to C
+
+            // Binarize the matrices
+            binarizeMatrix(A);
+            binarizeMatrix(C);
+
             std::cout << "TOF Data: ";
             for (int i = 0; i < 64; ++i) {
                 std::cout << tof_data[i] << " ";
             }
             std::cout << std::endl;
 
-            // Convert TOF data to an 8x8 matrix
-            cv::Mat A(8, 8, CV_8UC1, tof_data);
+            double h = 19.5; // Distance from sensor to tray [mm]
+            double a = sqrt(2) * h * tan(32.5 * M_PI / 180); // Side length of scanning area [mm]
 
-            // Normalize the data to binary (assuming a threshold for demonstration)
-            cv::Mat binaryMatrix;
-            cv::threshold(A, binaryMatrix, 128, 1, cv::THRESH_BINARY);
+            // std::cout << "Binary Matrix A: " << A << std::endl;
+            // std::cout << "Binary Matrix C: " << C << std::endl;
 
-            // Find the angle of the best fit line
-            try {
-                double angle = findBestFitLineAngle(binaryMatrix);
-                std::cout << "Angle of the best fit line: " << angle << " degrees" << std::endl;
-            } catch (const std::runtime_error& e) {
-                std::cerr << e.what() << std::endl;
+            if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
+                std::cout << "Pose NOT Accessible!" << std::endl;
+            } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0.5) {
+                std::cout << "Move Backward!" << std::endl;
+            } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0) {
+                std::cout << "Move Backward!" << std::endl;
+            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 1) {
+                std::cout << "Move Forward!" << std::endl;
+            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
+                auto result_A = BestFit::analyze(A);
+                auto result_C = BestFit::analyze(C);
+                double angle_A = result_A.first;
+                double angle_C = result_C.first;
+                double intercept_A = result_A.second;
+                double intercept_C = result_C.second;
+
+                double slope = tan((angle_A + angle_C) / 2);
+
+                double angle = (angle_A + angle_C) / 2;
+                double intercept = intercept_A + a / 2 * slope - (a - intercept_C - a / 2 * slope);
+
+                std::cout << "Angle = " << angle << " degrees, Drift = " << intercept << " mm" << std::endl;
+            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0) {
+                std::cout << "Move Backward!" << std::endl;
+            } else if (BestFit::check(A) == 0 && BestFit::check(C) == 1) {
+                std::cout << "Move Forward!" << std::endl;
+            } else if (BestFit::check(A) == 0 && BestFit::check(C) == 0.5) {
+                std::cout << "Move Forward" << std::endl;
+            } else {
+                std::cout << "Pose NOT Accessible!" << std::endl;
             }
+
         } else {
             std::cout << "Failed to get TOF data." << std::endl;
         }
 
-        // Sleep for a short duration before reading again
         std::this_thread::sleep_for(std::chrono::seconds(1));
     }
 

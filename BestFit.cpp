@@ -1,33 +1,102 @@
 #include "BestFit.hpp"
+#include <opencv2/opencv.hpp>
 #include <vector>
-#include <stdexcept>
 #include <cmath>
+#include <random>
+#include <algorithm>
+#include <numeric>
 
-double findBestFitLineAngle(const cv::Mat& matrix) {
-    // Enlarge the matrix for better visualization
-    cv::Mat enlargedMatrix;
-    cv::resize(matrix, enlargedMatrix, cv::Size(), 50, 50, cv::INTER_NEAREST);
-
-    // Convert the binary matrix to a binary image
-    cv::Mat binaryImage;
-    enlargedMatrix.convertTo(binaryImage, CV_8U);
-    binaryImage = binaryImage * 255;
-
-    // Find the contours of the regions
-    std::vector<std::vector<cv::Point>> contours;
-    cv::findContours(binaryImage, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
-
-    // Fit a line to the points on the boundary
-    if (!contours.empty()) {
-        std::vector<cv::Point> points = contours[0]; // Assuming only one contour
-        cv::Vec4f line;
-        cv::fitLine(points, line, cv::DIST_L2, 0, 0.01, 0.01);
-
-        // Calculate the angle of the line
-        double angle = std::atan2(line[1], line[0]) * 180.0 / CV_PI;
-
-        return angle;
+double BestFit::check(const cv::Mat &matrix) {
+    if (cv::countNonZero(matrix) == matrix.rows * matrix.cols) {
+        return 1.0;
+    } else if (cv::countNonZero(matrix) == 0) {
+        return 0.0;
     } else {
-        throw std::runtime_error("No contours found");
+        return 0.5;
     }
+}
+
+std::pair<double, double> BestFit::analyze(const cv::Mat &A) {
+    if (A.size() != cv::Size(8, 8) || cv::countNonZero((A != 0) & (A != 1)) != 0) {
+        throw std::invalid_argument("Input must be an 8x8 binary matrix.");
+    }
+
+    cv::Mat A_smoothed;
+    cv::medianBlur(A, A_smoothed, 3);
+
+    std::vector<std::vector<cv::Point>> contours;
+    cv::findContours(A_smoothed, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
+
+    if (contours.empty()) {
+        throw std::runtime_error("No boundary found in the input matrix.");
+    }
+
+    std::vector<cv::Point> boundaryPoints;
+    for (const auto &contour : contours) {
+        if (contour.size() > 5) {
+            boundaryPoints.insert(boundaryPoints.end(), contour.begin(), contour.end());
+        }
+    }
+
+    std::vector<cv::Point> filteredBoundaryPoints;
+    for (const auto &point : boundaryPoints) {
+        if (point.x > 0 && point.x < 7 && point.y > 0 && point.y < 7) {
+            filteredBoundaryPoints.push_back(point);
+        }
+    }
+
+    if (filteredBoundaryPoints.empty()) {
+        throw std::runtime_error("No significant boundary found in the input matrix.");
+    }
+
+    for (auto &point : filteredBoundaryPoints) {
+        point = cv::Point(point.y, A.rows - point.x - 1);
+    }
+
+    auto [coefficients, inliers] = fitLineRANSAC(filteredBoundaryPoints);
+
+    double slope = coefficients[0];
+    double intercept = coefficients[1];
+
+    double theta = atan(slope);
+    double angle = theta * 180.0 / M_PI;
+
+    return {angle, intercept};
+}
+
+std::pair<std::vector<double>, std::vector<int>> BestFit::fitLineRANSAC(const std::vector<cv::Point> &points) {
+    const double maxDistance = 1.0;
+    const int numTrials = 100;
+
+    std::vector<int> bestInliers;
+    std::vector<double> bestCoefficients = {0, 0};
+
+    for (int i = 0; i < numTrials; ++i) {
+        std::vector<int> indices(points.size());
+        std::iota(indices.begin(), indices.end(), 0);
+        std::shuffle(indices.begin(), indices.end(), std::mt19937{std::random_device{}()});
+
+        cv::Point p1 = points[indices[0]];
+        cv::Point p2 = points[indices[1]];
+
+        if (p2.x == p1.x) continue;
+
+        double slope = static_cast<double>(p2.y - p1.y) / (p2.x - p1.x);
+        double intercept = p1.y - slope * p1.x;
+
+        std::vector<int> inliers;
+        for (size_t j = 0; j < points.size(); ++j) {
+            double distance = std::abs(slope * points[j].x - points[j].y + intercept) / std::sqrt(slope * slope + 1);
+            if (distance <= maxDistance) {
+                inliers.push_back(j);
+            }
+        }
+
+        if (inliers.size() > bestInliers.size()) {
+            bestInliers = inliers;
+            bestCoefficients = {slope, intercept};
+        }
+    }
+
+    return {bestCoefficients, bestInliers};
 }

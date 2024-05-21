@@ -1,6 +1,7 @@
 #include "vl53l8_oper.hpp"
 #include <chrono>
 #include <iostream>
+#include <thread>
 
 using namespace std;
 using namespace std::chrono_literals;
@@ -28,7 +29,7 @@ static const uint8_t auchCRCHi[] = {
     0x00, 0xC1, 0x81, 0x40, 0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 
     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 
     0x00, 0xC1, 0x81, 0x40
- };
+};
  
 static const uint8_t auchCRCLo[] = { 
     0x00, 0xC0, 0xC1, 0x01, 0xC3, 0x03, 0x02, 0xC2, 0xC6, 0x06, 0x07, 0xC7, 
@@ -69,41 +70,32 @@ uint16_t CVl53l8Oper::CRC16_Modbus(volatile uint8_t *puchMsg, uint16_t usDataLen
     return (uchCRCHi << 8 | uchCRCLo);
 }
 
-CVl53l8Oper::CVl53l8Oper(std::string portName)
-{
+CVl53l8Oper::CVl53l8Oper(std::string portName) {
     memset((void*)tof_data, 0, sizeof(tof_data));
-    if (!portName.empty())
-    {
+    if (!portName.empty()) {
         serialportFd = OpenPort(portName);
-        if (serialportFd > 0)
-        {
-            cout << portName << " 串口打开成功" << endl;
+        if (serialportFd > 0) {
+            cout << portName << "Port opened successfully!" << endl;
             seiralThread = std::make_shared<std::thread>(bind(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd));
             seiralThread->detach();
+        } else {
+            cout << portName << "Port failed to open" << endl;
         }
-        else {
-            cout << portName << " 串口打开失败" << endl;
-        }
-    }
-    else {
-        cout << "请输写入串口号" << endl;
+    } else {
+        cout << "Please input the port:" << endl;
     }
 }
 
-CVl53l8Oper::~CVl53l8Oper()
-{
-    if (serialportFd > 0)
-    {
+CVl53l8Oper::~CVl53l8Oper() {
+    if (serialportFd > 0) {
         close(serialportFd);
         serialportFd = 0;
     }
 }
 
-int CVl53l8Oper::OpenPort(std::string port)
-{
+int CVl53l8Oper::OpenPort(std::string port) {
     int PortFd = open(port.c_str(), O_RDWR | O_NOCTTY);
-    if (PortFd <= 0)
-    {
+    if (PortFd <= 0) {
         cout << "open " << port << " failed!" << endl;
         return -1;
     }
@@ -121,8 +113,7 @@ int CVl53l8Oper::OpenPort(std::string port)
     opt.c_cc[VMIN] = 0;
     opt.c_cc[VTIME] = 100;
     tcflush(PortFd, TCIOFLUSH);
-    if (tcsetattr(PortFd, TCSANOW, &opt) < 0)
-    {
+    if (tcsetattr(PortFd, TCSANOW, &opt) < 0) {
         cout << "connect " << port << " failed" << endl;
         return -1;
     }
@@ -130,13 +121,11 @@ int CVl53l8Oper::OpenPort(std::string port)
     return PortFd;
 }
 
-void CVl53l8Oper::read_vl53l8_thread(int fd)
-{
-    uint8_t slave_id = 3; // Assuming the single slave ID is 1
+void CVl53l8Oper::read_vl53l8_thread(int fd) {
+    uint8_t slave_id = 3;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
-    while (1)
-    {
+    while (true) {
         send_length = generate_resquest(serial_send_buffer, slave_id);
         cout << "Sending request to slave " << int(slave_id) << ": ";
         for (int i = 0; i < send_length; ++i) {
@@ -146,34 +135,46 @@ void CVl53l8Oper::read_vl53l8_thread(int fd)
 
         write(fd, serial_send_buffer, send_length);
         tcflush(fd, TCIOFLUSH);
-        recv_length = read(fd, serial_recv_buffer, 120);
+
+        uint8_t recv_buffer[256];
+        int total_length = 0;
+        int max_wait_time_ms = 400;
+
+        auto start = chrono::high_resolution_clock::now();
+        while (total_length < 133) {
+            recv_length = read(fd, recv_buffer + total_length, sizeof(recv_buffer) - total_length);
+            total_length += recv_length;
+
+            auto now = chrono::high_resolution_clock::now();
+            auto duration = chrono::duration_cast<chrono::milliseconds>(now - start).count();
+            if (duration > max_wait_time_ms) {
+                break;
+            }
+        }
+
         cout << "Received response: ";
-        for (int i = 0; i < recv_length; ++i) {
-            printf("%02X ", serial_recv_buffer[i]);
+        for (int i = 0; i < total_length; ++i) {
+            printf("%02X ", recv_buffer[i]);
         }
         cout << endl;
 
-        if (recv_length > 0)
-        {
+        if (total_length > 0) {
             cout << "Calling parse_response..." << endl;
-            int result = parse_response(serial_recv_buffer, recv_length, slave_id);
+            int result = parse_response(recv_buffer, total_length, slave_id);
             if (result == -1) {
-                cout << "数据解析失败" << endl;
+                cout << "Failed parsing" << endl;
             } else {
                 cout << "Data successfully parsed" << endl;
             }
-        }
-        else {
-            cout << "获取数据失败" << endl;
+        } else {
+            cout << "Failed to obatin data" << endl;
         }
 
-        std::this_thread::sleep_for(100ms); // Adjust the sleep duration here if needed
+        std::this_thread::sleep_for(100ms);
     }
 }
 
-int CVl53l8Oper::generate_resquest(uint8_t *buf, int id)
-{
-    int len = 0;
+int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
     buf[0] = id;
     buf[1] = 0x03;
     buf[2] = 0x00;
@@ -181,14 +182,12 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id)
     buf[4] = 0x00;
     buf[5] = 0x40;
     uint16_t crc = CRC16_Modbus(buf, 6);
-    buf[6] = (crc >> 8) & 0xff; // High byte first
-    buf[7] = crc & 0xff;        // Low byte second
-    len = 8;
-    return len;
+    buf[6] = (crc >> 8) & 0xff;
+    buf[7] = crc & 0xff;
+    return 8;
 }
 
-int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id)
-{
+int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     cout << "Parsing response for slave " << int(id) << ": ";
     for (int i = 0; i < len; ++i) {
         printf("%02X ", buf[i]);
@@ -196,7 +195,6 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id)
     cout << endl;
 
     if (len < 133) {
-        // Response length must be at least 133 bytes (1 ID + 1 Function Code + 1 Byte Count + 128 Data + 2 CRC)
         cout << "Invalid response length: expected at least 133 but got " << len << endl;
         return -1;
     }
@@ -214,24 +212,36 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id)
         return -1;
     }
 
-    uint16_t crc = CRC16_Modbus(buf, 131); // Calculate CRC for the first 131 bytes
-    if (((crc >> 8) & 0xff) != buf[131] || (crc & 0xff) != buf[132]) {
-        cout << "CRC check failed: expected " << ((crc >> 8) & 0xff) << " " << (crc & 0xff) << " but got " << buf[131] << " " << buf[132] << endl;
+    // Calculate CRC for the first 131 bytes
+    uint16_t crc = CRC16_Modbus(buf, 131);
+    uint8_t crc_hi = (crc >> 8) & 0xFF;
+    uint8_t crc_lo = crc & 0xFF;
+
+    if (crc_hi != buf[131] || crc_lo != buf[132]) {
+        cout << "CRC check failed: expected " << hex << int(crc_hi) << " " << hex << int(crc_lo) << " but got " << hex << int(buf[131]) << " " << hex << int(buf[132]) << endl;
         return -1;
     }
 
     cout << "CRC check passed, copying TOF data..." << endl;
-
+    
     mutex_cp.lock();
-    memcpy(tof_data, buf + 3, 128); // Copy 128 bytes of data
+    // Parse TOF data into 2-byte integers and rearrange into an 8x8 matrix
+    for (int i = 0; i < 64; ++i) {
+        tof_data[i] = (buf[3 + 2*i] << 8) | buf[4 + 2*i];
+    }
+    data_ready = true;
     mutex_cp.unlock();
     return 1;
 }
 
-int CVl53l8Oper::getTof(uint16_t *buf)
-{
-    mutex_cp.lock();
+int CVl53l8Oper::getTof(uint16_t *buf) {
+    std::unique_lock<std::mutex> lock(mutex_cp);
+    if (!data_ready) {
+        lock.unlock();
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        return 0;
+    }
     memcpy(buf, tof_data, 128);
-    mutex_cp.unlock();
+    data_ready = false;
     return 1;
 }
