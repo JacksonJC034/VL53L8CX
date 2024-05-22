@@ -18,16 +18,36 @@ double BestFit::check(const cv::Mat &matrix) {
     }
 }
 
-std::pair<double, double> BestFit::analyze(const cv::Mat &A) {
+void binarizeMatrix(cv::Mat& matrix, uint8_t threshold) {
+    cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
+    matrix.convertTo(matrix, CV_8UC1);
+}
+
+std::pair<double, double> BestFit::analyze(const cv::Mat &A, uint8_t mode) {
     if (A.size() != cv::Size(8, 8) || A.type() != CV_8UC1) {
         throw std::invalid_argument("Input must be an 8x8 matrix with type CV_8UC1.");
     }
+    
+    // Extrinsic Parameters
+    double hights[3] = {22, 41, 58}; // Distance from sensor to tray [mm]
+    double threshold[3] = {40, 60, 70}; // Threhold for binarize [mm]
+    double a = sqrt(2) * hights[3] * tan(32.5 * M_PI / 180); // Side length of scanning area [mm]
+    
+    // Step1: Biliteral Filter
+    cv::Mat A_filtered(8, 8, CV_16UC1);
+    cv::Mat A_src;
+    cv::Mat A_dst;
+    A.convertTo(A_src, CV_32F);
+    cv::bilateralFilter(A_src, A_dst, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+    A_dst.convertTo(A_filtered, CV_16UC1);
+    
+    // Step2: Binarize
+    binarizeMatrix(A_filtered, threshold[mode - 1]);
 
-    cv::Mat A_smoothed;
-    cv::medianBlur(A, A_smoothed, 3);
-
+    // Step2: Find Contours in the Matrix
     std::vector<std::vector<cv::Point>> contours;
-    cv::findContours(A_smoothed, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_SIMPLE);
+    cv::findContours(A_filtered, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
+    // CHAIN_APPROX_NONE to store all the contour points
 
     if (contours.empty()) {
         throw std::runtime_error("No boundary found in the input matrix.");
