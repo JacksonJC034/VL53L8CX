@@ -6,12 +6,26 @@
 
 #IncludeRegexTransform: 
 
+/home/cjs/VL53L8CX/BestFit.cpp
+BestFit.hpp
 /home/cjs/VL53L8CX/BestFit.hpp
 opencv2/opencv.hpp
 -
 vector
 -
-utility
+cmath
+-
+random
+-
+algorithm
+-
+numeric
+-
+
+/home/cjs/VL53L8CX/BestFit.hpp
+opencv2/opencv.hpp
+-
+vector
 -
 
 /home/cjs/VL53L8CX/main.cpp
