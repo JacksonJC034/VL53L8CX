@@ -45,6 +45,10 @@ cmath
 -
 vector
 -
+cstdint
+-
+algorithm
+-
 
 /home/cjs/VL53L8CX/vl53l8_oper.hpp
 termios.h

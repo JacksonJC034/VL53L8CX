@@ -18,8 +18,10 @@ private:
     uint8_t serial_recv_buffer[1000];
     std::mutex mutex_cp;
     std::shared_ptr<std::thread> seiralThread;
-    uint16_t tof_data[64];
-    bool data_ready = false; // Flag to indicate if data is ready
+    uint16_t tof_data1[64];
+    uint16_t tof_data2[64];
+    bool data_ready1 = false;
+    bool data_ready2 = false;
 
     int OpenPort(std::string port);
     void read_vl53l8_thread(int fd);
@@ -30,5 +32,5 @@ private:
 public:
     CVl53l8Oper(std::string portName = "");
     ~CVl53l8Oper();
-    int getTof(uint16_t *buf);
+    int getTof(uint16_t *buf, int id);
 };

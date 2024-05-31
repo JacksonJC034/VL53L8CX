@@ -32,7 +32,7 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, uint8_t mode) {
     
     double heights[3] = {22, 41, 58}; // Distance from sensor to tray [mm]
     double threshold[3] = {40, 60, 70}; // Threshold for binarize [mm]
-    double a = sqrt(2) * heights[mode - 1] * tan(32.5 * M_PI / 180); // Side length of scanning area [mm]
+    // double a = sqrt(2) * heights[mode - 1] * tan(32.5 * M_PI / 180); // Side length of scanning area [mm]
     
     cv::Mat A_filtered;
     cv::Mat A_src;
