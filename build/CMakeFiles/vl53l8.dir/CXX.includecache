@@ -6,22 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/cjs/VL53L8CX/BestFit.cpp
-BestFit.hpp
-/home/cjs/VL53L8CX/BestFit.hpp
-opencv2/opencv.hpp
--
-vector
--
-cmath
--
-random
--
-algorithm
--
-numeric
--
-
 /home/cjs/VL53L8CX/BestFit.hpp
 opencv2/opencv.hpp
 -
@@ -48,16 +32,6 @@ vector
 cstdint
 -
 algorithm
--
-
-/home/cjs/VL53L8CX/vl53l8_oper.cpp
-vl53l8_oper.hpp
-/home/cjs/VL53L8CX/vl53l8_oper.hpp
-chrono
--
-iostream
--
-thread
 -
 
 /home/cjs/VL53L8CX/vl53l8_oper.hpp

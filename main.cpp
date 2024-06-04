@@ -38,29 +38,29 @@ void arrangeTOFData(uint8_t* raw_data, cv::Mat& matrix) {
 }
 
 int main() {
-    // std::string portName = "/dev/ttyUSB0";
-    // CVl53l8Oper vl53l8Sensor(portName);
+    std::string portName = "/dev/ttyUSB0";
+    CVl53l8Oper vl53l8Sensor(portName);
 
-    // uint8_t raw_data1[128];
-    // uint8_t raw_data2[128];
-    uint8_t raw_data1[128] = {0x00, 0x51, 0x00, 0x56, 0x00, 0x57, 0x00, 0x4B, 0x00, 0x39, 0x00, 0x35, 0x00, 0x37, 0x00, 0x34,
-        0x00, 0x56, 0x00, 0x58, 0x00, 0x57, 0x00, 0x49, 0x00, 0x3A, 0x00, 0x39, 0x00, 0x35, 0x00, 0x34,
-        0x00, 0x5D, 0x00, 0x5C, 0x00, 0x58, 0x00, 0x4D, 0x00, 0x3C, 0x00, 0x35, 0x00, 0x38, 0x00, 0x34,
-        0x00, 0x5C, 0x00, 0x65, 0x00, 0x56, 0x00, 0x51, 0x00, 0x39, 0x00, 0x37, 0x00, 0x36, 0x00, 0x39,
-        0x00, 0x5D, 0x00, 0x61, 0x00, 0x58, 0x00, 0x4D, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x35, 0x00, 0x37,
-        0x00, 0x63, 0x00, 0x61, 0x00, 0x5B, 0x00, 0x50, 0x00, 0x3A, 0x00, 0x38, 0x00, 0x37, 0x00, 0x34,
-        0x00, 0x5D, 0x00, 0x5F, 0x00, 0x5E, 0x00, 0x54, 0x00, 0x3B, 0x00, 0x39, 0x00, 0x35, 0x00, 0x35,
-        0x00, 0x54, 0x00, 0x58, 0x00, 0x59, 0x00, 0x4C, 0x00, 0x3A, 0x00, 0x3A, 0x00, 0x36, 0x00, 0x35};
+    uint8_t raw_data1[128];
     uint8_t raw_data2[128];
-    std::copy(raw_data1, raw_data1 + 128, raw_data2);
+    // uint8_t raw_data1[128] = {0x00, 0x51, 0x00, 0x56, 0x00, 0x57, 0x00, 0x4B, 0x00, 0x39, 0x00, 0x35, 0x00, 0x37, 0x00, 0x34,
+    //     0x00, 0x56, 0x00, 0x58, 0x00, 0x57, 0x00, 0x49, 0x00, 0x3A, 0x00, 0x39, 0x00, 0x35, 0x00, 0x34,
+    //     0x00, 0x5D, 0x00, 0x5C, 0x00, 0x58, 0x00, 0x4D, 0x00, 0x3C, 0x00, 0x35, 0x00, 0x38, 0x00, 0x34,
+    //     0x00, 0x5C, 0x00, 0x65, 0x00, 0x56, 0x00, 0x51, 0x00, 0x39, 0x00, 0x37, 0x00, 0x36, 0x00, 0x39,
+    //     0x00, 0x5D, 0x00, 0x61, 0x00, 0x58, 0x00, 0x4D, 0x00, 0x3B, 0x00, 0x36, 0x00, 0x35, 0x00, 0x37,
+    //     0x00, 0x63, 0x00, 0x61, 0x00, 0x5B, 0x00, 0x50, 0x00, 0x3A, 0x00, 0x38, 0x00, 0x37, 0x00, 0x34,
+    //     0x00, 0x5D, 0x00, 0x5F, 0x00, 0x5E, 0x00, 0x54, 0x00, 0x3B, 0x00, 0x39, 0x00, 0x35, 0x00, 0x35,
+    //     0x00, 0x54, 0x00, 0x58, 0x00, 0x59, 0x00, 0x4C, 0x00, 0x3A, 0x00, 0x3A, 0x00, 0x36, 0x00, 0x35};
+    // uint8_t raw_data2[128];
+    // std::copy(raw_data1, raw_data1 + 128, raw_data2);
 
-    auto last_time = std::chrono::high_resolution_clock::now();
-
+    // auto last_time = std::chrono::high_resolution_clock::now();
+    int i = 1;
     while (true) {
-        // bool data_ready1 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data1), 2) == 1;
-        // bool data_ready2 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data2), 3) == 1;
-        bool data_ready1 = true;
-        bool data_ready2 = true;
+        bool data_ready1 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data1), 2) == 1;
+        bool data_ready2 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data2), 3) == 1;
+        // bool data_ready1 = true;
+        // bool data_ready2 = true;
 
         if (data_ready1 && data_ready2) {
 
@@ -68,41 +68,45 @@ int main() {
             cv::Mat C(8, 8, CV_16UC1); // Initialize matrix B for sensor 2
             arrangeTOFData(raw_data1, A); // Arrange TOF data into matrix A
             arrangeTOFData(raw_data2, C); // Arrange TOF data into matrix B
+
+            std::cout << i << std::endl;
+            std::cout << "A" << A << std::endl;
+            std::cout << "C" << C << std::endl;
             
-            if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
-                std::cout << "Pose NOT Accessible!" << std::endl;
-            } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0.5) {
-                std::cout << "Please Move Backward!" << std::endl;
-            } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0) {
-                std::cout << "Please Move Backward!" << std::endl;
-            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 1) {
-                std::cout << "Please Move Forward!" << std::endl;
-            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
+            // if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
+            //     std::cout << "Pose NOT Accessible!" << std::endl;
+            // } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0.5) {
+            //     std::cout << "Please Move Backward!" << std::endl;
+            // } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0) {
+            //     std::cout << "Please Move Backward!" << std::endl;
+            // } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 1) {
+            //     std::cout << "Please Move Forward!" << std::endl;
+            // } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
                 // auto resultA = BestFit::analyze(A, 1);
                 // auto resultC = BestFit::analyze(C, 1);
                 // double angle = (resultA.first + resultC.first) / 2;
                 // double drift = (resultA.second + resultC.second) / 2;
                 // std::cout << "Angle = " << angle << " degrees, Drift = " << drift << " mm" << std::endl;
-                std::cout << "Calculating!" << std::endl;
-            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0) {
-                std::cout << "Please Move Backward!" << std::endl;
-            } else if (BestFit::check(A) == 0 && BestFit::check(C) == 1) {
-                std::cout << "Please Move Forward!" << std::endl;
-            } else if (BestFit::check(A) == 0 && BestFit::check(C) == 0.5) {
-                std::cout << "Please Move Forward" << std::endl;
-            } else {
-                std::cout << "Pose NOT Accessible!" << std::endl;
-            }
+            //     std::cout << "Calculating!" << std::endl;
+            // } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0) {
+            //     std::cout << "Please Move Backward!" << std::endl;
+            // } else if (BestFit::check(A) == 0 && BestFit::check(C) == 1) {
+            //     std::cout << "Please Move Forward!" << std::endl;
+            // } else if (BestFit::check(A) == 0 && BestFit::check(C) == 0.5) {
+            //     std::cout << "Please Move Forward" << std::endl;
+            // } else {
+            //     std::cout << "Pose NOT Accessible!" << std::endl;
+            // }
 
-            auto current_time = std::chrono::high_resolution_clock::now();
-            auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(current_time - last_time).count();
-            std::cout << "Loop Duration: " << duration << " ms" << std::endl;
-            last_time = current_time;
+            // auto current_time = std::chrono::high_resolution_clock::now();
+            // auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(current_time - last_time).count();
+            // std::cout << "Loop Duration: " << duration << " ms" << std::endl;
+            // last_time = current_time;
 
         } else {
             std::cout << "Failed to get TOF data from one or both sensors." << std::endl;
         }
-
+        i++;
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
