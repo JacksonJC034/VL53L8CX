@@ -150,6 +150,9 @@ CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/traits
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/types.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/utility.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/instrumentation.hpp
+CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/logger.defines.hpp
+CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/logger.hpp
+CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/logtag.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/utils/tls.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/version.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core/vsx_utils.hpp
