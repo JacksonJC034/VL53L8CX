@@ -30,8 +30,8 @@
 
 void arrangeTOFData(uint8_t* raw_data, cv::Mat& matrix) {
     for (int i = 0; i < 64; ++i) {
-        int row = 7 - (i / 8);
-        int col = i % 8;
+        int row = i % 8;
+        int col = i / 8;
         uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
         matrix.at<uint16_t>(row, col) = value;
     }
