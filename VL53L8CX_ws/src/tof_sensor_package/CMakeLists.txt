@@ -22,16 +22,14 @@ find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
 
-include_directories(include)
+add_executable(pallet_detect_node src/pallet_detect_node.cpp src/vl53l8_oper.cpp src/BestFit.cpp)
 
-add_executable(tof_sensor_node src/tof_sensor_node.cpp src/vl53l8_oper.cpp src/BestFit.cpp)
-
-ament_target_dependencies(tof_sensor_node rclcpp std_msgs sensor_msgs OpenCV)
+ament_target_dependencies(pallet_detect_node rclcpp std_msgs sensor_msgs OpenCV)
 
 install(TARGETS
-  tof_sensor_node
+  pallet_detect_node
   DESTINATION lib/${PROJECT_NAME})
-
+  
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

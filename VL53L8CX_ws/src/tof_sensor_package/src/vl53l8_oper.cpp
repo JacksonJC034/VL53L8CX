@@ -154,7 +154,7 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
         uint8_t recv_buffer[256];
         int total_length = 0;
-        uint8_t max_wait_time_ms = 100;
+        uint8_t max_wait_time_ms = 50;
 
         auto start = chrono::high_resolution_clock::now();
         while (total_length < 133) {

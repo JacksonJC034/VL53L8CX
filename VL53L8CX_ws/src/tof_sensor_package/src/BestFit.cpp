@@ -19,7 +19,6 @@ double BestFit::check(const cv::Mat &matrix) {
 }
 
 void BestFit::binarizeMatrix(cv::Mat& matrix, double threshold) {
-    // Ensure the threshold is used as an integer
     int int_threshold = static_cast<int>(threshold);
     cv::threshold(matrix, matrix, int_threshold, 1, cv::THRESH_BINARY);
     matrix.convertTo(matrix, CV_8UC1);
