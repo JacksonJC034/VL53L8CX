@@ -213,12 +213,6 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 OpenCV_DIR:PATH=/usr/local/lib/cmake/opencv4
 
 //Value Computed by CMake
-Project_BINARY_DIR:STATIC=/home/cjs/VL53L8CX/build
-
-//Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/home/cjs/VL53L8CX
-
-//Value Computed by CMake
 VL53L8CX_BINARY_DIR:STATIC=/home/cjs/VL53L8CX/build
 
 //Value Computed by CMake
