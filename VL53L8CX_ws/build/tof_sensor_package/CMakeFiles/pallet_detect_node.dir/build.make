@@ -114,6 +114,10 @@ pallet_detect_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introsp
 pallet_detect_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_c.so
 pallet_detect_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_introspection_cpp.so
 pallet_detect_node: /opt/ros/foxy/lib/libsensor_msgs__rosidl_typesupport_cpp.so
+pallet_detect_node: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_introspection_c.so
+pallet_detect_node: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_c.so
+pallet_detect_node: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_introspection_cpp.so
+pallet_detect_node: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_cpp.so
 pallet_detect_node: /usr/local/lib/libopencv_gapi.so.4.10.0
 pallet_detect_node: /usr/local/lib/libopencv_stitching.so.4.10.0
 pallet_detect_node: /usr/local/lib/libopencv_aruco.so.4.10.0
@@ -191,9 +195,10 @@ pallet_detect_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_
 pallet_detect_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_generator_c.so
 pallet_detect_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 pallet_detect_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
+pallet_detect_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+pallet_detect_node: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_generator_c.so
 pallet_detect_node: /opt/ros/foxy/lib/librosidl_typesupport_introspection_cpp.so
 pallet_detect_node: /opt/ros/foxy/lib/librosidl_typesupport_introspection_c.so
-pallet_detect_node: /opt/ros/foxy/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
 pallet_detect_node: /opt/ros/foxy/lib/librosidl_typesupport_cpp.so
 pallet_detect_node: /opt/ros/foxy/lib/librosidl_typesupport_c.so
 pallet_detect_node: /opt/ros/foxy/lib/librcpputils.so

@@ -21,10 +21,18 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(OpenCV REQUIRED)
+find_package(base_interfaces_demo REQUIRED)
+
+include_directories(
+  include
+  ${rclcpp_INCLUDE_DIRS}
+  ${OpenCV_INCLUDE_DIRS}
+  ${base_interfaces_demo_INCLUDE_DIRS}
+)
 
 add_executable(pallet_detect_node src/pallet_detect_node.cpp src/vl53l8_oper.cpp src/BestFit.cpp)
 
-ament_target_dependencies(pallet_detect_node rclcpp std_msgs sensor_msgs OpenCV)
+ament_target_dependencies(pallet_detect_node rclcpp std_msgs sensor_msgs OpenCV base_interfaces_demo)
 
 install(TARGETS
   pallet_detect_node

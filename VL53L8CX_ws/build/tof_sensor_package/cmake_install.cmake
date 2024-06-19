@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/tof_sensor_package/pallet_detect_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/tof_sensor_package/pallet_detect_node"
-         OLD_RPATH "/opt/ros/foxy/lib:/usr/local/lib:"
+         OLD_RPATH "/opt/ros/foxy/lib:/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:/usr/local/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/tof_sensor_package/pallet_detect_node")

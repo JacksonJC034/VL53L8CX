@@ -1,1 +1,1 @@
-opencv:rclcpp:sensor_msgs:std_msgs
+base_interfaces_demo:opencv:rclcpp:sensor_msgs:std_msgs

@@ -1,0 +1,2 @@
+Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4

@@ -2,8 +2,9 @@
 #include "BestFit.hpp"
 #include <opencv2/opencv.hpp>
 #include <rclcpp/rclcpp.hpp>
-#include <std_msgs/msg/string.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
+#include <msg/location.hpp>
+#include <msg/pallet_info.hpp>
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -12,17 +13,34 @@
 #include <cstdint>
 #include <algorithm>
 
+const int DISTANCE1 = 22; //40
+const int DISTANCE2 = 41; //60
+const int DISTANCE3 = 58; //70
+
 class PalletDetectNode : public rclcpp::Node {
 public:
     PalletDetectNode()
     : Node("pallet_detect_node"), vl53l8Sensor("/dev/ttyUSB0")
     {
-        publisher_ = this->create_publisher<std_msgs::msg::Float64MultiArray>("pallet_detect", 10);
+        publisher_ = this->create_publisher<msg::PalletInfo>("pallet_detect", 10);
+        subscriber_ = this->create_subscription<msg::Location>(
+            "/rbot/location_topic", 10, std::bind(&PalletDetectNode::location_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(500), std::bind(&PalletDetectNode::timer_callback, this));
+
+        // Initialize pallet_info_ parameters to 0
+        pallet_info_.d = 0;
+        pallet_info_.pallet = 0;
+        pallet_info_.drift = 0.0;
+        pallet_info_.angle = 0.0;
+        pallet_info_.error = 0;
     }
 
 private:
+    void location_callback(const msg::Location::SharedPtr msg) {
+        location_ = *msg;
+    }
+
     void timer_callback() {
         uint8_t raw_data1[128];
         uint8_t raw_data2[128];
@@ -37,28 +55,42 @@ private:
             arrangeTOFData(raw_data2, C);
             cv::flip(C, C, 0);
 
-            std::vector<double> result;
-            if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
-                result = {0.0, 0.0};
-            } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0.5) {
-                result = {1.0, 0.0};
-            } else if (BestFit::check(A) == 1 && BestFit::check(C) == 0) {
-                result = {1.0, 0.0};
-            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 1) {
-                result = {-1.0, 0.0};
-            } else if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
-                auto resultA = BestFit::analyze(A, 1);
-                auto resultC = BestFit::analyze(C, 1);
-                double angle = (resultA.first + resultC.first) / 2;
-                double drift = (resultA.second + resultC.second) / 2;
-                result = {angle, drift};
-            } else {
-                result = {0.0, 0.0};
+            int distance_threshold = 0;
+            if (location_.state_motor_or_son == 2) {
+                distance_threshold = DISTANCE1;
+            } else if (location_.state_motor_or_son == 1) {
+                if (location_.state_lift_down_or_up == 2) {
+                    distance_threshold = DISTANCE2;
+                } else if (location_.state_lift_down_or_up == 1) {
+                    distance_threshold = DISTANCE3;
+                } else if (location_.state_lift_down_or_up == 0) {
+                    pallet_info_.error = -2;
+                }
+            } else if (location_.state_motor_or_son == 0) {
+                pallet_info_.error = -1;
             }
 
-            std_msgs::msg::Float64MultiArray msg;
-            msg.data = result;
-            publisher_->publish(msg);
+            if (distance_threshold != 0) {
+                BestFit::binarizeMatrix(A, distance_threshold);
+                BestFit::binarizeMatrix(C, distance_threshold);
+
+                if (checkPalletCondition(A) && checkPalletCondition(C)) {
+                    pallet_info_.pallet = 1;
+                } else {
+                    pallet_info_.pallet = 0;
+                }
+
+                if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
+                    auto [angle, drift] = BestFit::analyze(A);
+                    pallet_info_.angle = angle;
+                    pallet_info_.drift = drift;
+                    pallet_info_.error = 0;
+                } else {
+                    pallet_info_.error = 1;
+                }
+            }
+
+            publisher_->publish(pallet_info_);
         } else {
             RCLCPP_WARN(this->get_logger(), "Failed to get TOF data from one or both sensors.");
         }
@@ -73,9 +105,24 @@ private:
         }
     }
 
+    bool checkPalletCondition(const cv::Mat& matrix) {
+        int count = 0;
+        for (int i = 0; i < matrix.rows; ++i) {
+            for (int j = 0; j < matrix.cols; ++j) {
+                if (matrix.at<uint16_t>(i, j) < 100) {
+                    count++;
+                }
+            }
+        }
+        return count >= 62;
+    }
+
     CVl53l8Oper vl53l8Sensor;
     rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<std_msgs::msg::Float64MultiArray>::SharedPtr publisher_;
+    rclcpp::Publisher<msg::PalletInfo>::SharedPtr publisher_;
+    rclcpp::Subscription<msg::Location>::SharedPtr subscriber_;
+    msg::Location location_;
+    msg::PalletInfo pallet_info_;
 };
 
 int main(int argc, char *argv[]) {

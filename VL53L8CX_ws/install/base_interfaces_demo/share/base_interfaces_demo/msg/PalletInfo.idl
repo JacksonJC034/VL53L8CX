@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/PalletInfo.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    struct PalletInfo {
+      int32 distance;
+
+      int32 pallet;
+
+      double drift;
+
+      double angle;
+
+      int32 error;
+    };
+  };
+};

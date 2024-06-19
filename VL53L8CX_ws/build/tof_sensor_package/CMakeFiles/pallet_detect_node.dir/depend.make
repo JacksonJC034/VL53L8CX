@@ -417,13 +417,8 @@ CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/in
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/multi_array_dimension__struct.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/multi_array_layout__struct.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/multi_array_layout__traits.hpp
-CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__builder.hpp
-CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__struct.hpp
-CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__traits.hpp
-CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/detail/string__type_support.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/float64_multi_array.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp
-CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/std_msgs/msg/string.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/tracetools/config.h
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/tracetools/tracetools.h
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/tracetools/utils.hpp

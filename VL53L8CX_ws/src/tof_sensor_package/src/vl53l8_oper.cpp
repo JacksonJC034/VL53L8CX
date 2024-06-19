@@ -136,8 +136,8 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
 }
 
 void CVl53l8Oper::read_vl53l8_thread(int fd) {
-    uint8_t slave_id1 = 3;
-    uint8_t slave_id2 = 4;
+    uint8_t slave_id1 = 1;
+    uint8_t slave_id2 = 2;
     uint8_t current_id = slave_id1;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
@@ -230,8 +230,8 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     // cout << "CRC check passed, copying TOF data..." << endl;
     
     mutex_cp.lock();
-    memcpy(id == 3 ? tof_data1 : tof_data2, buf + 3, 128);
-    if (id == 3) {
+    memcpy(id == 1 ? tof_data1 : tof_data2, buf + 3, 128);
+    if (id == 1) {
         data_ready1 = true;
     } else {
         data_ready2 = true;
@@ -242,14 +242,14 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
 
 int CVl53l8Oper::getTof(uint16_t *buf, int id) {
     std::unique_lock<std::mutex> lock(mutex_cp);
-    if ((id == 3 && !data_ready1) || id == 4 && !data_ready2) {
+    if ((id == 1 && !data_ready1) || id == 2 && !data_ready2) {
         lock.unlock();
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
         cout << "waited 50 in getTof" << endl;
         return 0;
     }
-    memcpy(buf, id == 3 ? tof_data1 : tof_data2, 128);
-    if (id == 3) {
+    memcpy(buf, id == 1 ? tof_data1 : tof_data2, 128);
+    if (id == 1) {
         data_ready1 = false;
     } else {
         data_ready2 = false;

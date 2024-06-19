@@ -1,0 +1,7 @@
+{
+  "package_name": "base_interfaces_demo",
+  "non_idl_tuples": [
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/Location.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/PalletInfo.msg"
+  ]
+}
