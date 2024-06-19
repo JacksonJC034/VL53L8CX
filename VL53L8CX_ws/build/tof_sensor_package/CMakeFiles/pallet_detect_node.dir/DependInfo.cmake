@@ -20,6 +20,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/include"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/../install/base_interfaces_demo/include"
   "/opt/ros/foxy/include"
   "/usr/local/include/opencv4"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include"

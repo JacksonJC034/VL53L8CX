@@ -1,0 +1,9 @@
+[35m[1mScanning dependencies of target pallet_detect_node[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:6:10:[m[K [01;31m[Kfatal error: [m[K~/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp: No such file or directory
+    6 | #include [01;31m[K<~/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp>[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:63: CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

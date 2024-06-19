@@ -3,8 +3,6 @@
 #include <opencv2/opencv.hpp>
 #include <rclcpp/rclcpp.hpp>
 #include <std_msgs/msg/float64_multi_array.hpp>
-#include <msg/location.hpp>
-#include <msg/pallet_info.hpp>
 #include <iostream>
 #include <thread>
 #include <chrono>
@@ -12,6 +10,10 @@
 #include <vector>
 #include <cstdint>
 #include <algorithm>
+#include <base_interfaces_demo/msg/location.hpp>
+#include <base_interfaces_demo/msg/pallet_info.hpp>
+using base_interfaces_demo::msg::Location;
+using base_interfaces_demo::msg::PalletInfo;
 
 const int DISTANCE1 = 22; //40
 const int DISTANCE2 = 41; //60
@@ -22,14 +24,14 @@ public:
     PalletDetectNode()
     : Node("pallet_detect_node"), vl53l8Sensor("/dev/ttyUSB0")
     {
-        publisher_ = this->create_publisher<msg::PalletInfo>("pallet_detect", 10);
-        subscriber_ = this->create_subscription<msg::Location>(
+        publisher_ = this->create_publisher<PalletInfo>("pallet_detect", 10);
+        subscriber_ = this->create_subscription<Location>(
             "/rbot/location_topic", 10, std::bind(&PalletDetectNode::location_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(500), std::bind(&PalletDetectNode::timer_callback, this));
+            std::chrono::milliseconds(300), std::bind(&PalletDetectNode::timer_callback, this));
 
         // Initialize pallet_info_ parameters to 0
-        pallet_info_.d = 0;
+        pallet_info_.distance = 0;
         pallet_info_.pallet = 0;
         pallet_info_.drift = 0.0;
         pallet_info_.angle = 0.0;
@@ -37,7 +39,7 @@ public:
     }
 
 private:
-    void location_callback(const msg::Location::SharedPtr msg) {
+    void location_callback(const Location::SharedPtr msg) {
         location_ = *msg;
     }
 
@@ -54,6 +56,9 @@ private:
             arrangeTOFData(raw_data1, A);
             arrangeTOFData(raw_data2, C);
             cv::flip(C, C, 0);
+
+            std::cout << "A" << A << std::endl;
+            std::cout << "C" << C << std::endl;
 
             int distance_threshold = 0;
             if (location_.state_motor_or_son == 2) {
@@ -81,7 +86,7 @@ private:
                 }
 
                 if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
-                    auto [angle, drift] = BestFit::analyze(A);
+                    auto [angle, drift] = BestFit::analyze(A, distance_threshold);
                     pallet_info_.angle = angle;
                     pallet_info_.drift = drift;
                     pallet_info_.error = 0;
@@ -119,10 +124,10 @@ private:
 
     CVl53l8Oper vl53l8Sensor;
     rclcpp::TimerBase::SharedPtr timer_;
-    rclcpp::Publisher<msg::PalletInfo>::SharedPtr publisher_;
-    rclcpp::Subscription<msg::Location>::SharedPtr subscriber_;
-    msg::Location location_;
-    msg::PalletInfo pallet_info_;
+    rclcpp::Publisher<PalletInfo>::SharedPtr publisher_;
+    rclcpp::Subscription<Location>::SharedPtr subscriber_;
+    Location location_;
+    PalletInfo pallet_info_;
 };
 
 int main(int argc, char *argv[]) {
