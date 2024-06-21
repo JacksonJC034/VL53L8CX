@@ -39,12 +39,12 @@ int main() {
             std::cout << A << std::endl;
             cv::resize(A_filtered, A_filtered, cv::Size(640, 640), 0, 0, cv::INTER_NEAREST);
             cv::imshow("Filtered Matrix", A_filtered);
-            cv::waitKey(500);
+            cv::waitKey(30);
         } else {
             std::cout << "Failed to get TOF data." << std::endl;
         }
 
-        std::this_thread::sleep_for(std::chrono::milliseconds(500));
+        std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
 
     return 0;

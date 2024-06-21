@@ -122,7 +122,7 @@ int CVl53l8Oper::OpenPort(std::string port) {
 }
 
 void CVl53l8Oper::read_vl53l8_thread(int fd) {
-    uint8_t slave_id = 4;
+    uint8_t slave_id = 1;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
     while (true) {
@@ -138,7 +138,7 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
         uint8_t recv_buffer[256];
         int total_length = 0;
-        int max_wait_time_ms = 400;
+        int max_wait_time_ms = 80;
 
         auto start = chrono::high_resolution_clock::now();
         while (total_length < 133) {
