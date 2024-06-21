@@ -1,0 +1,2 @@
+int32 lift_location
+int32 lift_base_location

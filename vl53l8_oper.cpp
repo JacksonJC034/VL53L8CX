@@ -170,7 +170,7 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
             cout << "Failed to obatin data" << endl;
         }
 
-        std::this_thread::sleep_for(100ms);
+        std::this_thread::sleep_for(60ms);
     }
 }
 
