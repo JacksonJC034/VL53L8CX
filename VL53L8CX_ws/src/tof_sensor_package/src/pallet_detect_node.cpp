@@ -47,8 +47,8 @@ private:
         uint8_t raw_data1[128];
         uint8_t raw_data2[128];
 
-        bool data_ready1 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data1), 3) == 1;
-        bool data_ready2 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data2), 4) == 1;
+        bool data_ready1 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data1), 1) == 1;
+        bool data_ready2 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data2), 2) == 1;
 
         if (data_ready1 && data_ready2) {
             cv::Mat A(8, 8, CV_16UC1);

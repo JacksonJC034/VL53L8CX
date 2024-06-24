@@ -6,6 +6,10 @@
 using namespace std;
 using namespace std::chrono_literals;
 
+uint8_t SLAVE_ID1 = 1;
+uint8_t SLAVE_ID2 = 2;
+uint8_t MAX_WAIT_TIME_MS = 100;
+
 static const uint8_t auchCRCHi[] = { 
     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 
     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x00, 0xC1, 0x81, 0x40, 
@@ -136,9 +140,7 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
 }
 
 void CVl53l8Oper::read_vl53l8_thread(int fd) {
-    uint8_t slave_id1 = 1;
-    uint8_t slave_id2 = 2;
-    uint8_t current_id = slave_id1;
+    uint8_t current_id = SLAVE_ID1;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
     while (true) {
@@ -154,7 +156,6 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
         uint8_t recv_buffer[256];
         int total_length = 0;
-        uint8_t max_wait_time_ms = 50;
 
         auto start = chrono::high_resolution_clock::now();
         while (total_length < 133) {
@@ -163,7 +164,7 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
             auto now = chrono::high_resolution_clock::now();
             auto duration = chrono::duration_cast<chrono::milliseconds>(now - start).count();
-            if (duration > max_wait_time_ms) {
+            if (duration > MAX_WAIT_TIME_MS) {
                 cout << "Sensor [" << current_id << "] not responding!" << endl;
                 break;
             }
@@ -187,8 +188,8 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
             cout << "Failed to obatin data" << endl;
         }
 
-        current_id = (current_id == slave_id1) ? slave_id2 : slave_id1;
-        std::this_thread::sleep_for(50ms);
+        current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
+        // std::this_thread::sleep_for(50ms);
     }
 }
 
@@ -230,8 +231,8 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     // cout << "CRC check passed, copying TOF data..." << endl;
     
     mutex_cp.lock();
-    memcpy(id == 1 ? tof_data1 : tof_data2, buf + 3, 128);
-    if (id == 1) {
+    memcpy(id == SLAVE_ID1 ? tof_data1 : tof_data2, buf + 3, 128);
+    if (id == SLAVE_ID1) {
         data_ready1 = true;
     } else {
         data_ready2 = true;
@@ -242,13 +243,13 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
 
 int CVl53l8Oper::getTof(uint16_t *buf, int id) {
     std::unique_lock<std::mutex> lock(mutex_cp);
-    if ((id == 1 && !data_ready1) || id == 2 && !data_ready2) {
+    if ((id == SLAVE_ID1 && !data_ready1) || id == SLAVE_ID2 && !data_ready2) {
         lock.unlock();
         std::this_thread::sleep_for(std::chrono::milliseconds(50));
         cout << "waited 50 in getTof" << endl;
         return 0;
     }
-    memcpy(buf, id == 1 ? tof_data1 : tof_data2, 128);
+    memcpy(buf, id == SLAVE_ID1 ? tof_data1 : tof_data2, 128);
     if (id == 1) {
         data_ready1 = false;
     } else {
