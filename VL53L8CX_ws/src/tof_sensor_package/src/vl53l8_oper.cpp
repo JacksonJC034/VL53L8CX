@@ -153,7 +153,7 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
         write(fd, serial_send_buffer, send_length);
         tcflush(fd, TCIOFLUSH);
-
+        
         uint8_t recv_buffer[256];
         int total_length = 0;
 
@@ -165,7 +165,7 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
             auto now = chrono::high_resolution_clock::now();
             auto duration = chrono::duration_cast<chrono::milliseconds>(now - start).count();
             if (duration > MAX_WAIT_TIME_MS) {
-                cout << "Sensor [" << current_id << "] not responding!" << endl;
+                cout << "Sensor [" << int(current_id) << "] not responding!" << endl;
                 break;
             }
         }
@@ -180,16 +180,14 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
             // cout << "Calling parse_response..." << endl;
             int result = parse_response(recv_buffer, total_length, current_id);
             if (result == -1) {
-                cout << "Failed parsing" << endl;
-            } else {
-                // cout << "Data successfully parsed" << endl;
+                cout << "Failed parsing response for sensor [" << int(current_id) << "]" << endl;
             }
         } else {
-            cout << "Failed to obatin data" << endl;
+            cout << "Failed to obtain data from sensor [" << int(current_id) << "]" << endl;
         }
 
         current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
-        // std::this_thread::sleep_for(50ms);
+        std::this_thread::sleep_for(10ms);
     }
 }
 
