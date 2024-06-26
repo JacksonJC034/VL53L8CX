@@ -80,8 +80,8 @@ int main() {
             arrangeTOFData(raw_data2, C);
             cv::flip(C, C, 0);
             std::cout << i << std::endl;
-            // std::cout << "A" << A << std::endl;
-            // std::cout << "C" << C << std::endl;
+            std::cout << "A" << A << std::endl;
+            std::cout << "C" << C << std::endl;
             
             // if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
             //     std::cout << "Pose NOT Accessible!" << std::endl;
