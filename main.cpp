@@ -63,8 +63,9 @@ int main() {
     uint8_t raw_data1[128];
     uint8_t raw_data2[128];
 
-    // auto last_time = std::chrono::high_resolution_clock::now();
-    // int i = 1;
+    auto last_time = std::chrono::high_resolution_clock::now();
+    int i = 1;
+    int k = 0;
     while (true) {
         bool data_ready1 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data1), 1) == 1;
         bool data_ready2 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data2), 2) == 1;
@@ -78,9 +79,9 @@ int main() {
             arrangeTOFData(raw_data1, A);
             arrangeTOFData(raw_data2, C);
             cv::flip(C, C, 0);
-            // std::cout << i << std::endl;
-            std::cout << "A" << A << std::endl;
-            std::cout << "C" << C << std::endl;
+            std::cout << i << std::endl;
+            // std::cout << "A" << A << std::endl;
+            // std::cout << "C" << C << std::endl;
             
             // if (BestFit::check(A) == 1 && BestFit::check(C) == 1) {
             //     std::cout << "Pose NOT Accessible!" << std::endl;
@@ -106,16 +107,31 @@ int main() {
             //     std::cout << "Pose NOT Accessible!" << std::endl;
             // }
 
-            // auto current_time = std::chrono::high_resolution_clock::now();
-            // auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(current_time - last_time).count();
-            // std::cout << "Loop Duration: " << duration << " ms" << std::endl;
-            // last_time = current_time;
-
-        } else {
-            std::cout << "Failed to get TOF data from one or both sensors." << std::endl;
+            auto current_time = std::chrono::high_resolution_clock::now();
+            auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(current_time - last_time).count();
+            std::cout << "Loop Duration: " << duration << " ms" << std::endl;
+            last_time = current_time;
+            if (duration > 72) {
+                k++;
+            }
+            std::cout << "Package Lost: " << k << std::endl;
         }
-        // i++;
-        std::this_thread::sleep_for(std::chrono::milliseconds(200));
+        else if (data_ready1 && !data_ready2) {
+            cv::Mat A(8, 8, CV_16UC1);
+            arrangeTOFData(raw_data1, A);
+            std::cout << 'A' << A << std::endl;
+            std::cout << "Failed to get TOF data from sensor 2." << std::endl;
+        } else if (!data_ready1 && data_ready2) {
+            std::cout << "Failed to get TOF data from sensor 1." << std::endl;
+            cv::Mat C(8, 8, CV_16UC1);
+            arrangeTOFData(raw_data2, C);
+            cv::flip(C, C, 0);
+            std::cout << 'C' << C << std::endl;
+        } else {
+            std::cout << "Failed to get TOF data from both sensors." << std::endl;
+        }
+        i++;
+        std::this_thread::sleep_for(std::chrono::milliseconds(70));
     }
 
     return 0;

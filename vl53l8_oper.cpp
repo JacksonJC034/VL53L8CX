@@ -8,7 +8,7 @@ using namespace std::chrono_literals;
 
 uint8_t SLAVE_ID1 = 1;
 uint8_t SLAVE_ID2 = 2;
-uint8_t MAX_WAIT_TIME_MS = 100;
+uint8_t MAX_WAIT_TIME_MS = 40;
 
 static const uint8_t auchCRCHi[] = { 
     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 
@@ -81,7 +81,7 @@ CVl53l8Oper::CVl53l8Oper(std::string portName) {
         serialportFd = OpenPort(portName);
         if (serialportFd > 0) {
             cout << portName << "Port opened successfully!" << endl;
-            seiralThread = std::make_shared<std::thread>(bind(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd));
+            seiralThread = std::make_shared<std::thread>(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd);
             seiralThread->detach();
         } else {
             cout << portName << "Port failed to open" << endl;
@@ -145,32 +145,44 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
     uint16_t recv_length = 0;
     while (true) {
         send_length = generate_resquest(serial_send_buffer, current_id);
-        // cout << "Sending request to slave " << int(slave_id) << ": ";
-        // for (int i = 0; i < send_length; ++i) {
-        //     printf("%02X ", serial_send_buffer[i]);
-        // }
-        // cout << endl;
+        cout << "Sending request to slave " << int(current_id) << ": ";
+        for (int i = 0; i < send_length; ++i) {
+            printf("%02X ", serial_send_buffer[i]);
+        }
+        cout << endl;
 
         write(fd, serial_send_buffer, send_length);
         tcflush(fd, TCIOFLUSH);
+        bool time_out = false;
 
-        uint8_t recv_buffer[256];
+        uint8_t recv_buffer[256] = {0};
         int total_length = 0;
 
         auto start = chrono::high_resolution_clock::now();
         while (total_length < 133) {
             recv_length = read(fd, recv_buffer + total_length, sizeof(recv_buffer) - total_length);
-            total_length += recv_length;
 
             auto now = chrono::high_resolution_clock::now();
             auto duration = chrono::duration_cast<chrono::milliseconds>(now - start).count();
+            if (recv_length < 0) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                continue;
+            } else if (recv_length == 0) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                continue;
+            } else if (recv_length > 0) {
+                total_length += recv_length;
+                // cout << "Received " << recv_length << " bytes from slave " << int(current_id) << endl;
+            }
+
             if (duration > MAX_WAIT_TIME_MS) {
-                cout << "Sensor [" << current_id << "] not responding!" << endl;
+                std::cerr << "Sensor [" << int(current_id) << "] not responding!" << strerror(errno) << std::endl;
+                time_out = true;
                 break;
             }
         }
 
-        // cout << "Received response from slave";
+        // cout << "Received response from slave " << int(current_id) << ": ";
         // for (int i = 0; i < total_length; ++i) {
         //     printf("%02X ", recv_buffer[i]);
         // }
@@ -179,17 +191,14 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
         if (total_length > 0) {
             // cout << "Calling parse_response..." << endl;
             int result = parse_response(recv_buffer, total_length, current_id);
-            if (result == -1) {
-                cout << "Failed parsing" << endl;
-            } else {
-                // cout << "Data successfully parsed" << endl;
-            }
-        } else {
-            cout << "Failed to obatin data" << endl;
+        }
+
+        if (time_out) {
+            cout << "Slave " << int(current_id) << "TIMEOUT!" << endl;
         }
 
         current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
-        // std::this_thread::sleep_for(10ms);
+        std::this_thread::sleep_for(10ms);
     }
 }
 
@@ -202,9 +211,7 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
 
     if (len < 133) {
         cout << "Invalid response length: expected at least 133 but got " << len << endl;
-        return -1;
     }
-
     if (buf[0] != id) {
         cout << "Invalid ID: expected " << int(id) << " but got " << int(buf[0]) << endl;
         return -1;
@@ -215,23 +222,22 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     }
     if (buf[2] != 128) { // 0x80 in hex
         cout << "Invalid data length: expected 128 (0x80) but got " << int(buf[2]) << endl;
-        return -1;
     }
 
     // Calculate CRC for the first 131 bytes
-    uint16_t crc = CRC16_Modbus(buf, 131);
+    uint16_t crc = CRC16_Modbus(buf, len - 2);
     uint8_t crc_hi = (crc >> 8) & 0xFF;
     uint8_t crc_lo = crc & 0xFF;
 
-    if (crc_hi != buf[131] || crc_lo != buf[132]) {
-        cout << "CRC check failed: expected " << hex << int(crc_hi) << " " << hex << int(crc_lo) << " but got " << hex << int(buf[131]) << " " << hex << int(buf[132]) << endl;
+    if (crc_hi != buf[len - 2] || crc_lo != buf[len - 1]) {
+        cout << "CRC check failed: expected " << hex << int(crc_hi) << " " << hex << int(crc_lo) << " but got " << hex << int(buf[len - 2]) << " " << hex << int(buf[len - 1]) << endl;
         return -1;
     }
 
     // cout << "CRC check passed, copying TOF data..." << endl;
     
     mutex_cp.lock();
-    memcpy(id == SLAVE_ID1 ? tof_data1 : tof_data2, buf + 3, 128);
+    memcpy(id == SLAVE_ID1 ? tof_data1 : tof_data2, buf + 3, len - 5);
     if (id == 1) {
         data_ready1 = true;
     } else {
@@ -245,8 +251,8 @@ int CVl53l8Oper::getTof(uint16_t *buf, int id) {
     std::unique_lock<std::mutex> lock(mutex_cp);
     if ((id == SLAVE_ID1 && !data_ready1) || id == SLAVE_ID2 && !data_ready2) {
         lock.unlock();
-        std::this_thread::sleep_for(std::chrono::milliseconds(50));
-        cout << "waited 50 in getTof" << endl;
+        std::this_thread::sleep_for(std::chrono::milliseconds(10));
+        cout << "waited 10 ms in getTof" << endl;
         return 0;
     }
     memcpy(buf, id == SLAVE_ID1 ? tof_data1 : tof_data2, 128);
