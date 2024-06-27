@@ -69,8 +69,6 @@ int main() {
     while (true) {
         bool data_ready1 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data1), 1) == 1;
         bool data_ready2 = vl53l8Sensor.getTof(reinterpret_cast<uint16_t*>(raw_data2), 2) == 1;
-        // bool data_ready1 = true;
-        // bool data_ready2 = true;
 
         if (data_ready1 && data_ready2) {
 

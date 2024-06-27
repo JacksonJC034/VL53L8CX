@@ -116,7 +116,7 @@ int CVl53l8Oper::OpenPort(std::string port) {
     opt.c_cflag |= CS8;
 
     opt.c_cc[VMIN] = 0;
-    opt.c_cc[VTIME] = 100;
+    opt.c_cc[VTIME] = 0;
     tcflush(PortFd, TCIOFLUSH);
     if (tcsetattr(PortFd, TCSANOW, &opt) < 0) {
         cout << "connect " << port << " failed" << endl;
@@ -164,17 +164,17 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
             auto now = chrono::high_resolution_clock::now();
             auto duration = chrono::duration_cast<chrono::milliseconds>(now - start).count();
-            total_length += recv_length;
-            // if (recv_length < 0) {
-            //     std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            //     continue;
-            // } else if (recv_length == 0) {
-            //     std::this_thread::sleep_for(std::chrono::milliseconds(10));
-            //     continue;
-            // } else if (recv_length > 0) {
-            //     total_length += recv_length;
-            //     // cout << "Received " << recv_length << " bytes from slave " << int(current_id) << endl;
-            // }
+            // total_length += recv_length;
+            if (recv_length < 0) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                continue;
+            } else if (recv_length == 0) {
+                std::this_thread::sleep_for(std::chrono::milliseconds(10));
+                continue;
+            } else if (recv_length > 0) {
+                total_length += recv_length;
+                // cout << "Received " << recv_length << " bytes from slave " << int(current_id) << endl;
+            }
 
             if (duration > MAX_WAIT_TIME_MS) {
                 std::cerr << "Sensor [" << int(current_id) << "] not responding!" << strerror(errno) << std::endl;
