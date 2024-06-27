@@ -8,7 +8,6 @@ using namespace std::chrono_literals;
 
 uint8_t SLAVE_ID1 = 1;
 uint8_t SLAVE_ID2 = 2;
-uint8_t MAX_WAIT_TIME_MS = 40;
 
 static const uint8_t auchCRCHi[] = { 
     0x00, 0xC1, 0x81, 0x40, 0x01, 0xC0, 0x80, 0x41, 0x01, 0xC0, 0x80, 0x41, 
@@ -143,6 +142,8 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
     uint8_t current_id = SLAVE_ID1;
     uint16_t send_length = 0;
     uint16_t recv_length = 0;
+    uint8_t recv_buffer[256] = {0};
+
     while (true) {
         send_length = generate_resquest(serial_send_buffer, current_id);
         cout << "Sending request to slave " << int(current_id) << ": ";
@@ -153,53 +154,52 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
 
         write(fd, serial_send_buffer, send_length);
         tcflush(fd, TCIOFLUSH);
-        bool time_out = false;
 
-        uint8_t recv_buffer[256] = {0};
-        int total_length = 0;
+        while (true){
+            fd_set fdsets;
+            FD_ZERO(&fdsets);
+            FD_SET(fd, &fdsets);
 
-        auto start = chrono::high_resolution_clock::now();
-        while (total_length < 133) {
-            recv_length = read(fd, recv_buffer + total_length, sizeof(recv_buffer) - total_length);
+            // 设置select等待时间
+            struct timeval time;
+            time.tv_sec = 0;
+            time.tv_usec = 40000; // 40ms
 
-            auto now = chrono::high_resolution_clock::now();
-            auto duration = chrono::duration_cast<chrono::milliseconds>(now - start).count();
-            // total_length += recv_length;
-            if (recv_length < 0) {
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
-                continue;
-            } else if (recv_length == 0) {
-                std::this_thread::sleep_for(std::chrono::milliseconds(10));
-                continue;
-            } else if (recv_length > 0) {
-                total_length += recv_length;
-                // cout << "Received " << recv_length << " bytes from slave " << int(current_id) << endl;
-            }
+            int ret = select(fd + 1, &fdsets, nullptr, nullptr, &time);
+            // int select(int maxfdp,fd_set *readfds,fd_set *writefds,fd_set *errorfds,struct timeval *timeout);
+            // < 0: select出错
+            // = 0: 超时
+            // > 0: 有事件发生
 
-            if (duration > MAX_WAIT_TIME_MS) {
-                std::cerr << "Sensor [" << int(current_id) << "] not responding!" << strerror(errno) << std::endl;
-                time_out = true;
+            if (ret <= 0)
+            {
+                cout << "sensor " << int(current_id) << " select timeout, select returned " << ret << endl;
+                // isState = false;
+                // break;
                 break;
+                // continue;
             }
+            // wait before reading
+            usleep(20000); // 20ms
+
+            recv_length = read(fd, recv_buffer, 256);
+            break;
+            // printf("m_AcceptBufLen = %d\n", m_AcceptBufLen); // 打印接收的数据长
         }
 
-        // cout << "Received response from slave " << int(current_id) << ": ";
-        // for (int i = 0; i < total_length; ++i) {
+        // cout << "Received " << int(recv_length) << " bytes from slave " << int(current_id) << ": ";
+        // for (int i = 0; i < recv_length; ++i) {
         //     printf("%02X ", recv_buffer[i]);
         // }
         // cout << endl;
 
-        if (total_length > 0) {
+        if (recv_length > 0) {
             // cout << "Calling parse_response..." << endl;
-            int result = parse_response(recv_buffer, total_length, current_id);
-        }
-
-        if (time_out) {
-            cout << "Slave " << int(current_id) << "TIMEOUT!" << endl;
+            int result = parse_response(recv_buffer, recv_length, current_id);
         }
 
         current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
-        std::this_thread::sleep_for(10ms);
+        // std::this_thread::sleep_for(10ms);
     }
 }
 
@@ -210,9 +210,9 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     // // }
     // cout << endl;
 
-    if (len < 133) {
-        cout << "Invalid response length: expected at least 133 but got " << len << endl;
-    }
+    // if (len < 133) {
+    //     cout << "Invalid response length: expected at least 133 but got " << len << endl;
+    // }
     if (buf[0] != id) {
         cout << "Invalid ID: expected " << int(id) << " but got " << int(buf[0]) << endl;
         return -1;
