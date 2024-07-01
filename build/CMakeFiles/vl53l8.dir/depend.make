@@ -119,6 +119,7 @@ CMakeFiles/vl53l8.dir/BestFit.cpp.o: /usr/local/include/opencv4/opencv2/videoio.
 
 CMakeFiles/vl53l8.dir/main.cpp.o: ../BestFit.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: ../main.cpp
+CMakeFiles/vl53l8.dir/main.cpp.o: ../serial_port_comm.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: ../vl53l8_oper.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/calib3d.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/core.hpp
@@ -234,6 +235,10 @@ CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/video/backg
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/video/tracking.hpp
 CMakeFiles/vl53l8.dir/main.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 
+CMakeFiles/vl53l8.dir/serial_port_comm.cpp.o: ../serial_port_comm.cpp
+CMakeFiles/vl53l8.dir/serial_port_comm.cpp.o: ../serial_port_comm.hpp
+
+CMakeFiles/vl53l8.dir/vl53l8_oper.cpp.o: ../serial_port_comm.hpp
 CMakeFiles/vl53l8.dir/vl53l8_oper.cpp.o: ../vl53l8_oper.cpp
 CMakeFiles/vl53l8.dir/vl53l8_oper.cpp.o: ../vl53l8_oper.hpp
 

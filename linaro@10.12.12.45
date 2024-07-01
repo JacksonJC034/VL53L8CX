@@ -2,6 +2,7 @@
 #include <chrono>
 #include <iostream>
 #include <thread>
+#include <serial_port_comm.hpp>
 
 using namespace std;
 using namespace std::chrono_literals;
@@ -76,27 +77,18 @@ uint16_t CVl53l8Oper::CRC16_Modbus(volatile uint8_t *puchMsg, uint16_t usDataLen
 CVl53l8Oper::CVl53l8Oper(std::string portName) {
     memset((void*)tof_data1, 0, sizeof(tof_data1));
     memset((void*)tof_data2, 0, sizeof(tof_data2));
-    if (this->operPort(portName)) {
-        if (this->setPortProperty(115200, 8, 'N', 1)) {
-            std::cout << "Serial port opened successfully!" << std::endl;
-            seiralThread = std::make_shared<std::thread>(std::bind(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd));
+    if (!portName.empty()) {
+        serialportFd = OpenPort(portName);
+        if (serialportFd > 0) {
+            cout << portName << "Port opened successfully!" << endl;
+            seiralThread = std::make_shared<std::thread>(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd);
             seiralThread->detach();
         } else {
-            std::cout << "Failed to set serial port property!" << std::endl;
+            cout << portName << "Port failed to open" << endl;
         }
+    } else {
+        cout << "Please input the port:" << endl;
     }
-    // if (!portName.empty()) {
-    //     serialportFd = OpenPort(portName);
-    //     if (serialportFd > 0) {
-    //         cout << portName << "Port opened successfully!" << endl;
-    //         seiralThread = std::make_shared<std::thread>(std::bind(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd));
-    //         seiralThread->detach();
-    //     } else {
-    //         cout << portName << "Port failed to open" << endl;
-    //     }
-    // } else {
-    //     cout << "Please input the port:" << endl;
-    // }
 }
 
 CVl53l8Oper::~CVl53l8Oper() {
@@ -145,31 +137,27 @@ int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
     buf[6] = (crc >> 8) & 0xff;
     buf[7] = crc & 0xff;
     return 8;
-
 }
 
 void CVl53l8Oper::read_vl53l8_thread(int fd) {
-    // uint8_t current_id = SLAVE_ID1;
-    // uint16_t send_length = 0;
-    // uint16_t recv_length = 0;
-    // uint8_t recv_buffer[256] = {0};
-    Uchar buf_1[] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x40, 0x44, 0x3A};
-    Uchar buf_2[] = {0x02, 0x03, 0x00, 0x00, 0x00, 0x40, 0x44, 0x33};
-    while (true) {
-        // send_length = generate_resquest(serial_send_buffer, current_id);
-        // cout << "Sending request to slave " << int(current_id) << ": ";
-        // for (int i = 0; i < send_length; ++i) {
-        //     printf("%02X ", serial_send_buffer[i]);
-        // }
-        // cout << endl;
-        // fd_set fdsets;
-        // FD_ZERO(&fdsets);
-        // FD_SET(fd, &fdsets);
-        // readWirtePort(SendResponse, 30000, nullptr);
+    uint8_t current_id = SLAVE_ID1;
+    uint16_t send_length = 0;
+    uint16_t recv_length = 0;
+    uint8_t recv_buffer[256] = {0};
 
-        
-        // write(fd, serial_send_buffer, send_length);
-        // tcflush(fd, TCIOFLUSH);
+    while (true) {
+        send_length = generate_resquest(serial_send_buffer, current_id);
+        cout << "Sending request to slave " << int(current_id) << ": ";
+        for (int i = 0; i < send_length; ++i) {
+            printf("%02X ", serial_send_buffer[i]);
+        }
+        cout << endl;
+        fd_set fdsets;
+        FD_ZERO(&fdsets);
+        FD_SET(fd, &fdsets);
+
+        write(fd, serial_send_buffer, send_length);
+        tcflush(fd, TCIOFLUSH);
 
         // 设置select等待时间
         // struct timeval time;
@@ -190,9 +178,9 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
         //     // continue;
         // }
         // wait before reading
-        // usleep(30000); // 30ms
+        usleep(30000); // 30ms
 
-        // recv_length = read(fd, recv_buffer, 256);
+        recv_length = read(fd, recv_buffer, 256);
 
         // cout << "Received " << int(recv_length) << " bytes from slave " << int(current_id) << ": ";
         // for (int i = 0; i < recv_length; ++i) {
@@ -200,19 +188,13 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
         // }
         // cout << endl;
 
-        // if (recv_length > 0) {
+        if (recv_length > 0) {
             // cout << "Calling parse_response..." << endl;
-            // int result = parse_response(recv_buffer, recv_length, current_id);
-        // }
+            int result = parse_response(recv_buffer, recv_length, current_id);
+        }
 
-        // current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
-        setSendData(buf_1, sizeof(buf_1));
-        readWirtePort(SendResponse, 20000, nullptr);
-        usleep(10000);
-        setSendData(buf_2, sizeof(buf_2));
-        readWirtePort(SendResponse, 20000, nullptr);
-
-        std::this_thread::sleep_for(10ms);
+        current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
+        std::this_thread::sleep_for(20ms);
     }
 }
 
@@ -276,16 +258,4 @@ int CVl53l8Oper::getTof(uint16_t *buf, int id) {
         data_ready2 = false;
     }
     return 1;
-}
-
-int CVl53l8Oper::parseAcceptData(void* para) {
-    if (m_AcceptBufLen <= 0) {
-        return -1;
-    }
-
-    for (int i = 0; i < m_AcceptBufLen; ++i) {
-        printf("%02X ", m_AcceptBuf[i]);
-    }
-
-    return 0;
 }

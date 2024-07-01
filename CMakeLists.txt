@@ -14,7 +14,7 @@ find_package(OpenCV REQUIRED)
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # Add the executable
-add_executable(vl53l8 main.cpp vl53l8_oper.cpp BestFit.cpp)
+add_executable(vl53l8 main.cpp vl53l8_oper.cpp BestFit.cpp serial_port_comm.cpp)
 
 # Link libraries
 target_link_libraries(vl53l8 ${OpenCV_LIBS} pthread)

@@ -177,6 +177,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+serial_port_comm.o: serial_port_comm.cpp.o
+
+.PHONY : serial_port_comm.o
+
+# target to build an object file
+serial_port_comm.cpp.o:
+	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/serial_port_comm.cpp.o
+.PHONY : serial_port_comm.cpp.o
+
+serial_port_comm.i: serial_port_comm.cpp.i
+
+.PHONY : serial_port_comm.i
+
+# target to preprocess a source file
+serial_port_comm.cpp.i:
+	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/serial_port_comm.cpp.i
+.PHONY : serial_port_comm.cpp.i
+
+serial_port_comm.s: serial_port_comm.cpp.s
+
+.PHONY : serial_port_comm.s
+
+# target to generate assembly for a file
+serial_port_comm.cpp.s:
+	$(MAKE) -f CMakeFiles/vl53l8.dir/build.make CMakeFiles/vl53l8.dir/serial_port_comm.cpp.s
+.PHONY : serial_port_comm.cpp.s
+
 vl53l8_oper.o: vl53l8_oper.cpp.o
 
 .PHONY : vl53l8_oper.o
@@ -219,6 +246,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... serial_port_comm.o"
+	@echo "... serial_port_comm.i"
+	@echo "... serial_port_comm.s"
 	@echo "... vl53l8_oper.o"
 	@echo "... vl53l8_oper.i"
 	@echo "... vl53l8_oper.s"
