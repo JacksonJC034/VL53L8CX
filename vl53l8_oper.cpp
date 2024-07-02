@@ -76,12 +76,16 @@ uint16_t CVl53l8Oper::CRC16_Modbus(volatile uint8_t *puchMsg, uint16_t usDataLen
 CVl53l8Oper::CVl53l8Oper(std::string portName) {
     memset((void*)tof_data1, 0, sizeof(tof_data1));
     memset((void*)tof_data2, 0, sizeof(tof_data2));
-    if (this->operPort(portName)) {
-        if (this->setPortProperty(115200, 8, 'N', 1)) {
+    if (this->operPort(portName)) 
+    {
+        if (this->setPortProperty(115200, 8, 'N', 1)) 
+        {
             std::cout << "Serial port opened successfully!" << std::endl;
             seiralThread = std::make_shared<std::thread>(std::bind(&CVl53l8Oper::read_vl53l8_thread, this, serialportFd));
             seiralThread->detach();
-        } else {
+        } 
+        else 
+        {
             std::cout << "Failed to set serial port property!" << std::endl;
         }
     }
@@ -107,31 +111,32 @@ CVl53l8Oper::~CVl53l8Oper() {
 }
 
 int CVl53l8Oper::OpenPort(std::string port) {
-    int PortFd = open(port.c_str(), O_RDWR | O_NOCTTY);
-    if (PortFd <= 0) {
-        cout << "open " << port << " failed!" << endl;
-        return -1;
-    }
-    struct termios opt;
-    tcgetattr(PortFd, &opt);
-    cfsetispeed(&opt, B115200);
-    cfsetospeed(&opt, B115200);
-    opt.c_cflag |= (CLOCAL | CREAD);
-    opt.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
-    opt.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
-    opt.c_oflag &= ~(OPOST);
-    opt.c_cflag &= ~(CSIZE | PARENB | CSTOPB);
-    opt.c_cflag |= CS8;
+    // int PortFd = open(port.c_str(), O_RDWR | O_NOCTTY);
+    // if (PortFd <= 0) {
+    //     cout << "open " << port << " failed!" << endl;
+    //     return -1;
+    // }
+    // struct termios opt;
+    // tcgetattr(PortFd, &opt);
+    // cfsetispeed(&opt, B115200);
+    // cfsetospeed(&opt, B115200);
+    // opt.c_cflag |= (CLOCAL | CREAD);
+    // opt.c_lflag &= ~(ECHO | ICANON | IEXTEN | ISIG);
+    // opt.c_iflag &= ~(BRKINT | ICRNL | INPCK | ISTRIP | IXON);
+    // opt.c_oflag &= ~(OPOST);
+    // opt.c_cflag &= ~(CSIZE | PARENB | CSTOPB);
+    // opt.c_cflag |= CS8;
 
-    opt.c_cc[VMIN] = 0;
-    opt.c_cc[VTIME] = 0;
-    tcflush(PortFd, TCIOFLUSH);
-    if (tcsetattr(PortFd, TCSANOW, &opt) < 0) {
-        cout << "connect " << port << " failed" << endl;
-        return -1;
-    }
-    cout << "open " << port << " successed!" << endl;
-    return PortFd;
+    // opt.c_cc[VMIN] = 0;
+    // opt.c_cc[VTIME] = 0;
+    // tcflush(PortFd, TCIOFLUSH);
+    // if (tcsetattr(PortFd, TCSANOW, &opt) < 0) {
+    //     cout << "connect " << port << " failed" << endl;
+    //     return -1;
+    // }
+    // cout << "open " << port << " successed!" << endl;
+    // return PortFd;
+    return 0;
 }
 
 int CVl53l8Oper::generate_resquest(uint8_t *buf, int id) {
@@ -154,8 +159,9 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
     // uint16_t recv_length = 0;
     // uint8_t recv_buffer[256] = {0};
     Uchar buf_1[] = {0x01, 0x03, 0x00, 0x00, 0x00, 0x40, 0x44, 0x3A};
-    Uchar buf_2[] = {0x02, 0x03, 0x00, 0x00, 0x00, 0x40, 0x44, 0x33};
-    while (true) {
+    Uchar buf_2[] = {0x02, 0x03, 0x00, 0x00, 0x00, 0x40, 0x44, 0x09};
+    while (true) 
+    {
         // send_length = generate_resquest(serial_send_buffer, current_id);
         // cout << "Sending request to slave " << int(current_id) << ": ";
         // for (int i = 0; i < send_length; ++i) {
@@ -206,12 +212,11 @@ void CVl53l8Oper::read_vl53l8_thread(int fd) {
         // }
 
         // current_id = (current_id == SLAVE_ID1) ? SLAVE_ID2 : SLAVE_ID1;
-        setSendData(buf_1, sizeof(buf_1));
-        readWirtePort(SendResponse, 20000, nullptr);
-        usleep(10000);
+        // setSendData(buf_1, sizeof(buf_1));
+        // readWirtePort(SendResponse, 30000, nullptr);
+        // std::this_thread::sleep_for(10ms);
         setSendData(buf_2, sizeof(buf_2));
-        readWirtePort(SendResponse, 20000, nullptr);
-
+        readWirtePort(SendResponse, 30000, nullptr);
         std::this_thread::sleep_for(10ms);
     }
 }
@@ -226,39 +231,86 @@ int CVl53l8Oper::parse_response(uint8_t *buf, int len, int id) {
     // if (len < 133) {
     //     cout << "Invalid response length: expected at least 133 but got " << len << endl;
     // }
-    if (buf[0] != id) {
-        cout << "Invalid ID: expected " << int(id) << " but got " << int(buf[0]) << endl;
+    // if (buf[0] != id) {
+    //     cout << "Invalid ID: expected " << int(id) << " but got " << int(buf[0]) << endl;
+    //     return -1;
+    // }
+    // if (buf[1] != 0x03) {
+    //     cout << "Invalid function code: expected 0x03 but got " << int(buf[1]) << endl;
+    //     return -1;
+    // }
+    // if (buf[2] != 128) { // 0x80 in hex
+    //     cout << "Invalid data length: expected 128 (0x80) but got " << int(buf[2]) << endl;
+    // }
+
+    // Calculate CRC for the first 131 bytes
+    // uint16_t crc = CRC16_Modbus(buf, len - 2);
+    // uint8_t crc_hi = (crc >> 8) & 0xFF;
+    // uint8_t crc_lo = crc & 0xFF;
+
+    // if (crc_hi != buf[len - 2] || crc_lo != buf[len - 1]) {
+    //     cout << "CRC check failed: expected " << hex << int(crc_hi) << " " << hex << int(crc_lo) << " but got " << hex << int(buf[len - 2]) << " " << hex << int(buf[len - 1]) << endl;
+    //     return -1;
+    // }
+
+    // cout << "CRC check passed, copying TOF data..." << endl;
+    
+//     mutex_cp.lock();
+//     memcpy(id == SLAVE_ID1 ? tof_data1 : tof_data2, buf + 3, len - 5);
+//     if (id == 1) {
+//         data_ready1 = true;
+//     } else {
+//         data_ready2 = true;
+//     }
+//     mutex_cp.unlock();
+    return 1;
+}
+
+int CVl53l8Oper::parseAcceptData(void* para) {
+    if (m_AcceptBufLen <= 0) {
         return -1;
     }
-    if (buf[1] != 0x03) {
-        cout << "Invalid function code: expected 0x03 but got " << int(buf[1]) << endl;
+
+    // for (int i = 0; i < m_AcceptBufLen; ++i) {
+    //     printf("%02X ", m_AcceptBuf[i]);
+    // }
+    // printf("%02d\n", m_AcceptBufLen);
+
+    int id = m_AcceptBuf[0];
+    // if (m_AcceptBuf[0] != id) {
+    //     cout << "Invalid ID: expected " << int(id) << " but got " << int(m_AcceptBuf[0]) << endl;
+    //     return -1;
+    // }
+    if (m_AcceptBuf[1] != 0x03) {
+        cout << "Invalid function code: expected 0x03 but got " << int(m_AcceptBuf[1]) << endl;
         return -1;
     }
-    if (buf[2] != 128) { // 0x80 in hex
-        cout << "Invalid data length: expected 128 (0x80) but got " << int(buf[2]) << endl;
+    if (m_AcceptBuf[2] != 128) { // 0x80 in hex
+        cout << "Invalid data length: expected 128 (0x80) but got " << int(m_AcceptBuf[2]) << endl;
     }
 
     // Calculate CRC for the first 131 bytes
-    uint16_t crc = CRC16_Modbus(buf, len - 2);
+    uint16_t crc = CRC16_Modbus(m_AcceptBuf, m_AcceptBufLen - 2);
     uint8_t crc_hi = (crc >> 8) & 0xFF;
     uint8_t crc_lo = crc & 0xFF;
 
-    if (crc_hi != buf[len - 2] || crc_lo != buf[len - 1]) {
-        cout << "CRC check failed: expected " << hex << int(crc_hi) << " " << hex << int(crc_lo) << " but got " << hex << int(buf[len - 2]) << " " << hex << int(buf[len - 1]) << endl;
+    if (crc_hi != m_AcceptBuf[m_AcceptBufLen - 2] || crc_lo != m_AcceptBuf[m_AcceptBufLen - 1]) {
+        cout << "CRC check failed: expected " << hex << int(crc_hi) << " " << hex << int(crc_lo) << " but got " << hex << int(m_AcceptBuf[m_AcceptBufLen - 2]) << " " << hex << int(m_AcceptBuf[m_AcceptBufLen - 1]) << endl;
         return -1;
     }
 
     // cout << "CRC check passed, copying TOF data..." << endl;
     
     mutex_cp.lock();
-    memcpy(id == SLAVE_ID1 ? tof_data1 : tof_data2, buf + 3, len - 5);
+    memcpy(id == SLAVE_ID1 ? tof_data1 : tof_data2, m_AcceptBuf + 3, m_AcceptBufLen - 5);
     if (id == 1) {
         data_ready1 = true;
     } else {
         data_ready2 = true;
     }
     mutex_cp.unlock();
-    return 1;
+
+    return 0;
 }
 
 int CVl53l8Oper::getTof(uint16_t *buf, int id) {
@@ -276,16 +328,4 @@ int CVl53l8Oper::getTof(uint16_t *buf, int id) {
         data_ready2 = false;
     }
     return 1;
-}
-
-int CVl53l8Oper::parseAcceptData(void* para) {
-    if (m_AcceptBufLen <= 0) {
-        return -1;
-    }
-
-    for (int i = 0; i < m_AcceptBufLen; ++i) {
-        printf("%02X ", m_AcceptBuf[i]);
-    }
-
-    return 0;
 }
