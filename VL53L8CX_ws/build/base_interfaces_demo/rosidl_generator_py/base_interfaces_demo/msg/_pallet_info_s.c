@@ -16,6 +16,9 @@
 #include "base_interfaces_demo/msg/detail/pallet_info__struct.h"
 #include "base_interfaces_demo/msg/detail/pallet_info__functions.h"
 
+#include "rosidl_runtime_c/primitives_sequence.h"
+#include "rosidl_runtime_c/primitives_sequence_functions.h"
+
 
 ROSIDL_GENERATOR_C_EXPORT
 bool base_interfaces_demo__msg__pallet_info__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -95,6 +98,63 @@ bool base_interfaces_demo__msg__pallet_info__convert_from_py(PyObject * _pymsg, 
     ros_message->error = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "status");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->status = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // sensor1
+    PyObject * field = PyObject_GetAttrString(_pymsg, "sensor1");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_UINT32);
+      Py_ssize_t size = 64;
+      uint32_t * dest = ros_message->sensor1;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        uint32_t tmp = *(npy_uint32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(uint32_t));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
+  {  // sensor2
+    PyObject * field = PyObject_GetAttrString(_pymsg, "sensor2");
+    if (!field) {
+      return false;
+    }
+    {
+      // TODO(dirk-thomas) use a better way to check the type before casting
+      assert(field->ob_type != NULL);
+      assert(field->ob_type->tp_name != NULL);
+      assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+      PyArrayObject * seq_field = (PyArrayObject *)field;
+      Py_INCREF(seq_field);
+      assert(PyArray_NDIM(seq_field) == 1);
+      assert(PyArray_TYPE(seq_field) == NPY_UINT32);
+      Py_ssize_t size = 64;
+      uint32_t * dest = ros_message->sensor2;
+      for (Py_ssize_t i = 0; i < size; ++i) {
+        uint32_t tmp = *(npy_uint32 *)PyArray_GETPTR1(seq_field, i);
+        memcpy(&dest[i], &tmp, sizeof(uint32_t));
+      }
+      Py_DECREF(seq_field);
+    }
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -171,6 +231,53 @@ PyObject * base_interfaces_demo__msg__pallet_info__convert_to_py(void * raw_ros_
         return NULL;
       }
     }
+  }
+  {  // status
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->status);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // sensor1
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "sensor1");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_UINT32);
+    assert(sizeof(npy_uint32) == sizeof(uint32_t));
+    npy_uint32 * dst = (npy_uint32 *)PyArray_GETPTR1(seq_field, 0);
+    uint32_t * src = &(ros_message->sensor1[0]);
+    memcpy(dst, src, 64 * sizeof(uint32_t));
+    Py_DECREF(field);
+  }
+  {  // sensor2
+    PyObject * field = NULL;
+    field = PyObject_GetAttrString(_pymessage, "sensor2");
+    if (!field) {
+      return NULL;
+    }
+    assert(field->ob_type != NULL);
+    assert(field->ob_type->tp_name != NULL);
+    assert(strcmp(field->ob_type->tp_name, "numpy.ndarray") == 0);
+    PyArrayObject * seq_field = (PyArrayObject *)field;
+    assert(PyArray_NDIM(seq_field) == 1);
+    assert(PyArray_TYPE(seq_field) == NPY_UINT32);
+    assert(sizeof(npy_uint32) == sizeof(uint32_t));
+    npy_uint32 * dst = (npy_uint32 *)PyArray_GETPTR1(seq_field, 0);
+    uint32_t * src = &(ros_message->sensor2[0]);
+    memcpy(dst, src, 64 * sizeof(uint32_t));
+    Py_DECREF(field);
   }
 
   // ownership of _pymessage is transferred to the caller

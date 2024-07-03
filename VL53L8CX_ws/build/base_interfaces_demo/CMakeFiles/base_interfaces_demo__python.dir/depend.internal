@@ -108,6 +108,8 @@ CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_
  rosidl_generator_c/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
 CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_pallet_info_s.c.o
  /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/msg/_pallet_info_s.c
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
+ /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  /usr/include/python3.8/Python.h
  /usr/include/python3.8/abstract.h

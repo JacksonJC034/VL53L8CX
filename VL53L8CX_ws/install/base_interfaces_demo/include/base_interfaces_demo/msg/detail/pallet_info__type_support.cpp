@@ -37,7 +37,47 @@ void PalletInfo_fini_function(void * message_memory)
   typed_message->~PalletInfo();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember PalletInfo_message_member_array[5] = {
+size_t size_function__PalletInfo__sensor1(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 64;
+}
+
+const void * get_const_function__PalletInfo__sensor1(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<uint32_t, 64> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__PalletInfo__sensor1(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<uint32_t, 64> *>(untyped_member);
+  return &member[index];
+}
+
+size_t size_function__PalletInfo__sensor2(const void * untyped_member)
+{
+  (void)untyped_member;
+  return 64;
+}
+
+const void * get_const_function__PalletInfo__sensor2(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::array<uint32_t, 64> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__PalletInfo__sensor2(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::array<uint32_t, 64> *>(untyped_member);
+  return &member[index];
+}
+
+static const ::rosidl_typesupport_introspection_cpp::MessageMember PalletInfo_message_member_array[8] = {
   {
     "distance",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -112,13 +152,58 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember PalletInfo_me
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::PalletInfo, status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "sensor1",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    64,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::PalletInfo, sensor1),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__PalletInfo__sensor1,  // size() function pointer
+    get_const_function__PalletInfo__sensor1,  // get_const(index) function pointer
+    get_function__PalletInfo__sensor1,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "sensor2",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    64,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::PalletInfo, sensor2),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__PalletInfo__sensor2,  // size() function pointer
+    get_const_function__PalletInfo__sensor2,  // get_const(index) function pointer
+    get_function__PalletInfo__sensor2,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers PalletInfo_message_members = {
   "base_interfaces_demo::msg",  // message namespace
   "PalletInfo",  // message name
-  5,  // number of fields
+  8,  // number of fields
   sizeof(base_interfaces_demo::msg::PalletInfo),
   PalletInfo_message_member_array,  // message members
   PalletInfo_init_function,  // function to initialize message memory (memory has to be allocated)

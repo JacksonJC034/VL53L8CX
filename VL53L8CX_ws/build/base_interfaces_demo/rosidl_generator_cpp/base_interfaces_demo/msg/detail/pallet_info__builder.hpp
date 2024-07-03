@@ -20,16 +20,64 @@ namespace msg
 namespace builder
 {
 
+class Init_PalletInfo_sensor2
+{
+public:
+  explicit Init_PalletInfo_sensor2(::base_interfaces_demo::msg::PalletInfo & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::msg::PalletInfo sensor2(::base_interfaces_demo::msg::PalletInfo::_sensor2_type arg)
+  {
+    msg_.sensor2 = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::PalletInfo msg_;
+};
+
+class Init_PalletInfo_sensor1
+{
+public:
+  explicit Init_PalletInfo_sensor1(::base_interfaces_demo::msg::PalletInfo & msg)
+  : msg_(msg)
+  {}
+  Init_PalletInfo_sensor2 sensor1(::base_interfaces_demo::msg::PalletInfo::_sensor1_type arg)
+  {
+    msg_.sensor1 = std::move(arg);
+    return Init_PalletInfo_sensor2(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::PalletInfo msg_;
+};
+
+class Init_PalletInfo_status
+{
+public:
+  explicit Init_PalletInfo_status(::base_interfaces_demo::msg::PalletInfo & msg)
+  : msg_(msg)
+  {}
+  Init_PalletInfo_sensor1 status(::base_interfaces_demo::msg::PalletInfo::_status_type arg)
+  {
+    msg_.status = std::move(arg);
+    return Init_PalletInfo_sensor1(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::PalletInfo msg_;
+};
+
 class Init_PalletInfo_error
 {
 public:
   explicit Init_PalletInfo_error(::base_interfaces_demo::msg::PalletInfo & msg)
   : msg_(msg)
   {}
-  ::base_interfaces_demo::msg::PalletInfo error(::base_interfaces_demo::msg::PalletInfo::_error_type arg)
+  Init_PalletInfo_status error(::base_interfaces_demo::msg::PalletInfo::_error_type arg)
   {
     msg_.error = std::move(arg);
-    return std::move(msg_);
+    return Init_PalletInfo_status(msg_);
   }
 
 private:

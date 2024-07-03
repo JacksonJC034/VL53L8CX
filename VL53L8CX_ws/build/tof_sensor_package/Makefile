@@ -260,6 +260,33 @@ src/pallet_detect_node.cpp.s:
 	$(MAKE) -f CMakeFiles/pallet_detect_node.dir/build.make CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.s
 .PHONY : src/pallet_detect_node.cpp.s
 
+src/serial_port_comm.o: src/serial_port_comm.cpp.o
+
+.PHONY : src/serial_port_comm.o
+
+# target to build an object file
+src/serial_port_comm.cpp.o:
+	$(MAKE) -f CMakeFiles/pallet_detect_node.dir/build.make CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.o
+.PHONY : src/serial_port_comm.cpp.o
+
+src/serial_port_comm.i: src/serial_port_comm.cpp.i
+
+.PHONY : src/serial_port_comm.i
+
+# target to preprocess a source file
+src/serial_port_comm.cpp.i:
+	$(MAKE) -f CMakeFiles/pallet_detect_node.dir/build.make CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.i
+.PHONY : src/serial_port_comm.cpp.i
+
+src/serial_port_comm.s: src/serial_port_comm.cpp.s
+
+.PHONY : src/serial_port_comm.s
+
+# target to generate assembly for a file
+src/serial_port_comm.cpp.s:
+	$(MAKE) -f CMakeFiles/pallet_detect_node.dir/build.make CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.s
+.PHONY : src/serial_port_comm.cpp.s
+
 src/vl53l8_oper.o: src/vl53l8_oper.cpp.o
 
 .PHONY : src/vl53l8_oper.o
@@ -309,6 +336,9 @@ help:
 	@echo "... src/pallet_detect_node.o"
 	@echo "... src/pallet_detect_node.i"
 	@echo "... src/pallet_detect_node.s"
+	@echo "... src/serial_port_comm.o"
+	@echo "... src/serial_port_comm.i"
+	@echo "... src/serial_port_comm.s"
 	@echo "... src/vl53l8_oper.o"
 	@echo "... src/vl53l8_oper.i"
 	@echo "... src/vl53l8_oper.s"

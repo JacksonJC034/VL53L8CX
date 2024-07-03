@@ -18,13 +18,12 @@ double BestFit::check(const cv::Mat &matrix) {
     }
 }
 
-void BestFit::binarizeMatrix(cv::Mat& matrix, double threshold) {
-    int int_threshold = static_cast<int>(threshold);
-    cv::threshold(matrix, matrix, int_threshold, 1, cv::THRESH_BINARY);
+void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
+    cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
     matrix.convertTo(matrix, CV_8UC1);
 }
 
-std::pair<double, double> BestFit::analyze(const cv::Mat &A, double threshold) {
+std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     if (A.size() != cv::Size(8, 8) || A.type() != CV_8UC1) {
         throw std::invalid_argument("Input must be an 8x8 matrix with type CV_8UC1.");
     }

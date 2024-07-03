@@ -33,7 +33,7 @@ include_directories(
 )
 
 # Add executable
-add_executable(pallet_detect_node src/pallet_detect_node.cpp src/vl53l8_oper.cpp src/BestFit.cpp)
+add_executable(pallet_detect_node src/pallet_detect_node.cpp src/vl53l8_oper.cpp src/BestFit.cpp src/serial_port_comm.cpp)
 
 # Link libraries
 ament_target_dependencies(pallet_detect_node

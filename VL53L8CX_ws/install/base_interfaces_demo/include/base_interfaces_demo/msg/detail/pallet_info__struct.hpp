@@ -42,12 +42,16 @@ struct PalletInfo_
       this->drift = 0.0;
       this->angle = 0.0;
       this->error = 0l;
+      this->status = 0l;
+      std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor1.begin(), this->sensor1.end(), 0ul);
+      std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor2.begin(), this->sensor2.end(), 0ul);
     }
   }
 
   explicit PalletInfo_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
+  : sensor1(_alloc),
+    sensor2(_alloc)
   {
-    (void)_alloc;
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
@@ -56,6 +60,9 @@ struct PalletInfo_
       this->drift = 0.0;
       this->angle = 0.0;
       this->error = 0l;
+      this->status = 0l;
+      std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor1.begin(), this->sensor1.end(), 0ul);
+      std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor2.begin(), this->sensor2.end(), 0ul);
     }
   }
 
@@ -75,6 +82,15 @@ struct PalletInfo_
   using _error_type =
     int32_t;
   _error_type error;
+  using _status_type =
+    int32_t;
+  _status_type status;
+  using _sensor1_type =
+    std::array<uint32_t, 64>;
+  _sensor1_type sensor1;
+  using _sensor2_type =
+    std::array<uint32_t, 64>;
+  _sensor2_type sensor2;
 
   // setters for named parameter idiom
   Type & set__distance(
@@ -105,6 +121,24 @@ struct PalletInfo_
     const int32_t & _arg)
   {
     this->error = _arg;
+    return *this;
+  }
+  Type & set__status(
+    const int32_t & _arg)
+  {
+    this->status = _arg;
+    return *this;
+  }
+  Type & set__sensor1(
+    const std::array<uint32_t, 64> & _arg)
+  {
+    this->sensor1 = _arg;
+    return *this;
+  }
+  Type & set__sensor2(
+    const std::array<uint32_t, 64> & _arg)
+  {
+    this->sensor2 = _arg;
     return *this;
   }
 
@@ -163,6 +197,15 @@ struct PalletInfo_
       return false;
     }
     if (this->error != other.error) {
+      return false;
+    }
+    if (this->status != other.status) {
+      return false;
+    }
+    if (this->sensor1 != other.sensor1) {
+      return false;
+    }
+    if (this->sensor2 != other.sensor2) {
       return false;
     }
     return true;

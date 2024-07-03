@@ -31,7 +31,7 @@ void PalletInfo__rosidl_typesupport_introspection_c__PalletInfo_fini_function(vo
   base_interfaces_demo__msg__PalletInfo__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember PalletInfo__rosidl_typesupport_introspection_c__PalletInfo_message_member_array[5] = {
+static rosidl_typesupport_introspection_c__MessageMember PalletInfo__rosidl_typesupport_introspection_c__PalletInfo_message_member_array[8] = {
   {
     "distance",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -106,13 +106,58 @@ static rosidl_typesupport_introspection_c__MessageMember PalletInfo__rosidl_type
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__PalletInfo, status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "sensor1",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    64,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__PalletInfo, sensor1),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "sensor2",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    64,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__PalletInfo, sensor2),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers PalletInfo__rosidl_typesupport_introspection_c__PalletInfo_message_members = {
   "base_interfaces_demo__msg",  // message namespace
   "PalletInfo",  // message name
-  5,  // number of fields
+  8,  // number of fields
   sizeof(base_interfaces_demo__msg__PalletInfo),
   PalletInfo__rosidl_typesupport_introspection_c__PalletInfo_message_member_array,  // message members
   PalletInfo__rosidl_typesupport_introspection_c__PalletInfo_init_function,  // function to initialize message memory (memory has to be allocated)

@@ -116,22 +116,6 @@ base_interfaces_demo/msg/detail/pallet_info__type_support.hpp
 
 /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_generator_cpp__visibility_control.hpp
 
-/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp
-BestFit.hpp
-/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp
-opencv2/opencv.hpp
--
-vector
--
-cmath
--
-random
--
-algorithm
--
-numeric
--
-
 /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp
 opencv2/opencv.hpp
 -
@@ -168,12 +152,38 @@ base_interfaces_demo/msg/location.hpp
 base_interfaces_demo/msg/pallet_info.hpp
 -
 
-/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp
-vl53l8_oper.hpp
-/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.hpp
-chrono
+/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp
+iostream
+-
+string
+-
+sys/types.h
+-
+sys/stat.h
+-
+fcntl.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+time.h
 -
 iostream
+-
+termios.h
+-
+unistd.h
+-
+errno.h
+-
+sys/select.h
+-
+sys/time.h
+-
+mutex
 -
 thread
 -
@@ -203,6 +213,8 @@ mutex
 -
 chrono
 -
+serial_port_comm.hpp
+/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp
 
 /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp
 builtin_interfaces/msg/detail/duration__struct.hpp

@@ -4,8 +4,8 @@
 class BestFit {
 public:
     static double check(const cv::Mat &matrix);
-    static void binarizeMatrix(cv::Mat& matrix, double threshold);
-    static std::pair<double, double> analyze(const cv::Mat &A, double threshold);
+    static void binarizeMatrix(cv::Mat& matrix, int threshold);
+    static std::pair<double, double> analyze(const cv::Mat &A, int threshold);
 private:
     static std::pair<std::vector<double>, std::vector<int>> fitLineRANSAC(const std::vector<cv::Point> &points);
 };

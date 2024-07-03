@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package/CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package/CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.cpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package/CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.o"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package/CMakeFiles/pallet_detect_node.dir/src/vl53l8_oper.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

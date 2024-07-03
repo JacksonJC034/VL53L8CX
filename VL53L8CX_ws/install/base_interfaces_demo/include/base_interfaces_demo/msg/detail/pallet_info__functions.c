@@ -22,6 +22,9 @@ base_interfaces_demo__msg__PalletInfo__init(base_interfaces_demo__msg__PalletInf
   // drift
   // angle
   // error
+  // status
+  // sensor1
+  // sensor2
   return true;
 }
 
@@ -36,6 +39,9 @@ base_interfaces_demo__msg__PalletInfo__fini(base_interfaces_demo__msg__PalletInf
   // drift
   // angle
   // error
+  // status
+  // sensor1
+  // sensor2
 }
 
 bool
@@ -64,6 +70,22 @@ base_interfaces_demo__msg__PalletInfo__are_equal(const base_interfaces_demo__msg
   if (lhs->error != rhs->error) {
     return false;
   }
+  // status
+  if (lhs->status != rhs->status) {
+    return false;
+  }
+  // sensor1
+  for (size_t i = 0; i < 64; ++i) {
+    if (lhs->sensor1[i] != rhs->sensor1[i]) {
+      return false;
+    }
+  }
+  // sensor2
+  for (size_t i = 0; i < 64; ++i) {
+    if (lhs->sensor2[i] != rhs->sensor2[i]) {
+      return false;
+    }
+  }
   return true;
 }
 
@@ -85,6 +107,16 @@ base_interfaces_demo__msg__PalletInfo__copy(
   output->angle = input->angle;
   // error
   output->error = input->error;
+  // status
+  output->status = input->status;
+  // sensor1
+  for (size_t i = 0; i < 64; ++i) {
+    output->sensor1[i] = input->sensor1[i];
+  }
+  // sensor2
+  for (size_t i = 0; i < 64; ++i) {
+    output->sensor2[i] = input->sensor2[i];
+  }
   return true;
 }
 

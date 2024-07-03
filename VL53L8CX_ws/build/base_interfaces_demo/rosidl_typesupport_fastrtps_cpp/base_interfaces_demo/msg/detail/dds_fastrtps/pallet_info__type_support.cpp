@@ -42,6 +42,16 @@ cdr_serialize(
   cdr << ros_message.angle;
   // Member: error
   cdr << ros_message.error;
+  // Member: status
+  cdr << ros_message.status;
+  // Member: sensor1
+  {
+    cdr << ros_message.sensor1;
+  }
+  // Member: sensor2
+  {
+    cdr << ros_message.sensor2;
+  }
   return true;
 }
 
@@ -65,6 +75,19 @@ cdr_deserialize(
 
   // Member: error
   cdr >> ros_message.error;
+
+  // Member: status
+  cdr >> ros_message.status;
+
+  // Member: sensor1
+  {
+    cdr >> ros_message.sensor1;
+  }
+
+  // Member: sensor2
+  {
+    cdr >> ros_message.sensor2;
+  }
 
   return true;
 }
@@ -110,6 +133,26 @@ get_serialized_size(
   {
     size_t item_size = sizeof(ros_message.error);
     current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: status
+  {
+    size_t item_size = sizeof(ros_message.status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: sensor1
+  {
+    size_t array_size = 64;
+    size_t item_size = sizeof(ros_message.sensor1[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: sensor2
+  {
+    size_t array_size = 64;
+    size_t item_size = sizeof(ros_message.sensor2[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -166,6 +209,30 @@ max_serialized_size_PalletInfo(
   // Member: error
   {
     size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: status
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: sensor1
+  {
+    size_t array_size = 64;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: sensor2
+  {
+    size_t array_size = 64;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));

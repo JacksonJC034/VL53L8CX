@@ -15,20 +15,20 @@
 using base_interfaces_demo::msg::Location;
 using base_interfaces_demo::msg::PalletInfo;
 
-const int DISTANCE1 = 22; //40
-const int DISTANCE2 = 41; //60
-const int DISTANCE3 = 58; //70
+const int DISTANCE1 = 40; //22
+const int DISTANCE2 = 60; //41
+const int DISTANCE3 = 80; //58
 
 class PalletDetectNode : public rclcpp::Node {
 public:
     PalletDetectNode()
-    : Node("pallet_detect_node"), vl53l8Sensor("/dev/ttyUSB0")
+    : Node("pallet_detect_node"), vl53l8Sensor("/dev/ttyS7")
     {
-        publisher_ = this->create_publisher<PalletInfo>("pallet_detect", 10);
+        publisher_ = this->create_publisher<PalletInfo>("/rbot/pallet_detect_topic", 10);
         subscriber_ = this->create_subscription<Location>(
             "/rbot/location_topic", 10, std::bind(&PalletDetectNode::location_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(
-            std::chrono::milliseconds(300), std::bind(&PalletDetectNode::timer_callback, this));
+            std::chrono::milliseconds(100), std::bind(&PalletDetectNode::timer_callback, this));
 
         // Initialize pallet_info_ parameters to 0
         pallet_info_.distance = 0;
@@ -36,6 +36,8 @@ public:
         pallet_info_.drift = 0.0;
         pallet_info_.angle = 0.0;
         pallet_info_.error = 0;
+        pallet_info_.sensor1.fill(0);
+        pallet_info_.sensor2.fill(0);
     }
 
 private:
@@ -53,12 +55,24 @@ private:
         if (data_ready1 && data_ready2) {
             cv::Mat A(8, 8, CV_16UC1);
             cv::Mat C(8, 8, CV_16UC1);
+            cv::Mat A_32(8, 8, CV_32FC1);
+            cv::Mat C_32(8, 8, CV_32FC1);
             arrangeTOFData(raw_data1, A);
             arrangeTOFData(raw_data2, C);
             cv::flip(C, C, 0);
 
+            A.convertTo(A, CV_32F);
+            C.convertTo(C, CV_32F);
+            cv::bilateralFilter(A, A_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+            cv::bilateralFilter(C, C_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+            A_32.convertTo(A, CV_16U);
+            C_32.convertTo(C, CV_16U);
+
             std::cout << "A" << A << std::endl;
             std::cout << "C" << C << std::endl;
+
+            populatePalletInfoMatrix(pallet_info_.sensor1, A);
+            populatePalletInfoMatrix(pallet_info_.sensor2, C);
 
             int distance_threshold = 0;
             if (location_.state_motor_or_son == 2) {
@@ -74,6 +88,8 @@ private:
             } else if (location_.state_motor_or_son == 0) {
                 pallet_info_.error = -1;
             }
+
+            std::cout << "threshold: " << distance_threshold << std::endl;
 
             if (distance_threshold != 0) {
                 BestFit::binarizeMatrix(A, distance_threshold);
@@ -107,6 +123,14 @@ private:
             int col = i / 8;
             uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
             matrix.at<uint16_t>(row, col) = value;
+        }
+    }
+
+    void populatePalletInfoMatrix(std::array<uint32_t, 64>& sensor_array, const cv::Mat& matrix) {
+        for (int i = 0; i < 64; ++i) {
+            int row = i % 8;
+            int col = i / 8;
+            sensor_array[i] = matrix.at<uint16_t>(row, col);
         }
     }
 

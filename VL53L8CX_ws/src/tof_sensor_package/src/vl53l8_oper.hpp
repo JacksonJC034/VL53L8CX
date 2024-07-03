@@ -10,8 +10,10 @@
 #include <functional>
 #include <mutex>
 #include <chrono>
+#include "serial_port_comm.hpp"
 
-class CVl53l8Oper {
+class CVl53l8Oper: public SerialPortComm
+{
 private:
     int serialportFd;
     uint8_t serial_send_buffer[20];
@@ -33,4 +35,5 @@ public:
     CVl53l8Oper(std::string portName = "");
     ~CVl53l8Oper();
     int getTof(uint16_t *buf, int id);
+    virtual int parseAcceptData(void* para = nullptr);
 };

@@ -130,6 +130,7 @@ CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_generator_cpp__visibility_control.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp
+CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__builder.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp
@@ -548,6 +549,10 @@ CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /usr/local/inclu
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /usr/local/include/opencv4/opencv2/video/tracking.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /usr/local/include/opencv4/opencv2/videoio.hpp
 
+CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.cpp
+CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp
+
+CMakeFiles/pallet_detect_node.dir/src/vl53l8_oper.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp
 CMakeFiles/pallet_detect_node.dir/src/vl53l8_oper.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp
 CMakeFiles/pallet_detect_node.dir/src/vl53l8_oper.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.hpp
 

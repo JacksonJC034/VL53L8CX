@@ -74,6 +74,25 @@ static bool _PalletInfo__cdr_serialize(
     cdr << ros_message->error;
   }
 
+  // Field name: status
+  {
+    cdr << ros_message->status;
+  }
+
+  // Field name: sensor1
+  {
+    size_t size = 64;
+    auto array_ptr = ros_message->sensor1;
+    cdr.serializeArray(array_ptr, size);
+  }
+
+  // Field name: sensor2
+  {
+    size_t size = 64;
+    auto array_ptr = ros_message->sensor2;
+    cdr.serializeArray(array_ptr, size);
+  }
+
   return true;
 }
 
@@ -109,6 +128,25 @@ static bool _PalletInfo__cdr_deserialize(
   // Field name: error
   {
     cdr >> ros_message->error;
+  }
+
+  // Field name: status
+  {
+    cdr >> ros_message->status;
+  }
+
+  // Field name: sensor1
+  {
+    size_t size = 64;
+    auto array_ptr = ros_message->sensor1;
+    cdr.deserializeArray(array_ptr, size);
+  }
+
+  // Field name: sensor2
+  {
+    size_t size = 64;
+    auto array_ptr = ros_message->sensor2;
+    cdr.deserializeArray(array_ptr, size);
   }
 
   return true;
@@ -156,6 +194,30 @@ size_t get_serialized_size_base_interfaces_demo__msg__PalletInfo(
   {
     size_t item_size = sizeof(ros_message->error);
     current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name status
+  {
+    size_t item_size = sizeof(ros_message->status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name sensor1
+  {
+    size_t array_size = 64;
+    auto array_ptr = ros_message->sensor1;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name sensor2
+  {
+    size_t array_size = 64;
+    auto array_ptr = ros_message->sensor2;
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
 
@@ -213,6 +275,27 @@ size_t max_serialized_size_base_interfaces_demo__msg__PalletInfo(
   // member: error
   {
     size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: status
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: sensor1
+  {
+    size_t array_size = 64;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: sensor2
+  {
+    size_t array_size = 64;
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
