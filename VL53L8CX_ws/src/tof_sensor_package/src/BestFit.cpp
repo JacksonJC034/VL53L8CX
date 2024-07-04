@@ -32,7 +32,7 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     cv::Mat A_src;
     A.convertTo(A_src, CV_32F);
     cv::bilateralFilter(A_src, A_filtered, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-    A_filtered.convertTo(A_filtered, CV_16UC1);
+    A_filtered.convertTo(A_filtered, CV_32FC1);
     
     binarizeMatrix(A_filtered, threshold);
 

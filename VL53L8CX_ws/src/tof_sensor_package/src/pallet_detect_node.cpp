@@ -15,9 +15,9 @@
 using base_interfaces_demo::msg::Location;
 using base_interfaces_demo::msg::PalletInfo;
 
-const int DISTANCE1 = 40; //22
-const int DISTANCE2 = 60; //41
-const int DISTANCE3 = 80; //58
+const int DISTANCE1 = 100; //52
+const int DISTANCE2 = 120; //71
+const int DISTANCE3 = 150; //88
 
 class PalletDetectNode : public rclcpp::Node {
 public:
@@ -61,12 +61,12 @@ private:
             arrangeTOFData(raw_data2, C);
             cv::flip(C, C, 0);
 
-            A.convertTo(A, CV_32F);
-            C.convertTo(C, CV_32F);
+            A.convertTo(A, CV_32FC1);
+            C.convertTo(C, CV_32FC1);
             cv::bilateralFilter(A, A_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
             cv::bilateralFilter(C, C_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            A_32.convertTo(A, CV_16U);
-            C_32.convertTo(C, CV_16U);
+            A_32.convertTo(A, CV_16UC1);
+            C_32.convertTo(C, CV_16UC1);
 
             std::cout << "A" << A << std::endl;
             std::cout << "C" << C << std::endl;
