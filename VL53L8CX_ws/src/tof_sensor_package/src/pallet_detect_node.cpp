@@ -15,9 +15,9 @@
 using base_interfaces_demo::msg::Location;
 using base_interfaces_demo::msg::PalletInfo;
 
-const int DISTANCE1 = 100; //52
-const int DISTANCE2 = 120; //71
-const int DISTANCE3 = 150; //88
+const int DISTANCE1 = 80; //52
+const int DISTANCE2 = 100; //71
+const int DISTANCE3 = 115; //88
 
 class PalletDetectNode : public rclcpp::Node {
 public:
@@ -70,7 +70,8 @@ private:
 
             std::cout << "A" << A << std::endl;
             std::cout << "C" << C << std::endl;
-
+            cv::imwrite("/result/A.png", A);
+            cv::imwrite("/result/C.png", C);
             populatePalletInfoMatrix(pallet_info_.sensor1, A);
             populatePalletInfoMatrix(pallet_info_.sensor2, C);
 
@@ -103,6 +104,11 @@ private:
 
                 if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
                     auto [angle, drift] = BestFit::analyze(A, distance_threshold);
+                    angle = angle/1000.0;
+                    drift = drift/1000.0;
+                    angle = 0.0;
+                    drift = 0.0;
+                    std::cout << "Result: " << angle << ", " << drift << std::endl;
                     pallet_info_.angle = angle;
                     pallet_info_.drift = drift;
                     pallet_info_.error = 0;
@@ -138,12 +144,15 @@ private:
         int count = 0;
         for (int i = 0; i < matrix.rows; ++i) {
             for (int j = 0; j < matrix.cols; ++j) {
-                if (matrix.at<uint16_t>(i, j) < 100) {
+                std::cout << matrix.at<uint16_t>(i, j) <<", ";
+                if (matrix.at<uint16_t>(i, j) == 0) {
                     count++;
                 }
             }
+            std::cout << std::endl;
         }
-        return count >= 62;
+        std::cout << "count: " << count << std::endl;
+        return count >= 32;
     }
 
     CVl53l8Oper vl53l8Sensor;

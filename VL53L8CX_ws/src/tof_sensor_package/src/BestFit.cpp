@@ -19,8 +19,24 @@ double BestFit::check(const cv::Mat &matrix) {
 }
 
 void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
-    cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
+    // matrix.convertTo(matrix, CV_8UC1, 1.0/255);
+    // threshold = int(threshold/255);
+    for (int i = 0; i < matrix.rows; ++i) {
+            for (int j = 0; j < matrix.cols; ++j) {
+
+                if (matrix.at<uint16_t>(i, j) > threshold) {
+                    matrix.at<uint16_t>(i, j) = 1;
+                }
+                else {
+                    matrix.at<uint16_t>(i, j) = 0;
+                }
+            }
+        }
     matrix.convertTo(matrix, CV_8UC1);
+    std::cout << "binarized: " << matrix << std::endl;
+    // cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
+    // std::cout << "Pass" << std::endl;
+    // matrix.convertTo(matrix, CV_8UC1);
 }
 
 std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
@@ -33,15 +49,16 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     A.convertTo(A_src, CV_32F);
     cv::bilateralFilter(A_src, A_filtered, 5, 10.0, 5.0, cv::BORDER_REFLECT);
     
-    A_filtered.convertTo(A_filtered, CV_8UC1, 1.0/255);
-    
     binarizeMatrix(A_filtered, threshold);
 
     std::vector<std::vector<cv::Point>> contours;
-    cv::findContours(A_filtered, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
+
+    // cv::findContours(A_filtered, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
+    
 
     if (contours.empty()) {
-        throw std::runtime_error("No boundary found in the input matrix.");
+        // throw std::runtime_error("No boundary found in the input matrix.");
+        std::cout << "No boundary found in the input matrix" << std::endl;
     }
 
     std::vector<cv::Point> boundaryPoints;
@@ -59,7 +76,8 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     }
 
     if (filteredBoundaryPoints.empty()) {
-        throw std::runtime_error("No significant boundary found in the input matrix.");
+        // throw std::runtime_error("No significant boundary found in the input matrix.");
+        std::cout << "No significant boundary found in the input matrix." << std::endl;
     }
 
     for (auto &point : filteredBoundaryPoints) {
