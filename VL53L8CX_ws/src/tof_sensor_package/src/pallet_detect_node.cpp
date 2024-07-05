@@ -55,23 +55,29 @@ private:
         if (data_ready1 && data_ready2) {
             cv::Mat A(8, 8, CV_16UC1);
             cv::Mat C(8, 8, CV_16UC1);
-            cv::Mat A_32(8, 8, CV_32FC1);
-            cv::Mat C_32(8, 8, CV_32FC1);
+            // cv::Mat A_32(8, 8, CV_32FC1);
+            // cv::Mat C_32(8, 8, CV_32FC1);
+            cv::Mat A_binary(8, 8, CV_8UC1);
+            cv::Mat C_binary(8, 8, CV_8UC1);
             arrangeTOFData(raw_data1, A);
             arrangeTOFData(raw_data2, C);
-            cv::flip(C, C, 0);
+            // cv::flip(C, C, 0);
+            erasenoise(A);
+            erasenoise(C);
 
             A.convertTo(A, CV_32FC1);
             C.convertTo(C, CV_32FC1);
-            cv::bilateralFilter(A, A_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            cv::bilateralFilter(C, C_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            A_32.convertTo(A, CV_16UC1);
-            C_32.convertTo(C, CV_16UC1);
+            cv::bilateralFilter(A, A, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+            cv::bilateralFilter(C, A, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+            A.convertTo(A, CV_16UC1);
+            C.convertTo(C, CV_16UC1);
+            A_binary = A.clone();
+            C_binary = C.clone();
 
             std::cout << "A" << A << std::endl;
             std::cout << "C" << C << std::endl;
-            cv::imwrite("/result/A.png", A);
-            cv::imwrite("/result/C.png", C);
+            // cv::imwrite("/result/A.png", A);
+            // cv::imwrite("/result/C.png", C);
             populatePalletInfoMatrix(pallet_info_.sensor1, A);
             populatePalletInfoMatrix(pallet_info_.sensor2, C);
 
@@ -93,21 +99,28 @@ private:
             std::cout << "threshold: " << distance_threshold << std::endl;
 
             if (distance_threshold != 0) {
-                BestFit::binarizeMatrix(A, distance_threshold);
-                BestFit::binarizeMatrix(C, distance_threshold);
+                BestFit::binarizeMatrix(A_binary, distance_threshold);
+                BestFit::binarizeMatrix(C_binary, distance_threshold);
 
-                if (checkPalletCondition(A) && checkPalletCondition(C)) {
+                if (checkPalletCondition(A_binary) && checkPalletCondition(C_binary)) {
                     pallet_info_.pallet = 1;
                 } else {
                     pallet_info_.pallet = 0;
                 }
 
-                if (BestFit::check(A) == 0.5 && BestFit::check(C) == 0.5) {
-                    auto [angle, drift] = BestFit::analyze(A, distance_threshold);
-                    angle = angle/1000.0;
+                if (BestFit::check(A_binary) == 0.5 && BestFit::check(C_binary) == 0.5) {
+                    auto [angleA, driftA] = BestFit::analyze(A, distance_threshold);
+                    auto [angleC, driftC] = BestFit::analyze(C, distance_threshold);
+                    driftA = driftA * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
+                    driftC = driftC * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
+                    auto drift = (driftA + driftC) / 2;
+                    auto angle = (angleA + angleC) / 2;
+                    if (drift > 80) {
+                        drift = 0.0;
+                    }
                     drift = drift/1000.0;
-                    angle = 0.0;
-                    drift = 0.0;
+                    // angle = 0.0;
+                    // drift = 0.0;
                     std::cout << "Result: " << angle << ", " << drift << std::endl;
                     pallet_info_.angle = angle;
                     pallet_info_.drift = drift;
@@ -120,6 +133,16 @@ private:
             publisher_->publish(pallet_info_);
         } else {
             RCLCPP_WARN(this->get_logger(), "Failed to get TOF data from one or both sensors.");
+        }
+    }
+    
+    void erasenoise(cv::Mat& matrix) {
+        for (int i = 0; i < matrix.rows; ++i) {
+            for (int j = 0; j < matrix.cols; ++j) {
+                if (matrix.at<uint16_t>(i, j) < 20) {
+                    matrix.at<uint16_t>(i, j) = 1000;
+                }
+            }
         }
     }
 

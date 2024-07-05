@@ -46,45 +46,64 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
 
     cv::Mat A_filtered;
     cv::Mat A_src;
+    cv::Mat Canny;
     A.convertTo(A_src, CV_32F);
     cv::bilateralFilter(A_src, A_filtered, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+    for (int i = 0; i < A_filtered.rows; ++i) {
+        for (int j = 0; j < A_filtered.cols; ++j) {
+            if (A_filtered.at<uint16_t>(i, j) > 255) {
+                A_filtered.at<uint16_t>(i, j) = 255;
+            }
+        }
+    }
+    A_filtered.convertTo(A_filtered, CV_8UC1);
     
-    binarizeMatrix(A_filtered, threshold);
+    // binarizeMatrix(A_filtered, threshold);
 
-    std::vector<std::vector<cv::Point>> contours;
+    // std::vector<std::vector<cv::Point>> contours;
 
     // cv::findContours(A_filtered, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
-    
-
-    if (contours.empty()) {
+    cv::Canny(A_filtered, Canny, 150, 200);
+    std::vector<cv::Point> edgePoints;
+    cv::findNonZero(Canny, edgePoints);
+    double centerX = 3.5;
+    double centerY = 3.5;
+    std::vector<cv::Point> robotEdgePoints;
+    for (const auto& point : edgePoints) {
+        double robotX = point.x - centerX;
+        double robotY = centerY - point.y; // flip y-coordinate
+        // std::cout << "(" << robotX << ", " << robotY << ")" << std::endl;
+        robotEdgePoints.emplace_back(robotX, robotY);
+    }
+    // if (contours.empty()) {
         // throw std::runtime_error("No boundary found in the input matrix.");
-        std::cout << "No boundary found in the input matrix" << std::endl;
-    }
+    //     std::cout << "No boundary found in the input matrix" << std::endl;
+    // }
 
-    std::vector<cv::Point> boundaryPoints;
-    for (const auto &contour : contours) {
-        if (contour.size() > 5) {
-            boundaryPoints.insert(boundaryPoints.end(), contour.begin(), contour.end());
-        }
-    }
+    // std::vector<cv::Point> boundaryPoints;
+    // for (const auto &contour : contours) {
+    //     if (contour.size() > 5) {
+    //         boundaryPoints.insert(boundaryPoints.end(), contour.begin(), contour.end());
+    //     }
+    // }
 
-    std::vector<cv::Point> filteredBoundaryPoints;
-    for (const auto &point : boundaryPoints) {
-        if (point.x > 0 && point.x < 7 && point.y > 0 && point.y < 7) {
-            filteredBoundaryPoints.push_back(point);
-        }
-    }
+    // std::vector<cv::Point> filteredBoundaryPoints;
+    // for (const auto &point : boundaryPoints) {
+    //     if (point.x > 0 && point.x < 7 && point.y > 0 && point.y < 7) {
+    //         filteredBoundaryPoints.push_back(point);
+    //     }
+    // }
 
-    if (filteredBoundaryPoints.empty()) {
+    if (robotEdgePoints.size() < 4) {
         // throw std::runtime_error("No significant boundary found in the input matrix.");
         std::cout << "No significant boundary found in the input matrix." << std::endl;
     }
 
-    for (auto &point : filteredBoundaryPoints) {
-        point = cv::Point(point.y, A.rows - point.x - 1);
-    }
+    // for (auto &point : robotEdgePoints) {
+    //     point = cv::Point(point.y, A.rows - point.x - 1);
+    // }
 
-    auto [coefficients, inliers] = fitLineRANSAC(filteredBoundaryPoints);
+    auto [coefficients, inliers] = fitLineRANSAC(robotEdgePoints);
 
     double slope = coefficients[0];
     double intercept = coefficients[1];
