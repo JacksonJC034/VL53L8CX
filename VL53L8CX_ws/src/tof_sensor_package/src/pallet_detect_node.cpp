@@ -55,8 +55,8 @@ private:
         if (data_ready1 && data_ready2) {
             cv::Mat A(8, 8, CV_16UC1);
             cv::Mat C(8, 8, CV_16UC1);
-            // cv::Mat A_32(8, 8, CV_32FC1);
-            // cv::Mat C_32(8, 8, CV_32FC1);
+            cv::Mat A_32(8, 8, CV_32FC1);
+            cv::Mat C_32(8, 8, CV_32FC1);
             cv::Mat A_binary(8, 8, CV_8UC1);
             cv::Mat C_binary(8, 8, CV_8UC1);
             arrangeTOFData(raw_data1, A);
@@ -67,10 +67,10 @@ private:
 
             A.convertTo(A, CV_32FC1);
             C.convertTo(C, CV_32FC1);
-            cv::bilateralFilter(A, A, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            cv::bilateralFilter(C, A, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            A.convertTo(A, CV_16UC1);
-            C.convertTo(C, CV_16UC1);
+            cv::bilateralFilter(A, A_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+            cv::bilateralFilter(C, C_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+            A_32.convertTo(A, CV_16UC1);
+            C_32.convertTo(C, CV_16UC1);
             A_binary = A.clone();
             C_binary = C.clone();
 

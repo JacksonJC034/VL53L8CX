@@ -47,7 +47,7 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     cv::Mat A_filtered;
     cv::Mat A_src;
     cv::Mat Canny;
-    A.convertTo(A_src, CV_32F);
+    A.convertTo(A_src, CV_32FC1);
     cv::bilateralFilter(A_src, A_filtered, 5, 10.0, 5.0, cv::BORDER_REFLECT);
     for (int i = 0; i < A_filtered.rows; ++i) {
         for (int j = 0; j < A_filtered.cols; ++j) {
