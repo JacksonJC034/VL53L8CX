@@ -69,8 +69,8 @@ private:
             C.convertTo(C, CV_32FC1);
             cv::bilateralFilter(A, A_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
             cv::bilateralFilter(C, C_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            A_32.convertTo(A, CV_16UC1);
-            C_32.convertTo(C, CV_16UC1);
+            A_32.convertTo(A, CV_8UC1);
+            C_32.convertTo(C, CV_8UC1);
             A_binary = A.clone();
             C_binary = C.clone();
 
@@ -80,6 +80,9 @@ private:
             // cv::imwrite("/result/C.png", C);
             populatePalletInfoMatrix(pallet_info_.sensor1, A);
             populatePalletInfoMatrix(pallet_info_.sensor2, C);
+        
+            location_.state_motor_or_son = 1;
+            location_.state_lift_down_or_up = 2;
 
             int distance_threshold = 0;
             if (location_.state_motor_or_son == 2) {
@@ -113,7 +116,7 @@ private:
                     auto [angleC, driftC] = BestFit::analyze(C, distance_threshold);
                     driftA = driftA * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
                     driftC = driftC * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
-                    auto drift = (driftA + driftC) / 2;
+                    auto drift = (driftA - driftC) / 2;
                     auto angle = (angleA + angleC) / 2;
                     if (drift > 80) {
                         drift = 0.0;

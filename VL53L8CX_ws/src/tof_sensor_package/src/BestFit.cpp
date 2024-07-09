@@ -40,30 +40,29 @@ void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
 }
 
 std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
-    if (A.size() != cv::Size(8, 8) || A.type() != CV_8UC1) {
-        throw std::invalid_argument("Input must be an 8x8 matrix with type CV_8UC1.");
-    }
-
-    cv::Mat A_filtered;
-    cv::Mat A_src;
+    // cv::Mat A_filtered;
+    // cv::Mat A_src;
     cv::Mat Canny;
-    A.convertTo(A_src, CV_32FC1);
-    cv::bilateralFilter(A_src, A_filtered, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-    for (int i = 0; i < A_filtered.rows; ++i) {
-        for (int j = 0; j < A_filtered.cols; ++j) {
-            if (A_filtered.at<uint16_t>(i, j) > 255) {
-                A_filtered.at<uint16_t>(i, j) = 255;
-            }
-        }
-    }
-    A_filtered.convertTo(A_filtered, CV_8UC1);
+    // A.convertTo(A_src, CV_32FC1);
+    // cv::bilateralFilter(A_src, A_filtered, 5, 10.0, 5.0, cv::BORDER_REFLECT);
+    // for (int i = 0; i < A_filtered.rows; ++i) {
+    //     for (int j = 0; j < A_filtered.cols; ++j) {
+    //         if (A_filtered.at<uint16_t>(i, j) > 255) {
+    //             A_filtered.at<uint16_t>(i, j) = 255;
+    //         }
+    //     }
+    // }
+    // A_filtered.convertTo(A_filtered, CV_8UC1);
     
     // binarizeMatrix(A_filtered, threshold);
 
     // std::vector<std::vector<cv::Point>> contours;
 
     // cv::findContours(A_filtered, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
-    cv::Canny(A_filtered, Canny, 150, 200);
+    std::cout << "A: " << std::endl;
+    cv::Canny(A, Canny, 150, 200);
+    std::cout << "Edge: " << Canny << std::endl;
+    cv::imwrite("Edge.png", Canny);
     std::vector<cv::Point> edgePoints;
     cv::findNonZero(Canny, edgePoints);
     double centerX = 3.5;
@@ -72,7 +71,7 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     for (const auto& point : edgePoints) {
         double robotX = point.x - centerX;
         double robotY = centerY - point.y; // flip y-coordinate
-        // std::cout << "(" << robotX << ", " << robotY << ")" << std::endl;
+        std::cout << "(" << robotX << ", " << robotY << ")" << std::endl;
         robotEdgePoints.emplace_back(robotX, robotY);
     }
     // if (contours.empty()) {
