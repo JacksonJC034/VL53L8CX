@@ -63,6 +63,11 @@ CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__struct.hpp
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__traits.hpp
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__type_support.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/hall.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__builder.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__struct.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__traits.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__type_support.hpp
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/rosidl_generator_cpp__visibility_control.hpp
 
 
@@ -87,6 +92,7 @@ rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp: /opt/ros/foxy/share/
 rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp: /opt/ros/foxy/share/rosidl_generator_cpp/resource/srv__type_support.hpp.em
 rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp: rosidl_adapter/base_interfaces_demo/msg/Location.idl
 rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp: rosidl_adapter/base_interfaces_demo/msg/PalletInfo.idl
+rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp: rosidl_adapter/base_interfaces_demo/srv/Hall.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp__arguments.json
 
@@ -117,6 +123,21 @@ rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__traits.hpp: ro
 rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__type_support.hpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__type_support.hpp
 
+rosidl_generator_cpp/base_interfaces_demo/srv/hall.hpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/srv/hall.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__builder.hpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__builder.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__struct.hpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__struct.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__traits.hpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__traits.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__type_support.hpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__type_support.hpp
+
 base_interfaces_demo__cpp: CMakeFiles/base_interfaces_demo__cpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/location__builder.hpp
@@ -128,6 +149,11 @@ base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__struct.hpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__traits.hpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__type_support.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/hall.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__builder.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__struct.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__traits.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__type_support.hpp
 base_interfaces_demo__cpp: CMakeFiles/base_interfaces_demo__cpp.dir/build.make
 
 .PHONY : base_interfaces_demo__cpp

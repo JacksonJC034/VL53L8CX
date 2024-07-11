@@ -2,3 +2,7 @@ msg/Location.idl
 msg/Location.msg
 msg/PalletInfo.idl
 msg/PalletInfo.msg
+srv/Hall.idl
+srv/Hall.srv
+srv/Hall_Request.msg
+srv/Hall_Response.msg

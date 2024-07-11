@@ -1,0 +1,23 @@
+{
+  "package_name": "base_interfaces_demo",
+  "output_dir": "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_typesupport_fastrtps_c/base_interfaces_demo",
+  "template_dir": "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource",
+  "idl_tuples": [
+    "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:msg/Location.idl",
+    "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:msg/PalletInfo.idl",
+    "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:srv/Hall.idl"
+  ],
+  "target_dependencies": [
+    "/opt/ros/foxy/lib/rosidl_typesupport_fastrtps_c/rosidl_typesupport_fastrtps_c",
+    "/opt/ros/foxy/lib/python3.8/site-packages/rosidl_typesupport_fastrtps_c/__init__.py",
+    "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/idl__rosidl_typesupport_fastrtps_c.h.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/idl__type_support_c.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/msg__rosidl_typesupport_fastrtps_c.h.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/msg__type_support_c.cpp.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
+    "/opt/ros/foxy/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
+    "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/Location.idl",
+    "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/PalletInfo.idl",
+    "/home/cjs/VL53L8CX/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/srv/Hall.idl"
+  ]
+}

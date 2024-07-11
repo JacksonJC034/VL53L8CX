@@ -12,8 +12,11 @@
 #include <algorithm>
 #include <base_interfaces_demo/msg/location.hpp>
 #include <base_interfaces_demo/msg/pallet_info.hpp>
+#include <base_interfaces_demo/srv/hall.hpp>
+
 using base_interfaces_demo::msg::Location;
 using base_interfaces_demo::msg::PalletInfo;
+using base_interfaces_demo::srv::Hall;
 
 const int DISTANCE1 = 80; //52
 const int DISTANCE2 = 100; //71
@@ -25,10 +28,12 @@ public:
     : Node("pallet_detect_node"), vl53l8Sensor("/dev/ttyS7")
     {
         publisher_ = this->create_publisher<PalletInfo>("/rbot/pallet_detect_topic", 10);
-        subscriber_ = this->create_subscription<Location>(
+        location_subscriber_ = this->create_subscription<Location>(
             "/rbot/location_topic", 10, std::bind(&PalletDetectNode::location_callback, this, std::placeholders::_1));
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100), std::bind(&PalletDetectNode::timer_callback, this));
+        service_ = this->create_service<Hall>(
+            "/rbot/hall_server", std::bind(&PalletDetectNode::handle_service, this, std::placeholders::_1, std::placeholders::_2));
 
         // Initialize pallet_info_ parameters to 0
         pallet_info_.distance = 0;
@@ -38,6 +43,10 @@ public:
         pallet_info_.error = 0;
         pallet_info_.sensor1.fill(0);
         pallet_info_.sensor2.fill(0);
+
+        // Initialize calibration offsets
+        drift_offset_ = 0.0;
+        angle_offset_ = 0.0;
     }
 
 private:
@@ -121,9 +130,10 @@ private:
                     if (drift > 80) {
                         drift = 0.0;
                     }
-                    drift = drift/1000.0;
-                    // angle = 0.0;
-                    // drift = 0.0;
+                    drift = drift / 1000.0;
+                    // Apply calibration offsets
+                    drift -= drift_offset_;
+                    angle -= angle_offset_;
                     std::cout << "Result: " << angle << ", " << drift << std::endl;
                     pallet_info_.angle = angle;
                     pallet_info_.drift = drift;
@@ -169,8 +179,8 @@ private:
     bool checkPalletCondition(const cv::Mat& matrix) {
         int count = 0;
         for (int i = 0; i < matrix.rows; ++i) {
-            for (int j = 0; j < matrix.cols; ++j) {
-                std::cout << matrix.at<uint16_t>(i, j) <<", ";
+            for (int j = i; j < matrix.cols; ++j) {
+                std::cout << matrix.at<uint16_t>(i, j) << ", ";
                 if (matrix.at<uint16_t>(i, j) == 0) {
                     count++;
                 }
@@ -181,12 +191,28 @@ private:
         return count >= 32;
     }
 
+    void handle_service(const std::shared_ptr<Hall::Request> request, std::shared_ptr<Hall::Response> response) {
+        if (request->cmd == 233) {
+            drift_offset_ = pallet_info_.drift;
+            angle_offset_ = pallet_info_.angle;
+            response->para = drift_offset_;
+            response->para2 = angle_offset_;
+            response->ret = 1;
+            RCLCPP_INFO(this->get_logger(), "Service request received: cmd = %d, Drift Offset: %.2f, Angle Offset: %.2f", request->cmd, response->para, response->para2);
+        } else {
+            response->ret = 0;
+        }
+    }
+
     CVl53l8Oper vl53l8Sensor;
     rclcpp::TimerBase::SharedPtr timer_;
     rclcpp::Publisher<PalletInfo>::SharedPtr publisher_;
-    rclcpp::Subscription<Location>::SharedPtr subscriber_;
+    rclcpp::Subscription<Location>::SharedPtr location_subscriber_;
+    rclcpp::Service<Hall>::SharedPtr service_;
     Location location_;
     PalletInfo pallet_info_;
+    double drift_offset_;
+    double angle_offset_;
 };
 
 int main(int argc, char *argv[]) {

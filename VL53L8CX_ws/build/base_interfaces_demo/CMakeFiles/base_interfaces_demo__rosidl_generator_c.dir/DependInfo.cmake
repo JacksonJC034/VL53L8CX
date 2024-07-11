@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c.o"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c.o"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -33,6 +34,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__struct.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__type_support.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/pallet_info.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__struct.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__type_support.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/hall.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/location.h"
   )
 
 

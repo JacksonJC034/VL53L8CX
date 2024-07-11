@@ -58,9 +58,12 @@ base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_p
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_c.c
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_location.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_pallet_info.py
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_hall.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/__init__.py
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/__init__.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_location_s.c
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_pallet_info_s.c
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_hall_s.c
 
 
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/rosidl_generator_py/rosidl_generator_py
@@ -78,6 +81,7 @@ rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_types
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/msg/Location.idl
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/msg/PalletInfo.idl
+rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/srv/Hall.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/base_interfaces_demo__py && /usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
@@ -93,8 +97,14 @@ rosidl_generator_py/base_interfaces_demo/msg/_location.py: rosidl_generator_py/b
 rosidl_generator_py/base_interfaces_demo/msg/_pallet_info.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/msg/_pallet_info.py
 
+rosidl_generator_py/base_interfaces_demo/srv/_hall.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_hall.py
+
 rosidl_generator_py/base_interfaces_demo/msg/__init__.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/msg/__init__.py
+
+rosidl_generator_py/base_interfaces_demo/srv/__init__.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/__init__.py
 
 rosidl_generator_py/base_interfaces_demo/msg/_location_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/msg/_location_s.c
@@ -102,15 +112,21 @@ rosidl_generator_py/base_interfaces_demo/msg/_location_s.c: rosidl_generator_py/
 rosidl_generator_py/base_interfaces_demo/msg/_pallet_info_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/msg/_pallet_info_s.c
 
+rosidl_generator_py/base_interfaces_demo/srv/_hall_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_hall_s.c
+
 base_interfaces_demo__py: base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_introspection_c.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_c.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_location.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_pallet_info.py
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_hall.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/__init__.py
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/__init__.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_location_s.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_pallet_info_s.c
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_hall_s.c
 base_interfaces_demo__py: base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py.dir/build.make
 
 .PHONY : base_interfaces_demo__py

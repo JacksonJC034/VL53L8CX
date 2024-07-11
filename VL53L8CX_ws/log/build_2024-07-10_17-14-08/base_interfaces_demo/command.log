@@ -1,0 +1,2 @@
+Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4
+Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4

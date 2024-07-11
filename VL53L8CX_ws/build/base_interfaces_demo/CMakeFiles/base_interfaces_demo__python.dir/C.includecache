@@ -38,6 +38,20 @@ rosidl_runtime_c/primitives_sequence.h
 rosidl_runtime_c/primitives_sequence_functions.h
 /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/msg/rosidl_runtime_c/primitives_sequence_functions.h
 
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/srv/_hall_s.c
+Python.h
+-
+stdbool.h
+-
+numpy/ndarrayobject.h
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/srv/numpy/ndarrayobject.h
+rosidl_runtime_c/visibility_control.h
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/srv/rosidl_runtime_c/visibility_control.h
+base_interfaces_demo/srv/detail/hall__struct.h
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/srv/base_interfaces_demo/srv/detail/hall__struct.h
+base_interfaces_demo/srv/detail/hall__functions.h
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/srv/base_interfaces_demo/srv/detail/hall__functions.h
+
 /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
 stdbool.h
 -
@@ -671,4 +685,24 @@ stdint.h
 -
 
 rosidl_generator_c/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/base_interfaces_demo/srv/detail/rosidl_runtime_c/visibility_control.h
+base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/base_interfaces_demo/srv/detail/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+base_interfaces_demo/srv/detail/hall__struct.h
+rosidl_generator_c/base_interfaces_demo/srv/detail/base_interfaces_demo/srv/detail/hall__struct.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
 

@@ -92,23 +92,24 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     //         filteredBoundaryPoints.push_back(point);
     //     }
     // }
+    double angle = 0.0;
+    double intercept = 0.0;
 
     if (robotEdgePoints.size() < 4) {
         // throw std::runtime_error("No significant boundary found in the input matrix.");
         std::cout << "No significant boundary found in the input matrix." << std::endl;
     }
+    else {
+        auto [coefficients, inliers] = fitLineRANSAC(robotEdgePoints);
+        double slope = coefficients[0];
+        intercept = coefficients[1];
+        double theta = atan(slope);
+        angle = theta * 180.0 / M_PI;
+    }
 
     // for (auto &point : robotEdgePoints) {
     //     point = cv::Point(point.y, A.rows - point.x - 1);
     // }
-
-    auto [coefficients, inliers] = fitLineRANSAC(robotEdgePoints);
-
-    double slope = coefficients[0];
-    double intercept = coefficients[1];
-
-    double theta = atan(slope);
-    double angle = theta * 180.0 / M_PI;
 
     return {angle, intercept};
 }

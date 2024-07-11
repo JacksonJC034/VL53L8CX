@@ -34,6 +34,20 @@ string.h
 rcutils/allocator.h
 /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/detail/rcutils/allocator.h
 
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c
+base_interfaces_demo/srv/detail/hall__functions.h
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/base_interfaces_demo/srv/detail/hall__functions.h
+assert.h
+-
+stdbool.h
+-
+stdlib.h
+-
+string.h
+-
+rcutils/allocator.h
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/rcutils/allocator.h
+
 /opt/ros/foxy/include/rcutils/allocator.h
 stdbool.h
 -
@@ -117,4 +131,24 @@ stdint.h
 -
 
 rosidl_generator_c/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.h
+stdbool.h
+-
+stdlib.h
+-
+rosidl_runtime_c/visibility_control.h
+rosidl_generator_c/base_interfaces_demo/srv/detail/rosidl_runtime_c/visibility_control.h
+base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+rosidl_generator_c/base_interfaces_demo/srv/detail/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+base_interfaces_demo/srv/detail/hall__struct.h
+rosidl_generator_c/base_interfaces_demo/srv/detail/base_interfaces_demo/srv/detail/hall__struct.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__struct.h
+stdbool.h
+-
+stddef.h
+-
+stdint.h
+-
 

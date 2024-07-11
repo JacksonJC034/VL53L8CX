@@ -72,6 +72,7 @@ rosidl_generator_c/base_interfaces_demo/msg/location.h: /opt/ros/foxy/share/rosi
 rosidl_generator_c/base_interfaces_demo/msg/location.h: /opt/ros/foxy/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/base_interfaces_demo/msg/location.h: rosidl_adapter/base_interfaces_demo/msg/Location.idl
 rosidl_generator_c/base_interfaces_demo/msg/location.h: rosidl_adapter/base_interfaces_demo/msg/PalletInfo.idl
+rosidl_generator_c/base_interfaces_demo/msg/location.h: rosidl_adapter/base_interfaces_demo/srv/Hall.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3 /opt/ros/foxy/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c__arguments.json
 
@@ -96,11 +97,26 @@ rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__struct.h: rosidl
 rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__type_support.h: rosidl_generator_c/base_interfaces_demo/msg/location.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__type_support.h
 
+rosidl_generator_c/base_interfaces_demo/srv/hall.h: rosidl_generator_c/base_interfaces_demo/msg/location.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/srv/hall.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.h: rosidl_generator_c/base_interfaces_demo/msg/location.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__struct.h: rosidl_generator_c/base_interfaces_demo/msg/location.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/srv/detail/hall__struct.h
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__type_support.h: rosidl_generator_c/base_interfaces_demo/msg/location.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/srv/detail/hall__type_support.h
+
 rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c: rosidl_generator_c/base_interfaces_demo/msg/location.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c
 
 rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c: rosidl_generator_c/base_interfaces_demo/msg/location.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c
+
+rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c: rosidl_generator_c/base_interfaces_demo/msg/location.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c
 
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c.o: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/flags.make
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c.o: rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c
@@ -128,21 +144,36 @@ CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c -o CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c.s
 
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/flags.make
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o: rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o   -c /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c
+
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c > CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.i
+
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c -o CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.s
+
 # Object files for target base_interfaces_demo__rosidl_generator_c
 base_interfaces_demo__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c.o" \
-"CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c.o"
+"CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c.o" \
+"CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o"
 
 # External object files for target base_interfaces_demo__rosidl_generator_c
 base_interfaces_demo__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libbase_interfaces_demo__rosidl_generator_c.so: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c.o
 libbase_interfaces_demo__rosidl_generator_c.so: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c.o
+libbase_interfaces_demo__rosidl_generator_c.so: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c.o
 libbase_interfaces_demo__rosidl_generator_c.so: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/build.make
 libbase_interfaces_demo__rosidl_generator_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libbase_interfaces_demo__rosidl_generator_c.so: /opt/ros/foxy/lib/librcutils.so
 libbase_interfaces_demo__rosidl_generator_c.so: CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libbase_interfaces_demo__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libbase_interfaces_demo__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -162,8 +193,13 @@ CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.h
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__struct.h
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__type_support.h
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/srv/hall.h
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.h
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/srv/detail/hall__struct.h
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/srv/detail/hall__type_support.h
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/msg/detail/location__functions.c
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/msg/detail/pallet_info__functions.c
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend: rosidl_generator_c/base_interfaces_demo/srv/detail/hall__functions.c
 	cd /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/depend
 

@@ -128,6 +128,11 @@ CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/pallet_info.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_generator_cpp__visibility_control.hpp
+CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__builder.hpp
+CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__struct.hpp
+CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__traits.hpp
+CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__type_support.hpp
+CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/hall.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp
 CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp

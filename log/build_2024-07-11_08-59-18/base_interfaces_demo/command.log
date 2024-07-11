@@ -1,0 +1,4 @@
+Invoking command in '/home/cjs/VL53L8CX/build/base_interfaces_demo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo -DCMAKE_INSTALL_PREFIX=/home/cjs/VL53L8CX/install/base_interfaces_demo
+Invoked command in '/home/cjs/VL53L8CX/build/base_interfaces_demo' returned '0': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo -DCMAKE_INSTALL_PREFIX=/home/cjs/VL53L8CX/install/base_interfaces_demo
+Invoking command in '/home/cjs/VL53L8CX/build/base_interfaces_demo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/build/base_interfaces_demo -- -j4 -l4
+Invoked command in '/home/cjs/VL53L8CX/build/base_interfaces_demo' returned '-2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/build/base_interfaces_demo -- -j4 -l4

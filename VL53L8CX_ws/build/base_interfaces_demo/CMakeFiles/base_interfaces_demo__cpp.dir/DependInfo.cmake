@@ -14,6 +14,11 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__traits.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/detail/pallet_info__type_support.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/pallet_info.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__builder.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__struct.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__traits.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/srv/detail/hall__type_support.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/srv/hall.hpp" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_cpp/base_interfaces_demo/msg/location.hpp"
   )
 
 

@@ -55,6 +55,9 @@ include CMakeFiles/base_interfaces_demo.dir/progress.make
 
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/Location.msg
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/PalletInfo.msg
+CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/Hall.srv
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/Hall_Request.msg
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/Hall_Response.msg
 
 
 base_interfaces_demo: CMakeFiles/base_interfaces_demo

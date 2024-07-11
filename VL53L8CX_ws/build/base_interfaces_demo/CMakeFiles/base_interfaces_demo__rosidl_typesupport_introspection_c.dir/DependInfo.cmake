@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__type_support.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__type_support.c.o"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/pallet_info__type_support.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/pallet_info__type_support.c.o"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__type_support.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__type_support.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
@@ -28,6 +29,8 @@ set(CMAKE_MULTIPLE_OUTPUT_PAIRS
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__type_support.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_c.h"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/pallet_info__rosidl_typesupport_introspection_c.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_c.h"
   "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/pallet_info__type_support.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_c.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__rosidl_typesupport_introspection_c.h" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_c.h"
+  "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__type_support.c" "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_c.h"
   )
 
 
