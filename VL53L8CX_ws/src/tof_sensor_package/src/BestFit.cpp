@@ -23,7 +23,6 @@ void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
     // threshold = int(threshold/255);
     for (int i = 0; i < matrix.rows; ++i) {
             for (int j = 0; j < matrix.cols; ++j) {
-
                 if (matrix.at<uint16_t>(i, j) > threshold) {
                     matrix.at<uint16_t>(i, j) = 1;
                 }

@@ -89,9 +89,6 @@ private:
             // cv::imwrite("/result/C.png", C);
             populatePalletInfoMatrix(pallet_info_.sensor1, A);
             populatePalletInfoMatrix(pallet_info_.sensor2, C);
-        
-            location_.state_motor_or_son = 1;
-            location_.state_lift_down_or_up = 2;
 
             int distance_threshold = 0;
             if (location_.state_motor_or_son == 2) {
@@ -142,7 +139,7 @@ private:
                     pallet_info_.error = 1;
                 }
             }
-
+            
             publisher_->publish(pallet_info_);
         } else {
             RCLCPP_WARN(this->get_logger(), "Failed to get TOF data from one or both sensors.");
