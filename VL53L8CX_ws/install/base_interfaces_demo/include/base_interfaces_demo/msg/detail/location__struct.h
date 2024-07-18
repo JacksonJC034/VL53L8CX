@@ -22,7 +22,7 @@ typedef struct base_interfaces_demo__msg__Location
 {
   double x;
   double y;
-  int32_t error;
+  int64_t error;
   int32_t status;
   double distance;
   int32_t hall_location;
@@ -31,6 +31,9 @@ typedef struct base_interfaces_demo__msg__Location
   int32_t lift_horseshoe_en;
   int32_t state_motor_or_son;
   int32_t state_lift_down_or_up;
+  int32_t hall_rfid_en;
+  double distancex;
+  double distancey;
 } base_interfaces_demo__msg__Location;
 
 // Struct for a sequence of base_interfaces_demo__msg__Location.

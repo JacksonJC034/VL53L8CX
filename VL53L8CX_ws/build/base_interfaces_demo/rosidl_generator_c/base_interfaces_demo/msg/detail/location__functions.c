@@ -28,6 +28,9 @@ base_interfaces_demo__msg__Location__init(base_interfaces_demo__msg__Location * 
   // lift_horseshoe_en
   // state_motor_or_son
   // state_lift_down_or_up
+  // hall_rfid_en
+  // distancex
+  // distancey
   return true;
 }
 
@@ -48,6 +51,9 @@ base_interfaces_demo__msg__Location__fini(base_interfaces_demo__msg__Location * 
   // lift_horseshoe_en
   // state_motor_or_son
   // state_lift_down_or_up
+  // hall_rfid_en
+  // distancex
+  // distancey
 }
 
 bool
@@ -100,6 +106,18 @@ base_interfaces_demo__msg__Location__are_equal(const base_interfaces_demo__msg__
   if (lhs->state_lift_down_or_up != rhs->state_lift_down_or_up) {
     return false;
   }
+  // hall_rfid_en
+  if (lhs->hall_rfid_en != rhs->hall_rfid_en) {
+    return false;
+  }
+  // distancex
+  if (lhs->distancex != rhs->distancex) {
+    return false;
+  }
+  // distancey
+  if (lhs->distancey != rhs->distancey) {
+    return false;
+  }
   return true;
 }
 
@@ -133,6 +151,12 @@ base_interfaces_demo__msg__Location__copy(
   output->state_motor_or_son = input->state_motor_or_son;
   // state_lift_down_or_up
   output->state_lift_down_or_up = input->state_lift_down_or_up;
+  // hall_rfid_en
+  output->hall_rfid_en = input->hall_rfid_en;
+  // distancex
+  output->distancex = input->distancex;
+  // distancey
+  output->distancey = input->distancey;
   return true;
 }
 

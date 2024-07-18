@@ -1,0 +1,28 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from base_interfaces_demo/action/Reverse.action
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module action {
+    struct Reverse_Goal {
+      @verbatim (language="comment", text=
+        "目标位置")
+      float goal_location;
+
+      @verbatim (language="comment", text=
+        "类型，是手动还是自动")
+      int32 type;
+    };
+    struct Reverse_Result {
+      @verbatim (language="comment", text=
+        "最终位置")
+      float final_location;
+    };
+    struct Reverse_Feedback {
+      @verbatim (language="comment", text=
+        "实时位置")
+      float current_location;
+    };
+  };
+};

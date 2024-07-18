@@ -1,0 +1,4 @@
+int32 lift_location
+int32 lift_base_location
+int64 error
+int32 status

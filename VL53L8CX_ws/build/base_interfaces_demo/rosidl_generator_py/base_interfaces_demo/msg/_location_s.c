@@ -74,7 +74,7 @@ bool base_interfaces_demo__msg__location__convert_from_py(PyObject * _pymsg, voi
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->error = (int32_t)PyLong_AsLong(field);
+    ros_message->error = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
   {  // status
@@ -149,6 +149,33 @@ bool base_interfaces_demo__msg__location__convert_from_py(PyObject * _pymsg, voi
     ros_message->state_lift_down_or_up = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // hall_rfid_en
+    PyObject * field = PyObject_GetAttrString(_pymsg, "hall_rfid_en");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->hall_rfid_en = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // distancex
+    PyObject * field = PyObject_GetAttrString(_pymsg, "distancex");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->distancex = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // distancey
+    PyObject * field = PyObject_GetAttrString(_pymsg, "distancey");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->distancey = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -195,7 +222,7 @@ PyObject * base_interfaces_demo__msg__location__convert_to_py(void * raw_ros_mes
   }
   {  // error
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->error);
+    field = PyLong_FromLongLong(ros_message->error);
     {
       int rc = PyObject_SetAttrString(_pymessage, "error", field);
       Py_DECREF(field);
@@ -286,6 +313,39 @@ PyObject * base_interfaces_demo__msg__location__convert_to_py(void * raw_ros_mes
     field = PyLong_FromLong(ros_message->state_lift_down_or_up);
     {
       int rc = PyObject_SetAttrString(_pymessage, "state_lift_down_or_up", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // hall_rfid_en
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->hall_rfid_en);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "hall_rfid_en", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // distancex
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->distancex);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "distancex", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // distancey
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->distancey);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "distancey", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

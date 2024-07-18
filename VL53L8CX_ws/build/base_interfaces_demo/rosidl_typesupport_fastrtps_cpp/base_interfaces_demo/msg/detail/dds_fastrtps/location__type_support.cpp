@@ -54,6 +54,12 @@ cdr_serialize(
   cdr << ros_message.state_motor_or_son;
   // Member: state_lift_down_or_up
   cdr << ros_message.state_lift_down_or_up;
+  // Member: hall_rfid_en
+  cdr << ros_message.hall_rfid_en;
+  // Member: distancex
+  cdr << ros_message.distancex;
+  // Member: distancey
+  cdr << ros_message.distancey;
   return true;
 }
 
@@ -95,6 +101,15 @@ cdr_deserialize(
 
   // Member: state_lift_down_or_up
   cdr >> ros_message.state_lift_down_or_up;
+
+  // Member: hall_rfid_en
+  cdr >> ros_message.hall_rfid_en;
+
+  // Member: distancex
+  cdr >> ros_message.distancex;
+
+  // Member: distancey
+  cdr >> ros_message.distancey;
 
   return true;
 }
@@ -178,6 +193,24 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // Member: hall_rfid_en
+  {
+    size_t item_size = sizeof(ros_message.hall_rfid_en);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: distancex
+  {
+    size_t item_size = sizeof(ros_message.distancex);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: distancey
+  {
+    size_t item_size = sizeof(ros_message.distancey);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -217,8 +250,8 @@ max_serialized_size_Location(
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: status
@@ -283,6 +316,30 @@ max_serialized_size_Location(
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: hall_rfid_en
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: distancex
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: distancey
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

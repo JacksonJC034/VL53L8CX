@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from base_interfaces_demo/srv/PubCode.srv
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module srv {
+    struct PubCode_Request {
+      int32 pub_code;
+    };
+    struct PubCode_Response {
+      int32 calibration;
+
+      double drift;
+
+      double angle;
+    };
+  };
+};

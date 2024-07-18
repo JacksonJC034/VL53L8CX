@@ -1,0 +1,72 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/BmsInfo.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    typedef double double__6[6];
+    typedef uint32 uint32__17[17];
+    struct BmsInfo {
+      uint32 cell_num;
+
+      uint32 run_time;
+
+      uint32 hsoc;
+
+      double voltage;
+
+      uint32 cur_cadc;
+
+      double__6 temp;
+
+      uint32 temp1;
+
+      uint32 temp2;
+
+      uint32 temp3;
+
+      uint32 temp4;
+
+      uint32 temp5;
+
+      uint32 temp6;
+
+      double tmax;
+
+      double tmin;
+
+      uint32 vmax;
+
+      uint32 vmin;
+
+      uint32 vmaxmin_no;
+
+      uint32 rsoc;
+
+      double fcc;
+
+      double rc;
+
+      uint32 cycle_count;
+
+      uint32 protect;
+
+      uint32 alarm;
+
+      uint32 pack_status;
+
+      uint32__17 vcell;
+
+      uint32 vcell1;
+
+      int32 state;
+
+      uint32 soc;
+
+      int32 status;
+
+      int64 error_code;
+    };
+  };
+};

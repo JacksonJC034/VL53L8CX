@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from base_interfaces_demo/srv/Hall.srv
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module srv {
+    struct Hall_Request {
+      int32 cmd;
+    };
+    struct Hall_Response {
+      int32 ret;
+
+      double para;
+
+      double para2;
+    };
+  };
+};

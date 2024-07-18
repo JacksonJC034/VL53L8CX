@@ -1,0 +1,60 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/HallInfo.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    struct HallInfo {
+      int32 uid7;
+
+      int32 uid6;
+
+      int32 uid5;
+
+      int32 uid4;
+
+      int32 uid3;
+
+      int32 uid2;
+
+      int32 uid1;
+
+      int32 uid0;
+
+      double f1;
+
+      double f2;
+
+      double f3;
+
+      double f4;
+
+      double b1;
+
+      double b2;
+
+      double b3;
+
+      double b4;
+
+      double l1;
+
+      double l2;
+
+      double l3;
+
+      double l4;
+
+      double r1;
+
+      double r2;
+
+      double r3;
+
+      double r4;
+
+      int32 state;
+    };
+  };
+};

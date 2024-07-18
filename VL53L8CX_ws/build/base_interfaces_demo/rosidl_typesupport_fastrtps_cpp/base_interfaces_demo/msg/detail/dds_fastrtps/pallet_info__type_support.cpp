@@ -40,8 +40,8 @@ cdr_serialize(
   cdr << ros_message.drift;
   // Member: angle
   cdr << ros_message.angle;
-  // Member: error
-  cdr << ros_message.error;
+  // Member: error_code
+  cdr << ros_message.error_code;
   // Member: status
   cdr << ros_message.status;
   // Member: sensor1
@@ -73,8 +73,8 @@ cdr_deserialize(
   // Member: angle
   cdr >> ros_message.angle;
 
-  // Member: error
-  cdr >> ros_message.error;
+  // Member: error_code
+  cdr >> ros_message.error_code;
 
   // Member: status
   cdr >> ros_message.status;
@@ -129,9 +129,9 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: error
+  // Member: error_code
   {
-    size_t item_size = sizeof(ros_message.error);
+    size_t item_size = sizeof(ros_message.error_code);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -206,7 +206,7 @@ max_serialized_size_PalletInfo(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: error
+  // Member: error_code
   {
     size_t array_size = 1;
 

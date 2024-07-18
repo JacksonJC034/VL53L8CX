@@ -69,9 +69,9 @@ static bool _PalletInfo__cdr_serialize(
     cdr << ros_message->angle;
   }
 
-  // Field name: error
+  // Field name: error_code
   {
-    cdr << ros_message->error;
+    cdr << ros_message->error_code;
   }
 
   // Field name: status
@@ -125,9 +125,9 @@ static bool _PalletInfo__cdr_deserialize(
     cdr >> ros_message->angle;
   }
 
-  // Field name: error
+  // Field name: error_code
   {
-    cdr >> ros_message->error;
+    cdr >> ros_message->error_code;
   }
 
   // Field name: status
@@ -190,9 +190,9 @@ size_t get_serialized_size_base_interfaces_demo__msg__PalletInfo(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name error
+  // field.name error_code
   {
-    size_t item_size = sizeof(ros_message->error);
+    size_t item_size = sizeof(ros_message->error_code);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -272,7 +272,7 @@ size_t max_serialized_size_base_interfaces_demo__msg__PalletInfo(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: error
+  // member: error_code
   {
     size_t array_size = 1;
 

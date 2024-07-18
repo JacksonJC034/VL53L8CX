@@ -104,6 +104,21 @@ static bool _Location__cdr_serialize(
     cdr << ros_message->state_lift_down_or_up;
   }
 
+  // Field name: hall_rfid_en
+  {
+    cdr << ros_message->hall_rfid_en;
+  }
+
+  // Field name: distancex
+  {
+    cdr << ros_message->distancex;
+  }
+
+  // Field name: distancey
+  {
+    cdr << ros_message->distancey;
+  }
+
   return true;
 }
 
@@ -169,6 +184,21 @@ static bool _Location__cdr_deserialize(
   // Field name: state_lift_down_or_up
   {
     cdr >> ros_message->state_lift_down_or_up;
+  }
+
+  // Field name: hall_rfid_en
+  {
+    cdr >> ros_message->hall_rfid_en;
+  }
+
+  // Field name: distancex
+  {
+    cdr >> ros_message->distancex;
+  }
+
+  // Field name: distancey
+  {
+    cdr >> ros_message->distancey;
   }
 
   return true;
@@ -254,6 +284,24 @@ size_t get_serialized_size_base_interfaces_demo__msg__Location(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name hall_rfid_en
+  {
+    size_t item_size = sizeof(ros_message->hall_rfid_en);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name distancex
+  {
+    size_t item_size = sizeof(ros_message->distancex);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name distancey
+  {
+    size_t item_size = sizeof(ros_message->distancey);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -296,8 +344,8 @@ size_t max_serialized_size_base_interfaces_demo__msg__Location(
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: status
   {
@@ -354,6 +402,27 @@ size_t max_serialized_size_base_interfaces_demo__msg__Location(
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: hall_rfid_en
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: distancex
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: distancey
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

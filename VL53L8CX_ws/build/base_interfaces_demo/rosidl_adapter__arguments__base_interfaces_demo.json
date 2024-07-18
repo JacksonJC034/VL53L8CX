@@ -1,8 +1,33 @@
 {
   "package_name": "base_interfaces_demo",
   "non_idl_tuples": [
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:action/Nav.action",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/Ohom.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/HallInfo.msg",
     "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/Location.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/MotorCmd.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/MotorStatus.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/Manual.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/Test.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:srv/Hall.srv",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/BmsInfo.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/ChargerInfo.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/ManualSeekLabel.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/SeekCmd.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/SeekRet.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/SystemStatus.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:action/Reverse.action",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/LiftInfo.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/ColorInfo.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/FileUpdata.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/ObsLaser.msg",
     "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/PalletInfo.msg",
-    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:srv/Hall.srv"
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/MovecontrolInfo.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/MotionControl.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/RcsInfo.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/LiftControl.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/BtStatus.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/CarStatus.msg",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/HealthNode.msg"
   ]
 }

@@ -64,12 +64,15 @@ class Location(metaclass=Metaclass_Location):
         '_lift_horseshoe_en',
         '_state_motor_or_son',
         '_state_lift_down_or_up',
+        '_hall_rfid_en',
+        '_distancex',
+        '_distancey',
     ]
 
     _fields_and_field_types = {
         'x': 'double',
         'y': 'double',
-        'error': 'int32',
+        'error': 'int64',
         'status': 'int32',
         'distance': 'double',
         'hall_location': 'int32',
@@ -78,12 +81,15 @@ class Location(metaclass=Metaclass_Location):
         'lift_horseshoe_en': 'int32',
         'state_motor_or_son': 'int32',
         'state_lift_down_or_up': 'int32',
+        'hall_rfid_en': 'int32',
+        'distancex': 'double',
+        'distancey': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
@@ -92,6 +98,9 @@ class Location(metaclass=Metaclass_Location):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -109,6 +118,9 @@ class Location(metaclass=Metaclass_Location):
         self.lift_horseshoe_en = kwargs.get('lift_horseshoe_en', int())
         self.state_motor_or_son = kwargs.get('state_motor_or_son', int())
         self.state_lift_down_or_up = kwargs.get('state_lift_down_or_up', int())
+        self.hall_rfid_en = kwargs.get('hall_rfid_en', int())
+        self.distancex = kwargs.get('distancex', float())
+        self.distancey = kwargs.get('distancey', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -161,6 +173,12 @@ class Location(metaclass=Metaclass_Location):
             return False
         if self.state_lift_down_or_up != other.state_lift_down_or_up:
             return False
+        if self.hall_rfid_en != other.hall_rfid_en:
+            return False
+        if self.distancex != other.distancex:
+            return False
+        if self.distancey != other.distancey:
+            return False
         return True
 
     @classmethod
@@ -205,8 +223,8 @@ class Location(metaclass=Metaclass_Location):
             assert \
                 isinstance(value, int), \
                 "The 'error' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'error' field must be an integer in [-2147483648, 2147483647]"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._error = value
 
     @property
@@ -326,3 +344,44 @@ class Location(metaclass=Metaclass_Location):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'state_lift_down_or_up' field must be an integer in [-2147483648, 2147483647]"
         self._state_lift_down_or_up = value
+
+    @property
+    def hall_rfid_en(self):
+        """Message field 'hall_rfid_en'."""
+        return self._hall_rfid_en
+
+    @hall_rfid_en.setter
+    def hall_rfid_en(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'hall_rfid_en' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'hall_rfid_en' field must be an integer in [-2147483648, 2147483647]"
+        self._hall_rfid_en = value
+
+    @property
+    def distancex(self):
+        """Message field 'distancex'."""
+        return self._distancex
+
+    @distancex.setter
+    def distancex(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'distancex' field must be of type 'float'"
+        self._distancex = value
+
+    @property
+    def distancey(self):
+        """Message field 'distancey'."""
+        return self._distancey
+
+    @distancey.setter
+    def distancey(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'distancey' field must be of type 'float'"
+        self._distancey = value

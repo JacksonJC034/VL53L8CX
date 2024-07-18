@@ -1,0 +1,6 @@
+float32 goal_location   #目标位置
+int32 type      #类型，是手动还是自动
+---
+float32 final_location  #最终位置
+---
+float32 current_location #实时位置

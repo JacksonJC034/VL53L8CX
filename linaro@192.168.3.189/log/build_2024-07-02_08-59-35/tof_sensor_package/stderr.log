@@ -1,0 +1,23 @@
+In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.hpp:13[m[K,
+                 from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:1[m[K:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp:23:10:[m[K [01;31m[Kfatal error: [m[Krobox_control_lister.hpp: No such file or directory
+   23 | #include [01;31m[K"robox_control_lister.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:63: CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.hpp:13[m[K,
+                 from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:1[m[K:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp:23:10:[m[K [01;31m[Kfatal error: [m[Krobox_control_lister.hpp: No such file or directory
+   23 | #include [01;31m[K"robox_control_lister.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:76: CMakeFiles/pallet_detect_node.dir/src/vl53l8_oper.cpp.o] Error 1
+In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.cpp:1[m[K:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/serial_port_comm.hpp:23:10:[m[K [01;31m[Kfatal error: [m[Krobox_control_lister.hpp: No such file or directory
+   23 | #include [01;31m[K"robox_control_lister.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:102: CMakeFiles/pallet_detect_node.dir/src/serial_port_comm.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

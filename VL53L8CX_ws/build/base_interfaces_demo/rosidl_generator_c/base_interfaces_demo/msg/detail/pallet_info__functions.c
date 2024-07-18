@@ -21,7 +21,7 @@ base_interfaces_demo__msg__PalletInfo__init(base_interfaces_demo__msg__PalletInf
   // pallet
   // drift
   // angle
-  // error
+  // error_code
   // status
   // sensor1
   // sensor2
@@ -38,7 +38,7 @@ base_interfaces_demo__msg__PalletInfo__fini(base_interfaces_demo__msg__PalletInf
   // pallet
   // drift
   // angle
-  // error
+  // error_code
   // status
   // sensor1
   // sensor2
@@ -66,8 +66,8 @@ base_interfaces_demo__msg__PalletInfo__are_equal(const base_interfaces_demo__msg
   if (lhs->angle != rhs->angle) {
     return false;
   }
-  // error
-  if (lhs->error != rhs->error) {
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
     return false;
   }
   // status
@@ -105,8 +105,8 @@ base_interfaces_demo__msg__PalletInfo__copy(
   output->drift = input->drift;
   // angle
   output->angle = input->angle;
-  // error
-  output->error = input->error;
+  // error_code
+  output->error_code = input->error_code;
   // status
   output->status = input->status;
   // sensor1

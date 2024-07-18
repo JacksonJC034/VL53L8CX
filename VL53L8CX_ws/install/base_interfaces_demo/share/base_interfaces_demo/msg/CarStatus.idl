@@ -1,0 +1,22 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/CarStatus.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    struct CarStatus {
+      @verbatim (language="comment", text=
+        " 单机状态")
+      int32 stand_alone_state;
+
+      @verbatim (language="comment", text=
+        " 任务状态")
+      int32 task_state;
+
+      @verbatim (language="comment", text=
+        " 表示 任务-1 或者 单机-2")
+      int32 status;
+    };
+  };
+};

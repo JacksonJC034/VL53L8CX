@@ -61,7 +61,7 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
         '_pallet',
         '_drift',
         '_angle',
-        '_error',
+        '_error_code',
         '_status',
         '_sensor1',
         '_sensor2',
@@ -72,7 +72,7 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
         'pallet': 'int32',
         'drift': 'double',
         'angle': 'double',
-        'error': 'int32',
+        'error_code': 'int32',
         'status': 'int32',
         'sensor1': 'uint32[64]',
         'sensor2': 'uint32[64]',
@@ -97,7 +97,7 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
         self.pallet = kwargs.get('pallet', int())
         self.drift = kwargs.get('drift', float())
         self.angle = kwargs.get('angle', float())
-        self.error = kwargs.get('error', int())
+        self.error_code = kwargs.get('error_code', int())
         self.status = kwargs.get('status', int())
         if 'sensor1' not in kwargs:
             self.sensor1 = numpy.zeros(64, dtype=numpy.uint32)
@@ -147,7 +147,7 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
             return False
         if self.angle != other.angle:
             return False
-        if self.error != other.error:
+        if self.error_code != other.error_code:
             return False
         if self.status != other.status:
             return False
@@ -219,19 +219,19 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
         self._angle = value
 
     @property
-    def error(self):
-        """Message field 'error'."""
-        return self._error
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
 
-    @error.setter
-    def error(self, value):
+    @error_code.setter
+    def error_code(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'error' field must be of type 'int'"
+                "The 'error_code' field must be of type 'int'"
             assert value >= -2147483648 and value < 2147483648, \
-                "The 'error' field must be an integer in [-2147483648, 2147483647]"
-        self._error = value
+                "The 'error_code' field must be an integer in [-2147483648, 2147483647]"
+        self._error_code = value
 
     @property
     def status(self):

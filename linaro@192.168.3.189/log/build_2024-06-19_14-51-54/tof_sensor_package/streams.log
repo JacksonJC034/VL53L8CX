@@ -1,0 +1,318 @@
+[0.057s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package:/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+[0.226s] [35m[1mScanning dependencies of target pallet_detect_node[0m
+[0.419s] [ 25%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+[4.222s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:42:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[4.223s]    42 |     void location_callback(const [01;31m[Kmsg[m[K::Location::SharedPtr msg) {
+[4.223s]       |                                  [01;31m[K^~~[m[K
+[4.223s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:42:59:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kmsg[m[K’
+[4.224s]    42 |     void location_callback(const msg::Location::SharedPtr [01;31m[Kmsg[m[K) {
+[4.224s]       |                                                           [01;31m[K^~~[m[K
+[4.224s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:42:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[Kmsg[m[K’
+[4.224s]    42 |     void location_callback[34m[K([m[Kconst msg::Location::SharedPtr[01;31m[K [m[K[32m[Kmsg[m[K) {
+[4.224s]       |                           [34m[K~[m[K                              [01;31m[K^[m[K[32m[K~~~[m[K
+[4.224s]       |                                                          [32m[K)[m[K
+[4.224s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:42:49:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[4.225s]    42 |     void location_callback(const msg::Location::[01;31m[KSharedPtr[m[K msg) {
+[4.225s]       |                                                 [01;31m[K^~~~~~~~~[m[K
+[4.225s]       |                                                          [32m[K;[m[K
+[4.231s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:42:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[4.231s]    42 |     void location_callback(const msg::Location::SharedPtr [01;31m[Kmsg[m[K) {
+[4.231s]       |                                                           [01;31m[K^~~[m[K
+[4.234s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[4.235s]   127 |     rclcpp::Publisher<[01;31m[Kmsg[m[K::PalletInfo>::SharedPtr publisher_;
+[4.235s]       |                       [01;31m[K^~~[m[K
+[4.235s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:23:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[4.236s] In file included from [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp:7[m[K,
+[4.236s]                  from [01m[K/opt/ros/foxy/include/rclcpp/duration.hpp:20[m[K,
+[4.236s]                  from [01m[K/opt/ros/foxy/include/rclcpp/qos.hpp:20[m[K,
+[4.236s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+[4.236s]                  from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:34[m[K,
+[4.236s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[4.237s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[4.237s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.237s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.237s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.237s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.238s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.238s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.239s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.239s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.240s] [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[4.242s]    26 | namespace [01;36m[Kmsg[m[K
+[4.242s]       |           [01;36m[K^~~[m[K
+[4.242s] In file included from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:22[m[K,
+[4.242s]                  from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[4.242s]                  from [01m[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[4.243s]                  from [01m[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[4.243s]                  from [01m[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50[m[K,
+[4.243s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25[m[K,
+[4.243s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.243s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.244s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.244s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.244s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.244s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.244s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.245s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.245s] [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[4.246s]    26 | namespace [01;36m[Kmsg[m[K
+[4.246s]       |           [01;36m[K^~~[m[K
+[4.246s] In file included from [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/list_parameters_result.hpp:7[m[K,
+[4.246s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:34[m[K,
+[4.246s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.246s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.247s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.247s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.247s] [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[4.247s]    26 | namespace [01;36m[Kmsg[m[K
+[4.247s]       |           [01;36m[K^~~[m[K
+[4.247s] In file included from [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/multi_array_layout__struct.hpp:19[m[K,
+[4.248s]                  from [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/float64_multi_array__struct.hpp:19[m[K,
+[4.248s]                  from [01m[K/opt/ros/foxy/include/std_msgs/msg/float64_multi_array.hpp:7[m[K,
+[4.248s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:5[m[K:
+[4.248s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/multi_array_dimension__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[4.248s]    26 | namespace [01;36m[Kmsg[m[K
+[4.248s]       |           [01;36m[K^~~[m[K
+[4.248s] In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp:7[m[K,
+[4.249s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:13[m[K:
+[4.257s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbase_interfaces_demo::msg[m[K’
+[4.257s]    26 | namespace [01;36m[Kmsg[m[K
+[4.258s]       |           [01;36m[K^~~[m[K
+[4.258s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:38:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.258s]   127 |     rclcpp::Publisher<msg::PalletInfo[01;31m[K>[m[K::SharedPtr publisher_;
+[4.258s]       |                                      [01;31m[K^[m[K
+[4.258s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:41:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[4.258s]   127 |     rclcpp::Publisher<msg::PalletInfo>::[01;31m[KSharedPtr[m[K publisher_;
+[4.259s]       |                                         [01;31m[K^~~~~~~~~[m[K
+[4.259s]       |                                                  [32m[K;[m[K
+[4.259s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ does not name a type; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[4.259s]   127 |     rclcpp::Publisher<msg::PalletInfo>::SharedPtr [01;31m[Kpublisher_[m[K;
+[4.259s]       |                                                   [01;31m[K^~~~~~~~~~[m[K
+[4.259s]       |                                                   [32m[Krcl_publisher_t[m[K
+[4.260s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[4.260s]   128 |     rclcpp::Subscription<[01;31m[Kmsg[m[K::Location>::SharedPtr subscriber_;
+[4.260s]       |                          [01;31m[K^~~[m[K
+[4.260s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:26:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[4.260s] In file included from [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp:7[m[K,
+[4.260s]                  from [01m[K/opt/ros/foxy/include/rclcpp/duration.hpp:20[m[K,
+[4.261s]                  from [01m[K/opt/ros/foxy/include/rclcpp/qos.hpp:20[m[K,
+[4.261s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+[4.261s]                  from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:34[m[K,
+[4.261s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[4.261s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[4.261s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.262s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.262s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.262s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.262s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.262s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.262s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.262s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.263s] [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[4.263s]    26 | namespace [01;36m[Kmsg[m[K
+[4.263s]       |           [01;36m[K^~~[m[K
+[4.263s] In file included from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:22[m[K,
+[4.263s]                  from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[4.263s]                  from [01m[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.264s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.265s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.269s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.269s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.269s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.269s] [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[4.270s]    26 | namespace [01;36m[Kmsg[m[K
+[4.270s]       |           [01;36m[K^~~[m[K
+[4.270s] In file included from [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/list_parameters_result.hpp:7[m[K,
+[4.270s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:34[m[K,
+[4.270s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.271s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.271s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.271s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.271s] [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[4.271s]    26 | namespace [01;36m[Kmsg[m[K
+[4.271s]       |           [01;36m[K^~~[m[K
+[4.271s] In file included from [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/multi_array_layout__struct.hpp:19[m[K,
+[4.272s]                  from [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/float64_multi_array__struct.hpp:19[m[K,
+[4.272s]                  from [01m[K/opt/ros/foxy/include/std_msgs/msg/float64_multi_array.hpp:7[m[K,
+[4.272s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:5[m[K:
+[4.272s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/multi_array_dimension__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[4.272s]    26 | namespace [01;36m[Kmsg[m[K
+[4.272s]       |           [01;36m[K^~~[m[K
+[4.272s] In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp:7[m[K,
+[4.273s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:13[m[K:
+[4.273s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbase_interfaces_demo::msg[m[K’
+[4.273s]    26 | namespace [01;36m[Kmsg[m[K
+[4.273s]       |           [01;36m[K^~~[m[K
+[4.273s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.274s]   128 |     rclcpp::Subscription<msg::Location[01;31m[K>[m[K::SharedPtr subscriber_;
+[4.274s]       |                                       [01;31m[K^[m[K
+[4.274s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:39:[m[K [01;31m[Kerror: [m[Ktemplate argument 3 is invalid
+[4.274s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:42:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[4.274s]   128 |     rclcpp::Subscription<msg::Location>::[01;31m[KSharedPtr[m[K subscriber_;
+[4.274s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[4.274s]       |                                                   [32m[K;[m[K
+[4.275s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:42:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint PalletDetectNode::SharedPtr[m[K’
+[4.275s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:41:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint PalletDetectNode::SharedPtr[m[K’
+[4.275s]   127 |     rclcpp::Publisher<msg::PalletInfo>::[01;36m[KSharedPtr[m[K publisher_;
+[4.275s]       |                                         [01;36m[K^~~~~~~~~[m[K
+[4.275s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:52:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscriber_[m[K’ does not name a type
+[4.275s]   128 |     rclcpp::Subscription<msg::Location>::SharedPtr [01;31m[Ksubscriber_[m[K;
+[4.275s]       |                                                    [01;31m[K^~~~~~~~~~~[m[K
+[4.276s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:129:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[4.276s]   129 |     [01;31m[Kmsg[m[K::Location location_;
+[4.276s]       |     [01;31m[K^~~[m[K
+[4.276s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:130:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ does not name a type
+[4.276s]   130 |     [01;31m[Kmsg[m[K::PalletInfo pallet_info_;
+[4.276s]       |     [01;31m[K^~~[m[K
+[4.277s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In constructor ‘[01m[KPalletDetectNode::PalletDetectNode()[m[K’:
+[4.281s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:27:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[4.281s]    27 |         [01;31m[Kpublisher_[m[K = this->create_publisher<msg::PalletInfo>("pallet_detect", 10);
+[4.282s]       |         [01;31m[K^~~~~~~~~~[m[K
+[4.282s]       |         [32m[Krcl_publisher_t[m[K
+[4.282s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:27:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[4.282s]    27 |         publisher_ = this->create_publisher<[01;31m[Kmsg[m[K::PalletInfo>("pallet_detect", 10);
+[4.282s]       |                                             [01;31m[K^~~[m[K
+[4.282s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:27:45:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[4.282s] In file included from [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/duration.hpp:7[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/duration.hpp:20[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/qos.hpp:20[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node_interfaces/node_graph_interface.hpp:31[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/client.hpp:34[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/callback_group.hpp:23[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:20[m[K,
+[4.283s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.284s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.284s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.284s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.284s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.284s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.284s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.284s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.285s] [01m[K/opt/ros/foxy/include/builtin_interfaces/msg/detail/duration__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[4.285s]    26 | namespace [01;36m[Kmsg[m[K
+[4.285s]       |           [01;36m[K^~~[m[K
+[4.285s] In file included from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/metrics_message__struct.hpp:22[m[K,
+[4.285s]                  from [01m[K/opt/ros/foxy/include/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[4.286s]                  from [01m[K/opt/ros/foxy/include/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[4.286s]                  from [01m[K/opt/ros/foxy/include/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[4.286s]                  from [01m[K/opt/ros/foxy/include/rclcpp/subscription.hpp:50[m[K,
+[4.286s]                  from [01m[K/opt/ros/foxy/include/rclcpp/any_executable.hpp:25[m[K,
+[4.286s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategy.hpp:24[m[K,
+[4.286s]                  from [01m[K/opt/ros/foxy/include/rclcpp/memory_strategies.hpp:18[m[K,
+[4.287s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor_options.hpp:20[m[K,
+[4.287s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executor.hpp:33[m[K,
+[4.287s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/multi_threaded_executor.hpp:26[m[K,
+[4.287s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:21[m[K,
+[4.287s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.287s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.287s] [01m[K/opt/ros/foxy/include/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[4.288s]    26 | namespace [01;36m[Kmsg[m[K
+[4.288s]       |           [01;36m[K^~~[m[K
+[4.288s] In file included from [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/list_parameters_result.hpp:7[m[K,
+[4.288s]                  from [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:34[m[K,
+[4.288s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.289s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.289s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.289s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.289s] [01m[K/opt/ros/foxy/include/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[4.289s]    26 | namespace [01;36m[Kmsg[m[K
+[4.289s]       |           [01;36m[K^~~[m[K
+[4.290s] In file included from [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/multi_array_layout__struct.hpp:19[m[K,
+[4.290s]                  from [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/float64_multi_array__struct.hpp:19[m[K,
+[4.290s]                  from [01m[K/opt/ros/foxy/include/std_msgs/msg/float64_multi_array.hpp:7[m[K,
+[4.290s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:5[m[K:
+[4.290s] [01m[K/opt/ros/foxy/include/std_msgs/msg/detail/multi_array_dimension__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[4.290s]    26 | namespace [01;36m[Kmsg[m[K
+[4.290s]       |           [01;36m[K^~~[m[K
+[4.291s] In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp:7[m[K,
+[4.291s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:13[m[K:
+[4.291s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__struct.hpp:26:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbase_interfaces_demo::msg[m[K’
+[4.291s]    26 | namespace [01;36m[Kmsg[m[K
+[4.291s]       |           [01;36m[K^~~[m[K
+[4.291s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:27:28:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[4.291s]    27 |         publisher_ = this->[01;31m[Kcreate_publisher<msg::PalletInfo>[m[K("pallet_detect", 10);
+[4.292s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.292s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:27:81:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPalletDetectNode::create_publisher<<expression error> >(const char [14], int)[m[K’
+[4.292s]    27 |         publisher_ = this->create_publisher<msg::PalletInfo>("pallet_detect", 10[01;31m[K)[m[K;
+[4.292s]       |                                                                                 [01;31m[K^[m[K
+[4.292s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.292s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.293s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.293s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.293s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+[4.293s]   184 |   [01;36m[Kcreate_publisher[m[K(
+[4.293s]       |   [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[4.302s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:184:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.302s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:27:81:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[4.302s]    27 |         publisher_ = this->create_publisher<msg::PalletInfo>("pallet_detect", 10[01;31m[K)[m[K;
+[4.302s]       |                                                                                 [01;31m[K^[m[K
+[4.302s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:28:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksubscriber_[m[K’ was not declared in this scope
+[4.303s]    28 |         [01;31m[Ksubscriber_[m[K = this->create_subscription<msg::Location>(
+[4.303s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[4.303s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:28:29:[m[K [01;31m[Kerror: [m[Kparse error in template argument list
+[4.303s]    28 |         subscriber_ = this->[01;31m[Kcreate_subscription<msg::Location>[m[K(
+[4.303s]       |                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.306s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:29:117:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KPalletDetectNode::create_subscription<msg>(const char [21], int, std::_Bind_helper<false, void (PalletDetectNode::*)(...), PalletDetectNode*, const std::_Placeholder<1>&>::type)[m[K’
+[4.306s]    29 |             "/rbot/location_topic", 10, std::bind(&PalletDetectNode::location_callback, this, std::placeholders::_1)[01;31m[K)[m[K;
+[4.306s]       |                                                                                                                     [01;31m[K^[m[K
+[4.306s] In file included from [01m[K/opt/ros/foxy/include/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[4.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/executors.hpp:22[m[K,
+[4.307s]                  from [01m[K/opt/ros/foxy/include/rclcpp/rclcpp.hpp:146[m[K,
+[4.307s]                  from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:4[m[K:
+[4.307s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class CallbackMessageT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<SubscriptionT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[4.307s]   213 |   [01;36m[Kcreate_subscription[m[K(
+[4.307s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[4.307s] [01m[K/opt/ros/foxy/include/rclcpp/node.hpp:213:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[4.328s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:34:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.328s]    34 |         [01;31m[Kpallet_info_[m[K.d = 0;
+[4.328s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[4.333s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[4.333s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:64:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klocation_[m[K’ was not declared in this scope
+[4.333s]    64 |             if ([01;31m[Klocation_[m[K.state_motor_or_son == 2) {
+[4.334s]       |                 [01;31m[K^~~~~~~~~[m[K
+[4.337s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:72:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.338s]    72 |                     [01;31m[Kpallet_info_[m[K.error = -2;
+[4.338s]       |                     [01;31m[K^~~~~~~~~~~~[m[K
+[4.341s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:75:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.341s]    75 |                 [01;31m[Kpallet_info_[m[K.error = -1;
+[4.342s]       |                 [01;31m[K^~~~~~~~~~~~[m[K
+[4.345s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:83:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.346s]    83 |                     [01;31m[Kpallet_info_[m[K.pallet = 1;
+[4.346s]       |                     [01;31m[K^~~~~~~~~~~~[m[K
+[4.351s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:85:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.351s]    85 |                     [01;31m[Kpallet_info_[m[K.pallet = 0;
+[4.352s]       |                     [01;31m[K^~~~~~~~~~~~[m[K
+[4.352s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:89:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[4.352s]    89 |                     auto [01;35m[K[[m[Kangle, drift] = BestFit::analyze(A);
+[4.352s]       |                          [01;35m[K^[m[K
+[4.352s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:89:61:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[KBestFit::analyze(cv::Mat&)[m[K’
+[4.352s]    89 |                     auto [angle, drift] = BestFit::analyze(A[01;31m[K)[m[K;
+[4.353s]       |                                                             [01;31m[K^[m[K
+[4.353s] In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:2[m[K:
+[4.353s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp:8:38:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstatic std::pair<double, double> BestFit::analyze(const cv::Mat&, double)[m[K’
+[4.353s]     8 |     static std::pair<double, double> [01;36m[Kanalyze[m[K(const cv::Mat &A, double threshold);
+[4.353s]       |                                      [01;36m[K^~~~~~~[m[K
+[4.354s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp:8:38:[m[K [01;36m[Knote: [m[K  candidate expects 2 arguments, 1 provided
+[4.356s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:90:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.357s]    90 |                     [01;31m[Kpallet_info_[m[K.angle = angle;
+[4.357s]       |                     [01;31m[K^~~~~~~~~~~~[m[K
+[4.362s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:94:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.362s]    94 |                     [01;31m[Kpallet_info_[m[K.error = 1;
+[4.362s]       |                     [01;31m[K^~~~~~~~~~~~[m[K
+[4.366s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:98:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublisher_[m[K’ was not declared in this scope; did you mean ‘[01m[Krcl_publisher_t[m[K’?
+[4.366s]    98 |             [01;31m[Kpublisher_[m[K->publish(pallet_info_);
+[4.366s]       |             [01;31m[K^~~~~~~~~~[m[K
+[4.367s]       |             [32m[Krcl_publisher_t[m[K
+[4.371s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:98:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kpallet_info_[m[K’ was not declared in this scope
+[4.371s]    98 |             publisher_->publish([01;31m[Kpallet_info_[m[K);
+[4.371s]       |                                 [01;31m[K^~~~~~~~~~~~[m[K
+[5.458s] make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:63: CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o] Error 1
+[5.459s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+[5.459s] make: *** [Makefile:141: all] Error 2
+[5.466s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '2': CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package:/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4

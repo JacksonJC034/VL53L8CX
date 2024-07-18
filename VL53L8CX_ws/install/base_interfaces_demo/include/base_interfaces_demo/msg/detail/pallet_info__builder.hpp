@@ -68,15 +68,15 @@ private:
   ::base_interfaces_demo::msg::PalletInfo msg_;
 };
 
-class Init_PalletInfo_error
+class Init_PalletInfo_error_code
 {
 public:
-  explicit Init_PalletInfo_error(::base_interfaces_demo::msg::PalletInfo & msg)
+  explicit Init_PalletInfo_error_code(::base_interfaces_demo::msg::PalletInfo & msg)
   : msg_(msg)
   {}
-  Init_PalletInfo_status error(::base_interfaces_demo::msg::PalletInfo::_error_type arg)
+  Init_PalletInfo_status error_code(::base_interfaces_demo::msg::PalletInfo::_error_code_type arg)
   {
-    msg_.error = std::move(arg);
+    msg_.error_code = std::move(arg);
     return Init_PalletInfo_status(msg_);
   }
 
@@ -90,10 +90,10 @@ public:
   explicit Init_PalletInfo_angle(::base_interfaces_demo::msg::PalletInfo & msg)
   : msg_(msg)
   {}
-  Init_PalletInfo_error angle(::base_interfaces_demo::msg::PalletInfo::_angle_type arg)
+  Init_PalletInfo_error_code angle(::base_interfaces_demo::msg::PalletInfo::_angle_type arg)
   {
     msg_.angle = std::move(arg);
-    return Init_PalletInfo_error(msg_);
+    return Init_PalletInfo_error_code(msg_);
   }
 
 private:

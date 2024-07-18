@@ -8,25 +8,55 @@ module base_interfaces_demo {
     struct Location {
       double x;
 
+      @verbatim (language="comment", text=
+        "机器人实际位置，xy")
       double y;
 
-      int32 error;
+      @verbatim (language="comment", text=
+        "本节点错误字")
+      int64 error;
 
+      @verbatim (language="comment", text=
+        "本节点状态")
       int32 status;
 
+      @verbatim (language="comment", text=
+        "霍尔定位偏差值")
       double distance;
 
+      @verbatim (language="comment", text=
+        "霍尔定位值")
       int32 hall_location;
 
+      @verbatim (language="comment", text=
+        "标定的子道位置")
       int32 lift_son_loc_cali;
 
+      @verbatim (language="comment", text=
+        "当前实时举升位置")
       int32 lift_current_loc;
 
+      @verbatim (language="comment", text=
+        "是否再马蹄上=0,=1")
       int32 lift_horseshoe_en;
 
+      @verbatim (language="comment", text=
+        "当前的是在子道还是母道，=2母道,=1子道 =0既不在子道也不再母道")
       int32 state_motor_or_son;
 
+      @verbatim (language="comment", text=
+        "当前是在顶升还是下降状态。 =2下降  =1上升 =0 既不在顶升也不在下降")
       int32 state_lift_down_or_up;
+
+      @verbatim (language="comment", text=
+        "霍尔和RFID读到")
+      int32 hall_rfid_en;
+
+      @verbatim (language="comment", text=
+        "霍尔定位偏差值")
+      double distancex;
+
+      double distancey;
     };
   };
 };

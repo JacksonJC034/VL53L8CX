@@ -1,0 +1,12 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/ColorInfo.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    struct ColorInfo {
+      int32 color_type;
+    };
+  };
+};

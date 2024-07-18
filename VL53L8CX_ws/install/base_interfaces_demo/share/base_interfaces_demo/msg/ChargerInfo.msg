@@ -1,0 +1,3 @@
+int32 charger_status
+int32 status
+int64 error_code

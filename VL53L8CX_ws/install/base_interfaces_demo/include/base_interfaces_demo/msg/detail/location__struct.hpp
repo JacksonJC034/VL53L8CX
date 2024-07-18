@@ -39,7 +39,7 @@ struct Location_
     {
       this->x = 0.0;
       this->y = 0.0;
-      this->error = 0l;
+      this->error = 0ll;
       this->status = 0l;
       this->distance = 0.0;
       this->hall_location = 0l;
@@ -48,6 +48,9 @@ struct Location_
       this->lift_horseshoe_en = 0l;
       this->state_motor_or_son = 0l;
       this->state_lift_down_or_up = 0l;
+      this->hall_rfid_en = 0l;
+      this->distancex = 0.0;
+      this->distancey = 0.0;
     }
   }
 
@@ -59,7 +62,7 @@ struct Location_
     {
       this->x = 0.0;
       this->y = 0.0;
-      this->error = 0l;
+      this->error = 0ll;
       this->status = 0l;
       this->distance = 0.0;
       this->hall_location = 0l;
@@ -68,6 +71,9 @@ struct Location_
       this->lift_horseshoe_en = 0l;
       this->state_motor_or_son = 0l;
       this->state_lift_down_or_up = 0l;
+      this->hall_rfid_en = 0l;
+      this->distancex = 0.0;
+      this->distancey = 0.0;
     }
   }
 
@@ -79,7 +85,7 @@ struct Location_
     double;
   _y_type y;
   using _error_type =
-    int32_t;
+    int64_t;
   _error_type error;
   using _status_type =
     int32_t;
@@ -105,6 +111,15 @@ struct Location_
   using _state_lift_down_or_up_type =
     int32_t;
   _state_lift_down_or_up_type state_lift_down_or_up;
+  using _hall_rfid_en_type =
+    int32_t;
+  _hall_rfid_en_type hall_rfid_en;
+  using _distancex_type =
+    double;
+  _distancex_type distancex;
+  using _distancey_type =
+    double;
+  _distancey_type distancey;
 
   // setters for named parameter idiom
   Type & set__x(
@@ -120,7 +135,7 @@ struct Location_
     return *this;
   }
   Type & set__error(
-    const int32_t & _arg)
+    const int64_t & _arg)
   {
     this->error = _arg;
     return *this;
@@ -171,6 +186,24 @@ struct Location_
     const int32_t & _arg)
   {
     this->state_lift_down_or_up = _arg;
+    return *this;
+  }
+  Type & set__hall_rfid_en(
+    const int32_t & _arg)
+  {
+    this->hall_rfid_en = _arg;
+    return *this;
+  }
+  Type & set__distancex(
+    const double & _arg)
+  {
+    this->distancex = _arg;
+    return *this;
+  }
+  Type & set__distancey(
+    const double & _arg)
+  {
+    this->distancey = _arg;
     return *this;
   }
 
@@ -247,6 +280,15 @@ struct Location_
       return false;
     }
     if (this->state_lift_down_or_up != other.state_lift_down_or_up) {
+      return false;
+    }
+    if (this->hall_rfid_en != other.hall_rfid_en) {
+      return false;
+    }
+    if (this->distancex != other.distancex) {
+      return false;
+    }
+    if (this->distancey != other.distancey) {
       return false;
     }
     return true;

@@ -255,6 +255,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/action" TYPE DIRECTORY FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/action/" REGEX "/[^/]*\\.py$")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/msg" TYPE DIRECTORY FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/msg/" REGEX "/[^/]*\\.py$")
 endif()
 
@@ -274,7 +278,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:"
+         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:/opt/ros/foxy/share/action_msgs/cmake/../../../lib:/opt/ros/foxy/share/builtin_interfaces/cmake/../../../lib:/opt/ros/foxy/share/unique_identifier_msgs/cmake/../../../lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so")
@@ -297,7 +301,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:"
+         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:/opt/ros/foxy/share/action_msgs/cmake/../../../lib:/opt/ros/foxy/share/builtin_interfaces/cmake/../../../lib:/opt/ros/foxy/share/unique_identifier_msgs/cmake/../../../lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so")
@@ -320,7 +324,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so"
-         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:"
+         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo:/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:/opt/ros/foxy/share/action_msgs/cmake/../../../lib:/opt/ros/foxy/share/builtin_interfaces/cmake/../../../lib:/opt/ros/foxy/share/unique_identifier_msgs/cmake/../../../lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so")
@@ -343,7 +347,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libbase_interfaces_demo__python.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libbase_interfaces_demo__python.so"
-         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/lib:"
+         OLD_RPATH "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo:/opt/ros/foxy/share/action_msgs/cmake/../../../lib:/opt/ros/foxy/share/builtin_interfaces/cmake/../../../lib:/opt/ros/foxy/share/unique_identifier_msgs/cmake/../../../lib:/opt/ros/foxy/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libbase_interfaces_demo__python.so")
@@ -355,11 +359,35 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/action/Nav.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/Ohom.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/HallInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/Location.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/PalletInfo.idl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/MotorCmd.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/MotorStatus.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/Manual.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/Test.idl")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -367,11 +395,111 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/BmsInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/ChargerInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/ManualSeekLabel.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/SeekCmd.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/SeekRet.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/SystemStatus.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/action/Reverse.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/LiftInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/ColorInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/FileUpdata.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/ObsLaser.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/PalletInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/MovecontrolInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/MotionControl.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/RcsInfo.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/LiftControl.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/BtStatus.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/CarStatus.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/msg/HealthNode.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Nav.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/Ohom.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/HallInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/Location.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/PalletInfo.msg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/MotorCmd.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/MotorStatus.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/Manual.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/Test.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -384,6 +512,82 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/Hall_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/BmsInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/ChargerInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/ManualSeekLabel.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/SeekCmd.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/SeekRet.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/SystemStatus.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Reverse.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/LiftInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/ColorInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/FileUpdata.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/ObsLaser.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/PalletInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/MovecontrolInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/MotionControl.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/RcsInfo.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/LiftControl.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/BtStatus.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/CarStatus.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/HealthNode.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

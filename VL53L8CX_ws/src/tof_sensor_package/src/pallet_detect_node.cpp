@@ -40,7 +40,7 @@ public:
         pallet_info_.pallet = 0;
         pallet_info_.drift = 0.0;
         pallet_info_.angle = 0.0;
-        pallet_info_.error = 0;
+        pallet_info_.error_code = 0;
         pallet_info_.sensor1.fill(0);
         pallet_info_.sensor2.fill(0);
 
@@ -99,10 +99,10 @@ private:
                 } else if (location_.state_lift_down_or_up == 1) {
                     distance_threshold = DISTANCE3;
                 } else if (location_.state_lift_down_or_up == 0) {
-                    pallet_info_.error = -2;
+                    pallet_info_.error_code = -2;
                 }
             } else if (location_.state_motor_or_son == 0) {
-                pallet_info_.error = -1;
+                pallet_info_.error_code = -1;
             }
 
             std::cout << "threshold: " << distance_threshold << std::endl;
@@ -134,9 +134,9 @@ private:
                     std::cout << "Result: " << angle << ", " << drift << std::endl;
                     pallet_info_.angle = angle;
                     pallet_info_.drift = drift;
-                    pallet_info_.error = 0;
+                    pallet_info_.error_code = 0;
                 } else {
-                    pallet_info_.error = 1;
+                    pallet_info_.error_code = 1;
                 }
             }
             
@@ -169,7 +169,7 @@ private:
         for (int i = 0; i < 64; ++i) {
             int row = i % 8;
             int col = i / 8;
-            sensor_array[i] = matrix.at<uint16_t>(row, col);
+            sensor_array[i] = matrix.at<uint8_t>(row, col);
         }
     }
 

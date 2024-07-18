@@ -1,0 +1,10 @@
+float32 goal_x
+float32 goal_y
+float32 goal_theta
+---
+float32 current_x
+float32 current_y
+float32 current_theta
+int32 success #=-1失败，=1成功
+---
+float32 distance

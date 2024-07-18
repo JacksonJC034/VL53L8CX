@@ -1,0 +1,30 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from base_interfaces_demo/action/Nav.action
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module action {
+    struct Nav_Goal {
+      float goal_x;
+
+      float goal_y;
+
+      float goal_theta;
+    };
+    struct Nav_Result {
+      float current_x;
+
+      float current_y;
+
+      float current_theta;
+
+      @verbatim (language="comment", text=
+        "=-1失败，=1成功")
+      int32 success;
+    };
+    struct Nav_Feedback {
+      float distance;
+    };
+  };
+};

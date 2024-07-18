@@ -1,0 +1,18 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/Ohom.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    struct Ohom {
+      @verbatim (language="comment", text=
+        "积分")
+      double mileage;
+
+      @verbatim (language="comment", text=
+        "速度")
+      double speed;
+    };
+  };
+};

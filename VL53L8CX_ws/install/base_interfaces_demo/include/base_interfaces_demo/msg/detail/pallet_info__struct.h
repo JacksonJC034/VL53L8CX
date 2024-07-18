@@ -24,7 +24,7 @@ typedef struct base_interfaces_demo__msg__PalletInfo
   int32_t pallet;
   double drift;
   double angle;
-  int32_t error;
+  int32_t error_code;
   int32_t status;
   uint32_t sensor1[64];
   uint32_t sensor2[64];

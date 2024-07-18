@@ -1,0 +1,29 @@
+[0.059s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4
+[0.137s] CMake Warning (dev) at CMakeLists.txt:23:
+[0.138s]   Syntax Warning in cmake code at column 21
+[0.138s] 
+[0.138s]   Argument not separated from preceding token by whitespace.
+[0.138s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[0.138s] 
+[0.148s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.226s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.621s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.724s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.736s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.994s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.125s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.130s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.389s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.420s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[1.421s]   rosidl_generate_interfaces() the passed file ',' doesn't exist relative to
+[1.421s]   the CMAKE_CURRENT_SOURCE_DIR
+[1.421s]   '/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo'
+[1.422s] Call Stack (most recent call first):
+[1.422s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[1.422s] 
+[1.422s] 
+[1.433s] -- Configuring incomplete, errors occurred!
+[1.434s] See also "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/CMakeOutput.log".
+[1.434s] See also "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/CMakeError.log".
+[1.447s] make: *** [Makefile:222: cmake_check_build_system] Error 1
+[1.452s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4

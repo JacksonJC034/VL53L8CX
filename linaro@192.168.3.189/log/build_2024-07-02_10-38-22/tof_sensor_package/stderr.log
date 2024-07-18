@@ -1,0 +1,30 @@
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:[m[K In member function ‘[01m[Kint CVl53l8Oper::OpenPort(std::string)[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:113:39:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kport[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  113 | int CVl53l8Oper::OpenPort([01;35m[Kstd::string port[m[K) {
+      |                           [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:[m[K In member function ‘[01m[Kvoid CVl53l8Oper::read_vl53l8_thread(int)[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:156:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kfd[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  156 | void CVl53l8Oper::read_vl53l8_thread([01;35m[Kint fd[m[K) {
+      |                                      [01;35m[K~~~~^~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:[m[K In member function ‘[01m[Kint CVl53l8Oper::parse_response(uint8_t*, int, int)[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:224:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kbuf[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 | int CVl53l8Oper::parse_response([01;35m[Kuint8_t *buf[m[K, int len, int id) {
+      |                                 [01;35m[K~~~~~~~~~^~~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:224:51:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klen[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 | int CVl53l8Oper::parse_response(uint8_t *buf, [01;35m[Kint len[m[K, int id) {
+      |                                               [01;35m[K~~~~^~~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:224:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kid[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  224 | int CVl53l8Oper::parse_response(uint8_t *buf, int len, [01;35m[Kint id[m[K) {
+      |                                                        [01;35m[K~~~~^~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:[m[K In member function ‘[01m[Kvirtual int CVl53l8Oper::parseAcceptData(void*)[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:269:40:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpara[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  269 | int CVl53l8Oper::parseAcceptData([01;35m[Kvoid* para[m[K) {
+      |                                  [01;35m[K~~~~~~^~~~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:[m[K In member function ‘[01m[Kint CVl53l8Oper::getTof(uint16_t*, int)[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/vl53l8_oper.cpp:318:62:[m[K [01;35m[Kwarning: [m[Ksuggest parentheses around ‘[01m[K&&[m[K’ within ‘[01m[K||[m[K’ [[01;35m[K-Wparentheses[m[K]
+  318 |     if ((id == SLAVE_ID1 && !data_ready1) || [01;35m[Kid == SLAVE_ID2 && !data_ready2[m[K) {
+      |                                              [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:94:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+   94 |                     auto [01;35m[K[[m[Kangle, drift] = BestFit::analyze(A, distance_threshold);
+      |                          [01;35m[K^[m[K

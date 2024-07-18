@@ -89,13 +89,13 @@ bool base_interfaces_demo__msg__pallet_info__convert_from_py(PyObject * _pymsg, 
     ros_message->angle = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // error
-    PyObject * field = PyObject_GetAttrString(_pymsg, "error");
+  {  // error_code
+    PyObject * field = PyObject_GetAttrString(_pymsg, "error_code");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->error = (int32_t)PyLong_AsLong(field);
+    ros_message->error_code = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // status
@@ -221,11 +221,11 @@ PyObject * base_interfaces_demo__msg__pallet_info__convert_to_py(void * raw_ros_
       }
     }
   }
-  {  // error
+  {  // error_code
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->error);
+    field = PyLong_FromLong(ros_message->error_code);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "error", field);
+      int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

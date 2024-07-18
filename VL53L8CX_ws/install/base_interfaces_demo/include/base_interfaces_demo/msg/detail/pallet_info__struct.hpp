@@ -41,7 +41,7 @@ struct PalletInfo_
       this->pallet = 0l;
       this->drift = 0.0;
       this->angle = 0.0;
-      this->error = 0l;
+      this->error_code = 0l;
       this->status = 0l;
       std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor1.begin(), this->sensor1.end(), 0ul);
       std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor2.begin(), this->sensor2.end(), 0ul);
@@ -59,7 +59,7 @@ struct PalletInfo_
       this->pallet = 0l;
       this->drift = 0.0;
       this->angle = 0.0;
-      this->error = 0l;
+      this->error_code = 0l;
       this->status = 0l;
       std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor1.begin(), this->sensor1.end(), 0ul);
       std::fill<typename std::array<uint32_t, 64>::iterator, uint32_t>(this->sensor2.begin(), this->sensor2.end(), 0ul);
@@ -79,9 +79,9 @@ struct PalletInfo_
   using _angle_type =
     double;
   _angle_type angle;
-  using _error_type =
+  using _error_code_type =
     int32_t;
-  _error_type error;
+  _error_code_type error_code;
   using _status_type =
     int32_t;
   _status_type status;
@@ -117,10 +117,10 @@ struct PalletInfo_
     this->angle = _arg;
     return *this;
   }
-  Type & set__error(
+  Type & set__error_code(
     const int32_t & _arg)
   {
-    this->error = _arg;
+    this->error_code = _arg;
     return *this;
   }
   Type & set__status(
@@ -196,7 +196,7 @@ struct PalletInfo_
     if (this->angle != other.angle) {
       return false;
     }
-    if (this->error != other.error) {
+    if (this->error_code != other.error_code) {
       return false;
     }
     if (this->status != other.status) {

@@ -1,0 +1,39 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/PalletInfo.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    typedef uint32 uint32__64[64];
+    struct PalletInfo {
+      @verbatim (language="comment", text=
+        " mm")
+      int32 distance;
+
+      @verbatim (language="comment", text=
+        " 0: no pallet, 1: pallet")
+      int32 pallet;
+
+      @verbatim (language="comment", text=
+        " degree")
+      double drift;
+
+      @verbatim (language="comment", text=
+        " mm")
+      double angle;
+
+      int32 error;
+
+      int32 status;
+
+      @verbatim (language="comment", text=
+        " right top sensor")
+      uint32__64 sensor1;
+
+      @verbatim (language="comment", text=
+        " left bottom sensor")
+      uint32__64 sensor2;
+    };
+  };
+};

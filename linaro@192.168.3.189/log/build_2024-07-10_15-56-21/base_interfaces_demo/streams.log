@@ -1,0 +1,24 @@
+[0.052s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4
+[0.203s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.272s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.273s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.698s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.872s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.891s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.246s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.416s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.424s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.737s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[1.768s] CMake Error at /opt/ros/foxy/share/rosidl_cmake/cmake/rosidl_generate_interfaces.cmake:93 (message):
+[1.768s]   rosidl_generate_interfaces() the passed file 'srv/PubCode.srv' doesn't
+[1.769s]   exist relative to the CMAKE_CURRENT_SOURCE_DIR
+[1.769s]   '/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo'
+[1.769s] Call Stack (most recent call first):
+[1.770s]   CMakeLists.txt:22 (rosidl_generate_interfaces)
+[1.770s] 
+[1.770s] 
+[1.778s] -- Configuring incomplete, errors occurred!
+[1.778s] See also "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/CMakeOutput.log".
+[1.779s] See also "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/CMakeError.log".
+[1.789s] make: *** [Makefile:1228: cmake_check_build_system] Error 1
+[1.794s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo' returned '2': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4

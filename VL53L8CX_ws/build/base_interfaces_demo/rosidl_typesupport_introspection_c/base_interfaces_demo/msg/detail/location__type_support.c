@@ -31,7 +31,7 @@ void Location__rosidl_typesupport_introspection_c__Location_fini_function(void *
   base_interfaces_demo__msg__Location__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember Location__rosidl_typesupport_introspection_c__Location_message_member_array[11] = {
+static rosidl_typesupport_introspection_c__MessageMember Location__rosidl_typesupport_introspection_c__Location_message_member_array[14] = {
   {
     "x",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
@@ -64,7 +64,7 @@ static rosidl_typesupport_introspection_c__MessageMember Location__rosidl_typesu
   },
   {
     "error",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
@@ -196,13 +196,58 @@ static rosidl_typesupport_introspection_c__MessageMember Location__rosidl_typesu
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "hall_rfid_en",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__Location, hall_rfid_en),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "distancex",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__Location, distancex),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "distancey",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__Location, distancey),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers Location__rosidl_typesupport_introspection_c__Location_message_members = {
   "base_interfaces_demo__msg",  // message namespace
   "Location",  // message name
-  11,  // number of fields
+  14,  // number of fields
   sizeof(base_interfaces_demo__msg__Location),
   Location__rosidl_typesupport_introspection_c__Location_message_member_array,  // message members
   Location__rosidl_typesupport_introspection_c__Location_init_function,  // function to initialize message memory (memory has to be allocated)

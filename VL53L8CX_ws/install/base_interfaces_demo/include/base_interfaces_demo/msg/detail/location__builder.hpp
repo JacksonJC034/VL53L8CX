@@ -20,16 +20,64 @@ namespace msg
 namespace builder
 {
 
+class Init_Location_distancey
+{
+public:
+  explicit Init_Location_distancey(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::msg::Location distancey(::base_interfaces_demo::msg::Location::_distancey_type arg)
+  {
+    msg_.distancey = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
+class Init_Location_distancex
+{
+public:
+  explicit Init_Location_distancex(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  Init_Location_distancey distancex(::base_interfaces_demo::msg::Location::_distancex_type arg)
+  {
+    msg_.distancex = std::move(arg);
+    return Init_Location_distancey(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
+class Init_Location_hall_rfid_en
+{
+public:
+  explicit Init_Location_hall_rfid_en(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  Init_Location_distancex hall_rfid_en(::base_interfaces_demo::msg::Location::_hall_rfid_en_type arg)
+  {
+    msg_.hall_rfid_en = std::move(arg);
+    return Init_Location_distancex(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
 class Init_Location_state_lift_down_or_up
 {
 public:
   explicit Init_Location_state_lift_down_or_up(::base_interfaces_demo::msg::Location & msg)
   : msg_(msg)
   {}
-  ::base_interfaces_demo::msg::Location state_lift_down_or_up(::base_interfaces_demo::msg::Location::_state_lift_down_or_up_type arg)
+  Init_Location_hall_rfid_en state_lift_down_or_up(::base_interfaces_demo::msg::Location::_state_lift_down_or_up_type arg)
   {
     msg_.state_lift_down_or_up = std::move(arg);
-    return std::move(msg_);
+    return Init_Location_hall_rfid_en(msg_);
   }
 
 private:

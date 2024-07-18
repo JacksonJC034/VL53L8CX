@@ -1,0 +1,40 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from base_interfaces_demo/msg/Manual.msg
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module msg {
+    typedef int32 int32__16[16];
+    typedef float float__16[16];
+    struct Manual {
+      @verbatim (language="comment", text=
+        " 命令本身")
+      int32 type;
+
+      @verbatim (language="comment", text=
+        " 加入命令发送方 rcs 遥控器 robox")
+      int32 sender;
+
+      @verbatim (language="comment", text=
+        " 命令相关参数")
+      int32__16 iparameter;
+
+      @verbatim (language="comment", text=
+        " 有几个命令长度")
+      int32 isize;
+
+      @verbatim (language="comment", text=
+        " 命令相关参数")
+      float__16 fparameter;
+
+      @verbatim (language="comment", text=
+        " 有几个命令长度")
+      float fsize;
+
+      @verbatim (language="comment", text=
+        " 成功 失败 发送给主控节点")
+      int32 status;
+    };
+  };
+};
