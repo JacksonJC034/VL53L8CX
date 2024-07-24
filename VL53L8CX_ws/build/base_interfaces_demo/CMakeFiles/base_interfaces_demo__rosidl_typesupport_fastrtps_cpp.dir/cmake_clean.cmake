@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/dds_fastrtps/nav__type_support.cpp.o"
+  "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/dds_fastrtps/pallet__type_support.cpp.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/dds_fastrtps/reverse__type_support.cpp.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/msg/detail/dds_fastrtps/bms_info__type_support.cpp.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/msg/detail/dds_fastrtps/bt_status__type_support.cpp.o"
@@ -30,8 +31,10 @@ file(REMOVE_RECURSE
   "libbase_interfaces_demo__rosidl_typesupport_fastrtps_cpp.pdb"
   "libbase_interfaces_demo__rosidl_typesupport_fastrtps_cpp.so"
   "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/dds_fastrtps/nav__type_support.cpp"
+  "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/dds_fastrtps/pallet__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/dds_fastrtps/reverse__type_support.cpp"
   "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_cpp.hpp"
+  "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/action/detail/reverse__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/msg/detail/bms_info__rosidl_typesupport_fastrtps_cpp.hpp"
   "rosidl_typesupport_fastrtps_cpp/base_interfaces_demo/msg/detail/bt_status__rosidl_typesupport_fastrtps_cpp.hpp"

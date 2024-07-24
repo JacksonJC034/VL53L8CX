@@ -19,6 +19,24 @@ CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_
  rosidl_generator_c/base_interfaces_demo/action/detail/nav__functions.h
  rosidl_generator_c/base_interfaces_demo/action/detail/nav__struct.h
  rosidl_generator_c/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
+CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/action/detail/pallet__functions.c.o
+ /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/action/detail/pallet__functions.c
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__functions.h
+ /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h
+ /opt/ros/foxy/include/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h
+ /opt/ros/foxy/include/rcutils/allocator.h
+ /opt/ros/foxy/include/rcutils/macros.h
+ /opt/ros/foxy/include/rcutils/testing/fault_injection.h
+ /opt/ros/foxy/include/rcutils/types/rcutils_ret.h
+ /opt/ros/foxy/include/rcutils/visibility_control.h
+ /opt/ros/foxy/include/rcutils/visibility_control_macros.h
+ /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
+ /opt/ros/foxy/include/unique_identifier_msgs/msg/detail/uuid__functions.h
+ /opt/ros/foxy/include/unique_identifier_msgs/msg/detail/uuid__struct.h
+ /opt/ros/foxy/include/unique_identifier_msgs/msg/rosidl_generator_c__visibility_control.h
+ rosidl_generator_c/base_interfaces_demo/action/detail/pallet__functions.h
+ rosidl_generator_c/base_interfaces_demo/action/detail/pallet__struct.h
+ rosidl_generator_c/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h
 CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_interfaces_demo/action/detail/reverse__functions.c.o
  /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_c/base_interfaces_demo/action/detail/reverse__functions.c
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__functions.h
@@ -129,9 +147,6 @@ CMakeFiles/base_interfaces_demo__rosidl_generator_c.dir/rosidl_generator_c/base_
  /opt/ros/foxy/include/rcutils/types/rcutils_ret.h
  /opt/ros/foxy/include/rcutils/visibility_control.h
  /opt/ros/foxy/include/rcutils/visibility_control_macros.h
- /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
- /opt/ros/foxy/include/rosidl_runtime_c/string.h
- /opt/ros/foxy/include/rosidl_runtime_c/string_functions.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  rosidl_generator_c/base_interfaces_demo/msg/detail/health_node__functions.h
  rosidl_generator_c/base_interfaces_demo/msg/detail/health_node__struct.h

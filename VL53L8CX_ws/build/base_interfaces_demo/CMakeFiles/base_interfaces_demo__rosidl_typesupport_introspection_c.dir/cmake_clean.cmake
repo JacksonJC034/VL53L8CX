@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c.o"
+  "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/reverse__type_support.c.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/bms_info__type_support.c.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/bt_status__type_support.c.o"
@@ -31,6 +32,8 @@ file(REMOVE_RECURSE
   "libbase_interfaces_demo__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/reverse__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/reverse__type_support.c"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/bms_info__rosidl_typesupport_introspection_c.h"

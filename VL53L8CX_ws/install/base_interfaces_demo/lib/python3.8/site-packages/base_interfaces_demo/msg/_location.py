@@ -55,7 +55,7 @@ class Location(metaclass=Metaclass_Location):
     __slots__ = [
         '_x',
         '_y',
-        '_error',
+        '_error_code',
         '_status',
         '_distance',
         '_hall_location',
@@ -72,7 +72,7 @@ class Location(metaclass=Metaclass_Location):
     _fields_and_field_types = {
         'x': 'double',
         'y': 'double',
-        'error': 'int64',
+        'error_code': 'int64',
         'status': 'int32',
         'distance': 'double',
         'hall_location': 'int32',
@@ -109,7 +109,7 @@ class Location(metaclass=Metaclass_Location):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.x = kwargs.get('x', float())
         self.y = kwargs.get('y', float())
-        self.error = kwargs.get('error', int())
+        self.error_code = kwargs.get('error_code', int())
         self.status = kwargs.get('status', int())
         self.distance = kwargs.get('distance', float())
         self.hall_location = kwargs.get('hall_location', int())
@@ -155,7 +155,7 @@ class Location(metaclass=Metaclass_Location):
             return False
         if self.y != other.y:
             return False
-        if self.error != other.error:
+        if self.error_code != other.error_code:
             return False
         if self.status != other.status:
             return False
@@ -213,19 +213,19 @@ class Location(metaclass=Metaclass_Location):
         self._y = value
 
     @property
-    def error(self):
-        """Message field 'error'."""
-        return self._error
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
 
-    @error.setter
-    def error(self, value):
+    @error_code.setter
+    def error_code(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'error' field must be of type 'int'"
+                "The 'error_code' field must be of type 'int'"
             assert value >= -9223372036854775808 and value < 9223372036854775808, \
-                "The 'error' field must be an integer in [-9223372036854775808, 9223372036854775807]"
-        self._error = value
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._error_code = value
 
     @property
     def status(self):

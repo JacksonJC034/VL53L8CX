@@ -83,6 +83,7 @@ CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfa
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/BtStatus.msg
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/CarStatus.msg
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/HealthNode.msg
+CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Pallet.action
 CMakeFiles/base_interfaces_demo: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/base_interfaces_demo: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 CMakeFiles/base_interfaces_demo: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl

@@ -93,6 +93,7 @@ rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typ
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/base_interfaces_demo/msg/BtStatus.idl
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/base_interfaces_demo/msg/CarStatus.idl
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/base_interfaces_demo/msg/HealthNode.idl
+rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: rosidl_adapter/base_interfaces_demo/action/Pallet.idl
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
@@ -267,6 +268,12 @@ rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__rosid
 
 rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp
+
+rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_fastrtps_c.h: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_fastrtps_c.h
+
+rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp
 
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__type_support_c.cpp.o: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/flags.make
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__type_support_c.cpp
@@ -632,6 +639,19 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesu
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp.s
 
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.o: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/flags.make
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.o: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.o -c /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp > CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.i
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.s
+
 # Object files for target base_interfaces_demo__rosidl_typesupport_fastrtps_c
 base_interfaces_demo__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/nav__type_support_c.cpp.o" \
@@ -661,7 +681,8 @@ base_interfaces_demo__rosidl_typesupport_fastrtps_c_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/lift_control__type_support_c.cpp.o" \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/bt_status__type_support_c.cpp.o" \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/car_status__type_support_c.cpp.o" \
-"CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp.o"
+"CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp.o" \
+"CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.o"
 
 # External object files for target base_interfaces_demo__rosidl_typesupport_fastrtps_c
 base_interfaces_demo__rosidl_typesupport_fastrtps_c_EXTERNAL_OBJECTS =
@@ -694,6 +715,7 @@ libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_inter
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/bt_status__type_support_c.cpp.o
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/car_status__type_support_c.cpp.o
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp.o
+libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp.o
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/build.make
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: /opt/ros/foxy/lib/librosidl_typesupport_fastrtps_c.so
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_fastrtps_c.so
@@ -736,7 +758,7 @@ libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: /usr/lib/x86_64-linux-gnu/libcrypto.so
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: /opt/ros/foxy/lib/libfastcdr.so.1.0.13
 libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking CXX shared library libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking CXX shared library libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -804,6 +826,8 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend: rosid
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/car_status__type_support_c.cpp
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__rosidl_typesupport_fastrtps_c.h
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/base_interfaces_demo/msg/detail/health_node__type_support_c.cpp
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_fastrtps_c.h
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend: rosidl_typesupport_fastrtps_c/base_interfaces_demo/action/detail/pallet__type_support_c.cpp
 	cd /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/base_interfaces_demo__rosidl_typesupport_fastrtps_c.dir/depend
 

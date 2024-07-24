@@ -17,6 +17,10 @@ module base_interfaces_demo {
       int32 mom2;
 
       int32 scout2;
+
+      int64 error_code;
+
+      int32 status;
     };
   };
 };

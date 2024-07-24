@@ -6,18 +6,6 @@
 #include <algorithm>
 #include <numeric>
 
-double BestFit::check(const cv::Mat &matrix) {
-    int nonZeroCount = cv::countNonZero(matrix);
-    int totalCount = matrix.rows * matrix.cols;
-    if (nonZeroCount == totalCount) {
-        return 1.0;
-    } else if (nonZeroCount == 0) {
-        return 0.0;
-    } else {
-        return 0.5;
-    }
-}
-
 void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
     // matrix.convertTo(matrix, CV_8UC1, 1.0/255);
     // threshold = int(threshold/255);
@@ -32,13 +20,12 @@ void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
             }
         }
     matrix.convertTo(matrix, CV_8UC1);
-    std::cout << "binarized: " << matrix << std::endl;
+    // std::cout << "binarized: " << matrix << std::endl;
     // cv::threshold(matrix, matrix, threshold, 1, cv::THRESH_BINARY);
-    // std::cout << "Pass" << std::endl;
-    // matrix.convertTo(matrix, CV_8UC1);
 }
 
 std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
+    A.convertTo(A, CV_8UC1);
     // cv::Mat A_filtered;
     // cv::Mat A_src;
     cv::Mat Canny;
@@ -113,11 +100,11 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     return {angle, intercept};
 }
 
-std::pair<std::vector<double>, std::vector<int>> BestFit::fitLineRANSAC(const std::vector<cv::Point> &points) {
-    const double maxDistance = 1.0;
+std::pair<std::vector<double>, std::vector<cv::Point>> BestFit::fitLineRANSAC(const std::vector<cv::Point> &points) {
+    const double maxDistance = 0.8;
     const int numTrials = 100;
 
-    std::vector<int> bestInliers;
+    std::vector<int> bestInliersIndices;
     std::vector<double> bestCoefficients = {0, 0};
 
     for (int i = 0; i < numTrials; ++i) {
@@ -133,19 +120,47 @@ std::pair<std::vector<double>, std::vector<int>> BestFit::fitLineRANSAC(const st
         double slope = static_cast<double>(p2.y - p1.y) / (p2.x - p1.x);
         double intercept = p1.y - slope * p1.x;
 
-        std::vector<int> inliers;
+        std::vector<int> inliersIndices;
+        
         for (size_t j = 0; j < points.size(); ++j) {
             double distance = std::abs(slope * points[j].x - points[j].y + intercept) / std::sqrt(slope * slope + 1);
             if (distance <= maxDistance) {
-                inliers.push_back(j);
+                inliersIndices.push_back(j);
             }
         }
 
-        if (inliers.size() > bestInliers.size()) {
-            bestInliers = inliers;
+        if (inliersIndices.size() > bestInliersIndices.size()) {
+            bestInliersIndices = inliersIndices;
             bestCoefficients = {slope, intercept};
         }
+    }
+    
+    std::vector<cv::Point> bestInliers;
+    for (int idx : bestInliersIndices) {
+        bestInliers.push_back(points[idx]);
+    }
+
+    if (!bestInliers.empty()) {
+        int n = bestInliers.size();
+        cv::Mat X(n, 2, CV_64F);
+        cv::Mat y(n, 1, CV_64F);
+
+        for (int i = 0; i < n; ++i) {
+            X.at<double>(i, 0) = bestInliers[i].x;
+            X.at<double>(i, 1) = 1.0;
+            y.at<double>(i, 0) = bestInliers[i].y;
+        }
+
+        // Solve for the coefficients using the normal equation
+        cv::Mat XtX = X.t() * X;
+        cv::Mat XtY = X.t() * y;
+        cv::Mat coeffs;
+        cv::solve(XtX, XtY, coeffs, cv::DECOMP_SVD);
+
+        bestCoefficients[0] = coeffs.at<double>(0, 0); // slope
+        bestCoefficients[1] = coeffs.at<double>(1, 0); // intercept
     }
 
     return {bestCoefficients, bestInliers};
 }
+

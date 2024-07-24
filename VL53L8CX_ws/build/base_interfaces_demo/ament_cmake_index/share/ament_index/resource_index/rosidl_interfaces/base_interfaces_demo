@@ -1,5 +1,7 @@
 action/Nav.action
 action/Nav.idl
+action/Pallet.action
+action/Pallet.idl
 action/Reverse.action
 action/Reverse.idl
 msg/BmsInfo.idl

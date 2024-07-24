@@ -38,29 +38,28 @@ struct HealthNode_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->cpu_usage = 0.0;
-      this->memory_usage = 0.0;
       this->disk_usage = 0.0;
-      this->cpu_frequency = 0.0;
-      this->nic_status = "";
+      this->memory_usage = 0.0;
+      this->nic_status = 0.0;
       this->temperature = 0.0;
+      this->cpu_frequency = 0.0;
       std::fill<typename std::array<uint64_t, 12>::iterator, uint64_t>(this->error_array.begin(), this->error_array.end(), 0ull);
       this->error_level = 0;
     }
   }
 
   explicit HealthNode_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
-  : nic_status(_alloc),
-    error_array(_alloc)
+  : error_array(_alloc)
   {
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->cpu_usage = 0.0;
-      this->memory_usage = 0.0;
       this->disk_usage = 0.0;
-      this->cpu_frequency = 0.0;
-      this->nic_status = "";
+      this->memory_usage = 0.0;
+      this->nic_status = 0.0;
       this->temperature = 0.0;
+      this->cpu_frequency = 0.0;
       std::fill<typename std::array<uint64_t, 12>::iterator, uint64_t>(this->error_array.begin(), this->error_array.end(), 0ull);
       this->error_level = 0;
     }
@@ -70,21 +69,21 @@ struct HealthNode_
   using _cpu_usage_type =
     double;
   _cpu_usage_type cpu_usage;
-  using _memory_usage_type =
-    double;
-  _memory_usage_type memory_usage;
   using _disk_usage_type =
     double;
   _disk_usage_type disk_usage;
-  using _cpu_frequency_type =
+  using _memory_usage_type =
     double;
-  _cpu_frequency_type cpu_frequency;
+  _memory_usage_type memory_usage;
   using _nic_status_type =
-    std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other>;
+    double;
   _nic_status_type nic_status;
   using _temperature_type =
     double;
   _temperature_type temperature;
+  using _cpu_frequency_type =
+    double;
+  _cpu_frequency_type cpu_frequency;
   using _error_array_type =
     std::array<uint64_t, 12>;
   _error_array_type error_array;
@@ -99,26 +98,20 @@ struct HealthNode_
     this->cpu_usage = _arg;
     return *this;
   }
-  Type & set__memory_usage(
-    const double & _arg)
-  {
-    this->memory_usage = _arg;
-    return *this;
-  }
   Type & set__disk_usage(
     const double & _arg)
   {
     this->disk_usage = _arg;
     return *this;
   }
-  Type & set__cpu_frequency(
+  Type & set__memory_usage(
     const double & _arg)
   {
-    this->cpu_frequency = _arg;
+    this->memory_usage = _arg;
     return *this;
   }
   Type & set__nic_status(
-    const std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other> & _arg)
+    const double & _arg)
   {
     this->nic_status = _arg;
     return *this;
@@ -127,6 +120,12 @@ struct HealthNode_
     const double & _arg)
   {
     this->temperature = _arg;
+    return *this;
+  }
+  Type & set__cpu_frequency(
+    const double & _arg)
+  {
+    this->cpu_frequency = _arg;
     return *this;
   }
   Type & set__error_array(
@@ -187,19 +186,19 @@ struct HealthNode_
     if (this->cpu_usage != other.cpu_usage) {
       return false;
     }
-    if (this->memory_usage != other.memory_usage) {
-      return false;
-    }
     if (this->disk_usage != other.disk_usage) {
       return false;
     }
-    if (this->cpu_frequency != other.cpu_frequency) {
+    if (this->memory_usage != other.memory_usage) {
       return false;
     }
     if (this->nic_status != other.nic_status) {
       return false;
     }
     if (this->temperature != other.temperature) {
+      return false;
+    }
+    if (this->cpu_frequency != other.cpu_frequency) {
       return false;
     }
     if (this->error_array != other.error_array) {

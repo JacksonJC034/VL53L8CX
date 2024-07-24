@@ -95,7 +95,7 @@ bool base_interfaces_demo__msg__pallet_info__convert_from_py(PyObject * _pymsg, 
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->error_code = (int32_t)PyLong_AsLong(field);
+    ros_message->error_code = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
   {  // status
@@ -223,7 +223,7 @@ PyObject * base_interfaces_demo__msg__pallet_info__convert_to_py(void * raw_ros_
   }
   {  // error_code
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->error_code);
+    field = PyLong_FromLongLong(ros_message->error_code);
     {
       int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
       Py_DECREF(field);

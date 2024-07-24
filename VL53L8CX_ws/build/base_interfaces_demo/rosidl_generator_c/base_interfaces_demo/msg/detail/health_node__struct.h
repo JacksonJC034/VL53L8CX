@@ -17,19 +17,15 @@ extern "C"
 
 // Constants defined in the message
 
-// Include directives for member types
-// Member 'nic_status'
-#include "rosidl_runtime_c/string.h"
-
 // Struct defined in msg/HealthNode in the package base_interfaces_demo.
 typedef struct base_interfaces_demo__msg__HealthNode
 {
   double cpu_usage;
-  double memory_usage;
   double disk_usage;
-  double cpu_frequency;
-  rosidl_runtime_c__String nic_status;
+  double memory_usage;
+  double nic_status;
   double temperature;
+  double cpu_frequency;
   uint64_t error_array[12];
   uint8_t error_level;
 } base_interfaces_demo__msg__HealthNode;

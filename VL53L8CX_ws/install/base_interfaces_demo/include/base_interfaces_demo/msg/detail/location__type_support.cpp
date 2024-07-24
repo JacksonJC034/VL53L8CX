@@ -69,14 +69,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Location_mess
     nullptr  // resize(index) function pointer
   },
   {
-    "error",  // name
+    "error_code",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(base_interfaces_demo::msg::Location, error),  // bytes offset in struct
+    offsetof(base_interfaces_demo::msg::Location, error_code),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

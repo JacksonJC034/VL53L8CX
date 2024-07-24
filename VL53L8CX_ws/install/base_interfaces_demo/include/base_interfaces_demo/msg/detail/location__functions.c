@@ -19,7 +19,7 @@ base_interfaces_demo__msg__Location__init(base_interfaces_demo__msg__Location * 
   }
   // x
   // y
-  // error
+  // error_code
   // status
   // distance
   // hall_location
@@ -42,7 +42,7 @@ base_interfaces_demo__msg__Location__fini(base_interfaces_demo__msg__Location * 
   }
   // x
   // y
-  // error
+  // error_code
   // status
   // distance
   // hall_location
@@ -70,8 +70,8 @@ base_interfaces_demo__msg__Location__are_equal(const base_interfaces_demo__msg__
   if (lhs->y != rhs->y) {
     return false;
   }
-  // error
-  if (lhs->error != rhs->error) {
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
     return false;
   }
   // status
@@ -133,8 +133,8 @@ base_interfaces_demo__msg__Location__copy(
   output->x = input->x;
   // y
   output->y = input->y;
-  // error
-  output->error = input->error;
+  // error_code
+  output->error_code = input->error_code;
   // status
   output->status = input->status;
   // distance

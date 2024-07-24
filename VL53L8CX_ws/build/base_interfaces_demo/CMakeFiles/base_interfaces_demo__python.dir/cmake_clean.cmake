@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_nav_s.c.o"
+  "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o"
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_reverse_s.c.o"
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_bms_info_s.c.o"
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_bt_status_s.c.o"

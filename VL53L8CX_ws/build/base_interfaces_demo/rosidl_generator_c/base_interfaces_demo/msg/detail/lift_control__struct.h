@@ -20,7 +20,7 @@ extern "C"
 // Struct defined in msg/LiftControl in the package base_interfaces_demo.
 typedef struct base_interfaces_demo__msg__LiftControl
 {
-  int32_t error;
+  int64_t error_code;
   int32_t status;
   uint64_t lift_times;
   uint64_t convert_times;

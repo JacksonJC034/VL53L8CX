@@ -68,15 +68,15 @@ private:
   ::base_interfaces_demo::msg::LiftControl msg_;
 };
 
-class Init_LiftControl_error
+class Init_LiftControl_error_code
 {
 public:
-  Init_LiftControl_error()
+  Init_LiftControl_error_code()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_LiftControl_status error(::base_interfaces_demo::msg::LiftControl::_error_type arg)
+  Init_LiftControl_status error_code(::base_interfaces_demo::msg::LiftControl::_error_code_type arg)
   {
-    msg_.error = std::move(arg);
+    msg_.error_code = std::move(arg);
     return Init_LiftControl_status(msg_);
   }
 
@@ -95,7 +95,7 @@ template<>
 inline
 auto build<::base_interfaces_demo::msg::LiftControl>()
 {
-  return base_interfaces_demo::msg::builder::Init_LiftControl_error();
+  return base_interfaces_demo::msg::builder::Init_LiftControl_error_code();
 }
 
 }  // namespace base_interfaces_demo

@@ -36,8 +36,8 @@ cdr_serialize(
   cdr << ros_message.x;
   // Member: y
   cdr << ros_message.y;
-  // Member: error
-  cdr << ros_message.error;
+  // Member: error_code
+  cdr << ros_message.error_code;
   // Member: status
   cdr << ros_message.status;
   // Member: distance
@@ -75,8 +75,8 @@ cdr_deserialize(
   // Member: y
   cdr >> ros_message.y;
 
-  // Member: error
-  cdr >> ros_message.error;
+  // Member: error_code
+  cdr >> ros_message.error_code;
 
   // Member: status
   cdr >> ros_message.status;
@@ -139,9 +139,9 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: error
+  // Member: error_code
   {
-    size_t item_size = sizeof(ros_message.error);
+    size_t item_size = sizeof(ros_message.error_code);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -246,7 +246,7 @@ max_serialized_size_Location(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: error
+  // Member: error_code
   {
     size_t array_size = 1;
 

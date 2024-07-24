@@ -94,7 +94,7 @@ static rosidl_typesupport_introspection_c__MessageMember PalletInfo__rosidl_type
   },
   {
     "error_code",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array

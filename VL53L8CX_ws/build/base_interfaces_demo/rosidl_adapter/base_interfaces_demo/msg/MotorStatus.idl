@@ -29,6 +29,8 @@ module base_interfaces_demo {
       @verbatim (language="comment", text=
         "1表示锁轴，=0表示松轴")
       int32 enable;
+
+      int64 error_code;
     };
   };
 };

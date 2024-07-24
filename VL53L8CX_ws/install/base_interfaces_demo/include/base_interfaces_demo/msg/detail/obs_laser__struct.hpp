@@ -43,6 +43,8 @@ struct ObsLaser_
       this->son2 = 0l;
       this->mom2 = 0l;
       this->scout2 = 0l;
+      this->error_code = 0ll;
+      this->status = 0l;
     }
   }
 
@@ -58,6 +60,8 @@ struct ObsLaser_
       this->son2 = 0l;
       this->mom2 = 0l;
       this->scout2 = 0l;
+      this->error_code = 0ll;
+      this->status = 0l;
     }
   }
 
@@ -80,6 +84,12 @@ struct ObsLaser_
   using _scout2_type =
     int32_t;
   _scout2_type scout2;
+  using _error_code_type =
+    int64_t;
+  _error_code_type error_code;
+  using _status_type =
+    int32_t;
+  _status_type status;
 
   // setters for named parameter idiom
   Type & set__son1(
@@ -116,6 +126,18 @@ struct ObsLaser_
     const int32_t & _arg)
   {
     this->scout2 = _arg;
+    return *this;
+  }
+  Type & set__error_code(
+    const int64_t & _arg)
+  {
+    this->error_code = _arg;
+    return *this;
+  }
+  Type & set__status(
+    const int32_t & _arg)
+  {
+    this->status = _arg;
     return *this;
   }
 
@@ -177,6 +199,12 @@ struct ObsLaser_
       return false;
     }
     if (this->scout2 != other.scout2) {
+      return false;
+    }
+    if (this->error_code != other.error_code) {
+      return false;
+    }
+    if (this->status != other.status) {
       return false;
     }
     return true;

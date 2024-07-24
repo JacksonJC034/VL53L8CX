@@ -193,6 +193,11 @@ CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__struct.hpp
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__traits.hpp
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__type_support.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/pallet.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__builder.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__struct.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__traits.hpp
+CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__type_support.hpp
 CMakeFiles/base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/rosidl_generator_cpp__visibility_control.hpp
 
 
@@ -243,6 +248,7 @@ rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: rosidl_adapter/base_in
 rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: rosidl_adapter/base_interfaces_demo/msg/BtStatus.idl
 rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: rosidl_adapter/base_interfaces_demo/msg/CarStatus.idl
 rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: rosidl_adapter/base_interfaces_demo/msg/HealthNode.idl
+rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: rosidl_adapter/base_interfaces_demo/action/Pallet.idl
 rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
@@ -670,6 +676,21 @@ rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__traits.hpp: ro
 rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__type_support.hpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__type_support.hpp
 
+rosidl_generator_cpp/base_interfaces_demo/action/pallet.hpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/action/pallet.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__builder.hpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__builder.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__struct.hpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__struct.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__traits.hpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__traits.hpp
+
+rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__type_support.hpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__type_support.hpp
+
 base_interfaces_demo__cpp: CMakeFiles/base_interfaces_demo__cpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/nav.hpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/nav__builder.hpp
@@ -811,6 +832,11 @@ base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__struct.hpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__traits.hpp
 base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/msg/detail/health_node__type_support.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/pallet.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__builder.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__struct.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__traits.hpp
+base_interfaces_demo__cpp: rosidl_generator_cpp/base_interfaces_demo/action/detail/pallet__type_support.hpp
 base_interfaces_demo__cpp: CMakeFiles/base_interfaces_demo__cpp.dir/build.make
 
 .PHONY : base_interfaces_demo__cpp

@@ -34,8 +34,6 @@ extern "C"
 {
 #endif
 
-#include "rosidl_runtime_c/string.h"  // nic_status
-#include "rosidl_runtime_c/string_functions.h"  // nic_status
 
 // forward declare type support functions
 
@@ -56,38 +54,29 @@ static bool _HealthNode__cdr_serialize(
     cdr << ros_message->cpu_usage;
   }
 
-  // Field name: memory_usage
-  {
-    cdr << ros_message->memory_usage;
-  }
-
   // Field name: disk_usage
   {
     cdr << ros_message->disk_usage;
   }
 
-  // Field name: cpu_frequency
+  // Field name: memory_usage
   {
-    cdr << ros_message->cpu_frequency;
+    cdr << ros_message->memory_usage;
   }
 
   // Field name: nic_status
   {
-    const rosidl_runtime_c__String * str = &ros_message->nic_status;
-    if (str->capacity == 0 || str->capacity <= str->size) {
-      fprintf(stderr, "string capacity not greater than size\n");
-      return false;
-    }
-    if (str->data[str->size] != '\0') {
-      fprintf(stderr, "string not null-terminated\n");
-      return false;
-    }
-    cdr << str->data;
+    cdr << ros_message->nic_status;
   }
 
   // Field name: temperature
   {
     cdr << ros_message->temperature;
+  }
+
+  // Field name: cpu_frequency
+  {
+    cdr << ros_message->cpu_frequency;
   }
 
   // Field name: error_array
@@ -119,40 +108,29 @@ static bool _HealthNode__cdr_deserialize(
     cdr >> ros_message->cpu_usage;
   }
 
-  // Field name: memory_usage
-  {
-    cdr >> ros_message->memory_usage;
-  }
-
   // Field name: disk_usage
   {
     cdr >> ros_message->disk_usage;
   }
 
-  // Field name: cpu_frequency
+  // Field name: memory_usage
   {
-    cdr >> ros_message->cpu_frequency;
+    cdr >> ros_message->memory_usage;
   }
 
   // Field name: nic_status
   {
-    std::string tmp;
-    cdr >> tmp;
-    if (!ros_message->nic_status.data) {
-      rosidl_runtime_c__String__init(&ros_message->nic_status);
-    }
-    bool succeeded = rosidl_runtime_c__String__assign(
-      &ros_message->nic_status,
-      tmp.c_str());
-    if (!succeeded) {
-      fprintf(stderr, "failed to assign string into field 'nic_status'\n");
-      return false;
-    }
+    cdr >> ros_message->nic_status;
   }
 
   // Field name: temperature
   {
     cdr >> ros_message->temperature;
+  }
+
+  // Field name: cpu_frequency
+  {
+    cdr >> ros_message->cpu_frequency;
   }
 
   // Field name: error_array
@@ -190,31 +168,33 @@ size_t get_serialized_size_base_interfaces_demo__msg__HealthNode(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name memory_usage
-  {
-    size_t item_size = sizeof(ros_message->memory_usage);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name disk_usage
   {
     size_t item_size = sizeof(ros_message->disk_usage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name cpu_frequency
+  // field.name memory_usage
   {
-    size_t item_size = sizeof(ros_message->cpu_frequency);
+    size_t item_size = sizeof(ros_message->memory_usage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // field.name nic_status
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message->nic_status.size + 1);
+  {
+    size_t item_size = sizeof(ros_message->nic_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name temperature
   {
     size_t item_size = sizeof(ros_message->temperature);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name cpu_frequency
+  {
+    size_t item_size = sizeof(ros_message->cpu_frequency);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -264,13 +244,6 @@ size_t max_serialized_size_base_interfaces_demo__msg__HealthNode(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: memory_usage
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
   // member: disk_usage
   {
     size_t array_size = 1;
@@ -278,7 +251,7 @@ size_t max_serialized_size_base_interfaces_demo__msg__HealthNode(
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
-  // member: cpu_frequency
+  // member: memory_usage
   {
     size_t array_size = 1;
 
@@ -289,14 +262,17 @@ size_t max_serialized_size_base_interfaces_demo__msg__HealthNode(
   {
     size_t array_size = 1;
 
-    full_bounded = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: temperature
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: cpu_frequency
   {
     size_t array_size = 1;
 

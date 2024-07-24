@@ -15,7 +15,7 @@ module base_interfaces_demo {
 
       double angle;
 
-      int32 error_code;
+      int64 error_code;
 
       int32 status;
 

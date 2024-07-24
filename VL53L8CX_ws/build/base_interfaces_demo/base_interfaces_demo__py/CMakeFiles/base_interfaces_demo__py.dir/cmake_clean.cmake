@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "../rosidl_generator_py/base_interfaces_demo/action/__init__.py"
   "../rosidl_generator_py/base_interfaces_demo/action/_nav.py"
   "../rosidl_generator_py/base_interfaces_demo/action/_nav_s.c"
+  "../rosidl_generator_py/base_interfaces_demo/action/_pallet.py"
+  "../rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c"
   "../rosidl_generator_py/base_interfaces_demo/action/_reverse.py"
   "../rosidl_generator_py/base_interfaces_demo/action/_reverse_s.c"
   "../rosidl_generator_py/base_interfaces_demo/msg/__init__.py"

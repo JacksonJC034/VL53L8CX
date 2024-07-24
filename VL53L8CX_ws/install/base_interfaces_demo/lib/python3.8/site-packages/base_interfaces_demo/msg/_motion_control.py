@@ -53,13 +53,13 @@ class MotionControl(metaclass=Metaclass_MotionControl):
     """Message class 'MotionControl'."""
 
     __slots__ = [
-        '_error',
+        '_error_code',
         '_status',
         '_total_odom',
     ]
 
     _fields_and_field_types = {
-        'error': 'int32',
+        'error_code': 'int32',
         'status': 'int32',
         'total_odom': 'double',
     }
@@ -74,7 +74,7 @@ class MotionControl(metaclass=Metaclass_MotionControl):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.error = kwargs.get('error', int())
+        self.error_code = kwargs.get('error_code', int())
         self.status = kwargs.get('status', int())
         self.total_odom = kwargs.get('total_odom', float())
 
@@ -107,7 +107,7 @@ class MotionControl(metaclass=Metaclass_MotionControl):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.error != other.error:
+        if self.error_code != other.error_code:
             return False
         if self.status != other.status:
             return False
@@ -121,19 +121,19 @@ class MotionControl(metaclass=Metaclass_MotionControl):
         return copy(cls._fields_and_field_types)
 
     @property
-    def error(self):
-        """Message field 'error'."""
-        return self._error
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
 
-    @error.setter
-    def error(self, value):
+    @error_code.setter
+    def error_code(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'error' field must be of type 'int'"
+                "The 'error_code' field must be of type 'int'"
             assert value >= -2147483648 and value < 2147483648, \
-                "The 'error' field must be an integer in [-2147483648, 2147483647]"
-        self._error = value
+                "The 'error_code' field must be an integer in [-2147483648, 2147483647]"
+        self._error_code = value
 
     @property
     def status(self):

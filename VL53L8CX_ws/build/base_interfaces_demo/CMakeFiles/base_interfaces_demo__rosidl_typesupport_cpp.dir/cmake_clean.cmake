@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/base_interfaces_demo/action/nav__type_support.cpp.o"
+  "CMakeFiles/base_interfaces_demo__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/base_interfaces_demo/action/pallet__type_support.cpp.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/base_interfaces_demo/action/reverse__type_support.cpp.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/base_interfaces_demo/msg/bms_info__type_support.cpp.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/base_interfaces_demo/msg/bt_status__type_support.cpp.o"
@@ -30,6 +31,7 @@ file(REMOVE_RECURSE
   "libbase_interfaces_demo__rosidl_typesupport_cpp.pdb"
   "libbase_interfaces_demo__rosidl_typesupport_cpp.so"
   "rosidl_typesupport_cpp/base_interfaces_demo/action/nav__type_support.cpp"
+  "rosidl_typesupport_cpp/base_interfaces_demo/action/pallet__type_support.cpp"
   "rosidl_typesupport_cpp/base_interfaces_demo/action/reverse__type_support.cpp"
   "rosidl_typesupport_cpp/base_interfaces_demo/msg/bms_info__type_support.cpp"
   "rosidl_typesupport_cpp/base_interfaces_demo/msg/bt_status__type_support.cpp"

@@ -23,6 +23,8 @@ base_interfaces_demo__msg__ObsLaser__init(base_interfaces_demo__msg__ObsLaser * 
   // son2
   // mom2
   // scout2
+  // error_code
+  // status
   return true;
 }
 
@@ -38,6 +40,8 @@ base_interfaces_demo__msg__ObsLaser__fini(base_interfaces_demo__msg__ObsLaser * 
   // son2
   // mom2
   // scout2
+  // error_code
+  // status
 }
 
 bool
@@ -70,6 +74,14 @@ base_interfaces_demo__msg__ObsLaser__are_equal(const base_interfaces_demo__msg__
   if (lhs->scout2 != rhs->scout2) {
     return false;
   }
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
+    return false;
+  }
+  // status
+  if (lhs->status != rhs->status) {
+    return false;
+  }
   return true;
 }
 
@@ -93,6 +105,10 @@ base_interfaces_demo__msg__ObsLaser__copy(
   output->mom2 = input->mom2;
   // scout2
   output->scout2 = input->scout2;
+  // error_code
+  output->error_code = input->error_code;
+  // status
+  output->status = input->status;
   return true;
 }
 

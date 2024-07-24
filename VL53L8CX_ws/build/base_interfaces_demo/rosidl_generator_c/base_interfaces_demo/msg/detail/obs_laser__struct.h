@@ -26,6 +26,8 @@ typedef struct base_interfaces_demo__msg__ObsLaser
   int32_t son2;
   int32_t mom2;
   int32_t scout2;
+  int64_t error_code;
+  int32_t status;
 } base_interfaces_demo__msg__ObsLaser;
 
 // Struct for a sequence of base_interfaces_demo__msg__ObsLaser.

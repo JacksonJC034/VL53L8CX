@@ -72,7 +72,7 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
         'pallet': 'int32',
         'drift': 'double',
         'angle': 'double',
-        'error_code': 'int32',
+        'error_code': 'int64',
         'status': 'int32',
         'sensor1': 'uint32[64]',
         'sensor2': 'uint32[64]',
@@ -83,7 +83,7 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('uint32'), 64),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('uint32'), 64),  # noqa: E501
@@ -229,8 +229,8 @@ class PalletInfo(metaclass=Metaclass_PalletInfo):
             assert \
                 isinstance(value, int), \
                 "The 'error_code' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'error_code' field must be an integer in [-2147483648, 2147483647]"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._error_code = value
 
     @property

@@ -40,6 +40,9 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/BtStatus.msg"
   "msg/CarStatus.msg"
   "msg/HealthNode.msg"
+  "action/Pallet.action"
+  "srv/CheckEmergency.srv"
+  "srv/SetEmergency.srv"
 )
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

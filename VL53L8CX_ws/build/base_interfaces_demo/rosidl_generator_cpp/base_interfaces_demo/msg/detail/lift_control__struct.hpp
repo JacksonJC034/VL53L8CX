@@ -37,7 +37,7 @@ struct LiftControl_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->error = 0l;
+      this->error_code = 0ll;
       this->status = 0l;
       this->lift_times = 0ull;
       this->convert_times = 0ull;
@@ -50,7 +50,7 @@ struct LiftControl_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->error = 0l;
+      this->error_code = 0ll;
       this->status = 0l;
       this->lift_times = 0ull;
       this->convert_times = 0ull;
@@ -58,9 +58,9 @@ struct LiftControl_
   }
 
   // field types and members
-  using _error_type =
-    int32_t;
-  _error_type error;
+  using _error_code_type =
+    int64_t;
+  _error_code_type error_code;
   using _status_type =
     int32_t;
   _status_type status;
@@ -72,10 +72,10 @@ struct LiftControl_
   _convert_times_type convert_times;
 
   // setters for named parameter idiom
-  Type & set__error(
-    const int32_t & _arg)
+  Type & set__error_code(
+    const int64_t & _arg)
   {
-    this->error = _arg;
+    this->error_code = _arg;
     return *this;
   }
   Type & set__status(
@@ -139,7 +139,7 @@ struct LiftControl_
   // comparison operators
   bool operator==(const LiftControl_ & other) const
   {
-    if (this->error != other.error) {
+    if (this->error_code != other.error_code) {
       return false;
     }
     if (this->status != other.status) {

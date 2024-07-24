@@ -26,3 +26,4 @@
 /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:msg/BtStatus.idl
 /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:msg/CarStatus.idl
 /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:msg/HealthNode.idl
+/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo:action/Pallet.idl

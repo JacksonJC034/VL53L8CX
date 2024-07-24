@@ -196,15 +196,15 @@ private:
   ::base_interfaces_demo::msg::Location msg_;
 };
 
-class Init_Location_error
+class Init_Location_error_code
 {
 public:
-  explicit Init_Location_error(::base_interfaces_demo::msg::Location & msg)
+  explicit Init_Location_error_code(::base_interfaces_demo::msg::Location & msg)
   : msg_(msg)
   {}
-  Init_Location_status error(::base_interfaces_demo::msg::Location::_error_type arg)
+  Init_Location_status error_code(::base_interfaces_demo::msg::Location::_error_code_type arg)
   {
-    msg_.error = std::move(arg);
+    msg_.error_code = std::move(arg);
     return Init_Location_status(msg_);
   }
 
@@ -218,10 +218,10 @@ public:
   explicit Init_Location_y(::base_interfaces_demo::msg::Location & msg)
   : msg_(msg)
   {}
-  Init_Location_error y(::base_interfaces_demo::msg::Location::_y_type arg)
+  Init_Location_error_code y(::base_interfaces_demo::msg::Location::_y_type arg)
   {
     msg_.y = std::move(arg);
-    return Init_Location_error(msg_);
+    return Init_Location_error_code(msg_);
   }
 
 private:

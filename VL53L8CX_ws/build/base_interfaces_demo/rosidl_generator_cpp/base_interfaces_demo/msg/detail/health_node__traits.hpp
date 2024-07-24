@@ -27,11 +27,11 @@ inline const char * name<base_interfaces_demo::msg::HealthNode>()
 
 template<>
 struct has_fixed_size<base_interfaces_demo::msg::HealthNode>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct has_bounded_size<base_interfaces_demo::msg::HealthNode>
-  : std::integral_constant<bool, false> {};
+  : std::integral_constant<bool, true> {};
 
 template<>
 struct is_message<base_interfaces_demo::msg::HealthNode>

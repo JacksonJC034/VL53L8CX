@@ -1,7 +1,0 @@
-int32 pub_code
-
----
-
-int32 calibration
-float64 drift
-float64 angle

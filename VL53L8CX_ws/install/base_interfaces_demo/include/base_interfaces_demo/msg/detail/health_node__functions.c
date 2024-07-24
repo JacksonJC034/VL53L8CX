@@ -11,10 +11,6 @@
 #include "rcutils/allocator.h"
 
 
-// Include directives for member types
-// Member `nic_status`
-#include "rosidl_runtime_c/string_functions.h"
-
 bool
 base_interfaces_demo__msg__HealthNode__init(base_interfaces_demo__msg__HealthNode * msg)
 {
@@ -22,15 +18,11 @@ base_interfaces_demo__msg__HealthNode__init(base_interfaces_demo__msg__HealthNod
     return false;
   }
   // cpu_usage
-  // memory_usage
   // disk_usage
-  // cpu_frequency
+  // memory_usage
   // nic_status
-  if (!rosidl_runtime_c__String__init(&msg->nic_status)) {
-    base_interfaces_demo__msg__HealthNode__fini(msg);
-    return false;
-  }
   // temperature
+  // cpu_frequency
   // error_array
   // error_level
   return true;
@@ -43,12 +35,11 @@ base_interfaces_demo__msg__HealthNode__fini(base_interfaces_demo__msg__HealthNod
     return;
   }
   // cpu_usage
-  // memory_usage
   // disk_usage
-  // cpu_frequency
+  // memory_usage
   // nic_status
-  rosidl_runtime_c__String__fini(&msg->nic_status);
   // temperature
+  // cpu_frequency
   // error_array
   // error_level
 }
@@ -63,26 +54,24 @@ base_interfaces_demo__msg__HealthNode__are_equal(const base_interfaces_demo__msg
   if (lhs->cpu_usage != rhs->cpu_usage) {
     return false;
   }
-  // memory_usage
-  if (lhs->memory_usage != rhs->memory_usage) {
-    return false;
-  }
   // disk_usage
   if (lhs->disk_usage != rhs->disk_usage) {
     return false;
   }
-  // cpu_frequency
-  if (lhs->cpu_frequency != rhs->cpu_frequency) {
+  // memory_usage
+  if (lhs->memory_usage != rhs->memory_usage) {
     return false;
   }
   // nic_status
-  if (!rosidl_runtime_c__String__are_equal(
-      &(lhs->nic_status), &(rhs->nic_status)))
-  {
+  if (lhs->nic_status != rhs->nic_status) {
     return false;
   }
   // temperature
   if (lhs->temperature != rhs->temperature) {
+    return false;
+  }
+  // cpu_frequency
+  if (lhs->cpu_frequency != rhs->cpu_frequency) {
     return false;
   }
   // error_array
@@ -108,20 +97,16 @@ base_interfaces_demo__msg__HealthNode__copy(
   }
   // cpu_usage
   output->cpu_usage = input->cpu_usage;
-  // memory_usage
-  output->memory_usage = input->memory_usage;
   // disk_usage
   output->disk_usage = input->disk_usage;
-  // cpu_frequency
-  output->cpu_frequency = input->cpu_frequency;
+  // memory_usage
+  output->memory_usage = input->memory_usage;
   // nic_status
-  if (!rosidl_runtime_c__String__copy(
-      &(input->nic_status), &(output->nic_status)))
-  {
-    return false;
-  }
+  output->nic_status = input->nic_status;
   // temperature
   output->temperature = input->temperature;
+  // cpu_frequency
+  output->cpu_frequency = input->cpu_frequency;
   // error_array
   for (size_t i = 0; i < 12; ++i) {
     output->error_array[i] = input->error_array[i];

@@ -50,13 +50,13 @@ bool base_interfaces_demo__msg__lift_control__convert_from_py(PyObject * _pymsg,
     assert(strncmp("base_interfaces_demo.msg._lift_control.LiftControl", full_classname_dest, 50) == 0);
   }
   base_interfaces_demo__msg__LiftControl * ros_message = _ros_message;
-  {  // error
-    PyObject * field = PyObject_GetAttrString(_pymsg, "error");
+  {  // error_code
+    PyObject * field = PyObject_GetAttrString(_pymsg, "error_code");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->error = (int32_t)PyLong_AsLong(field);
+    ros_message->error_code = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
   {  // status
@@ -108,11 +108,11 @@ PyObject * base_interfaces_demo__msg__lift_control__convert_to_py(void * raw_ros
     }
   }
   base_interfaces_demo__msg__LiftControl * ros_message = (base_interfaces_demo__msg__LiftControl *)raw_ros_message;
-  {  // error
+  {  // error_code
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->error);
+    field = PyLong_FromLongLong(ros_message->error_code);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "error", field);
+      int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

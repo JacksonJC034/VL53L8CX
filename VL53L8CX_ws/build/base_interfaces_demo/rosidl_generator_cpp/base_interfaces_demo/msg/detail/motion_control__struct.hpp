@@ -37,7 +37,7 @@ struct MotionControl_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->error = 0l;
+      this->error_code = 0l;
       this->status = 0l;
       this->total_odom = 0.0;
     }
@@ -49,16 +49,16 @@ struct MotionControl_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->error = 0l;
+      this->error_code = 0l;
       this->status = 0l;
       this->total_odom = 0.0;
     }
   }
 
   // field types and members
-  using _error_type =
+  using _error_code_type =
     int32_t;
-  _error_type error;
+  _error_code_type error_code;
   using _status_type =
     int32_t;
   _status_type status;
@@ -67,10 +67,10 @@ struct MotionControl_
   _total_odom_type total_odom;
 
   // setters for named parameter idiom
-  Type & set__error(
+  Type & set__error_code(
     const int32_t & _arg)
   {
-    this->error = _arg;
+    this->error_code = _arg;
     return *this;
   }
   Type & set__status(
@@ -128,7 +128,7 @@ struct MotionControl_
   // comparison operators
   bool operator==(const MotionControl_ & other) const
   {
-    if (this->error != other.error) {
+    if (this->error_code != other.error_code) {
       return false;
     }
     if (this->status != other.status) {

@@ -1,7 +1,0 @@
-[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
-[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:124:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
-  124 |                     auto [01;35m[K[[m[KangleA, driftA] = BestFit::analyze(A, distance_threshold);
-      |                          [01;35m[K^[m[K
-[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:125:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
-  125 |                     auto [01;35m[K[[m[KangleC, driftC] = BestFit::analyze(C, distance_threshold);
-      |                          [01;35m[K^[m[K

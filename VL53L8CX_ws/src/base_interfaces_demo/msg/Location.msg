@@ -1,6 +1,6 @@
 float64 x
 float64 y                                               #机器人实际位置，xy
-int64 error                                             #本节点错误字
+int64 error_code                                             #本节点错误字
 int32 status                                        #本节点状态
 float64 distance                                #霍尔定位偏差值
 int32 hall_location                            #霍尔定位值

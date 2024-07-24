@@ -1,4 +1,0 @@
-Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo': /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4
-Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo' returned '0': /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo -- -j4 -l4
-Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo': /usr/bin/cmake --install /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo
-Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo' returned '0': /usr/bin/cmake --install /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo

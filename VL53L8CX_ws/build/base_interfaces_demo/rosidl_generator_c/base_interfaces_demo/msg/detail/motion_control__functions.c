@@ -17,7 +17,7 @@ base_interfaces_demo__msg__MotionControl__init(base_interfaces_demo__msg__Motion
   if (!msg) {
     return false;
   }
-  // error
+  // error_code
   // status
   // total_odom
   return true;
@@ -29,7 +29,7 @@ base_interfaces_demo__msg__MotionControl__fini(base_interfaces_demo__msg__Motion
   if (!msg) {
     return;
   }
-  // error
+  // error_code
   // status
   // total_odom
 }
@@ -40,8 +40,8 @@ base_interfaces_demo__msg__MotionControl__are_equal(const base_interfaces_demo__
   if (!lhs || !rhs) {
     return false;
   }
-  // error
-  if (lhs->error != rhs->error) {
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
     return false;
   }
   // status
@@ -63,8 +63,8 @@ base_interfaces_demo__msg__MotionControl__copy(
   if (!input || !output) {
     return false;
   }
-  // error
-  output->error = input->error;
+  // error_code
+  output->error_code = input->error_code;
   // status
   output->status = input->status;
   // total_odom

@@ -9,15 +9,15 @@ module base_interfaces_demo {
     struct HealthNode {
       double cpu_usage;
 
-      double memory_usage;
-
       double disk_usage;
 
-      double cpu_frequency;
+      double memory_usage;
 
-      string nic_status;
+      double nic_status;
 
       double temperature;
+
+      double cpu_frequency;
 
       @verbatim (language="comment", text=
         "[main, battery, charge, comm, servo, lift, pallet, obs, location, order, motion, stop]")

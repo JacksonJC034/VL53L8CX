@@ -1,0 +1,57 @@
+[0.040s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+[0.099s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.128s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.349s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.413s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.418s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[0.555s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.640s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[0.644s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.855s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.004s] -- Found base_interfaces_demo: 0.0.0 (/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake)
+[1.118s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[1.211s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.213s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.213s] -- Configured cppcheck include dirs: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/include;/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/../install/base_interfaces_demo/include
+[1.213s] -- Configured cppcheck exclude dirs and/or files: 
+[1.215s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.215s] -- Configured cpplint exclude dirs and/or files: 
+[1.217s] -- Added test 'lint_cmake' to check CMake code style
+[1.219s] -- Added test 'uncrustify' to check C / C++ code style
+[1.219s] -- Configured uncrustify additional arguments: 
+[1.219s] -- Added test 'xmllint' to check XML markup files
+[1.226s] -- Configuring done
+[1.262s] -- Generating done
+[1.265s] -- Build files have been written to: /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package
+[1.319s] [35m[1mScanning dependencies of target pallet_detect_node[0m
+[1.374s] [ 20%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+[3.991s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[3.992s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:121:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[3.992s]   121 |                     auto [01;35m[K[[m[KangleA, driftA] = BestFit::analyze(A, distance_threshold);
+[3.992s]       |                          [01;35m[K^[m[K
+[3.994s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:122:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[3.994s]   122 |                     auto [01;35m[K[[m[KangleC, driftC] = BestFit::analyze(C, distance_threshold);
+[3.994s]       |                          [01;35m[K^[m[K
+[9.065s] [ 40%] [32m[1mLinking CXX executable pallet_detect_node[0m
+[9.875s] [100%] Built target pallet_detect_node
+[9.892s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '0': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+[9.956s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package
+[9.964s] -- Install configuration: ""
+[9.967s] -- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/lib/tof_sensor_package/pallet_detect_node
+[9.969s] -- Set runtime path of "/home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/lib/tof_sensor_package/pallet_detect_node" to ""
+[9.970s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/ament_index/resource_index/package_run_dependencies/tof_sensor_package
+[9.970s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/ament_index/resource_index/parent_prefix_path/tof_sensor_package
+[9.970s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/ament_prefix_path.sh
+[9.970s] -- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/ament_prefix_path.dsv
+[9.970s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/path.sh
+[9.971s] -- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/path.dsv
+[9.971s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.bash
+[9.971s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.sh
+[9.971s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.zsh
+[9.971s] -- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.dsv
+[9.971s] -- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/package.dsv
+[9.972s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/ament_index/resource_index/packages/tof_sensor_package
+[9.972s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/cmake/tof_sensor_packageConfig.cmake
+[9.972s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/cmake/tof_sensor_packageConfig-version.cmake
+[9.972s] -- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/package.xml
+[9.982s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '0': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --install /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package

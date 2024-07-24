@@ -52,15 +52,15 @@ private:
   ::base_interfaces_demo::msg::MotionControl msg_;
 };
 
-class Init_MotionControl_error
+class Init_MotionControl_error_code
 {
 public:
-  Init_MotionControl_error()
+  Init_MotionControl_error_code()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_MotionControl_status error(::base_interfaces_demo::msg::MotionControl::_error_type arg)
+  Init_MotionControl_status error_code(::base_interfaces_demo::msg::MotionControl::_error_code_type arg)
   {
-    msg_.error = std::move(arg);
+    msg_.error_code = std::move(arg);
     return Init_MotionControl_status(msg_);
   }
 
@@ -79,7 +79,7 @@ template<>
 inline
 auto build<::base_interfaces_demo::msg::MotionControl>()
 {
-  return base_interfaces_demo::msg::builder::Init_MotionControl_error();
+  return base_interfaces_demo::msg::builder::Init_MotionControl_error_code();
 }
 
 }  // namespace base_interfaces_demo

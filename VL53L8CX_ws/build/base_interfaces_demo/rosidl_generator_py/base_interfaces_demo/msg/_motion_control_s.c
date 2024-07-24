@@ -50,13 +50,13 @@ bool base_interfaces_demo__msg__motion_control__convert_from_py(PyObject * _pyms
     assert(strncmp("base_interfaces_demo.msg._motion_control.MotionControl", full_classname_dest, 54) == 0);
   }
   base_interfaces_demo__msg__MotionControl * ros_message = _ros_message;
-  {  // error
-    PyObject * field = PyObject_GetAttrString(_pymsg, "error");
+  {  // error_code
+    PyObject * field = PyObject_GetAttrString(_pymsg, "error_code");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->error = (int32_t)PyLong_AsLong(field);
+    ros_message->error_code = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // status
@@ -99,11 +99,11 @@ PyObject * base_interfaces_demo__msg__motion_control__convert_to_py(void * raw_r
     }
   }
   base_interfaces_demo__msg__MotionControl * ros_message = (base_interfaces_demo__msg__MotionControl *)raw_ros_message;
-  {  // error
+  {  // error_code
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->error);
+    field = PyLong_FromLong(ros_message->error_code);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "error", field);
+      int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

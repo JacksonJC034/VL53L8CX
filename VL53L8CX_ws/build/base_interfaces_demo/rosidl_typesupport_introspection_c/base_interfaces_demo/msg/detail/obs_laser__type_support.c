@@ -31,7 +31,7 @@ void ObsLaser__rosidl_typesupport_introspection_c__ObsLaser_fini_function(void *
   base_interfaces_demo__msg__ObsLaser__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ObsLaser__rosidl_typesupport_introspection_c__ObsLaser_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember ObsLaser__rosidl_typesupport_introspection_c__ObsLaser_message_member_array[8] = {
   {
     "son1",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -121,13 +121,43 @@ static rosidl_typesupport_introspection_c__MessageMember ObsLaser__rosidl_typesu
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "error_code",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__ObsLaser, error_code),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__ObsLaser, status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers ObsLaser__rosidl_typesupport_introspection_c__ObsLaser_message_members = {
   "base_interfaces_demo__msg",  // message namespace
   "ObsLaser",  // message name
-  6,  // number of fields
+  8,  // number of fields
   sizeof(base_interfaces_demo__msg__ObsLaser),
   ObsLaser__rosidl_typesupport_introspection_c__ObsLaser_message_member_array,  // message members
   ObsLaser__rosidl_typesupport_introspection_c__ObsLaser_init_function,  // function to initialize message memory (memory has to be allocated)

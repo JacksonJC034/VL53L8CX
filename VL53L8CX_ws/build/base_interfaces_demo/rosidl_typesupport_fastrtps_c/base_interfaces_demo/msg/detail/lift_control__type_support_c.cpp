@@ -49,9 +49,9 @@ static bool _LiftControl__cdr_serialize(
     return false;
   }
   const _LiftControl__ros_msg_type * ros_message = static_cast<const _LiftControl__ros_msg_type *>(untyped_ros_message);
-  // Field name: error
+  // Field name: error_code
   {
-    cdr << ros_message->error;
+    cdr << ros_message->error_code;
   }
 
   // Field name: status
@@ -81,9 +81,9 @@ static bool _LiftControl__cdr_deserialize(
     return false;
   }
   _LiftControl__ros_msg_type * ros_message = static_cast<_LiftControl__ros_msg_type *>(untyped_ros_message);
-  // Field name: error
+  // Field name: error_code
   {
-    cdr >> ros_message->error;
+    cdr >> ros_message->error_code;
   }
 
   // Field name: status
@@ -118,9 +118,9 @@ size_t get_serialized_size_base_interfaces_demo__msg__LiftControl(
   (void)padding;
   (void)wchar_size;
 
-  // field.name error
+  // field.name error_code
   {
-    size_t item_size = sizeof(ros_message->error);
+    size_t item_size = sizeof(ros_message->error_code);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -166,12 +166,12 @@ size_t max_serialized_size_base_interfaces_demo__msg__LiftControl(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: error
+  // member: error_code
   {
     size_t array_size = 1;
 
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
   // member: status
   {

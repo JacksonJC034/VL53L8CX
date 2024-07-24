@@ -47,6 +47,7 @@ struct MotorStatus_
       this->encoder_location = 0l;
       this->jerk = 0l;
       this->enable = 0l;
+      this->error_code = 0ll;
     }
   }
 
@@ -66,6 +67,7 @@ struct MotorStatus_
       this->encoder_location = 0l;
       this->jerk = 0l;
       this->enable = 0l;
+      this->error_code = 0ll;
     }
   }
 
@@ -100,6 +102,9 @@ struct MotorStatus_
   using _enable_type =
     int32_t;
   _enable_type enable;
+  using _error_code_type =
+    int64_t;
+  _error_code_type error_code;
 
   // setters for named parameter idiom
   Type & set__mode(
@@ -160,6 +165,12 @@ struct MotorStatus_
     const int32_t & _arg)
   {
     this->enable = _arg;
+    return *this;
+  }
+  Type & set__error_code(
+    const int64_t & _arg)
+  {
+    this->error_code = _arg;
     return *this;
   }
 
@@ -233,6 +244,9 @@ struct MotorStatus_
       return false;
     }
     if (this->enable != other.enable) {
+      return false;
+    }
+    if (this->error_code != other.error_code) {
       return false;
     }
     return true;

@@ -31,7 +31,7 @@ void MotorStatus__rosidl_typesupport_introspection_c__MotorStatus_fini_function(
   base_interfaces_demo__msg__MotorStatus__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember MotorStatus__rosidl_typesupport_introspection_c__MotorStatus_message_member_array[10] = {
+static rosidl_typesupport_introspection_c__MessageMember MotorStatus__rosidl_typesupport_introspection_c__MotorStatus_message_member_array[11] = {
   {
     "mode",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -181,13 +181,28 @@ static rosidl_typesupport_introspection_c__MessageMember MotorStatus__rosidl_typ
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "error_code",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__MotorStatus, error_code),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers MotorStatus__rosidl_typesupport_introspection_c__MotorStatus_message_members = {
   "base_interfaces_demo__msg",  // message namespace
   "MotorStatus",  // message name
-  10,  // number of fields
+  11,  // number of fields
   sizeof(base_interfaces_demo__msg__MotorStatus),
   MotorStatus__rosidl_typesupport_introspection_c__MotorStatus_message_member_array,  // message members
   MotorStatus__rosidl_typesupport_introspection_c__MotorStatus_init_function,  // function to initialize message memory (memory has to be allocated)

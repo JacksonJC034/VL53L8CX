@@ -1,0 +1,32 @@
+[0.052s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+[0.203s] [35m[1mScanning dependencies of target pallet_detect_node[0m
+[0.388s] [ 20%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o[0m
+[0.396s] [ 40%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+[2.978s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<double, double> BestFit::analyze(const cv::Mat&, int)[m[K’:
+[2.979s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:89:14:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[2.979s]    89 |         auto [01;35m[K[[m[Kcoefficients, inliers] = fitLineRANSAC(robotEdgePoints);
+[2.979s]       |              [01;35m[K^[m[K
+[2.991s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:27:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kthreshold[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.991s]    27 | std::pair<double, double> BestFit::analyze(const cv::Mat &A, [01;35m[Kint threshold[m[K) {
+[2.991s]       |                                                              [01;35m[K~~~~^~~~~~~~~[m[K
+[2.997s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<std::vector<double, std::allocator<double> >, std::vector<cv::Point_<int> > > BestFit::fitLineRANSAC(const std::vector<cv::Point_<int> >&)[m[K’:
+[2.997s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:142:31:[m[K [01;31m[Kerror: [m[K‘[01m[KbestInliers[m[K’ was not declared in this scope
+[2.997s]   142 |     return {bestCoefficients, [01;31m[KbestInliers[m[K};
+[2.997s]       |                               [01;31m[K^~~~~~~~~~~[m[K
+[2.998s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:142:42:[m[K [01;31m[Kerror: [m[Kcould not convert ‘[01m[K{bestCoefficients, <expression error>}[m[K’ from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kstd::pair<std::vector<double, std::allocator<double> >, std::vector<cv::Point_<int> > >[m[K’
+[2.998s]   142 |     return {bestCoefficients, bestInliers[01;31m[K}[m[K;
+[2.998s]       |                                          [01;31m[K^[m[K
+[2.998s]       |                                          [01;31m[K|[m[K
+[2.998s]       |                                          [01;31m[K<brace-enclosed initializer list>[m[K
+[3.856s] make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:89: CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o] Error 1
+[3.856s] make[2]: *** Waiting for unfinished jobs....
+[4.852s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[4.853s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:121:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[4.853s]   121 |                     auto [01;35m[K[[m[KangleA, driftA] = BestFit::analyze(A, distance_threshold);
+[4.853s]       |                          [01;35m[K^[m[K
+[4.857s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:122:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[4.858s]   122 |                     auto [01;35m[K[[m[KangleC, driftC] = BestFit::analyze(C, distance_threshold);
+[4.858s]       |                          [01;35m[K^[m[K
+[11.361s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+[11.365s] make: *** [Makefile:141: all] Error 2
+[11.375s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '2': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4

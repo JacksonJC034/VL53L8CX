@@ -59,6 +59,8 @@ class ObsLaser(metaclass=Metaclass_ObsLaser):
         '_son2',
         '_mom2',
         '_scout2',
+        '_error_code',
+        '_status',
     ]
 
     _fields_and_field_types = {
@@ -68,6 +70,8 @@ class ObsLaser(metaclass=Metaclass_ObsLaser):
         'son2': 'int32',
         'mom2': 'int32',
         'scout2': 'int32',
+        'error_code': 'int64',
+        'status': 'int32',
     }
 
     SLOT_TYPES = (
@@ -76,6 +80,8 @@ class ObsLaser(metaclass=Metaclass_ObsLaser):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
@@ -89,6 +95,8 @@ class ObsLaser(metaclass=Metaclass_ObsLaser):
         self.son2 = kwargs.get('son2', int())
         self.mom2 = kwargs.get('mom2', int())
         self.scout2 = kwargs.get('scout2', int())
+        self.error_code = kwargs.get('error_code', int())
+        self.status = kwargs.get('status', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -130,6 +138,10 @@ class ObsLaser(metaclass=Metaclass_ObsLaser):
         if self.mom2 != other.mom2:
             return False
         if self.scout2 != other.scout2:
+            return False
+        if self.error_code != other.error_code:
+            return False
+        if self.status != other.status:
             return False
         return True
 
@@ -227,3 +239,33 @@ class ObsLaser(metaclass=Metaclass_ObsLaser):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'scout2' field must be an integer in [-2147483648, 2147483647]"
         self._scout2 = value
+
+    @property
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
+
+    @error_code.setter
+    def error_code(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'error_code' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._error_code = value
+
+    @property
+    def status(self):
+        """Message field 'status'."""
+        return self._status
+
+    @status.setter
+    def status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'status' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'status' field must be an integer in [-2147483648, 2147483647]"
+        self._status = value

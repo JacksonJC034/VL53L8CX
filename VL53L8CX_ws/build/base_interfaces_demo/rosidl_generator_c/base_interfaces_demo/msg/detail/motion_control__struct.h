@@ -20,7 +20,7 @@ extern "C"
 // Struct defined in msg/MotionControl in the package base_interfaces_demo.
 typedef struct base_interfaces_demo__msg__MotionControl
 {
-  int32_t error;
+  int32_t error_code;
   int32_t status;
   double total_odom;
 } base_interfaces_demo__msg__MotionControl;

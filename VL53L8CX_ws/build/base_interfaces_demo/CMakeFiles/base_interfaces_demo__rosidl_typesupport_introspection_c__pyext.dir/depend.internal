@@ -6,9 +6,7 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c__pyext.dir/r
  /opt/ros/foxy/include/builtin_interfaces/msg/detail/time__struct.h
  /opt/ros/foxy/include/rosidl_runtime_c/action_type_support_struct.h
  /opt/ros/foxy/include/rosidl_runtime_c/message_type_support_struct.h
- /opt/ros/foxy/include/rosidl_runtime_c/primitives_sequence.h
  /opt/ros/foxy/include/rosidl_runtime_c/service_type_support_struct.h
- /opt/ros/foxy/include/rosidl_runtime_c/string.h
  /opt/ros/foxy/include/rosidl_runtime_c/visibility_control.h
  /opt/ros/foxy/include/rosidl_typesupport_interface/macros.h
  /opt/ros/foxy/include/unique_identifier_msgs/msg/detail/uuid__struct.h
@@ -102,6 +100,9 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c__pyext.dir/r
  rosidl_generator_c/base_interfaces_demo/action/detail/nav__functions.h
  rosidl_generator_c/base_interfaces_demo/action/detail/nav__struct.h
  rosidl_generator_c/base_interfaces_demo/action/detail/nav__type_support.h
+ rosidl_generator_c/base_interfaces_demo/action/detail/pallet__functions.h
+ rosidl_generator_c/base_interfaces_demo/action/detail/pallet__struct.h
+ rosidl_generator_c/base_interfaces_demo/action/detail/pallet__type_support.h
  rosidl_generator_c/base_interfaces_demo/action/detail/reverse__functions.h
  rosidl_generator_c/base_interfaces_demo/action/detail/reverse__struct.h
  rosidl_generator_c/base_interfaces_demo/action/detail/reverse__type_support.h

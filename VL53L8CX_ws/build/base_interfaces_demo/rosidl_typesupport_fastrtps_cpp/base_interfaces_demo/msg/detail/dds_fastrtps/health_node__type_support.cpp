@@ -34,16 +34,16 @@ cdr_serialize(
 {
   // Member: cpu_usage
   cdr << ros_message.cpu_usage;
-  // Member: memory_usage
-  cdr << ros_message.memory_usage;
   // Member: disk_usage
   cdr << ros_message.disk_usage;
-  // Member: cpu_frequency
-  cdr << ros_message.cpu_frequency;
+  // Member: memory_usage
+  cdr << ros_message.memory_usage;
   // Member: nic_status
   cdr << ros_message.nic_status;
   // Member: temperature
   cdr << ros_message.temperature;
+  // Member: cpu_frequency
+  cdr << ros_message.cpu_frequency;
   // Member: error_array
   {
     cdr << ros_message.error_array;
@@ -62,20 +62,20 @@ cdr_deserialize(
   // Member: cpu_usage
   cdr >> ros_message.cpu_usage;
 
-  // Member: memory_usage
-  cdr >> ros_message.memory_usage;
-
   // Member: disk_usage
   cdr >> ros_message.disk_usage;
 
-  // Member: cpu_frequency
-  cdr >> ros_message.cpu_frequency;
+  // Member: memory_usage
+  cdr >> ros_message.memory_usage;
 
   // Member: nic_status
   cdr >> ros_message.nic_status;
 
   // Member: temperature
   cdr >> ros_message.temperature;
+
+  // Member: cpu_frequency
+  cdr >> ros_message.cpu_frequency;
 
   // Member: error_array
   {
@@ -107,31 +107,33 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: memory_usage
-  {
-    size_t item_size = sizeof(ros_message.memory_usage);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // Member: disk_usage
   {
     size_t item_size = sizeof(ros_message.disk_usage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // Member: cpu_frequency
+  // Member: memory_usage
   {
-    size_t item_size = sizeof(ros_message.cpu_frequency);
+    size_t item_size = sizeof(ros_message.memory_usage);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // Member: nic_status
-  current_alignment += padding +
-    eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-    (ros_message.nic_status.size() + 1);
+  {
+    size_t item_size = sizeof(ros_message.nic_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // Member: temperature
   {
     size_t item_size = sizeof(ros_message.temperature);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: cpu_frequency
+  {
+    size_t item_size = sizeof(ros_message.cpu_frequency);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -175,14 +177,6 @@ max_serialized_size_HealthNode(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: memory_usage
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint64_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
-  }
-
   // Member: disk_usage
   {
     size_t array_size = 1;
@@ -191,7 +185,7 @@ max_serialized_size_HealthNode(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
-  // Member: cpu_frequency
+  // Member: memory_usage
   {
     size_t array_size = 1;
 
@@ -203,15 +197,19 @@ max_serialized_size_HealthNode(
   {
     size_t array_size = 1;
 
-    full_bounded = false;
-    for (size_t index = 0; index < array_size; ++index) {
-      current_alignment += padding +
-        eprosima::fastcdr::Cdr::alignment(current_alignment, padding) +
-        1;
-    }
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   // Member: temperature
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: cpu_frequency
   {
     size_t array_size = 1;
 

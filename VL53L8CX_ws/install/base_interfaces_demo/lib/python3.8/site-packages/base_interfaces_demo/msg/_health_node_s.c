@@ -16,9 +16,6 @@
 #include "base_interfaces_demo/msg/detail/health_node__struct.h"
 #include "base_interfaces_demo/msg/detail/health_node__functions.h"
 
-#include "rosidl_runtime_c/string.h"
-#include "rosidl_runtime_c/string_functions.h"
-
 #include "rosidl_runtime_c/primitives_sequence.h"
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 
@@ -65,15 +62,6 @@ bool base_interfaces_demo__msg__health_node__convert_from_py(PyObject * _pymsg, 
     ros_message->cpu_usage = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // memory_usage
-    PyObject * field = PyObject_GetAttrString(_pymsg, "memory_usage");
-    if (!field) {
-      return false;
-    }
-    assert(PyFloat_Check(field));
-    ros_message->memory_usage = PyFloat_AS_DOUBLE(field);
-    Py_DECREF(field);
-  }
   {  // disk_usage
     PyObject * field = PyObject_GetAttrString(_pymsg, "disk_usage");
     if (!field) {
@@ -83,13 +71,13 @@ bool base_interfaces_demo__msg__health_node__convert_from_py(PyObject * _pymsg, 
     ros_message->disk_usage = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
-  {  // cpu_frequency
-    PyObject * field = PyObject_GetAttrString(_pymsg, "cpu_frequency");
+  {  // memory_usage
+    PyObject * field = PyObject_GetAttrString(_pymsg, "memory_usage");
     if (!field) {
       return false;
     }
     assert(PyFloat_Check(field));
-    ros_message->cpu_frequency = PyFloat_AS_DOUBLE(field);
+    ros_message->memory_usage = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // nic_status
@@ -97,14 +85,8 @@ bool base_interfaces_demo__msg__health_node__convert_from_py(PyObject * _pymsg, 
     if (!field) {
       return false;
     }
-    assert(PyUnicode_Check(field));
-    PyObject * encoded_field = PyUnicode_AsUTF8String(field);
-    if (!encoded_field) {
-      Py_DECREF(field);
-      return false;
-    }
-    rosidl_runtime_c__String__assign(&ros_message->nic_status, PyBytes_AS_STRING(encoded_field));
-    Py_DECREF(encoded_field);
+    assert(PyFloat_Check(field));
+    ros_message->nic_status = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // temperature
@@ -114,6 +96,15 @@ bool base_interfaces_demo__msg__health_node__convert_from_py(PyObject * _pymsg, 
     }
     assert(PyFloat_Check(field));
     ros_message->temperature = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
+  {  // cpu_frequency
+    PyObject * field = PyObject_GetAttrString(_pymsg, "cpu_frequency");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->cpu_frequency = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
   {  // error_array
@@ -182,17 +173,6 @@ PyObject * base_interfaces_demo__msg__health_node__convert_to_py(void * raw_ros_
       }
     }
   }
-  {  // memory_usage
-    PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->memory_usage);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "memory_usage", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // disk_usage
     PyObject * field = NULL;
     field = PyFloat_FromDouble(ros_message->disk_usage);
@@ -204,11 +184,11 @@ PyObject * base_interfaces_demo__msg__health_node__convert_to_py(void * raw_ros_
       }
     }
   }
-  {  // cpu_frequency
+  {  // memory_usage
     PyObject * field = NULL;
-    field = PyFloat_FromDouble(ros_message->cpu_frequency);
+    field = PyFloat_FromDouble(ros_message->memory_usage);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "cpu_frequency", field);
+      int rc = PyObject_SetAttrString(_pymessage, "memory_usage", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -217,13 +197,7 @@ PyObject * base_interfaces_demo__msg__health_node__convert_to_py(void * raw_ros_
   }
   {  // nic_status
     PyObject * field = NULL;
-    field = PyUnicode_DecodeUTF8(
-      ros_message->nic_status.data,
-      strlen(ros_message->nic_status.data),
-      "replace");
-    if (!field) {
-      return NULL;
-    }
+    field = PyFloat_FromDouble(ros_message->nic_status);
     {
       int rc = PyObject_SetAttrString(_pymessage, "nic_status", field);
       Py_DECREF(field);
@@ -237,6 +211,17 @@ PyObject * base_interfaces_demo__msg__health_node__convert_to_py(void * raw_ros_
     field = PyFloat_FromDouble(ros_message->temperature);
     {
       int rc = PyObject_SetAttrString(_pymessage, "temperature", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // cpu_frequency
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->cpu_frequency);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "cpu_frequency", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -6,7 +6,7 @@
 module base_interfaces_demo {
   module msg {
     struct LiftControl {
-      int32 error;
+      int64 error_code;
 
       int32 status;
 

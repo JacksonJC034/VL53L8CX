@@ -53,21 +53,21 @@ class LiftControl(metaclass=Metaclass_LiftControl):
     """Message class 'LiftControl'."""
 
     __slots__ = [
-        '_error',
+        '_error_code',
         '_status',
         '_lift_times',
         '_convert_times',
     ]
 
     _fields_and_field_types = {
-        'error': 'int32',
+        'error_code': 'int64',
         'status': 'int32',
         'lift_times': 'uint64',
         'convert_times': 'uint64',
     }
 
     SLOT_TYPES = (
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
         rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
@@ -77,7 +77,7 @@ class LiftControl(metaclass=Metaclass_LiftControl):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.error = kwargs.get('error', int())
+        self.error_code = kwargs.get('error_code', int())
         self.status = kwargs.get('status', int())
         self.lift_times = kwargs.get('lift_times', int())
         self.convert_times = kwargs.get('convert_times', int())
@@ -111,7 +111,7 @@ class LiftControl(metaclass=Metaclass_LiftControl):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.error != other.error:
+        if self.error_code != other.error_code:
             return False
         if self.status != other.status:
             return False
@@ -127,19 +127,19 @@ class LiftControl(metaclass=Metaclass_LiftControl):
         return copy(cls._fields_and_field_types)
 
     @property
-    def error(self):
-        """Message field 'error'."""
-        return self._error
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
 
-    @error.setter
-    def error(self, value):
+    @error_code.setter
+    def error_code(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'error' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'error' field must be an integer in [-2147483648, 2147483647]"
-        self._error = value
+                "The 'error_code' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._error_code = value
 
     @property
     def status(self):

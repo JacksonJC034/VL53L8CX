@@ -22,7 +22,7 @@ typedef struct base_interfaces_demo__msg__Location
 {
   double x;
   double y;
-  int64_t error;
+  int64_t error_code;
   int32_t status;
   double distance;
   int32_t hall_location;

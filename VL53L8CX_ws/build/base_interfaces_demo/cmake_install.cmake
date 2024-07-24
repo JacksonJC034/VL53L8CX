@@ -471,6 +471,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/action/Pallet.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Nav.action")
 endif()
 
@@ -588,6 +592,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/msg" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/HealthNode.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Pallet.action")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

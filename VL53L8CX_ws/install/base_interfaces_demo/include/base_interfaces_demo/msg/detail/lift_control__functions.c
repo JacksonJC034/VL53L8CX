@@ -17,7 +17,7 @@ base_interfaces_demo__msg__LiftControl__init(base_interfaces_demo__msg__LiftCont
   if (!msg) {
     return false;
   }
-  // error
+  // error_code
   // status
   // lift_times
   // convert_times
@@ -30,7 +30,7 @@ base_interfaces_demo__msg__LiftControl__fini(base_interfaces_demo__msg__LiftCont
   if (!msg) {
     return;
   }
-  // error
+  // error_code
   // status
   // lift_times
   // convert_times
@@ -42,8 +42,8 @@ base_interfaces_demo__msg__LiftControl__are_equal(const base_interfaces_demo__ms
   if (!lhs || !rhs) {
     return false;
   }
-  // error
-  if (lhs->error != rhs->error) {
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
     return false;
   }
   // status
@@ -69,8 +69,8 @@ base_interfaces_demo__msg__LiftControl__copy(
   if (!input || !output) {
     return false;
   }
-  // error
-  output->error = input->error;
+  // error_code
+  output->error_code = input->error_code;
   // status
   output->status = input->status;
   // lift_times

@@ -1,4 +1,0 @@
-[0.000000] (-) TimerEvent: {}
-[0.000296] (-) JobUnselected: {'identifier': 'base_interfaces_demo'}
-[0.000412] (-) JobUnselected: {'identifier': 'tof_sensor_package'}
-[0.001441] (-) EventReactorShutdown: {}

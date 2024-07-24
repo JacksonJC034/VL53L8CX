@@ -20,16 +20,48 @@ namespace msg
 namespace builder
 {
 
+class Init_ObsLaser_status
+{
+public:
+  explicit Init_ObsLaser_status(::base_interfaces_demo::msg::ObsLaser & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::msg::ObsLaser status(::base_interfaces_demo::msg::ObsLaser::_status_type arg)
+  {
+    msg_.status = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::ObsLaser msg_;
+};
+
+class Init_ObsLaser_error_code
+{
+public:
+  explicit Init_ObsLaser_error_code(::base_interfaces_demo::msg::ObsLaser & msg)
+  : msg_(msg)
+  {}
+  Init_ObsLaser_status error_code(::base_interfaces_demo::msg::ObsLaser::_error_code_type arg)
+  {
+    msg_.error_code = std::move(arg);
+    return Init_ObsLaser_status(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::ObsLaser msg_;
+};
+
 class Init_ObsLaser_scout2
 {
 public:
   explicit Init_ObsLaser_scout2(::base_interfaces_demo::msg::ObsLaser & msg)
   : msg_(msg)
   {}
-  ::base_interfaces_demo::msg::ObsLaser scout2(::base_interfaces_demo::msg::ObsLaser::_scout2_type arg)
+  Init_ObsLaser_error_code scout2(::base_interfaces_demo::msg::ObsLaser::_scout2_type arg)
   {
     msg_.scout2 = std::move(arg);
-    return std::move(msg_);
+    return Init_ObsLaser_error_code(msg_);
   }
 
 private:

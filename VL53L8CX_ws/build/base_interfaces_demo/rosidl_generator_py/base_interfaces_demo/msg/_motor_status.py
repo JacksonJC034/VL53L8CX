@@ -63,6 +63,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         '_encoder_location',
         '_jerk',
         '_enable',
+        '_error_code',
     ]
 
     _fields_and_field_types = {
@@ -76,6 +77,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         'encoder_location': 'int32',
         'jerk': 'int32',
         'enable': 'int32',
+        'error_code': 'int64',
     }
 
     SLOT_TYPES = (
@@ -89,6 +91,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -105,6 +108,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         self.encoder_location = kwargs.get('encoder_location', int())
         self.jerk = kwargs.get('jerk', int())
         self.enable = kwargs.get('enable', int())
+        self.error_code = kwargs.get('error_code', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -154,6 +158,8 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         if self.jerk != other.jerk:
             return False
         if self.enable != other.enable:
+            return False
+        if self.error_code != other.error_code:
             return False
         return True
 
@@ -311,3 +317,18 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'enable' field must be an integer in [-2147483648, 2147483647]"
         self._enable = value
+
+    @property
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
+
+    @error_code.setter
+    def error_code(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'error_code' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._error_code = value

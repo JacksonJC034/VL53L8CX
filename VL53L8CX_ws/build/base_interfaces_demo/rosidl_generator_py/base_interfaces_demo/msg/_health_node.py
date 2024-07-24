@@ -57,22 +57,22 @@ class HealthNode(metaclass=Metaclass_HealthNode):
 
     __slots__ = [
         '_cpu_usage',
-        '_memory_usage',
         '_disk_usage',
-        '_cpu_frequency',
+        '_memory_usage',
         '_nic_status',
         '_temperature',
+        '_cpu_frequency',
         '_error_array',
         '_error_level',
     ]
 
     _fields_and_field_types = {
         'cpu_usage': 'double',
-        'memory_usage': 'double',
         'disk_usage': 'double',
-        'cpu_frequency': 'double',
-        'nic_status': 'string',
+        'memory_usage': 'double',
+        'nic_status': 'double',
         'temperature': 'double',
+        'cpu_frequency': 'double',
         'error_array': 'uint64[12]',
         'error_level': 'uint8',
     }
@@ -82,7 +82,7 @@ class HealthNode(metaclass=Metaclass_HealthNode):
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
-        rosidl_parser.definition.UnboundedString(),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.Array(rosidl_parser.definition.BasicType('uint64'), 12),  # noqa: E501
         rosidl_parser.definition.BasicType('uint8'),  # noqa: E501
@@ -93,11 +93,11 @@ class HealthNode(metaclass=Metaclass_HealthNode):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.cpu_usage = kwargs.get('cpu_usage', float())
-        self.memory_usage = kwargs.get('memory_usage', float())
         self.disk_usage = kwargs.get('disk_usage', float())
-        self.cpu_frequency = kwargs.get('cpu_frequency', float())
-        self.nic_status = kwargs.get('nic_status', str())
+        self.memory_usage = kwargs.get('memory_usage', float())
+        self.nic_status = kwargs.get('nic_status', float())
         self.temperature = kwargs.get('temperature', float())
+        self.cpu_frequency = kwargs.get('cpu_frequency', float())
         if 'error_array' not in kwargs:
             self.error_array = numpy.zeros(12, dtype=numpy.uint64)
         else:
@@ -136,15 +136,15 @@ class HealthNode(metaclass=Metaclass_HealthNode):
             return False
         if self.cpu_usage != other.cpu_usage:
             return False
-        if self.memory_usage != other.memory_usage:
-            return False
         if self.disk_usage != other.disk_usage:
             return False
-        if self.cpu_frequency != other.cpu_frequency:
+        if self.memory_usage != other.memory_usage:
             return False
         if self.nic_status != other.nic_status:
             return False
         if self.temperature != other.temperature:
+            return False
+        if self.cpu_frequency != other.cpu_frequency:
             return False
         if all(self.error_array != other.error_array):
             return False
@@ -171,19 +171,6 @@ class HealthNode(metaclass=Metaclass_HealthNode):
         self._cpu_usage = value
 
     @property
-    def memory_usage(self):
-        """Message field 'memory_usage'."""
-        return self._memory_usage
-
-    @memory_usage.setter
-    def memory_usage(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, float), \
-                "The 'memory_usage' field must be of type 'float'"
-        self._memory_usage = value
-
-    @property
     def disk_usage(self):
         """Message field 'disk_usage'."""
         return self._disk_usage
@@ -197,17 +184,17 @@ class HealthNode(metaclass=Metaclass_HealthNode):
         self._disk_usage = value
 
     @property
-    def cpu_frequency(self):
-        """Message field 'cpu_frequency'."""
-        return self._cpu_frequency
+    def memory_usage(self):
+        """Message field 'memory_usage'."""
+        return self._memory_usage
 
-    @cpu_frequency.setter
-    def cpu_frequency(self, value):
+    @memory_usage.setter
+    def memory_usage(self, value):
         if __debug__:
             assert \
                 isinstance(value, float), \
-                "The 'cpu_frequency' field must be of type 'float'"
-        self._cpu_frequency = value
+                "The 'memory_usage' field must be of type 'float'"
+        self._memory_usage = value
 
     @property
     def nic_status(self):
@@ -218,8 +205,8 @@ class HealthNode(metaclass=Metaclass_HealthNode):
     def nic_status(self, value):
         if __debug__:
             assert \
-                isinstance(value, str), \
-                "The 'nic_status' field must be of type 'str'"
+                isinstance(value, float), \
+                "The 'nic_status' field must be of type 'float'"
         self._nic_status = value
 
     @property
@@ -234,6 +221,19 @@ class HealthNode(metaclass=Metaclass_HealthNode):
                 isinstance(value, float), \
                 "The 'temperature' field must be of type 'float'"
         self._temperature = value
+
+    @property
+    def cpu_frequency(self):
+        """Message field 'cpu_frequency'."""
+        return self._cpu_frequency
+
+    @cpu_frequency.setter
+    def cpu_frequency(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'cpu_frequency' field must be of type 'float'"
+        self._cpu_frequency = value
 
     @property
     def error_array(self):

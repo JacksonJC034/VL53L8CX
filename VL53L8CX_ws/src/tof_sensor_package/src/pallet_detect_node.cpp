@@ -18,8 +18,8 @@ using base_interfaces_demo::msg::Location;
 using base_interfaces_demo::msg::PalletInfo;
 using base_interfaces_demo::srv::Hall;
 
-const int DISTANCE1 = 80; //52
-const int DISTANCE2 = 100; //71
+const int DISTANCE1 = 80; //53
+const int DISTANCE2 = 100; //75
 const int DISTANCE3 = 115; //88
 
 class PalletDetectNode : public rclcpp::Node {
@@ -33,7 +33,7 @@ public:
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100), std::bind(&PalletDetectNode::timer_callback, this));
         service_ = this->create_service<Hall>(
-            "/rbot/hall_server", std::bind(&PalletDetectNode::handle_service, this, std::placeholders::_1, std::placeholders::_2));
+            "/rbot/tray_server", std::bind(&PalletDetectNode::handle_service, this, std::placeholders::_1, std::placeholders::_2));
 
         // Initialize pallet_info_ parameters to 0
         pallet_info_.distance = 0;
@@ -78,10 +78,10 @@ private:
             C.convertTo(C, CV_32FC1);
             cv::bilateralFilter(A, A_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
             cv::bilateralFilter(C, C_32, 5, 10.0, 5.0, cv::BORDER_REFLECT);
-            A_32.convertTo(A, CV_8UC1);
-            C_32.convertTo(C, CV_8UC1);
-            A_binary = A.clone();
-            C_binary = C.clone();
+            A_32.convertTo(A, CV_16UC1);
+            C_32.convertTo(C, CV_16UC1);
+            A_32.convertTo(A_binary, CV_8UC1);
+            C_32.convertTo(C_binary, CV_8UC1);
 
             std::cout << "A" << A << std::endl;
             std::cout << "C" << C << std::endl;
@@ -112,14 +112,23 @@ private:
                 BestFit::binarizeMatrix(C_binary, distance_threshold);
 
                 if (checkPalletCondition(A_binary) && checkPalletCondition(C_binary)) {
-                    pallet_info_.pallet = 1;
+                    pallet_info_.pallet = 1; // pallet detected
                 } else {
-                    pallet_info_.pallet = 0;
+                    pallet_info_.pallet = 0; // assume no pallet
                 }
 
-                if (BestFit::check(A_binary) == 0.5 && BestFit::check(C_binary) == 0.5) {
+                if (pallet_info_.pallet == 1) {
                     auto [angleA, driftA] = BestFit::analyze(A, distance_threshold);
                     auto [angleC, driftC] = BestFit::analyze(C, distance_threshold);
+                    if (distance_threshold == 80) {
+                        distance_threshold = 52;
+                    }
+                    else if (distance_threshold == 100) {
+                        distance_threshold = 71;
+                    }
+                    else {
+                        distance_threshold = 88;
+                    }
                     driftA = driftA * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
                     driftC = driftC * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
                     auto drift = (driftA - driftC) / 2;
@@ -175,14 +184,13 @@ private:
 
     bool checkPalletCondition(const cv::Mat& matrix) {
         int count = 0;
+        std::cout << matrix << std::endl;
         for (int i = 0; i < matrix.rows; ++i) {
             for (int j = i; j < matrix.cols; ++j) {
-                std::cout << matrix.at<uint16_t>(i, j) << ", ";
-                if (matrix.at<uint16_t>(i, j) == 0) {
+                if (matrix.at<uint8_t>(i, j) == 0) {
                     count++;
                 }
             }
-            std::cout << std::endl;
         }
         std::cout << "count: " << count << std::endl;
         return count >= 32;

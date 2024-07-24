@@ -14,7 +14,7 @@ module base_interfaces_demo {
 
       @verbatim (language="comment", text=
         "本节点错误字")
-      int64 error;
+      int64 error_code;
 
       @verbatim (language="comment", text=
         "本节点状态")

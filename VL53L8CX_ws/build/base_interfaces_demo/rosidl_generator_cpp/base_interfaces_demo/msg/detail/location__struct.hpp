@@ -39,7 +39,7 @@ struct Location_
     {
       this->x = 0.0;
       this->y = 0.0;
-      this->error = 0ll;
+      this->error_code = 0ll;
       this->status = 0l;
       this->distance = 0.0;
       this->hall_location = 0l;
@@ -62,7 +62,7 @@ struct Location_
     {
       this->x = 0.0;
       this->y = 0.0;
-      this->error = 0ll;
+      this->error_code = 0ll;
       this->status = 0l;
       this->distance = 0.0;
       this->hall_location = 0l;
@@ -84,9 +84,9 @@ struct Location_
   using _y_type =
     double;
   _y_type y;
-  using _error_type =
+  using _error_code_type =
     int64_t;
-  _error_type error;
+  _error_code_type error_code;
   using _status_type =
     int32_t;
   _status_type status;
@@ -134,10 +134,10 @@ struct Location_
     this->y = _arg;
     return *this;
   }
-  Type & set__error(
+  Type & set__error_code(
     const int64_t & _arg)
   {
-    this->error = _arg;
+    this->error_code = _arg;
     return *this;
   }
   Type & set__status(
@@ -255,7 +255,7 @@ struct Location_
     if (this->y != other.y) {
       return false;
     }
-    if (this->error != other.error) {
+    if (this->error_code != other.error_code) {
       return false;
     }
     if (this->status != other.status) {

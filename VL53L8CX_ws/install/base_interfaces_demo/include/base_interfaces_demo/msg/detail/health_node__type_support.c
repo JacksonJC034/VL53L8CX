@@ -12,10 +12,6 @@
 #include "base_interfaces_demo/msg/detail/health_node__struct.h"
 
 
-// Include directives for member types
-// Member `nic_status`
-#include "rosidl_runtime_c/string_functions.h"
-
 #ifdef __cplusplus
 extern "C"
 {
@@ -52,21 +48,6 @@ static rosidl_typesupport_introspection_c__MessageMember HealthNode__rosidl_type
     NULL  // resize(index) function pointer
   },
   {
-    "memory_usage",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(base_interfaces_demo__msg__HealthNode, memory_usage),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
     "disk_usage",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
@@ -82,14 +63,14 @@ static rosidl_typesupport_introspection_c__MessageMember HealthNode__rosidl_type
     NULL  // resize(index) function pointer
   },
   {
-    "cpu_frequency",  // name
+    "memory_usage",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(base_interfaces_demo__msg__HealthNode, cpu_frequency),  // bytes offset in struct
+    offsetof(base_interfaces_demo__msg__HealthNode, memory_usage),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -98,7 +79,7 @@ static rosidl_typesupport_introspection_c__MessageMember HealthNode__rosidl_type
   },
   {
     "nic_status",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_STRING,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
@@ -120,6 +101,21 @@ static rosidl_typesupport_introspection_c__MessageMember HealthNode__rosidl_type
     0,  // array size
     false,  // is upper bound
     offsetof(base_interfaces_demo__msg__HealthNode, temperature),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "cpu_frequency",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__HealthNode, cpu_frequency),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

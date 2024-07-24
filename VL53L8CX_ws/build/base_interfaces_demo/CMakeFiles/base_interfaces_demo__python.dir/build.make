@@ -421,6 +421,19 @@ CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c -o CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c.s
 
+CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o: CMakeFiles/base_interfaces_demo__python.dir/flags.make
+CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o: rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building C object CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o   -c /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c
+
+CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c > CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.i
+
+CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c -o CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.s
+
 # Object files for target base_interfaces_demo__python
 base_interfaces_demo__python_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_nav_s.c.o" \
@@ -450,7 +463,8 @@ base_interfaces_demo__python_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_lift_control_s.c.o" \
 "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_bt_status_s.c.o" \
 "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_car_status_s.c.o" \
-"CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c.o"
+"CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c.o" \
+"CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o"
 
 # External object files for target base_interfaces_demo__python
 base_interfaces_demo__python_EXTERNAL_OBJECTS =
@@ -483,6 +497,7 @@ rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMa
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_bt_status_s.c.o
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_car_status_s.c.o
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c.o
+rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c.o
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMakeFiles/base_interfaces_demo__python.dir/build.make
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: libbase_interfaces_demo__rosidl_generator_c.so
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: /usr/lib/x86_64-linux-gnu/libpython3.8.so
@@ -513,7 +528,7 @@ rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: /op
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: /opt/ros/foxy/lib/librcpputils.so
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: /opt/ros/foxy/lib/librcutils.so
 rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so: CMakeFiles/base_interfaces_demo__python.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Linking C shared library rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Linking C shared library rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base_interfaces_demo__python.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

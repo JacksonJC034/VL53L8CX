@@ -74,21 +74,6 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HealthNode_me
     nullptr  // resize(index) function pointer
   },
   {
-    "memory_usage",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(base_interfaces_demo::msg::HealthNode, memory_usage),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
     "disk_usage",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
@@ -104,14 +89,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HealthNode_me
     nullptr  // resize(index) function pointer
   },
   {
-    "cpu_frequency",  // name
+    "memory_usage",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(base_interfaces_demo::msg::HealthNode, cpu_frequency),  // bytes offset in struct
+    offsetof(base_interfaces_demo::msg::HealthNode, memory_usage),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -120,7 +105,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HealthNode_me
   },
   {
     "nic_status",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_STRING,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
@@ -142,6 +127,21 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember HealthNode_me
     0,  // array size
     false,  // is upper bound
     offsetof(base_interfaces_demo::msg::HealthNode, temperature),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "cpu_frequency",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::HealthNode, cpu_frequency),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

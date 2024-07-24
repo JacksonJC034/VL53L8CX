@@ -33,14 +33,14 @@ void LiftControl__rosidl_typesupport_introspection_c__LiftControl_fini_function(
 
 static rosidl_typesupport_introspection_c__MessageMember LiftControl__rosidl_typesupport_introspection_c__LiftControl_message_member_array[4] = {
   {
-    "error",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    "error_code",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(base_interfaces_demo__msg__LiftControl, error),  // bytes offset in struct
+    offsetof(base_interfaces_demo__msg__LiftControl, error_code),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

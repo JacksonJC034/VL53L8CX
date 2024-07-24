@@ -1,0 +1,26 @@
+// generated from rosidl_adapter/resource/action.idl.em
+// with input from base_interfaces_demo/action/Pallet.action
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module action {
+    struct Pallet_Goal {
+      int32 type;
+    };
+    struct Pallet_Result {
+      int32 pallet;
+
+      double angle;
+
+      double drift;
+    };
+    struct Pallet_Feedback {
+      int32 pallet;
+
+      double angle;
+
+      double drift;
+    };
+  };
+};

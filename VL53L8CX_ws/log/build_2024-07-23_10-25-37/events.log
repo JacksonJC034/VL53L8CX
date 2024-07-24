@@ -1,0 +1,1014 @@
+[0.000000] (-) TimerEvent: {}
+[0.001581] (base_interfaces_demo) JobQueued: {'identifier': 'base_interfaces_demo', 'dependencies': OrderedDict()}
+[0.001720] (tof_sensor_package) JobQueued: {'identifier': 'tof_sensor_package', 'dependencies': OrderedDict([('base_interfaces_demo', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo')])}
+[0.003121] (base_interfaces_demo) JobStarted: {'identifier': 'base_interfaces_demo'}
+[0.040440] (base_interfaces_demo) JobProgress: {'identifier': 'base_interfaces_demo', 'progress': 'cmake'}
+[0.045855] (base_interfaces_demo) JobProgress: {'identifier': 'base_interfaces_demo', 'progress': 'build'}
+[0.047588] (base_interfaces_demo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo', '--', '-j4', '-l4'], 'cwd': '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo', 'env': OrderedDict([('USER', 'cjs'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR', '/home/cjs/snap/code/common/.cache/gio-modules'), ('SSH_AGENT_PID', '1495'), ('XDG_SESSION_TYPE', 'x11'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GIT_ASKPASS', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('LESS', '-R'), ('HOME', '/home/cjs'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/cjs/VL53L8CX'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/164/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/cjs/.oh-my-zsh'), ('GTK_IM_MODULE_FILE', '/home/cjs/snap/code/common/.cache/immodules/immodules.cache'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ALL', 'en.US.UTF-8'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('PAGER', 'less'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1390'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/164/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cjs'), ('JOURNAL_STREAM', '8:53922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USER_ZDOTDIR', '/home/cjs'), ('USERNAME', 'cjs'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/cjs-virtual-machine:@/tmp/.ICE-unix/1530,unix/cjs-virtual-machine:/tmp/.ICE-unix/1530'), ('GTK_EXE_PREFIX', '/snap/code/164/usr'), ('INVOCATION_ID', '77505bc0ebd24f48845ca7b348a0073f'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/164/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TILIX_ID', '5ad5abdc-a059-4ddc-8cd1-84d245006796'), ('VSCODE_INJECTION', '1'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-6e22b0dd4c.sock'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/cjs/snap/code/164/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('XDG_DATA_DIRS', '/home/cjs/snap/code/164/.local/share:/home/cjs/snap/code/164:/snap/code/164/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/cjs'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.100304] (-) TimerEvent: {}
+[0.201934] (-) TimerEvent: {}
+[0.303166] (-) TimerEvent: {}
+[0.403974] (-) TimerEvent: {}
+[0.424550] (base_interfaces_demo) StdoutLine: {'line': b'[  0%] Built target base_interfaces_demo__cpp\n'}
+[0.442095] (base_interfaces_demo) StdoutLine: {'line': b'[ 12%] Built target base_interfaces_demo__rosidl_generator_c\n'}
+[0.504742] (-) TimerEvent: {}
+[0.612785] (base_interfaces_demo) StdoutLine: {'line': b'[ 25%] Built target base_interfaces_demo__rosidl_typesupport_introspection_c\n'}
+[0.613048] (-) TimerEvent: {}
+[0.614537] (base_interfaces_demo) StdoutLine: {'line': b'[ 38%] Built target base_interfaces_demo__rosidl_typesupport_introspection_cpp\n'}
+[0.624222] (base_interfaces_demo) StdoutLine: {'line': b'[ 50%] Built target base_interfaces_demo__rosidl_typesupport_cpp\n'}
+[0.637151] (base_interfaces_demo) StdoutLine: {'line': b'[ 62%] Built target base_interfaces_demo__rosidl_typesupport_fastrtps_cpp\n'}
+[0.713863] (-) TimerEvent: {}
+[0.725859] (base_interfaces_demo) StdoutLine: {'line': b'[ 74%] Built target base_interfaces_demo__rosidl_typesupport_c\n'}
+[0.755019] (base_interfaces_demo) StdoutLine: {'line': b'[ 86%] Built target base_interfaces_demo__rosidl_typesupport_fastrtps_c\n'}
+[0.814767] (-) TimerEvent: {}
+[0.839783] (base_interfaces_demo) StdoutLine: {'line': b'[ 86%] Built target base_interfaces_demo\n'}
+[0.915839] (-) TimerEvent: {}
+[0.957584] (base_interfaces_demo) StdoutLine: {'line': b'[ 86%] Built target base_interfaces_demo__py\n'}
+[1.016273] (-) TimerEvent: {}
+[1.091756] (base_interfaces_demo) StdoutLine: {'line': b'[ 98%] Built target base_interfaces_demo__python\n'}
+[1.116787] (-) TimerEvent: {}
+[1.213486] (base_interfaces_demo) StdoutLine: {'line': b'[ 99%] Built target base_interfaces_demo__rosidl_typesupport_c__pyext\n'}
+[1.217573] (-) TimerEvent: {}
+[1.230119] (base_interfaces_demo) StdoutLine: {'line': b'[ 99%] Built target base_interfaces_demo__rosidl_typesupport_introspection_c__pyext\n'}
+[1.240312] (base_interfaces_demo) StdoutLine: {'line': b'[100%] Built target base_interfaces_demo__rosidl_typesupport_fastrtps_c__pyext\n'}
+[1.299850] (base_interfaces_demo) CommandEnded: {'returncode': 0}
+[1.318076] (-) TimerEvent: {}
+[1.419516] (-) TimerEvent: {}
+[1.522150] (-) TimerEvent: {}
+[1.623455] (-) TimerEvent: {}
+[1.725115] (-) TimerEvent: {}
+[1.826155] (-) TimerEvent: {}
+[1.927515] (-) TimerEvent: {}
+[2.029123] (-) TimerEvent: {}
+[2.130304] (-) TimerEvent: {}
+[2.231418] (-) TimerEvent: {}
+[2.332850] (-) TimerEvent: {}
+[2.435831] (-) TimerEvent: {}
+[2.537131] (-) TimerEvent: {}
+[2.638494] (-) TimerEvent: {}
+[2.739160] (-) TimerEvent: {}
+[2.840159] (-) TimerEvent: {}
+[2.941152] (-) TimerEvent: {}
+[3.041729] (-) TimerEvent: {}
+[3.143386] (-) TimerEvent: {}
+[3.246066] (-) TimerEvent: {}
+[3.347558] (-) TimerEvent: {}
+[3.450250] (-) TimerEvent: {}
+[3.551697] (-) TimerEvent: {}
+[3.653341] (-) TimerEvent: {}
+[3.754846] (-) TimerEvent: {}
+[3.856348] (-) TimerEvent: {}
+[3.956924] (-) TimerEvent: {}
+[4.057496] (-) TimerEvent: {}
+[4.158197] (-) TimerEvent: {}
+[4.259676] (-) TimerEvent: {}
+[4.290030] (base_interfaces_demo) JobProgress: {'identifier': 'base_interfaces_demo', 'progress': 'install'}
+[4.326255] (base_interfaces_demo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo'], 'cwd': '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo', 'env': OrderedDict([('USER', 'cjs'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR', '/home/cjs/snap/code/common/.cache/gio-modules'), ('SSH_AGENT_PID', '1495'), ('XDG_SESSION_TYPE', 'x11'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GIT_ASKPASS', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('LESS', '-R'), ('HOME', '/home/cjs'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/cjs/VL53L8CX'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/164/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/cjs/.oh-my-zsh'), ('GTK_IM_MODULE_FILE', '/home/cjs/snap/code/common/.cache/immodules/immodules.cache'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ALL', 'en.US.UTF-8'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('PAGER', 'less'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1390'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/164/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cjs'), ('JOURNAL_STREAM', '8:53922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USER_ZDOTDIR', '/home/cjs'), ('USERNAME', 'cjs'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/cjs-virtual-machine:@/tmp/.ICE-unix/1530,unix/cjs-virtual-machine:/tmp/.ICE-unix/1530'), ('GTK_EXE_PREFIX', '/snap/code/164/usr'), ('INVOCATION_ID', '77505bc0ebd24f48845ca7b348a0073f'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/164/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TILIX_ID', '5ad5abdc-a059-4ddc-8cd1-84d245006796'), ('VSCODE_INJECTION', '1'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-6e22b0dd4c.sock'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/cjs/snap/code/164/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('XDG_DATA_DIRS', '/home/cjs/snap/code/164/.local/share:/home/cjs/snap/code/164:/snap/code/164/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/cjs'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[4.360290] (-) TimerEvent: {}
+[4.362217] (base_interfaces_demo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[4.362556] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/ament_index/resource_index/rosidl_interfaces/base_interfaces_demo\n'}
+[4.362714] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo\n'}
+[4.362864] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action\n'}
+[4.363021] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/nav.h\n'}
+[4.363175] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail\n'}
+[4.363330] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__type_support.h\n'}
+[4.363499] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__functions.h\n'}
+[4.363850] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__struct.h\n'}
+[4.364939] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__type_support.h\n'}
+[4.366460] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__struct.h\n'}
+[4.370491] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__functions.c\n'}
+[4.373972] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__functions.h\n'}
+[4.376146] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__type_support.h\n'}
+[4.379761] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__functions.h\n'}
+[4.382408] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__functions.c\n'}
+[4.384683] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__struct.h\n'}
+[4.385891] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__functions.c\n'}
+[4.387152] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/pallet.h\n'}
+[4.390117] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/reverse.h\n'}
+[4.390522] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv\n'}
+[4.391728] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail\n'}
+[4.391892] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__functions.c\n'}
+[4.392055] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__functions.h\n'}
+[4.392202] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__functions.h\n'}
+[4.392346] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__type_support.h\n'}
+[4.392511] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__struct.h\n'}
+[4.393148] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__struct.h\n'}
+[4.393471] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__functions.c\n'}
+[4.393628] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__type_support.h\n'}
+[4.393771] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/hall.h\n'}
+[4.393916] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/pub_code.h\n'}
+[4.395502] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg\n'}
+[4.397401] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/bms_info.h\n'}
+[4.399459] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/ohom.h\n'}
+[4.401944] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/manual_seek_label.h\n'}
+[4.403434] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/motor_cmd.h\n'}
+[4.403848] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/lift_control.h\n'}
+[4.404038] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_generator_c__visibility_control.h\n'}
+[4.404224] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail\n'}
+[4.404505] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__functions.c\n'}
+[4.404675] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__functions.c\n'}
+[4.404836] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__functions.h\n'}
+[4.405180] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__functions.h\n'}
+[4.405345] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__functions.h\n'}
+[4.405505] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__type_support.h\n'}
+[4.405661] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__type_support.h\n'}
+[4.405825] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__type_support.h\n'}
+[4.406016] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__type_support.h\n'}
+[4.406185] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__functions.c\n'}
+[4.406343] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__struct.h\n'}
+[4.406507] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__functions.h\n'}
+[4.406668] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__struct.h\n'}
+[4.406824] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__struct.h\n'}
+[4.407000] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__type_support.h\n'}
+[4.407295] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__struct.h\n'}
+[4.407467] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__type_support.h\n'}
+[4.407766] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__struct.h\n'}
+[4.407921] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__functions.h\n'}
+[4.408099] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__struct.h\n'}
+[4.408242] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__functions.c\n'}
+[4.408411] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__struct.h\n'}
+[4.413311] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__type_support.h\n'}
+[4.416367] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__functions.c\n'}
+[4.418068] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__functions.c\n'}
+[4.420471] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__struct.h\n'}
+[4.420607] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__functions.h\n'}
+[4.420739] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__struct.h\n'}
+[4.420859] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__struct.h\n'}
+[4.422080] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__functions.c\n'}
+[4.422217] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__functions.h\n'}
+[4.422338] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__type_support.h\n'}
+[4.422459] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__type_support.h\n'}
+[4.422580] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__functions.h\n'}
+[4.422710] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__functions.h\n'}
+[4.422830] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__struct.h\n'}
+[4.422953] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__functions.h\n'}
+[4.423072] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__functions.c\n'}
+[4.423189] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__functions.h\n'}
+[4.423316] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__functions.h\n'}
+[4.423436] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__functions.c\n'}
+[4.425722] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__functions.c\n'}
+[4.426605] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__type_support.h\n'}
+[4.427745] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__type_support.h\n'}
+[4.428975] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__functions.h\n'}
+[4.430636] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__functions.h\n'}
+[4.432008] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__functions.h\n'}
+[4.433592] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__functions.c\n'}
+[4.436924] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__functions.h\n'}
+[4.437349] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__type_support.h\n'}
+[4.437507] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__functions.c\n'}
+[4.437651] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__functions.h\n'}
+[4.437795] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__functions.h\n'}
+[4.437938] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__functions.c\n'}
+[4.438079] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__struct.h\n'}
+[4.438233] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__functions.c\n'}
+[4.438384] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__functions.h\n'}
+[4.438552] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__struct.h\n'}
+[4.438846] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__functions.c\n'}
+[4.439009] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__struct.h\n'}
+[4.439167] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__type_support.h\n'}
+[4.439324] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__functions.c\n'}
+[4.439479] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__functions.h\n'}
+[4.439761] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__type_support.h\n'}
+[4.439912] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__type_support.h\n'}
+[4.440056] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__functions.h\n'}
+[4.440199] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__struct.h\n'}
+[4.440450] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__functions.h\n'}
+[4.440607] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__struct.h\n'}
+[4.440750] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__functions.c\n'}
+[4.440894] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__struct.h\n'}
+[4.441039] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__functions.h\n'}
+[4.443063] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__functions.h\n'}
+[4.444008] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__type_support.h\n'}
+[4.447549] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__functions.c\n'}
+[4.450411] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__type_support.h\n'}
+[4.451587] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__type_support.h\n'}
+[4.453064] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__struct.h\n'}
+[4.453967] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__functions.c\n'}
+[4.454773] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__functions.c\n'}
+[4.455452] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__type_support.h\n'}
+[4.456392] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__struct.h\n'}
+[4.457230] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__functions.c\n'}
+[4.459010] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__struct.h\n'}
+[4.459670] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__type_support.h\n'}
+[4.461951] (-) TimerEvent: {}
+[4.463319] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__type_support.h\n'}
+[4.464003] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__type_support.h\n'}
+[4.465106] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__struct.h\n'}
+[4.466003] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__struct.h\n'}
+[4.466856] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__struct.h\n'}
+[4.468242] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__functions.c\n'}
+[4.469516] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__struct.h\n'}
+[4.470532] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__struct.h\n'}
+[4.471839] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__type_support.h\n'}
+[4.474965] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__functions.c\n'}
+[4.475913] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__functions.c\n'}
+[4.477546] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__functions.h\n'}
+[4.479241] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__functions.h\n'}
+[4.481179] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__struct.h\n'}
+[4.481347] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__functions.c\n'}
+[4.481500] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__type_support.h\n'}
+[4.481651] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__type_support.h\n'}
+[4.481818] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__type_support.h\n'}
+[4.482061] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__functions.c\n'}
+[4.482191] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/pallet_info.h\n'}
+[4.482483] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/motor_status.h\n'}
+[4.482620] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.h\n'}
+[4.482739] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/charger_info.h\n'}
+[4.482857] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rcs_info.h\n'}
+[4.482976] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/bt_status.h\n'}
+[4.483094] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/lift_info.h\n'}
+[4.483229] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/color_info.h\n'}
+[4.483439] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/movecontrol_info.h\n'}
+[4.483558] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/test.h\n'}
+[4.483678] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/obs_laser.h\n'}
+[4.483797] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/hall_info.h\n'}
+[4.483918] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/health_node.h\n'}
+[4.484046] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/car_status.h\n'}
+[4.484170] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/motion_control.h\n'}
+[4.489158] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/pub_code.h\n'}
+[4.490802] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/seek_cmd.h\n'}
+[4.491130] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/system_status.h\n'}
+[4.491255] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/manual.h\n'}
+[4.491375] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/seek_ret.h\n'}
+[4.491521] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/file_updata.h\n'}
+[4.491770] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/library_path.sh\n'}
+[4.491893] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/library_path.dsv\n'}
+[4.492016] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_generator_c.so\n'}
+[4.492226] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo\n'}
+[4.492420] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action\n'}
+[4.493732] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail\n'}
+[4.493870] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_c.h\n'}
+[4.493994] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_fastrtps_c.h\n'}
+[4.494115] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__rosidl_typesupport_fastrtps_c.h\n'}
+[4.494237] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv\n'}
+[4.494371] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail\n'}
+[4.494559] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__rosidl_typesupport_fastrtps_c.h\n'}
+[4.494789] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__rosidl_typesupport_fastrtps_c.h\n'}
+[4.494977] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg\n'}
+[4.495143] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail\n'}
+[4.495300] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.495475] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__rosidl_typesupport_fastrtps_c.h\n'}
+[4.495652] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__rosidl_typesupport_fastrtps_c.h\n'}
+[4.495842] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.496018] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__rosidl_typesupport_fastrtps_c.h\n'}
+[4.496175] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.496340] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.496549] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__rosidl_typesupport_fastrtps_c.h\n'}
+[4.496896] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497055] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497202] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497364] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497526] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497674] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497817] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.497969] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__rosidl_typesupport_fastrtps_c.h\n'}
+[4.498121] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__rosidl_typesupport_fastrtps_c.h\n'}
+[4.498269] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[4.498462] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__rosidl_typesupport_fastrtps_c.h\n'}
+[4.498642] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__rosidl_typesupport_fastrtps_c.h\n'}
+[4.498789] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__rosidl_typesupport_fastrtps_c.h\n'}
+[4.498936] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__rosidl_typesupport_fastrtps_c.h\n'}
+[4.499085] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__rosidl_typesupport_fastrtps_c.h\n'}
+[4.499232] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__rosidl_typesupport_fastrtps_c.h\n'}
+[4.499380] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__rosidl_typesupport_fastrtps_c.h\n'}
+[4.499561] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__rosidl_typesupport_fastrtps_c.h\n'}
+[4.499717] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[4.499868] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_fastrtps_c.so\n'}
+[4.500015] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo\n'}
+[4.500162] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action\n'}
+[4.500310] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail\n'}
+[4.500481] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.504328] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/dds_fastrtps\n'}
+[4.504584] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.504886] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.505040] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv\n'}
+[4.505193] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail\n'}
+[4.505342] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/dds_fastrtps\n'}
+[4.505508] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.505658] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.505817] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg\n'}
+[4.505971] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail\n'}
+[4.506122] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.506266] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.506410] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.506619] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.506769] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.506916] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507062] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507211] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507357] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507513] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507662] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507823] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.507970] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.508118] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.508263] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.508414] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/dds_fastrtps\n'}
+[4.511353] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.511676] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.511882] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.512073] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.512225] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.512405] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.512854] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.513037] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.513166] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.513288] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.513409] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[4.513529] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[4.513650] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_fastrtps_cpp.so\n'}
+[4.513771] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo\n'}
+[4.513889] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action\n'}
+[4.514008] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail\n'}
+[4.514127] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_introspection_c.h\n'}
+[4.514261] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__type_support.c\n'}
+[4.514390] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h\n'}
+[4.514582] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__type_support.c\n'}
+[4.514763] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__rosidl_typesupport_introspection_c.h\n'}
+[4.514900] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__type_support.c\n'}
+[4.515020] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv\n'}
+[4.515139] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail\n'}
+[4.515268] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__rosidl_typesupport_introspection_c.h\n'}
+[4.515387] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__type_support.c\n'}
+[4.515505] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__type_support.c\n'}
+[4.515622] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__rosidl_typesupport_introspection_c.h\n'}
+[4.515743] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg\n'}
+[4.515860] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail\n'}
+[4.515977] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__type_support.c\n'}
+[4.516094] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__rosidl_typesupport_introspection_c.h\n'}
+[4.516212] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__rosidl_typesupport_introspection_c.h\n'}
+[4.516330] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__type_support.c\n'}
+[4.516447] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__rosidl_typesupport_introspection_c.h\n'}
+[4.516728] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__type_support.c\n'}
+[4.516860] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__rosidl_typesupport_introspection_c.h\n'}
+[4.516977] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__type_support.c\n'}
+[4.517099] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__rosidl_typesupport_introspection_c.h\n'}
+[4.517218] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__rosidl_typesupport_introspection_c.h\n'}
+[4.517335] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__type_support.c\n'}
+[4.517453] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__rosidl_typesupport_introspection_c.h\n'}
+[4.517572] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__rosidl_typesupport_introspection_c.h\n'}
+[4.517691] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__type_support.c\n'}
+[4.517810] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__rosidl_typesupport_introspection_c.h\n'}
+[4.517932] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__type_support.c\n'}
+[4.518055] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__type_support.c\n'}
+[4.518177] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__type_support.c\n'}
+[4.518303] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__rosidl_typesupport_introspection_c.h\n'}
+[4.518501] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__type_support.c\n'}
+[4.518688] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__type_support.c\n'}
+[4.518814] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__type_support.c\n'}
+[4.518935] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__type_support.c\n'}
+[4.519055] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__rosidl_typesupport_introspection_c.h\n'}
+[4.519180] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__rosidl_typesupport_introspection_c.h\n'}
+[4.519299] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__type_support.c\n'}
+[4.519419] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__type_support.c\n'}
+[4.519542] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__rosidl_typesupport_introspection_c.h\n'}
+[4.519660] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__type_support.c\n'}
+[4.519778] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__rosidl_typesupport_introspection_c.h\n'}
+[4.519898] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__type_support.c\n'}
+[4.520016] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__rosidl_typesupport_introspection_c.h\n'}
+[4.520152] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__type_support.c\n'}
+[4.520300] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__type_support.c\n'}
+[4.520425] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__rosidl_typesupport_introspection_c.h\n'}
+[4.522266] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__type_support.c\n'}
+[4.522406] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__rosidl_typesupport_introspection_c.h\n'}
+[4.522555] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__rosidl_typesupport_introspection_c.h\n'}
+[4.522682] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__type_support.c\n'}
+[4.522802] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__rosidl_typesupport_introspection_c.h\n'}
+[4.522921] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__type_support.c\n'}
+[4.523041] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__type_support.c\n'}
+[4.523158] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__rosidl_typesupport_introspection_c.h\n'}
+[4.523276] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__rosidl_typesupport_introspection_c.h\n'}
+[4.523393] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__rosidl_typesupport_introspection_c.h\n'}
+[4.523511] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__type_support.c\n'}
+[4.523639] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__rosidl_typesupport_introspection_c.h\n'}
+[4.523759] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_c.h\n'}
+[4.523877] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__type_support.c\n'}
+[4.523997] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__type_support.c\n'}
+[4.524115] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__rosidl_typesupport_introspection_c.h\n'}
+[4.524232] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__rosidl_typesupport_introspection_c.h\n'}
+[4.524349] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[4.524500] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_introspection_c.so\n'}
+[4.524772] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_c.so\n'}
+[4.524895] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo\n'}
+[4.525014] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action\n'}
+[4.525133] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail\n'}
+[4.525251] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__builder.hpp\n'}
+[4.525370] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__traits.hpp\n'}
+[4.525487] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__struct.hpp\n'}
+[4.525607] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__traits.hpp\n'}
+[4.525724] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__type_support.hpp\n'}
+[4.525842] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__struct.hpp\n'}
+[4.525959] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__type_support.hpp\n'}
+[4.526076] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__traits.hpp\n'}
+[4.526194] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__builder.hpp\n'}
+[4.526316] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__builder.hpp\n'}
+[4.526435] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__struct.hpp\n'}
+[4.526571] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__type_support.hpp\n'}
+[4.526701] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/reverse.hpp\n'}
+[4.526829] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/nav.hpp\n'}
+[4.526954] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/pallet.hpp\n'}
+[4.527078] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv\n'}
+[4.527199] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/pub_code.hpp\n'}
+[4.527320] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail\n'}
+[4.527448] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__type_support.hpp\n'}
+[4.527571] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__type_support.hpp\n'}
+[4.527737] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__builder.hpp\n'}
+[4.527896] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__builder.hpp\n'}
+[4.528085] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__struct.hpp\n'}
+[4.528231] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__struct.hpp\n'}
+[4.528356] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__traits.hpp\n'}
+[4.528498] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__traits.hpp\n'}
+[4.528696] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/hall.hpp\n'}
+[4.528826] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg\n'}
+[4.529147] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/color_info.hpp\n'}
+[4.529327] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/car_status.hpp\n'}
+[4.529508] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/test.hpp\n'}
+[4.529666] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/ohom.hpp\n'}
+[4.529837] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/seek_ret.hpp\n'}
+[4.530046] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/pub_code.hpp\n'}
+[4.530264] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/motor_cmd.hpp\n'}
+[4.530602] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rcs_info.hpp\n'}
+[4.530811] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/pallet_info.hpp\n'}
+[4.530946] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail\n'}
+[4.531164] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__builder.hpp\n'}
+[4.531340] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__type_support.hpp\n'}
+[4.531492] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__type_support.hpp\n'}
+[4.531641] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__struct.hpp\n'}
+[4.531808] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__struct.hpp\n'}
+[4.531947] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__builder.hpp\n'}
+[4.532082] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__builder.hpp\n'}
+[4.532214] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__traits.hpp\n'}
+[4.532350] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__struct.hpp\n'}
+[4.532485] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__traits.hpp\n'}
+[4.532609] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__type_support.hpp\n'}
+[4.532763] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__builder.hpp\n'}
+[4.532900] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__type_support.hpp\n'}
+[4.533181] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__struct.hpp\n'}
+[4.533390] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__builder.hpp\n'}
+[4.533594] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__traits.hpp\n'}
+[4.533755] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__builder.hpp\n'}
+[4.533895] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__traits.hpp\n'}
+[4.534047] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__traits.hpp\n'}
+[4.534175] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__builder.hpp\n'}
+[4.534301] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__builder.hpp\n'}
+[4.534444] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__type_support.hpp\n'}
+[4.534645] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__type_support.hpp\n'}
+[4.534799] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__builder.hpp\n'}
+[4.534919] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__builder.hpp\n'}
+[4.535077] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__struct.hpp\n'}
+[4.535204] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__struct.hpp\n'}
+[4.535323] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__struct.hpp\n'}
+[4.535441] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__struct.hpp\n'}
+[4.535559] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__struct.hpp\n'}
+[4.535680] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__builder.hpp\n'}
+[4.535805] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__type_support.hpp\n'}
+[4.535929] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__type_support.hpp\n'}
+[4.538511] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__struct.hpp\n'}
+[4.538742] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__traits.hpp\n'}
+[4.538910] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__struct.hpp\n'}
+[4.539083] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__type_support.hpp\n'}
+[4.539210] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__traits.hpp\n'}
+[4.539329] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__builder.hpp\n'}
+[4.539454] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__traits.hpp\n'}
+[4.539574] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__type_support.hpp\n'}
+[4.539718] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__traits.hpp\n'}
+[4.539840] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__type_support.hpp\n'}
+[4.539960] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__traits.hpp\n'}
+[4.540099] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__type_support.hpp\n'}
+[4.540217] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__type_support.hpp\n'}
+[4.540352] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__type_support.hpp\n'}
+[4.540473] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__builder.hpp\n'}
+[4.540590] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__traits.hpp\n'}
+[4.540708] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__builder.hpp\n'}
+[4.540825] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__struct.hpp\n'}
+[4.540943] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__builder.hpp\n'}
+[4.541881] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__type_support.hpp\n'}
+[4.542100] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__traits.hpp\n'}
+[4.542261] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__traits.hpp\n'}
+[4.542425] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__builder.hpp\n'}
+[4.542594] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__type_support.hpp\n'}
+[4.542765] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__type_support.hpp\n'}
+[4.542919] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__builder.hpp\n'}
+[4.543106] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__traits.hpp\n'}
+[4.543265] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__traits.hpp\n'}
+[4.543424] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__traits.hpp\n'}
+[4.543580] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__struct.hpp\n'}
+[4.543745] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__builder.hpp\n'}
+[4.543901] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__type_support.hpp\n'}
+[4.544054] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__traits.hpp\n'}
+[4.544237] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__builder.hpp\n'}
+[4.544416] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__struct.hpp\n'}
+[4.544577] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__traits.hpp\n'}
+[4.544775] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__type_support.hpp\n'}
+[4.544975] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__traits.hpp\n'}
+[4.545468] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__type_support.hpp\n'}
+[4.545653] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__builder.hpp\n'}
+[4.545868] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__struct.hpp\n'}
+[4.546027] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__traits.hpp\n'}
+[4.546220] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__type_support.hpp\n'}
+[4.546408] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__builder.hpp\n'}
+[4.546661] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__builder.hpp\n'}
+[4.546837] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__struct.hpp\n'}
+[4.547042] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__traits.hpp\n'}
+[4.547204] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__traits.hpp\n'}
+[4.547359] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__struct.hpp\n'}
+[4.547512] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__type_support.hpp\n'}
+[4.547666] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__struct.hpp\n'}
+[4.547819] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__type_support.hpp\n'}
+[4.547999] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__type_support.hpp\n'}
+[4.548502] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__struct.hpp\n'}
+[4.548662] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__struct.hpp\n'}
+[4.548817] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__builder.hpp\n'}
+[4.549022] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__traits.hpp\n'}
+[4.549335] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__traits.hpp\n'}
+[4.549496] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__builder.hpp\n'}
+[4.549651] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__builder.hpp\n'}
+[4.549805] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__traits.hpp\n'}
+[4.549995] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__struct.hpp\n'}
+[4.550157] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__struct.hpp\n'}
+[4.550312] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__type_support.hpp\n'}
+[4.550464] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__type_support.hpp\n'}
+[4.550618] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__struct.hpp\n'}
+[4.550773] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__builder.hpp\n'}
+[4.550937] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__traits.hpp\n'}
+[4.551139] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__struct.hpp\n'}
+[4.551310] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__struct.hpp\n'}
+[4.551462] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__struct.hpp\n'}
+[4.551617] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/manual_seek_label.hpp\n'}
+[4.551781] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/motion_control.hpp\n'}
+[4.551941] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/lift_control.hpp\n'}
+[4.552131] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/motor_status.hpp\n'}
+[4.552299] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/hall_info.hpp\n'}
+[4.552452] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/charger_info.hpp\n'}
+[4.552604] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/movecontrol_info.hpp\n'}
+[4.552771] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[4.552926] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/location.hpp\n'}
+[4.553356] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/file_updata.hpp\n'}
+[4.553527] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/seek_cmd.hpp\n'}
+[4.553684] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/health_node.hpp\n'}
+[4.553837] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/bt_status.hpp\n'}
+[4.554013] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/obs_laser.hpp\n'}
+[4.554168] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/system_status.hpp\n'}
+[4.554324] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/bms_info.hpp\n'}
+[4.554482] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/manual.hpp\n'}
+[4.554650] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/lift_info.hpp\n'}
+[4.554807] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo\n'}
+[4.554996] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action\n'}
+[4.555165] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail\n'}
+[4.555318] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.555477] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__type_support.cpp\n'}
+[4.555634] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/reverse__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.555798] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__type_support.cpp\n'}
+[4.555983] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.556154] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/action/detail/nav__type_support.cpp\n'}
+[4.556337] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv\n'}
+[4.556500] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail\n'}
+[4.556660] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.556818] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.557033] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/hall__type_support.cpp\n'}
+[4.558412] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/srv/detail/pub_code__type_support.cpp\n'}
+[4.558598] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg\n'}
+[4.558765] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail\n'}
+[4.558918] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.559126] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.559280] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.559432] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.559584] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.559736] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.559891] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__type_support.cpp\n'}
+[4.560852] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.561874] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__type_support.cpp\n'}
+[4.565160] (-) TimerEvent: {}
+[4.566879] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/health_node__type_support.cpp\n'}
+[4.569430] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__type_support.cpp\n'}
+[4.570373] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/car_status__type_support.cpp\n'}
+[4.570550] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__type_support.cpp\n'}
+[4.570732] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.571071] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motion_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.571388] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.571552] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__type_support.cpp\n'}
+[4.571707] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.571878] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.572172] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/location__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.572331] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__type_support.cpp\n'}
+[4.572554] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__type_support.cpp\n'}
+[4.572710] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual__type_support.cpp\n'}
+[4.572861] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/rcs_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.575366] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__type_support.cpp\n'}
+[4.575984] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__type_support.cpp\n'}
+[4.576433] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bt_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.577098] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_info__type_support.cpp\n'}
+[4.577266] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/manual_seek_label__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.577411] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.577552] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/charger_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.577692] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.577862] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_cmd__type_support.cpp\n'}
+[4.578166] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/color_info__type_support.cpp\n'}
+[4.578313] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.578460] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.578621] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_cmd__type_support.cpp\n'}
+[4.578762] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__type_support.cpp\n'}
+[4.578905] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/file_updata__type_support.cpp\n'}
+[4.579455] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/ohom__type_support.cpp\n'}
+[4.580697] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pub_code__type_support.cpp\n'}
+[4.580893] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/lift_control__type_support.cpp\n'}
+[4.581054] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/bms_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.581407] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/seek_ret__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.581553] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/system_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.581706] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.581888] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/movecontrol_info__type_support.cpp\n'}
+[4.582152] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/motor_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[4.582298] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/pallet_info__type_support.cpp\n'}
+[4.582447] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/test__type_support.cpp\n'}
+[4.582733] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/obs_laser__type_support.cpp\n'}
+[4.582883] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/include/base_interfaces_demo/msg/detail/hall_info__type_support.cpp\n'}
+[4.583045] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_introspection_cpp.so\n'}
+[4.583199] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__rosidl_typesupport_cpp.so\n'}
+[4.583343] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/pythonpath.sh\n'}
+[4.583483] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/pythonpath.dsv\n'}
+[4.583637] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/__init__.py\n'}
+[4.583782] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action\n'}
+[4.583923] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/_reverse_s.c\n'}
+[4.584067] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/_nav_s.c\n'}
+[4.584216] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/_reverse.py\n'}
+[4.584360] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/_nav.py\n'}
+[4.584516] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/_pallet.py\n'}
+[4.584934] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/_pallet_s.c\n'}
+[4.585133] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/action/__init__.py\n'}
+[4.585282] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg\n'}
+[4.585429] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_hall_info_s.c\n'}
+[4.585577] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_health_node.py\n'}
+[4.585733] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_car_status_s.c\n'}
+[4.585880] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_health_node_s.c\n'}
+[4.586727] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_color_info.py\n'}
+[4.586888] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_lift_info_s.c\n'}
+[4.587056] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_motor_status.py\n'}
+[4.587215] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_pallet_info.py\n'}
+[4.587368] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_obs_laser.py\n'}
+[4.587514] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_movecontrol_info.py\n'}
+[4.587666] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_seek_ret_s.c\n'}
+[4.588642] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_seek_cmd_s.c\n'}
+[4.588821] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_file_updata_s.c\n'}
+[4.589358] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_manual_seek_label.py\n'}
+[4.589547] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_motor_cmd_s.c\n'}
+[4.589692] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_ohom.py\n'}
+[4.589841] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_obs_laser_s.c\n'}
+[4.589987] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_charger_info_s.c\n'}
+[4.590134] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_pub_code_s.c\n'}
+[4.590278] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_seek_cmd.py\n'}
+[4.590448] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_system_status.py\n'}
+[4.590723] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_manual.py\n'}
+[4.590873] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_movecontrol_info_s.c\n'}
+[4.591042] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_pub_code.py\n'}
+[4.591201] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_charger_info.py\n'}
+[4.591345] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_lift_control_s.c\n'}
+[4.591489] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_manual_s.c\n'}
+[4.591636] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_bt_status.py\n'}
+[4.591779] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_motion_control_s.c\n'}
+[4.591923] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_manual_seek_label_s.c\n'}
+[4.592072] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_hall_info.py\n'}
+[4.592215] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_location_s.c\n'}
+[4.592358] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_seek_ret.py\n'}
+[4.595746] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_ohom_s.c\n'}
+[4.596167] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_car_status.py\n'}
+[4.596590] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_lift_control.py\n'}
+[4.596936] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_bt_status_s.c\n'}
+[4.597435] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_motion_control.py\n'}
+[4.597952] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_test.py\n'}
+[4.598723] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_rcs_info_s.c\n'}
+[4.598933] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_system_status_s.c\n'}
+[4.599434] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_location.py\n'}
+[4.599618] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_motor_cmd.py\n'}
+[4.600168] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_color_info_s.c\n'}
+[4.600317] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_motor_status_s.c\n'}
+[4.600604] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_rcs_info.py\n'}
+[4.601812] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_file_updata.py\n'}
+[4.602207] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_lift_info.py\n'}
+[4.603719] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_bms_info_s.c\n'}
+[4.604109] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_pallet_info_s.c\n'}
+[4.604993] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/__init__.py\n'}
+[4.605993] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_bms_info.py\n'}
+[4.606500] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/msg/_test_s.c\n'}
+[4.607087] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/srv\n'}
+[4.608193] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/srv/_hall.py\n'}
+[4.609309] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/srv/_hall_s.c\n'}
+[4.609683] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/srv/_pub_code_s.c\n'}
+[4.610317] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/srv/_pub_code.py\n'}
+[4.611247] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/srv/__init__.py\n'}
+[4.611800] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_fastrtps_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.612070] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_introspection_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.612615] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages/base_interfaces_demo/base_interfaces_demo_s__rosidl_typesupport_c.cpython-38-x86_64-linux-gnu.so\n'}
+[4.612880] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/libbase_interfaces_demo__python.so\n'}
+[4.613826] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/action/Nav.idl\n'}
+[4.614248] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Ohom.idl\n'}
+[4.614585] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/HallInfo.idl\n'}
+[4.614738] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Location.idl\n'}
+[4.614883] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MotorCmd.idl\n'}
+[4.615041] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MotorStatus.idl\n'}
+[4.615201] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Manual.idl\n'}
+[4.615347] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Test.idl\n'}
+[4.615500] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/srv/Hall.idl\n'}
+[4.615646] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/BmsInfo.idl\n'}
+[4.615793] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ChargerInfo.idl\n'}
+[4.615934] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ManualSeekLabel.idl\n'}
+[4.616082] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/SeekCmd.idl\n'}
+[4.616226] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/SeekRet.idl\n'}
+[4.616372] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/SystemStatus.idl\n'}
+[4.616520] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/action/Reverse.idl\n'}
+[4.616664] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/LiftInfo.idl\n'}
+[4.616809] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ColorInfo.idl\n'}
+[4.616950] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/FileUpdata.idl\n'}
+[4.617339] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ObsLaser.idl\n'}
+[4.619560] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/PalletInfo.idl\n'}
+[4.620119] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MovecontrolInfo.idl\n'}
+[4.621440] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MotionControl.idl\n'}
+[4.621961] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/RcsInfo.idl\n'}
+[4.623613] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/LiftControl.idl\n'}
+[4.623855] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/BtStatus.idl\n'}
+[4.624075] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/CarStatus.idl\n'}
+[4.624328] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/HealthNode.idl\n'}
+[4.624739] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/action/Pallet.idl\n'}
+[4.625011] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/action/Nav.action\n'}
+[4.625460] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Ohom.msg\n'}
+[4.626413] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/HallInfo.msg\n'}
+[4.626904] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Location.msg\n'}
+[4.627328] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MotorCmd.msg\n'}
+[4.627455] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MotorStatus.msg\n'}
+[4.627604] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Manual.msg\n'}
+[4.627781] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/Test.msg\n'}
+[4.627918] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/srv/Hall.srv\n'}
+[4.628065] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/srv/Hall_Request.msg\n'}
+[4.628200] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/srv/Hall_Response.msg\n'}
+[4.628744] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/BmsInfo.msg\n'}
+[4.628929] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ChargerInfo.msg\n'}
+[4.629076] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ManualSeekLabel.msg\n'}
+[4.629221] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/SeekCmd.msg\n'}
+[4.629432] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/SeekRet.msg\n'}
+[4.629634] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/SystemStatus.msg\n'}
+[4.629759] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/action/Reverse.action\n'}
+[4.629888] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/LiftInfo.msg\n'}
+[4.630008] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ColorInfo.msg\n'}
+[4.630128] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/FileUpdata.msg\n'}
+[4.630248] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/ObsLaser.msg\n'}
+[4.630366] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/PalletInfo.msg\n'}
+[4.630484] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MovecontrolInfo.msg\n'}
+[4.630605] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/MotionControl.msg\n'}
+[4.630725] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/RcsInfo.msg\n'}
+[4.630844] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/LiftControl.msg\n'}
+[4.630962] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/BtStatus.msg\n'}
+[4.631089] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/CarStatus.msg\n'}
+[4.631208] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/msg/HealthNode.msg\n'}
+[4.631326] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/action/Pallet.action\n'}
+[4.631445] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/ament_index/resource_index/package_run_dependencies/base_interfaces_demo\n'}
+[4.631591] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/ament_index/resource_index/parent_prefix_path/base_interfaces_demo\n'}
+[4.631713] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/ament_prefix_path.sh\n'}
+[4.631855] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/ament_prefix_path.dsv\n'}
+[4.632102] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/path.sh\n'}
+[4.632224] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/environment/path.dsv\n'}
+[4.632344] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/local_setup.bash\n'}
+[4.632461] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/local_setup.sh\n'}
+[4.632703] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/local_setup.zsh\n'}
+[4.632842] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/local_setup.dsv\n'}
+[4.632961] (base_interfaces_demo) StdoutLine: {'line': b'-- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/package.dsv\n'}
+[4.633078] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/ament_index/resource_index/packages/base_interfaces_demo\n'}
+[4.635827] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_generator_cExport.cmake\n'}
+[4.636096] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_generator_cExport-noconfig.cmake\n'}
+[4.638619] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_introspection_cExport.cmake\n'}
+[4.640175] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[4.641692] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_cExport.cmake\n'}
+[4.641948] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[4.642063] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_generator_cppExport.cmake\n'}
+[4.642188] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[4.642402] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[4.642978] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_cppExport.cmake\n'}
+[4.643542] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demo__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[4.644700] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/rosidl_cmake-extras.cmake\n'}
+[4.644878] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[4.645878] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[4.647212] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[4.648996] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[4.649417] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[4.650120] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[4.650347] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demoConfig.cmake\n'}
+[4.650510] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake/base_interfaces_demoConfig-version.cmake\n'}
+[4.650675] (base_interfaces_demo) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/package.xml\n'}
+[4.659561] (base_interfaces_demo) CommandEnded: {'returncode': 0}
+[4.665460] (-) TimerEvent: {}
+[4.767001] (-) TimerEvent: {}
+[4.868852] (-) TimerEvent: {}
+[4.969474] (-) TimerEvent: {}
+[5.071872] (-) TimerEvent: {}
+[5.173509] (-) TimerEvent: {}
+[5.274944] (-) TimerEvent: {}
+[5.376500] (-) TimerEvent: {}
+[5.477067] (-) TimerEvent: {}
+[5.578635] (-) TimerEvent: {}
+[5.680329] (-) TimerEvent: {}
+[5.781721] (-) TimerEvent: {}
+[5.882294] (-) TimerEvent: {}
+[5.982956] (-) TimerEvent: {}
+[6.083553] (-) TimerEvent: {}
+[6.185334] (-) TimerEvent: {}
+[6.286206] (-) TimerEvent: {}
+[6.387123] (-) TimerEvent: {}
+[6.487717] (-) TimerEvent: {}
+[6.588736] (-) TimerEvent: {}
+[6.689829] (-) TimerEvent: {}
+[6.790879] (-) TimerEvent: {}
+[6.891942] (-) TimerEvent: {}
+[6.992759] (-) TimerEvent: {}
+[7.093573] (-) TimerEvent: {}
+[7.194485] (-) TimerEvent: {}
+[7.296253] (-) TimerEvent: {}
+[7.397229] (-) TimerEvent: {}
+[7.498294] (-) TimerEvent: {}
+[7.599016] (-) TimerEvent: {}
+[7.701343] (-) TimerEvent: {}
+[7.802459] (-) TimerEvent: {}
+[7.903201] (-) TimerEvent: {}
+[8.004032] (-) TimerEvent: {}
+[8.060963] (base_interfaces_demo) JobEnded: {'identifier': 'base_interfaces_demo', 'rc': 0}
+[8.063888] (tof_sensor_package) JobStarted: {'identifier': 'tof_sensor_package'}
+[8.098513] (tof_sensor_package) JobProgress: {'identifier': 'tof_sensor_package', 'progress': 'cmake'}
+[8.102095] (tof_sensor_package) JobProgress: {'identifier': 'tof_sensor_package', 'progress': 'build'}
+[8.103192] (tof_sensor_package) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package', '--', '-j4', '-l4'], 'cwd': '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package', 'env': OrderedDict([('USER', 'cjs'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR', '/home/cjs/snap/code/common/.cache/gio-modules'), ('SSH_AGENT_PID', '1495'), ('XDG_SESSION_TYPE', 'x11'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GIT_ASKPASS', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('LESS', '-R'), ('HOME', '/home/cjs'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/cjs/VL53L8CX'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/164/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/cjs/.oh-my-zsh'), ('GTK_IM_MODULE_FILE', '/home/cjs/snap/code/common/.cache/immodules/immodules.cache'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ALL', 'en.US.UTF-8'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('PAGER', 'less'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1390'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/164/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cjs'), ('JOURNAL_STREAM', '8:53922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USER_ZDOTDIR', '/home/cjs'), ('USERNAME', 'cjs'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/cjs-virtual-machine:@/tmp/.ICE-unix/1530,unix/cjs-virtual-machine:/tmp/.ICE-unix/1530'), ('GTK_EXE_PREFIX', '/snap/code/164/usr'), ('INVOCATION_ID', '77505bc0ebd24f48845ca7b348a0073f'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/164/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TILIX_ID', '5ad5abdc-a059-4ddc-8cd1-84d245006796'), ('VSCODE_INJECTION', '1'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-6e22b0dd4c.sock'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/cjs/snap/code/164/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('XDG_DATA_DIRS', '/home/cjs/snap/code/164/.local/share:/home/cjs/snap/code/164:/snap/code/164/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/cjs'), ('PYTHONPATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy')]), 'shell': False}
+[8.105852] (-) TimerEvent: {}
+[8.206853] (-) TimerEvent: {}
+[8.308911] (-) TimerEvent: {}
+[8.312470] (tof_sensor_package) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target pallet_detect_node\x1b[0m\n'}
+[8.409384] (-) TimerEvent: {}
+[8.510233] (-) TimerEvent: {}
+[8.540413] (tof_sensor_package) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o\x1b[0m\n'}
+[8.541042] (tof_sensor_package) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o\x1b[0m\n'}
+[8.611230] (-) TimerEvent: {}
+[8.712101] (-) TimerEvent: {}
+[8.813453] (-) TimerEvent: {}
+[8.914285] (-) TimerEvent: {}
+[9.015455] (-) TimerEvent: {}
+[9.116905] (-) TimerEvent: {}
+[9.218432] (-) TimerEvent: {}
+[9.319093] (-) TimerEvent: {}
+[9.420690] (-) TimerEvent: {}
+[9.522094] (-) TimerEvent: {}
+[9.623476] (-) TimerEvent: {}
+[9.724338] (-) TimerEvent: {}
+[9.824901] (-) TimerEvent: {}
+[9.925519] (-) TimerEvent: {}
+[10.029051] (-) TimerEvent: {}
+[10.133075] (-) TimerEvent: {}
+[10.234125] (-) TimerEvent: {}
+[10.337178] (-) TimerEvent: {}
+[10.438685] (-) TimerEvent: {}
+[10.540400] (-) TimerEvent: {}
+[10.642877] (-) TimerEvent: {}
+[10.744314] (-) TimerEvent: {}
+[10.845971] (-) TimerEvent: {}
+[10.949340] (-) TimerEvent: {}
+[11.052964] (-) TimerEvent: {}
+[11.157482] (-) TimerEvent: {}
+[11.261126] (-) TimerEvent: {}
+[11.329264] (tof_sensor_package) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:\x1b[m\x1b[K In static member function \xe2\x80\x98\x1b[01m\x1b[Kstatic std::pair<double, double> BestFit::analyze(const cv::Mat&, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[11.329652] (tof_sensor_package) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:89:14:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstructured bindings only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++17\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++17\x1b[m\x1b[K\xe2\x80\x99\n'}
+[11.329795] (tof_sensor_package) StderrLine: {'line': b'   89 |         auto \x1b[01;35m\x1b[K[\x1b[m\x1b[Kcoefficients, inliers] = fitLineRANSAC(robotEdgePoints);\n'}
+[11.329926] (tof_sensor_package) StderrLine: {'line': b'      |              \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[11.338538] (tof_sensor_package) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:27:66:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kthreshold\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[11.338817] (tof_sensor_package) StderrLine: {'line': b'   27 | std::pair<double, double> BestFit::analyze(const cv::Mat &A, \x1b[01;35m\x1b[Kint threshold\x1b[m\x1b[K) {\n'}
+[11.338944] (tof_sensor_package) StderrLine: {'line': b'      |                                                              \x1b[01;35m\x1b[K~~~~^~~~~~~~~\x1b[m\x1b[K\n'}
+[11.365612] (-) TimerEvent: {}
+[11.469574] (-) TimerEvent: {}
+[11.573085] (-) TimerEvent: {}
+[11.676271] (-) TimerEvent: {}
+[11.777318] (-) TimerEvent: {}
+[11.881738] (-) TimerEvent: {}
+[11.983353] (-) TimerEvent: {}
+[12.083982] (-) TimerEvent: {}
+[12.185328] (-) TimerEvent: {}
+[12.285986] (-) TimerEvent: {}
+[12.387641] (-) TimerEvent: {}
+[12.489136] (-) TimerEvent: {}
+[12.590513] (-) TimerEvent: {}
+[12.692124] (-) TimerEvent: {}
+[12.793744] (-) TimerEvent: {}
+[12.895365] (-) TimerEvent: {}
+[12.996718] (-) TimerEvent: {}
+[13.097635] (-) TimerEvent: {}
+[13.186069] (tof_sensor_package) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid PalletDetectNode::timer_callback()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[13.186453] (tof_sensor_package) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:121:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstructured bindings only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++17\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++17\x1b[m\x1b[K\xe2\x80\x99\n'}
+[13.186663] (tof_sensor_package) StderrLine: {'line': b'  121 |                     auto \x1b[01;35m\x1b[K[\x1b[m\x1b[KangleA, driftA] = BestFit::analyze(A, distance_threshold);\n'}
+[13.186837] (tof_sensor_package) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[13.189992] (tof_sensor_package) StderrLine: {'line': b'\x1b[01m\x1b[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:122:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kstructured bindings only available with \xe2\x80\x98\x1b[01m\x1b[K-std=c++17\x1b[m\x1b[K\xe2\x80\x99 or \xe2\x80\x98\x1b[01m\x1b[K-std=gnu++17\x1b[m\x1b[K\xe2\x80\x99\n'}
+[13.191760] (tof_sensor_package) StderrLine: {'line': b'  122 |                     auto \x1b[01;35m\x1b[K[\x1b[m\x1b[KangleC, driftC] = BestFit::analyze(C, distance_threshold);\n'}
+[13.191985] (tof_sensor_package) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[13.206646] (-) TimerEvent: {}
+[13.307287] (-) TimerEvent: {}
+[13.409527] (-) TimerEvent: {}
+[13.510312] (-) TimerEvent: {}
+[13.610987] (-) TimerEvent: {}
+[13.712075] (-) TimerEvent: {}
+[13.813107] (-) TimerEvent: {}
+[13.913862] (-) TimerEvent: {}
+[14.015972] (-) TimerEvent: {}
+[14.117611] (-) TimerEvent: {}
+[14.218504] (-) TimerEvent: {}
+[14.319422] (-) TimerEvent: {}
+[14.420975] (-) TimerEvent: {}
+[14.521723] (-) TimerEvent: {}
+[14.623003] (-) TimerEvent: {}
+[14.724987] (-) TimerEvent: {}
+[14.827076] (-) TimerEvent: {}
+[14.928696] (-) TimerEvent: {}
+[15.030120] (-) TimerEvent: {}
+[15.130773] (-) TimerEvent: {}
+[15.232260] (-) TimerEvent: {}
+[15.333230] (-) TimerEvent: {}
+[15.434421] (-) TimerEvent: {}
+[15.535751] (-) TimerEvent: {}
+[15.637078] (-) TimerEvent: {}
+[15.737868] (-) TimerEvent: {}
+[15.839365] (-) TimerEvent: {}
+[15.941865] (-) TimerEvent: {}
+[16.043169] (-) TimerEvent: {}
+[16.144091] (-) TimerEvent: {}
+[16.245677] (-) TimerEvent: {}
+[16.347034] (-) TimerEvent: {}
+[16.448205] (-) TimerEvent: {}
+[16.549979] (-) TimerEvent: {}
+[16.650678] (-) TimerEvent: {}
+[16.752253] (-) TimerEvent: {}
+[16.852925] (-) TimerEvent: {}
+[16.953617] (-) TimerEvent: {}
+[17.054348] (-) TimerEvent: {}
+[17.155506] (-) TimerEvent: {}
+[17.257236] (-) TimerEvent: {}
+[17.358491] (-) TimerEvent: {}
+[17.459987] (-) TimerEvent: {}
+[17.561417] (-) TimerEvent: {}
+[17.663047] (-) TimerEvent: {}
+[17.764743] (-) TimerEvent: {}
+[17.867198] (-) TimerEvent: {}
+[17.968939] (-) TimerEvent: {}
+[18.070976] (-) TimerEvent: {}
+[18.172664] (-) TimerEvent: {}
+[18.273217] (-) TimerEvent: {}
+[18.374397] (-) TimerEvent: {}
+[18.475857] (-) TimerEvent: {}
+[18.576478] (-) TimerEvent: {}
+[18.677077] (-) TimerEvent: {}
+[18.777638] (-) TimerEvent: {}
+[18.878977] (-) TimerEvent: {}
+[18.979966] (-) TimerEvent: {}
+[19.081719] (-) TimerEvent: {}
+[19.183177] (-) TimerEvent: {}
+[19.284841] (-) TimerEvent: {}
+[19.386310] (-) TimerEvent: {}
+[19.487867] (-) TimerEvent: {}
+[19.507128] (tof_sensor_package) StdoutLine: {'line': b'[ 60%] \x1b[32m\x1b[1mLinking CXX executable pallet_detect_node\x1b[0m\n'}
+[19.589838] (-) TimerEvent: {}
+[19.690787] (-) TimerEvent: {}
+[19.792325] (-) TimerEvent: {}
+[19.893191] (-) TimerEvent: {}
+[19.994365] (-) TimerEvent: {}
+[20.095772] (-) TimerEvent: {}
+[20.196938] (-) TimerEvent: {}
+[20.297875] (-) TimerEvent: {}
+[20.398455] (-) TimerEvent: {}
+[20.499176] (-) TimerEvent: {}
+[20.601543] (-) TimerEvent: {}
+[20.704716] (-) TimerEvent: {}
+[20.806231] (-) TimerEvent: {}
+[20.907512] (-) TimerEvent: {}
+[21.010030] (-) TimerEvent: {}
+[21.111169] (-) TimerEvent: {}
+[21.211927] (-) TimerEvent: {}
+[21.313747] (-) TimerEvent: {}
+[21.356389] (tof_sensor_package) StdoutLine: {'line': b'[100%] Built target pallet_detect_node\n'}
+[21.402897] (tof_sensor_package) CommandEnded: {'returncode': 0}
+[21.415690] (-) TimerEvent: {}
+[21.517478] (-) TimerEvent: {}
+[21.612295] (tof_sensor_package) JobProgress: {'identifier': 'tof_sensor_package', 'progress': 'install'}
+[21.615312] (tof_sensor_package) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package'], 'cwd': '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package', 'env': OrderedDict([('USER', 'cjs'), ('LC_TIME', 'zh_CN.UTF-8'), ('GIO_MODULE_DIR', '/home/cjs/snap/code/common/.cache/gio-modules'), ('SSH_AGENT_PID', '1495'), ('XDG_SESSION_TYPE', 'x11'), ('GTK_EXE_PREFIX_VSCODE_SNAP_ORIG', ''), ('GIT_ASKPASS', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('GDK_BACKEND_VSCODE_SNAP_ORIG', ''), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('LESS', '-R'), ('HOME', '/home/cjs'), ('LOCPATH_VSCODE_SNAP_ORIG', ''), ('OLDPWD', '/home/cjs/VL53L8CX'), ('CHROME_DESKTOP', 'code-url-handler.desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('GTK_PATH', '/snap/code/164/usr/lib/x86_64-linux-gnu/gtk-3.0'), ('TERM_PROGRAM_VERSION', '1.91.1'), ('LSCOLORS', 'Gxfxcxdxbxegedabagacad'), ('ZSH', '/home/cjs/.oh-my-zsh'), ('GTK_IM_MODULE_FILE', '/home/cjs/snap/code/common/.cache/immodules/immodules.cache'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('ALL', 'en.US.UTF-8'), ('GTK_MODULES', 'gail:atk-bridge'), ('GSETTINGS_SCHEMA_DIR_VSCODE_SNAP_ORIG', ''), ('PAGER', 'less'), ('VSCODE_GIT_ASKPASS_MAIN', '/snap/code/164/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('LC_MONETARY', 'zh_CN.UTF-8'), ('MANAGERPID', '1390'), ('VSCODE_GIT_ASKPASS_NODE', '/snap/code/164/usr/share/code/code'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'cjs'), ('JOURNAL_STREAM', '8:53922'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_CONFIG_DIRS_VSCODE_SNAP_ORIG', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_SESSION_CLASS', 'user'), ('XDG_DATA_DIRS_VSCODE_SNAP_ORIG', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('USER_ZDOTDIR', '/home/cjs'), ('USERNAME', 'cjs'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/cjs-virtual-machine:@/tmp/.ICE-unix/1530,unix/cjs-virtual-machine:/tmp/.ICE-unix/1530'), ('GTK_EXE_PREFIX', '/snap/code/164/usr'), ('INVOCATION_ID', '77505bc0ebd24f48845ca7b348a0073f'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'zh_CN.UTF-8'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':0'), ('LOCPATH', '/snap/code/164/usr/lib/locale'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('LC_TELEPHONE', 'zh_CN.UTF-8'), ('TILIX_ID', '5ad5abdc-a059-4ddc-8cd1-84d245006796'), ('VSCODE_INJECTION', '1'), ('GIO_MODULE_DIR_VSCODE_SNAP_ORIG', ''), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'no=00:fi=00:di=01;34:ln=00;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=41;33;01:ex=00;32:*.cmd=00;32:*.exe=01;32:*.com=01;32:*.bat=01;32:*.btm=01;32:*.dll=01;32:*.tar=00;31:*.tbz=00;31:*.tgz=00;31:*.rpm=00;31:*.deb=00;31:*.arj=00;31:*.taz=00;31:*.lzh=00;31:*.lzma=00;31:*.zip=00;31:*.zoo=00;31:*.z=00;31:*.Z=00;31:*.gz=00;31:*.bz2=00;31:*.tb2=00;31:*.tz2=00;31:*.tbz2=00;31:*.avi=01;35:*.bmp=01;35:*.fli=01;35:*.gif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mng=01;35:*.mov=01;35:*.mpg=01;35:*.pcx=01;35:*.pbm=01;35:*.pgm=01;35:*.png=01;35:*.ppm=01;35:*.tga=01;35:*.tif=01;35:*.xbm=01;35:*.xpm=01;35:*.dl=01;35:*.gl=01;35:*.wmv=01;35:*.aiff=00;32:*.au=00;32:*.mid=00;32:*.mp3=00;32:*.ogg=00;32:*.voc=00;32:*.wav=00;32:'), ('TERM_PROGRAM', 'vscode'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-6e22b0dd4c.sock'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('GSETTINGS_SCHEMA_DIR', '/home/cjs/snap/code/164/.local/share/glib-2.0/schemas'), ('AMENT_PREFIX_PATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/usr/bin/zsh'), ('LC_NAME', 'zh_CN.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('GTK_PATH_VSCODE_SNAP_ORIG', ''), ('GTK_IM_MODULE_FILE_VSCODE_SNAP_ORIG', ''), ('LC_MEASUREMENT', 'zh_CN.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'zh_CN.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=c21988fb61186ca5cea0be12669dff52'), ('XDG_DATA_DIRS', '/home/cjs/snap/code/164/.local/share:/home/cjs/snap/code/164:/snap/code/164/usr/share:/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ZDOTDIR', '/home/cjs'), ('PYTHONPATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'zh_CN.UTF-8'), ('LC_PAPER', 'zh_CN.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy')]), 'shell': False}
+[21.618442] (-) TimerEvent: {}
+[21.661726] (tof_sensor_package) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[21.667792] (tof_sensor_package) StdoutLine: {'line': b'-- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/lib/tof_sensor_package/pallet_detect_node\n'}
+[21.685672] (tof_sensor_package) StdoutLine: {'line': b'-- Set runtime path of "/home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/lib/tof_sensor_package/pallet_detect_node" to ""\n'}
+[21.686013] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/ament_index/resource_index/package_run_dependencies/tof_sensor_package\n'}
+[21.686590] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/ament_index/resource_index/parent_prefix_path/tof_sensor_package\n'}
+[21.687181] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/ament_prefix_path.sh\n'}
+[21.687935] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/ament_prefix_path.dsv\n'}
+[21.688116] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/path.sh\n'}
+[21.688828] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/environment/path.dsv\n'}
+[21.689343] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.bash\n'}
+[21.691146] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.sh\n'}
+[21.691415] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.zsh\n'}
+[21.691606] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/local_setup.dsv\n'}
+[21.691768] (tof_sensor_package) StdoutLine: {'line': b'-- Installing: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/package.dsv\n'}
+[21.693051] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/ament_index/resource_index/packages/tof_sensor_package\n'}
+[21.694144] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/cmake/tof_sensor_packageConfig.cmake\n'}
+[21.694966] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/cmake/tof_sensor_packageConfig-version.cmake\n'}
+[21.695829] (tof_sensor_package) StdoutLine: {'line': b'-- Up-to-date: /home/cjs/VL53L8CX/VL53L8CX_ws/install/tof_sensor_package/share/tof_sensor_package/package.xml\n'}
+[21.707724] (tof_sensor_package) CommandEnded: {'returncode': 0}
+[21.719393] (-) TimerEvent: {}
+[21.823709] (-) TimerEvent: {}
+[21.928958] (tof_sensor_package) JobEnded: {'identifier': 'tof_sensor_package', 'rc': 0}
+[21.930409] (-) TimerEvent: {}
+[21.930776] (-) EventReactorShutdown: {}

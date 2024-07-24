@@ -30,6 +30,7 @@ typedef struct base_interfaces_demo__msg__MotorStatus
   int32_t encoder_location;
   int32_t jerk;
   int32_t enable;
+  int64_t error_code;
 } base_interfaces_demo__msg__MotorStatus;
 
 // Struct for a sequence of base_interfaces_demo__msg__MotorStatus.
