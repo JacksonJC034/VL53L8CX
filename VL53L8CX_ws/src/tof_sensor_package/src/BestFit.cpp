@@ -25,7 +25,6 @@ void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
 }
 
 std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
-    A.convertTo(A, CV_8UC1);
     // cv::Mat A_filtered;
     // cv::Mat A_src;
     cv::Mat Canny;
@@ -45,7 +44,6 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     // std::vector<std::vector<cv::Point>> contours;
 
     // cv::findContours(A_filtered, contours, cv::RETR_EXTERNAL, cv::CHAIN_APPROX_NONE);
-    std::cout << "A: " << std::endl;
     cv::Canny(A, Canny, 150, 200);
     std::cout << "Edge: " << Canny << std::endl;
     cv::imwrite("Edge.png", Canny);

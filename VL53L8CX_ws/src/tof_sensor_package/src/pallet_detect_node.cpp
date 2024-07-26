@@ -68,6 +68,8 @@ private:
             cv::Mat C_32(8, 8, CV_32FC1);
             cv::Mat A_binary(8, 8, CV_8UC1);
             cv::Mat C_binary(8, 8, CV_8UC1);
+            cv::Mat A_8(8, 8, CV_8UC1);
+            cv::Mat C_8(8, 8, CV_8UC1);
             arrangeTOFData(raw_data1, A);
             arrangeTOFData(raw_data2, C);
             // cv::flip(C, C, 0);
@@ -89,6 +91,8 @@ private:
             // cv::imwrite("/result/C.png", C);
             populatePalletInfoMatrix(pallet_info_.sensor1, A);
             populatePalletInfoMatrix(pallet_info_.sensor2, C);
+            A.convertTo(A_8, CV_8UC1);
+            C.convertTo(C_8, CV_8UC1);
 
             int distance_threshold = 0;
             if (location_.state_motor_or_son == 2) {
@@ -118,8 +122,8 @@ private:
                 }
 
                 if (pallet_info_.pallet == 1) {
-                    auto [angleA, driftA] = BestFit::analyze(A, distance_threshold);
-                    auto [angleC, driftC] = BestFit::analyze(C, distance_threshold);
+                    auto [angleA, driftA] = BestFit::analyze(A_8, distance_threshold);
+                    auto [angleC, driftC] = BestFit::analyze(C_8, distance_threshold);
                     if (distance_threshold == 80) {
                         distance_threshold = 52;
                     }
