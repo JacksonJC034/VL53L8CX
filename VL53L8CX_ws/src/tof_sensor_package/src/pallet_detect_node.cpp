@@ -33,7 +33,7 @@ public:
         timer_ = this->create_wall_timer(
             std::chrono::milliseconds(100), std::bind(&PalletDetectNode::timer_callback, this));
         service_ = this->create_service<Hall>(
-            "/rbot/tray_server", std::bind(&PalletDetectNode::handle_service, this, std::placeholders::_1, std::placeholders::_2));
+            "/rbot/Pallet_server", std::bind(&PalletDetectNode::handle_service, this, std::placeholders::_1, std::placeholders::_2));
 
         // Initialize pallet_info_ parameters to 0
         pallet_info_.distance = 0;
@@ -201,7 +201,7 @@ private:
     }
 
     void handle_service(const std::shared_ptr<Hall::Request> request, std::shared_ptr<Hall::Response> response) {
-        if (request->cmd == 233) {
+        if (request->cmd == 234) {
             drift_offset_ = pallet_info_.drift;
             angle_offset_ = pallet_info_.angle;
             response->para = drift_offset_;
