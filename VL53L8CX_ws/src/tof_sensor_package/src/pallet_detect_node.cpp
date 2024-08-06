@@ -18,9 +18,9 @@ using base_interfaces_demo::msg::Location;
 using base_interfaces_demo::msg::PalletInfo;
 using base_interfaces_demo::srv::Hall;
 
-const int DISTANCE1 = 80; //53
-const int DISTANCE2 = 100; //75
-const int DISTANCE3 = 115; //88
+const int DISTANCE1 = 80; //实际距离52 分辨率6.69
+const int DISTANCE2 = 100; //实际距离74 分辨率9.52
+const int DISTANCE3 = 115; //实际距离89 分辨率11.45
 
 class PalletDetectNode : public rclcpp::Node {
 public:
@@ -73,6 +73,8 @@ private:
             arrangeTOFData(raw_data1, A);
             arrangeTOFData(raw_data2, C);
             // cv::flip(C, C, 0);
+
+            // 将小于20的值设置为1000
             erasenoise(A);
             erasenoise(C);
 

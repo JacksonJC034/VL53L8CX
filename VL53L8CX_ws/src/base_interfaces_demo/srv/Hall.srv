@@ -1,4 +1,5 @@
 int32 cmd
+float64 para3
 ---
 int32 ret
 float64 para

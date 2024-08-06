@@ -1,0 +1,4 @@
+uint8 emergency_cmd
+uint8 EMERGENCY_NONE=0
+uint8 EMERGENCY_SOFT=1
+uint8 EMERGENCY_HARD=2

@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from base_interfaces_demo/srv/CheckEmergency.srv
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module srv {
+    struct CheckEmergency_Request {
+      uint8 structure_needs_at_least_one_member;
+    };
+    module CheckEmergency_Response_Constants {
+      const uint8 FINISHED = 0;
+      const uint8 RUNNING = 1;
+    };
+    struct CheckEmergency_Response {
+      uint8 status;
+    };
+  };
+};

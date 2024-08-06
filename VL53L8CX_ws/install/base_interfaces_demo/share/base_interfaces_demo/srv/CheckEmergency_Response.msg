@@ -1,0 +1,4 @@
+
+uint8 status
+uint8 FINISHED=0
+uint8 RUNNING=1

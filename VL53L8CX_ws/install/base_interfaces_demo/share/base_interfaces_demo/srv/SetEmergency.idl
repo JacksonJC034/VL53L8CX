@@ -1,0 +1,20 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from base_interfaces_demo/srv/SetEmergency.srv
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module srv {
+    module SetEmergency_Request_Constants {
+      const uint8 EMERGENCY_NONE = 0;
+      const uint8 EMERGENCY_SOFT = 1;
+      const uint8 EMERGENCY_HARD = 2;
+    };
+    struct SetEmergency_Request {
+      uint8 emergency_cmd;
+    };
+    struct SetEmergency_Response {
+      boolean success;
+    };
+  };
+};
