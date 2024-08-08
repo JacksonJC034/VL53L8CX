@@ -173,17 +173,17 @@ private:
 
     void arrangeTOFData(uint8_t* raw_data, cv::Mat& matrix) {
         for (int i = 0; i < 64; ++i) {
-            int row = i % 8;
-            int col = i / 8;
+            int row = i / 8;
+            int col = 7 - i % 8;
             uint16_t value = (raw_data[2 * i] << 8) | raw_data[2 * i + 1];
             matrix.at<uint16_t>(row, col) = value;
         }
     }
 
-    void populatePalletInfoMatrix(std::array<uint32_t, 64>& sensor_array, const cv::Mat& matrix) {
+    void populatePalletInfoMatrix(std::array<uint16_t, 64>& sensor_array, const cv::Mat& matrix) {
         for (int i = 0; i < 64; ++i) {
-            int row = i % 8;
-            int col = i / 8;
+            int row = i / 8;
+            int col = i % 8;
             sensor_array[i] = matrix.at<uint8_t>(row, col);
         }
     }
@@ -193,7 +193,7 @@ private:
         std::cout << matrix << std::endl;
         for (int i = 0; i < matrix.rows; ++i) {
             for (int j = i; j < matrix.cols; ++j) {
-                if (matrix.at<uint8_t>(i, j) == 0) {
+                if (matrix.at<uint8_t>(i, j) < 250) {
                     count++;
                 }
             }
