@@ -20,16 +20,32 @@ namespace srv
 namespace builder
 {
 
+class Init_Hall_Request_para3
+{
+public:
+  explicit Init_Hall_Request_para3(::base_interfaces_demo::srv::Hall_Request & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::srv::Hall_Request para3(::base_interfaces_demo::srv::Hall_Request::_para3_type arg)
+  {
+    msg_.para3 = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::srv::Hall_Request msg_;
+};
+
 class Init_Hall_Request_cmd
 {
 public:
   Init_Hall_Request_cmd()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::base_interfaces_demo::srv::Hall_Request cmd(::base_interfaces_demo::srv::Hall_Request::_cmd_type arg)
+  Init_Hall_Request_para3 cmd(::base_interfaces_demo::srv::Hall_Request::_cmd_type arg)
   {
     msg_.cmd = std::move(arg);
-    return std::move(msg_);
+    return Init_Hall_Request_para3(msg_);
   }
 
 private:

@@ -38,6 +38,7 @@ struct Hall_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->cmd = 0l;
+      this->para3 = 0.0;
     }
   }
 
@@ -48,6 +49,7 @@ struct Hall_Request_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->cmd = 0l;
+      this->para3 = 0.0;
     }
   }
 
@@ -55,12 +57,21 @@ struct Hall_Request_
   using _cmd_type =
     int32_t;
   _cmd_type cmd;
+  using _para3_type =
+    double;
+  _para3_type para3;
 
   // setters for named parameter idiom
   Type & set__cmd(
     const int32_t & _arg)
   {
     this->cmd = _arg;
+    return *this;
+  }
+  Type & set__para3(
+    const double & _arg)
+  {
+    this->para3 = _arg;
     return *this;
   }
 
@@ -107,6 +118,9 @@ struct Hall_Request_
   bool operator==(const Hall_Request_ & other) const
   {
     if (this->cmd != other.cmd) {
+      return false;
+    }
+    if (this->para3 != other.para3) {
       return false;
     }
     return true;

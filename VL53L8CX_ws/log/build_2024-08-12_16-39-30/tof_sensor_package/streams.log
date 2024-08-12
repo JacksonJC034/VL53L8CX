@@ -1,0 +1,28 @@
+[0.058s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+[0.209s] [35m[1mScanning dependencies of target pallet_detect_node[0m
+[0.396s] [ 20%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+[0.399s] [ 40%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o[0m
+[2.919s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<double, double> BestFit::analyze(const cv::Mat&, int)[m[K’:
+[2.919s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:87:14:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[2.919s]    87 |         auto [01;35m[K[[m[Kcoefficients, inliers] = fitLineRANSAC(robotEdgePoints);
+[2.919s]       |              [01;35m[K^[m[K
+[2.930s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:27:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kthreshold[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+[2.930s]    27 | std::pair<double, double> BestFit::analyze(const cv::Mat &A, [01;35m[Kint threshold[m[K) {
+[2.930s]       |                                                              [01;35m[K~~~~^~~~~~~~~[m[K
+[4.843s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[4.844s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[4.844s]   127 |                     auto [01;35m[K[[m[KangleA, driftA] = BestFit::analyze(A_8, distance_threshold);
+[4.844s]       |                          [01;35m[K^[m[K
+[4.846s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[4.847s]   128 |                     auto [01;35m[K[[m[KangleC, driftC] = BestFit::analyze(C_8, distance_threshold);
+[4.847s]       |                          [01;35m[K^[m[K
+[11.157s] [ 60%] [32m[1mLinking CXX executable pallet_detect_node[0m
+[12.720s] /usr/bin/ld: CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o: in function `PalletDetectNode::timer_callback()':
+[12.720s] pallet_detect_node.cpp:(.text._ZN16PalletDetectNode14timer_callbackEv[_ZN16PalletDetectNode14timer_callbackEv]+0xb2f): undefined reference to `BestFit::status'
+[12.720s] /usr/bin/ld: CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o: in function `BestFit::analyze(cv::Mat const&, int)':
+[12.721s] BestFit.cpp:(.text+0x78f): undefined reference to `BestFit::status'
+[12.721s] collect2: error: ld returned 1 exit status
+[12.728s] make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:254: pallet_detect_node] Error 1
+[12.728s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+[12.729s] make: *** [Makefile:141: all] Error 2
+[12.735s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '2': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4

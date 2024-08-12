@@ -54,14 +54,17 @@ class Hall_Request(metaclass=Metaclass_Hall_Request):
 
     __slots__ = [
         '_cmd',
+        '_para3',
     ]
 
     _fields_and_field_types = {
         'cmd': 'int32',
+        'para3': 'double',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -69,6 +72,7 @@ class Hall_Request(metaclass=Metaclass_Hall_Request):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.cmd = kwargs.get('cmd', int())
+        self.para3 = kwargs.get('para3', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,6 +105,8 @@ class Hall_Request(metaclass=Metaclass_Hall_Request):
             return False
         if self.cmd != other.cmd:
             return False
+        if self.para3 != other.para3:
+            return False
         return True
 
     @classmethod
@@ -122,6 +128,19 @@ class Hall_Request(metaclass=Metaclass_Hall_Request):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'cmd' field must be an integer in [-2147483648, 2147483647]"
         self._cmd = value
+
+    @property
+    def para3(self):
+        """Message field 'para3'."""
+        return self._para3
+
+    @para3.setter
+    def para3(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'para3' field must be of type 'float'"
+        self._para3 = value
 
 
 # Import statements for member types

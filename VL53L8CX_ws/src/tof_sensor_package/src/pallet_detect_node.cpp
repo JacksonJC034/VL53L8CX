@@ -138,7 +138,7 @@ private:
                     driftA = driftA * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
                     driftC = driftC * distance_threshold * tan(22.5/180.0*M_PI) * 2 / 7.0;
                     auto drift = (driftA - driftC) / 2;
-                    auto angle = (angleA + angleC) / 2;
+                    auto angle = (angleA + angleC) / 20;
                     if (drift > 80) {
                         drift = 0.0;
                     }
@@ -150,11 +150,12 @@ private:
                     pallet_info_.angle = angle;
                     pallet_info_.drift = drift;
                     pallet_info_.error_code = 0;
+                    pallet_info_.status = BestFit::status;
                 } else {
                     pallet_info_.error_code = 1;
                 }
             }
-            
+            std::cout<<"pallet_info_.status: "<<pallet_info_.status<<std::endl;
             publisher_->publish(pallet_info_);
         } else {
             RCLCPP_WARN(this->get_logger(), "Failed to get TOF data from one or both sensors.");
@@ -180,7 +181,7 @@ private:
         }
     }
 
-    void populatePalletInfoMatrix(std::array<uint16_t, 64>& sensor_array, const cv::Mat& matrix) {
+    void populatePalletInfoMatrix(std::array<uint32_t, 64>& sensor_array, const cv::Mat& matrix) {
         for (int i = 0; i < 64; ++i) {
             int row = i / 8;
             int col = i % 8;

@@ -15,3 +15,5 @@ float64 distancey
 int32 storage_x                                #舱位号x
 int32 storage_y                                #舱位号y
 int32 storage_z                                #舱位号z
+int32 vx                                                #速度x
+int32 vy                                                #速度y

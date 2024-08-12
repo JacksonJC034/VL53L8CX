@@ -176,6 +176,51 @@ bool base_interfaces_demo__msg__location__convert_from_py(PyObject * _pymsg, voi
     ros_message->distancey = PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // storage_x
+    PyObject * field = PyObject_GetAttrString(_pymsg, "storage_x");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->storage_x = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // storage_y
+    PyObject * field = PyObject_GetAttrString(_pymsg, "storage_y");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->storage_y = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // storage_z
+    PyObject * field = PyObject_GetAttrString(_pymsg, "storage_z");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->storage_z = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // vx
+    PyObject * field = PyObject_GetAttrString(_pymsg, "vx");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->vx = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // vy
+    PyObject * field = PyObject_GetAttrString(_pymsg, "vy");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->vy = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -346,6 +391,61 @@ PyObject * base_interfaces_demo__msg__location__convert_to_py(void * raw_ros_mes
     field = PyFloat_FromDouble(ros_message->distancey);
     {
       int rc = PyObject_SetAttrString(_pymessage, "distancey", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // storage_x
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->storage_x);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "storage_x", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // storage_y
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->storage_y);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "storage_y", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // storage_z
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->storage_z);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "storage_z", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // vx
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->vx);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "vx", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // vy
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->vy);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "vy", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -174,6 +174,15 @@ bool base_interfaces_demo__action__reverse__result__convert_from_py(PyObject * _
     ros_message->final_location = (float)PyFloat_AS_DOUBLE(field);
     Py_DECREF(field);
   }
+  {  // success
+    PyObject * field = PyObject_GetAttrString(_pymsg, "success");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->success = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -201,6 +210,17 @@ PyObject * base_interfaces_demo__action__reverse__result__convert_to_py(void * r
     field = PyFloat_FromDouble(ros_message->final_location);
     {
       int rc = PyObject_SetAttrString(_pymessage, "final_location", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // success
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->success);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "success", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

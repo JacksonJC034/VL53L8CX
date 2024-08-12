@@ -243,6 +243,11 @@ static bool _Reverse_Result__cdr_serialize(
     cdr << ros_message->final_location;
   }
 
+  // Field name: success
+  {
+    cdr << ros_message->success;
+  }
+
   return true;
 }
 
@@ -258,6 +263,11 @@ static bool _Reverse_Result__cdr_deserialize(
   // Field name: final_location
   {
     cdr >> ros_message->final_location;
+  }
+
+  // Field name: success
+  {
+    cdr >> ros_message->success;
   }
 
   return true;
@@ -280,6 +290,12 @@ size_t get_serialized_size_base_interfaces_demo__action__Reverse_Result(
   // field.name final_location
   {
     size_t item_size = sizeof(ros_message->final_location);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name success
+  {
+    size_t item_size = sizeof(ros_message->success);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -308,6 +324,13 @@ size_t max_serialized_size_base_interfaces_demo__action__Reverse_Result(
   (void)full_bounded;
 
   // member: final_location
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: success
   {
     size_t array_size = 1;
 

@@ -18,6 +18,10 @@ module base_interfaces_demo {
       @verbatim (language="comment", text=
         "最终位置")
       float final_location;
+
+      @verbatim (language="comment", text=
+        "=-1失败，=1成功")
+      int32 success;
     };
     struct Reverse_Feedback {
       @verbatim (language="comment", text=

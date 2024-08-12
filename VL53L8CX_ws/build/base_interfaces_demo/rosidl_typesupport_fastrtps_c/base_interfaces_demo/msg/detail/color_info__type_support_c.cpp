@@ -54,6 +54,16 @@ static bool _ColorInfo__cdr_serialize(
     cdr << ros_message->color_type;
   }
 
+  // Field name: error_code
+  {
+    cdr << ros_message->error_code;
+  }
+
+  // Field name: status
+  {
+    cdr << ros_message->status;
+  }
+
   return true;
 }
 
@@ -69,6 +79,16 @@ static bool _ColorInfo__cdr_deserialize(
   // Field name: color_type
   {
     cdr >> ros_message->color_type;
+  }
+
+  // Field name: error_code
+  {
+    cdr >> ros_message->error_code;
+  }
+
+  // Field name: status
+  {
+    cdr >> ros_message->status;
   }
 
   return true;
@@ -91,6 +111,18 @@ size_t get_serialized_size_base_interfaces_demo__msg__ColorInfo(
   // field.name color_type
   {
     size_t item_size = sizeof(ros_message->color_type);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name error_code
+  {
+    size_t item_size = sizeof(ros_message->error_code);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name status
+  {
+    size_t item_size = sizeof(ros_message->status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -119,6 +151,20 @@ size_t max_serialized_size_base_interfaces_demo__msg__ColorInfo(
   (void)full_bounded;
 
   // member: color_type
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: error_code
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: status
   {
     size_t array_size = 1;
 

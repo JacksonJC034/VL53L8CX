@@ -53,30 +53,30 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
     """Message class 'SystemStatus'."""
 
     __slots__ = [
-        '_system_mode',
-        '_work_status',
+        '_selfcheck_status',
         '_init_status',
+        '_error_code',
     ]
 
     _fields_and_field_types = {
-        'system_mode': 'int32',
-        'work_status': 'int32',
+        'selfcheck_status': 'int32',
         'init_status': 'int32',
+        'error_code': 'int64',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
-        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
         assert all('_' + key in self.__slots__ for key in kwargs.keys()), \
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
-        self.system_mode = kwargs.get('system_mode', int())
-        self.work_status = kwargs.get('work_status', int())
+        self.selfcheck_status = kwargs.get('selfcheck_status', int())
         self.init_status = kwargs.get('init_status', int())
+        self.error_code = kwargs.get('error_code', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -107,11 +107,11 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
     def __eq__(self, other):
         if not isinstance(other, self.__class__):
             return False
-        if self.system_mode != other.system_mode:
-            return False
-        if self.work_status != other.work_status:
+        if self.selfcheck_status != other.selfcheck_status:
             return False
         if self.init_status != other.init_status:
+            return False
+        if self.error_code != other.error_code:
             return False
         return True
 
@@ -121,34 +121,19 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
         return copy(cls._fields_and_field_types)
 
     @property
-    def system_mode(self):
-        """Message field 'system_mode'."""
-        return self._system_mode
+    def selfcheck_status(self):
+        """Message field 'selfcheck_status'."""
+        return self._selfcheck_status
 
-    @system_mode.setter
-    def system_mode(self, value):
+    @selfcheck_status.setter
+    def selfcheck_status(self, value):
         if __debug__:
             assert \
                 isinstance(value, int), \
-                "The 'system_mode' field must be of type 'int'"
+                "The 'selfcheck_status' field must be of type 'int'"
             assert value >= -2147483648 and value < 2147483648, \
-                "The 'system_mode' field must be an integer in [-2147483648, 2147483647]"
-        self._system_mode = value
-
-    @property
-    def work_status(self):
-        """Message field 'work_status'."""
-        return self._work_status
-
-    @work_status.setter
-    def work_status(self, value):
-        if __debug__:
-            assert \
-                isinstance(value, int), \
-                "The 'work_status' field must be of type 'int'"
-            assert value >= -2147483648 and value < 2147483648, \
-                "The 'work_status' field must be an integer in [-2147483648, 2147483647]"
-        self._work_status = value
+                "The 'selfcheck_status' field must be an integer in [-2147483648, 2147483647]"
+        self._selfcheck_status = value
 
     @property
     def init_status(self):
@@ -164,3 +149,18 @@ class SystemStatus(metaclass=Metaclass_SystemStatus):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'init_status' field must be an integer in [-2147483648, 2147483647]"
         self._init_status = value
+
+    @property
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
+
+    @error_code.setter
+    def error_code(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'error_code' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._error_code = value

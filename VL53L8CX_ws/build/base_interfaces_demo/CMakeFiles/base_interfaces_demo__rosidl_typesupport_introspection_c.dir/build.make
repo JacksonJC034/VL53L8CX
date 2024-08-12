@@ -94,6 +94,9 @@ rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosid
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: rosidl_adapter/base_interfaces_demo/msg/CarStatus.idl
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: rosidl_adapter/base_interfaces_demo/msg/HealthNode.idl
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: rosidl_adapter/base_interfaces_demo/action/Pallet.idl
+rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: rosidl_adapter/base_interfaces_demo/srv/CheckEmergency.idl
+rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: rosidl_adapter/base_interfaces_demo/srv/SetEmergency.idl
+rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: rosidl_adapter/base_interfaces_demo/srv/RcsServer.idl
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
@@ -188,6 +191,15 @@ rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/health_node__
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_introspection_c.h
 
+rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__rosidl_typesupport_introspection_c.h
+
+rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__rosidl_typesupport_introspection_c.h: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__rosidl_typesupport_introspection_c.h
+
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c
 
@@ -274,6 +286,15 @@ rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/health_node__
 
 rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c
+
+rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c
+
+rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c
+
+rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c
 
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c.o: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/flags.make
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c.o: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c
@@ -652,6 +673,45 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_t
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c.s
 
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building C object CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o   -c /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c > CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.i
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.s
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building C object CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o   -c /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c > CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.i
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.s
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/flags.make
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building C object CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o   -c /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c > CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.i
+
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c -o CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.s
+
 # Object files for target base_interfaces_demo__rosidl_typesupport_introspection_c
 base_interfaces_demo__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c.o" \
@@ -682,7 +742,10 @@ base_interfaces_demo__rosidl_typesupport_introspection_c_OBJECTS = \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/bt_status__type_support.c.o" \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/car_status__type_support.c.o" \
 "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/health_node__type_support.c.o" \
-"CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c.o"
+"CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c.o" \
+"CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o" \
+"CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o" \
+"CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o"
 
 # External object files for target base_interfaces_demo__rosidl_typesupport_introspection_c
 base_interfaces_demo__rosidl_typesupport_introspection_c_EXTERNAL_OBJECTS =
@@ -716,6 +779,9 @@ libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/car_status__type_support.c.o
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/health_node__type_support.c.o
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c.o
+libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o
+libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o
+libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/build.make
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: libbase_interfaces_demo__rosidl_generator_c.so
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/libaction_msgs__rosidl_typesupport_c.so
@@ -741,7 +807,7 @@ libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/li
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librosidl_runtime_c.so
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: /opt/ros/foxy/lib/librcutils.so
 libbase_interfaces_demo__rosidl_typesupport_introspection_c.so: CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Linking C shared library libbase_interfaces_demo__rosidl_typesupport_introspection_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Linking C shared library libbase_interfaces_demo__rosidl_typesupport_introspection_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -782,6 +848,9 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: 
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/car_status__rosidl_typesupport_introspection_c.h
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/health_node__rosidl_typesupport_introspection_c.h
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__rosidl_typesupport_introspection_c.h
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__rosidl_typesupport_introspection_c.h
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__rosidl_typesupport_introspection_c.h
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__rosidl_typesupport_introspection_c.h
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__type_support.c
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/ohom__type_support.c
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/hall_info__type_support.c
@@ -811,6 +880,9 @@ CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: 
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/car_status__type_support.c
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/health_node__type_support.c
 CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/pallet__type_support.c
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c
+CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend: rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c
 	cd /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo /home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/depend
 

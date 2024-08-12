@@ -12,3 +12,8 @@ int32 state_lift_down_or_up         #当前是在顶升还是下降状态。 =2�
 int32 hall_rfid_en                              #霍尔和RFID读到
 float64 distancex                                #霍尔定位偏差值
 float64 distancey
+int32 storage_x                                #舱位号x
+int32 storage_y                                #舱位号y
+int32 storage_z                                #舱位号z
+int32 vx                                                #速度x
+int32 vy                                                #速度y

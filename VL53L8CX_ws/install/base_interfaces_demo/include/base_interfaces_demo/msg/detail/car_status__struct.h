@@ -20,9 +20,22 @@ extern "C"
 // Struct defined in msg/CarStatus in the package base_interfaces_demo.
 typedef struct base_interfaces_demo__msg__CarStatus
 {
-  int32_t stand_alone_state;
   int32_t task_state;
-  int32_t status;
+  int32_t initializing;
+  int32_t checking;
+  int32_t releasing;
+  int32_t driving;
+  int32_t fine_positioning;
+  int32_t on_tag;
+  int32_t on_track;
+  int32_t error;
+  int32_t warning;
+  int32_t estop;
+  int32_t sleeping;
+  int32_t load;
+  int32_t charging;
+  int32_t mode;
+  int32_t stand_alone_state;
 } base_interfaces_demo__msg__CarStatus;
 
 // Struct for a sequence of base_interfaces_demo__msg__CarStatus.

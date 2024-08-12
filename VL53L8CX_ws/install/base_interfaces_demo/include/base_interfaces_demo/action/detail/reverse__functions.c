@@ -246,6 +246,7 @@ base_interfaces_demo__action__Reverse_Result__init(base_interfaces_demo__action_
     return false;
   }
   // final_location
+  // success
   return true;
 }
 
@@ -256,6 +257,7 @@ base_interfaces_demo__action__Reverse_Result__fini(base_interfaces_demo__action_
     return;
   }
   // final_location
+  // success
 }
 
 bool
@@ -266,6 +268,10 @@ base_interfaces_demo__action__Reverse_Result__are_equal(const base_interfaces_de
   }
   // final_location
   if (lhs->final_location != rhs->final_location) {
+    return false;
+  }
+  // success
+  if (lhs->success != rhs->success) {
     return false;
   }
   return true;
@@ -281,6 +287,8 @@ base_interfaces_demo__action__Reverse_Result__copy(
   }
   // final_location
   output->final_location = input->final_location;
+  // success
+  output->success = input->success;
   return true;
 }
 

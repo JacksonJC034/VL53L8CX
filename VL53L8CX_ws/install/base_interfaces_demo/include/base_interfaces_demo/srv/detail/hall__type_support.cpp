@@ -37,7 +37,7 @@ void Hall_Request_fini_function(void * message_memory)
   typed_message->~Hall_Request();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Hall_Request_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Hall_Request_message_member_array[2] = {
   {
     "cmd",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -52,13 +52,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Hall_Request_
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "para3",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_DOUBLE,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::srv::Hall_Request, para3),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Hall_Request_message_members = {
   "base_interfaces_demo::srv",  // message namespace
   "Hall_Request",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(base_interfaces_demo::srv::Hall_Request),
   Hall_Request_message_member_array,  // message members
   Hall_Request_init_function,  // function to initialize message memory (memory has to be allocated)

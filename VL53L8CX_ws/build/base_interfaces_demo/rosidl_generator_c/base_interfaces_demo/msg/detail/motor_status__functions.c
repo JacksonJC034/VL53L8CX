@@ -28,6 +28,7 @@ base_interfaces_demo__msg__MotorStatus__init(base_interfaces_demo__msg__MotorSta
   // jerk
   // enable
   // error_code
+  // motor_current
   return true;
 }
 
@@ -48,6 +49,7 @@ base_interfaces_demo__msg__MotorStatus__fini(base_interfaces_demo__msg__MotorSta
   // jerk
   // enable
   // error_code
+  // motor_current
 }
 
 bool
@@ -100,6 +102,10 @@ base_interfaces_demo__msg__MotorStatus__are_equal(const base_interfaces_demo__ms
   if (lhs->error_code != rhs->error_code) {
     return false;
   }
+  // motor_current
+  if (lhs->motor_current != rhs->motor_current) {
+    return false;
+  }
   return true;
 }
 
@@ -133,6 +139,8 @@ base_interfaces_demo__msg__MotorStatus__copy(
   output->enable = input->enable;
   // error_code
   output->error_code = input->error_code;
+  // motor_current
+  output->motor_current = input->motor_current;
   return true;
 }
 

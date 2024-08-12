@@ -237,6 +237,8 @@ cdr_serialize(
 {
   // Member: final_location
   cdr << ros_message.final_location;
+  // Member: success
+  cdr << ros_message.success;
   return true;
 }
 
@@ -248,6 +250,9 @@ cdr_deserialize(
 {
   // Member: final_location
   cdr >> ros_message.final_location;
+
+  // Member: success
+  cdr >> ros_message.success;
 
   return true;
 }
@@ -271,6 +276,12 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // Member: success
+  {
+    size_t item_size = sizeof(ros_message.success);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -291,6 +302,14 @@ max_serialized_size_Reverse_Result(
 
 
   // Member: final_location
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: success
   {
     size_t array_size = 1;
 

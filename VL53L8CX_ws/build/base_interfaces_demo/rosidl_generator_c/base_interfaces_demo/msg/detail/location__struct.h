@@ -34,6 +34,11 @@ typedef struct base_interfaces_demo__msg__Location
   int32_t hall_rfid_en;
   double distancex;
   double distancey;
+  int32_t storage_x;
+  int32_t storage_y;
+  int32_t storage_z;
+  int32_t vx;
+  int32_t vy;
 } base_interfaces_demo__msg__Location;
 
 // Struct for a sequence of base_interfaces_demo__msg__Location.

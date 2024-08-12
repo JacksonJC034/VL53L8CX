@@ -29,6 +29,9 @@
     "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/BtStatus.msg",
     "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/CarStatus.msg",
     "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:msg/HealthNode.msg",
-    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:action/Pallet.action"
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:action/Pallet.action",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:srv/CheckEmergency.srv",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:srv/SetEmergency.srv",
+    "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo:srv/RcsServer.srv"
   ]
 }

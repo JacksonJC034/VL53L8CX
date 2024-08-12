@@ -6,6 +6,8 @@
 #include <algorithm>
 #include <numeric>
 
+uint32_t BestFit::status = -1;
+
 void BestFit::binarizeMatrix(cv::Mat& matrix, int threshold) {
     // matrix.convertTo(matrix, CV_8UC1, 1.0/255);
     // threshold = int(threshold/255);
@@ -82,6 +84,7 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
     if (robotEdgePoints.size() < 4) {
         // throw std::runtime_error("No significant boundary found in the input matrix.");
         std::cout << "No significant boundary found in the input matrix." << std::endl;
+        status = -1;
     }
     else {
         auto [coefficients, inliers] = fitLineRANSAC(robotEdgePoints);
@@ -89,6 +92,7 @@ std::pair<double, double> BestFit::analyze(const cv::Mat &A, int threshold) {
         intercept = coefficients[1];
         double theta = atan(slope);
         angle = theta * 180.0 / M_PI;
+        status = 0;
     }
 
     // for (auto &point : robotEdgePoints) {
@@ -162,3 +166,14 @@ std::pair<std::vector<double>, std::vector<cv::Point>> BestFit::fitLineRANSAC(co
     return {bestCoefficients, bestInliers};
 }
 
+// std::pair<double, double> BestFit::analyzeTwoMatrices(const cv::Mat &A, const cv::Mat &C, int threshold) {
+//     // Combine the two matrices into one
+//     cv::Mat combinedMatrix;
+    
+
+//     // Binarize the combined matrix
+//     binarizeMatrix(combinedMatrix, threshold);
+
+//     // Analyze the combined matrix
+//     return analyze(combinedMatrix, threshold);
+// }

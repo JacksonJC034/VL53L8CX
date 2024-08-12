@@ -51,6 +51,11 @@ struct Location_
       this->hall_rfid_en = 0l;
       this->distancex = 0.0;
       this->distancey = 0.0;
+      this->storage_x = 0l;
+      this->storage_y = 0l;
+      this->storage_z = 0l;
+      this->vx = 0l;
+      this->vy = 0l;
     }
   }
 
@@ -74,6 +79,11 @@ struct Location_
       this->hall_rfid_en = 0l;
       this->distancex = 0.0;
       this->distancey = 0.0;
+      this->storage_x = 0l;
+      this->storage_y = 0l;
+      this->storage_z = 0l;
+      this->vx = 0l;
+      this->vy = 0l;
     }
   }
 
@@ -120,6 +130,21 @@ struct Location_
   using _distancey_type =
     double;
   _distancey_type distancey;
+  using _storage_x_type =
+    int32_t;
+  _storage_x_type storage_x;
+  using _storage_y_type =
+    int32_t;
+  _storage_y_type storage_y;
+  using _storage_z_type =
+    int32_t;
+  _storage_z_type storage_z;
+  using _vx_type =
+    int32_t;
+  _vx_type vx;
+  using _vy_type =
+    int32_t;
+  _vy_type vy;
 
   // setters for named parameter idiom
   Type & set__x(
@@ -206,6 +231,36 @@ struct Location_
     this->distancey = _arg;
     return *this;
   }
+  Type & set__storage_x(
+    const int32_t & _arg)
+  {
+    this->storage_x = _arg;
+    return *this;
+  }
+  Type & set__storage_y(
+    const int32_t & _arg)
+  {
+    this->storage_y = _arg;
+    return *this;
+  }
+  Type & set__storage_z(
+    const int32_t & _arg)
+  {
+    this->storage_z = _arg;
+    return *this;
+  }
+  Type & set__vx(
+    const int32_t & _arg)
+  {
+    this->vx = _arg;
+    return *this;
+  }
+  Type & set__vy(
+    const int32_t & _arg)
+  {
+    this->vy = _arg;
+    return *this;
+  }
 
   // constant declarations
 
@@ -289,6 +344,21 @@ struct Location_
       return false;
     }
     if (this->distancey != other.distancey) {
+      return false;
+    }
+    if (this->storage_x != other.storage_x) {
+      return false;
+    }
+    if (this->storage_y != other.storage_y) {
+      return false;
+    }
+    if (this->storage_z != other.storage_z) {
+      return false;
+    }
+    if (this->vx != other.vx) {
+      return false;
+    }
+    if (this->vy != other.vy) {
       return false;
     }
     return true;

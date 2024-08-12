@@ -31,6 +31,10 @@ module base_interfaces_demo {
       int32 enable;
 
       int64 error_code;
+
+      @verbatim (language="comment", text=
+        "电机电流")
+      double motor_current;
     };
   };
 };

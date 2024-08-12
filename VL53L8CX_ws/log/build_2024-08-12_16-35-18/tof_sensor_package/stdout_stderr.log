@@ -1,0 +1,30 @@
+[35m[1mScanning dependencies of target pallet_detect_node[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:1[m[K:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp:6:21:[m[K [01;31m[Kerror: [m[KISO C++ forbids in-class initialization of non-const static member ‘[01m[KBestFit::status[m[K’
+    6 |     static uint32_t [01;31m[Kstatus[m[K = -1;
+      |                     [01;31m[K^~~~~~[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:[m[K In static member function ‘[01m[Kstatic std::pair<double, double> BestFit::analyze(const cv::Mat&, int)[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:87:14:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+   87 |         auto [01;35m[K[[m[Kcoefficients, inliers] = fitLineRANSAC(robotEdgePoints);
+      |              [01;35m[K^[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.cpp:27:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kthreshold[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+   27 | std::pair<double, double> BestFit::analyze(const cv::Mat &A, [01;35m[Kint threshold[m[K) {
+      |                                                              [01;35m[K~~~~^~~~~~~~~[m[K
+In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:2[m[K:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp:6:21:[m[K [01;31m[Kerror: [m[KISO C++ forbids in-class initialization of non-const static member ‘[01m[KBestFit::status[m[K’
+    6 |     static uint32_t [01;31m[Kstatus[m[K = -1;
+      |                     [01;31m[K^~~~~~[m[K
+make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:89: CMakeFiles/pallet_detect_node.dir/src/BestFit.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  127 |                     auto [01;35m[K[[m[KangleA, driftA] = BestFit::analyze(A_8, distance_threshold);
+      |                          [01;35m[K^[m[K
+[01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+  128 |                     auto [01;35m[K[[m[KangleC, driftC] = BestFit::analyze(C_8, distance_threshold);
+      |                          [01;35m[K^[m[K
+make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:63: CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o] Error 1
+make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+make: *** [Makefile:141: all] Error 2

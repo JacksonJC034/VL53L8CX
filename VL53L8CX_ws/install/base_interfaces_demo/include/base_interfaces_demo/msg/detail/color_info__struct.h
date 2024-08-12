@@ -21,6 +21,8 @@ extern "C"
 typedef struct base_interfaces_demo__msg__ColorInfo
 {
   int32_t color_type;
+  int64_t error_code;
+  int32_t status;
 } base_interfaces_demo__msg__ColorInfo;
 
 // Struct for a sequence of base_interfaces_demo__msg__ColorInfo.

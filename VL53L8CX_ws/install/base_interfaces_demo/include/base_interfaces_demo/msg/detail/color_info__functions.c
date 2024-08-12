@@ -18,6 +18,8 @@ base_interfaces_demo__msg__ColorInfo__init(base_interfaces_demo__msg__ColorInfo 
     return false;
   }
   // color_type
+  // error_code
+  // status
   return true;
 }
 
@@ -28,6 +30,8 @@ base_interfaces_demo__msg__ColorInfo__fini(base_interfaces_demo__msg__ColorInfo 
     return;
   }
   // color_type
+  // error_code
+  // status
 }
 
 bool
@@ -38,6 +42,14 @@ base_interfaces_demo__msg__ColorInfo__are_equal(const base_interfaces_demo__msg_
   }
   // color_type
   if (lhs->color_type != rhs->color_type) {
+    return false;
+  }
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
+    return false;
+  }
+  // status
+  if (lhs->status != rhs->status) {
     return false;
   }
   return true;
@@ -53,6 +65,10 @@ base_interfaces_demo__msg__ColorInfo__copy(
   }
   // color_type
   output->color_type = input->color_type;
+  // error_code
+  output->error_code = input->error_code;
+  // status
+  output->status = input->status;
   return true;
 }
 

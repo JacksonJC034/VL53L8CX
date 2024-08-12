@@ -1,3 +1,3 @@
-int32 system_mode
-int32 work_status
+int32 selfcheck_status
 int32 init_status
+int64 error_code

@@ -37,9 +37,9 @@ struct SystemStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->system_mode = 0l;
-      this->work_status = 0l;
+      this->selfcheck_status = 0l;
       this->init_status = 0l;
+      this->error_code = 0ll;
     }
   }
 
@@ -49,40 +49,40 @@ struct SystemStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->system_mode = 0l;
-      this->work_status = 0l;
+      this->selfcheck_status = 0l;
       this->init_status = 0l;
+      this->error_code = 0ll;
     }
   }
 
   // field types and members
-  using _system_mode_type =
+  using _selfcheck_status_type =
     int32_t;
-  _system_mode_type system_mode;
-  using _work_status_type =
-    int32_t;
-  _work_status_type work_status;
+  _selfcheck_status_type selfcheck_status;
   using _init_status_type =
     int32_t;
   _init_status_type init_status;
+  using _error_code_type =
+    int64_t;
+  _error_code_type error_code;
 
   // setters for named parameter idiom
-  Type & set__system_mode(
+  Type & set__selfcheck_status(
     const int32_t & _arg)
   {
-    this->system_mode = _arg;
-    return *this;
-  }
-  Type & set__work_status(
-    const int32_t & _arg)
-  {
-    this->work_status = _arg;
+    this->selfcheck_status = _arg;
     return *this;
   }
   Type & set__init_status(
     const int32_t & _arg)
   {
     this->init_status = _arg;
+    return *this;
+  }
+  Type & set__error_code(
+    const int64_t & _arg)
+  {
+    this->error_code = _arg;
     return *this;
   }
 
@@ -128,13 +128,13 @@ struct SystemStatus_
   // comparison operators
   bool operator==(const SystemStatus_ & other) const
   {
-    if (this->system_mode != other.system_mode) {
-      return false;
-    }
-    if (this->work_status != other.work_status) {
+    if (this->selfcheck_status != other.selfcheck_status) {
       return false;
     }
     if (this->init_status != other.init_status) {
+      return false;
+    }
+    if (this->error_code != other.error_code) {
       return false;
     }
     return true;

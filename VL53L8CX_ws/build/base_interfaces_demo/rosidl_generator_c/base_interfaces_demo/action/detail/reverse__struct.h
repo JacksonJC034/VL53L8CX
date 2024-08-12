@@ -41,6 +41,7 @@ typedef struct base_interfaces_demo__action__Reverse_Goal__Sequence
 typedef struct base_interfaces_demo__action__Reverse_Result
 {
   float final_location;
+  int32_t success;
 } base_interfaces_demo__action__Reverse_Result;
 
 // Struct for a sequence of base_interfaces_demo__action__Reverse_Result.

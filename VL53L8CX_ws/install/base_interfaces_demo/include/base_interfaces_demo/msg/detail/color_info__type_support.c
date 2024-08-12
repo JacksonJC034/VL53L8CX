@@ -31,7 +31,7 @@ void ColorInfo__rosidl_typesupport_introspection_c__ColorInfo_fini_function(void
   base_interfaces_demo__msg__ColorInfo__fini(message_memory);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember ColorInfo__rosidl_typesupport_introspection_c__ColorInfo_message_member_array[1] = {
+static rosidl_typesupport_introspection_c__MessageMember ColorInfo__rosidl_typesupport_introspection_c__ColorInfo_message_member_array[3] = {
   {
     "color_type",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
@@ -46,13 +46,43 @@ static rosidl_typesupport_introspection_c__MessageMember ColorInfo__rosidl_types
     NULL,  // get_const(index) function pointer
     NULL,  // get(index) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "error_code",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__ColorInfo, error_code),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__ColorInfo, status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
   }
 };
 
 static const rosidl_typesupport_introspection_c__MessageMembers ColorInfo__rosidl_typesupport_introspection_c__ColorInfo_message_members = {
   "base_interfaces_demo__msg",  // message namespace
   "ColorInfo",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(base_interfaces_demo__msg__ColorInfo),
   ColorInfo__rosidl_typesupport_introspection_c__ColorInfo_message_member_array,  // message members
   ColorInfo__rosidl_typesupport_introspection_c__ColorInfo_init_function,  // function to initialize message memory (memory has to be allocated)

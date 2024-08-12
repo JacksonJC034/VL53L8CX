@@ -67,6 +67,11 @@ class Location(metaclass=Metaclass_Location):
         '_hall_rfid_en',
         '_distancex',
         '_distancey',
+        '_storage_x',
+        '_storage_y',
+        '_storage_z',
+        '_vx',
+        '_vy',
     ]
 
     _fields_and_field_types = {
@@ -84,6 +89,11 @@ class Location(metaclass=Metaclass_Location):
         'hall_rfid_en': 'int32',
         'distancex': 'double',
         'distancey': 'double',
+        'storage_x': 'int32',
+        'storage_y': 'int32',
+        'storage_z': 'int32',
+        'vx': 'int32',
+        'vy': 'int32',
     }
 
     SLOT_TYPES = (
@@ -101,6 +111,11 @@ class Location(metaclass=Metaclass_Location):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
         rosidl_parser.definition.BasicType('double'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -121,6 +136,11 @@ class Location(metaclass=Metaclass_Location):
         self.hall_rfid_en = kwargs.get('hall_rfid_en', int())
         self.distancex = kwargs.get('distancex', float())
         self.distancey = kwargs.get('distancey', float())
+        self.storage_x = kwargs.get('storage_x', int())
+        self.storage_y = kwargs.get('storage_y', int())
+        self.storage_z = kwargs.get('storage_z', int())
+        self.vx = kwargs.get('vx', int())
+        self.vy = kwargs.get('vy', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -178,6 +198,16 @@ class Location(metaclass=Metaclass_Location):
         if self.distancex != other.distancex:
             return False
         if self.distancey != other.distancey:
+            return False
+        if self.storage_x != other.storage_x:
+            return False
+        if self.storage_y != other.storage_y:
+            return False
+        if self.storage_z != other.storage_z:
+            return False
+        if self.vx != other.vx:
+            return False
+        if self.vy != other.vy:
             return False
         return True
 
@@ -385,3 +415,78 @@ class Location(metaclass=Metaclass_Location):
                 isinstance(value, float), \
                 "The 'distancey' field must be of type 'float'"
         self._distancey = value
+
+    @property
+    def storage_x(self):
+        """Message field 'storage_x'."""
+        return self._storage_x
+
+    @storage_x.setter
+    def storage_x(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'storage_x' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'storage_x' field must be an integer in [-2147483648, 2147483647]"
+        self._storage_x = value
+
+    @property
+    def storage_y(self):
+        """Message field 'storage_y'."""
+        return self._storage_y
+
+    @storage_y.setter
+    def storage_y(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'storage_y' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'storage_y' field must be an integer in [-2147483648, 2147483647]"
+        self._storage_y = value
+
+    @property
+    def storage_z(self):
+        """Message field 'storage_z'."""
+        return self._storage_z
+
+    @storage_z.setter
+    def storage_z(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'storage_z' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'storage_z' field must be an integer in [-2147483648, 2147483647]"
+        self._storage_z = value
+
+    @property
+    def vx(self):
+        """Message field 'vx'."""
+        return self._vx
+
+    @vx.setter
+    def vx(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'vx' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'vx' field must be an integer in [-2147483648, 2147483647]"
+        self._vx = value
+
+    @property
+    def vy(self):
+        """Message field 'vy'."""
+        return self._vy
+
+    @vy.setter
+    def vy(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'vy' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'vy' field must be an integer in [-2147483648, 2147483647]"
+        self._vy = value

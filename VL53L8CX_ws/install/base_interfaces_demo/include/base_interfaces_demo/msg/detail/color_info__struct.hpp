@@ -38,6 +38,8 @@ struct ColorInfo_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->color_type = 0l;
+      this->error_code = 0ll;
+      this->status = 0l;
     }
   }
 
@@ -48,6 +50,8 @@ struct ColorInfo_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->color_type = 0l;
+      this->error_code = 0ll;
+      this->status = 0l;
     }
   }
 
@@ -55,12 +59,30 @@ struct ColorInfo_
   using _color_type_type =
     int32_t;
   _color_type_type color_type;
+  using _error_code_type =
+    int64_t;
+  _error_code_type error_code;
+  using _status_type =
+    int32_t;
+  _status_type status;
 
   // setters for named parameter idiom
   Type & set__color_type(
     const int32_t & _arg)
   {
     this->color_type = _arg;
+    return *this;
+  }
+  Type & set__error_code(
+    const int64_t & _arg)
+  {
+    this->error_code = _arg;
+    return *this;
+  }
+  Type & set__status(
+    const int32_t & _arg)
+  {
+    this->status = _arg;
     return *this;
   }
 
@@ -107,6 +129,12 @@ struct ColorInfo_
   bool operator==(const ColorInfo_ & other) const
   {
     if (this->color_type != other.color_type) {
+      return false;
+    }
+    if (this->error_code != other.error_code) {
+      return false;
+    }
+    if (this->status != other.status) {
       return false;
     }
     return true;

@@ -7,16 +7,68 @@ module base_interfaces_demo {
   module msg {
     struct CarStatus {
       @verbatim (language="comment", text=
-        " 单机状态")
-      int32 stand_alone_state;
-
-      @verbatim (language="comment", text=
         " 任务状态")
       int32 task_state;
 
       @verbatim (language="comment", text=
-        " 表示 任务-1 或者 单机-2")
-      int32 status;
+        "系统初始化         =1初始化完成,=0自检中,=2初始化失败")
+      int32 initializing;
+
+      @verbatim (language="comment", text=
+        "系统自检               同上")
+      int32 checking;
+
+      @verbatim (language="comment", text=
+        "松轴中                      =1松轴,=0锁轴")
+      int32 releasing;
+
+      @verbatim (language="comment", text=
+        "行走中                         =1行走中,=0不在行走")
+      int32 driving;
+
+      @verbatim (language="comment", text=
+        "定位状态OK         =1OK, =0.不OK")
+      int32 fine_positioning;
+
+      @verbatim (language="comment", text=
+        "=1在标签上,=0不在标签上")
+      int32 on_tag;
+
+      @verbatim (language="comment", text=
+        "=1在轨道,=0不在轨道")
+      int32 on_track;
+
+      @verbatim (language="comment", text=
+        "错误中")
+      int32 error;
+
+      @verbatim (language="comment", text=
+        "警告中")
+      int32 warning;
+
+      @verbatim (language="comment", text=
+        "急停中")
+      int32 estop;
+
+      @verbatim (language="comment", text=
+        "休眠中")
+      int32 sleeping;
+
+      @verbatim (language="comment", text=
+        "载货中")
+      int32 load;
+
+      @verbatim (language="comment", text=
+        "充电中")
+      int32 charging;
+
+      @verbatim (language="comment", text=
+        " 模式")
+      int32 mode;
+
+      @verbatim (language="comment", text=
+        "弃用")
+      int32 stand_alone_state;
     };
   };
 };

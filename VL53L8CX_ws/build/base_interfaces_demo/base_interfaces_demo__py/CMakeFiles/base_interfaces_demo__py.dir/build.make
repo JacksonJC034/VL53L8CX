@@ -85,6 +85,9 @@ base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_p
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_car_status.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_health_node.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/action/_pallet.py
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_check_emergency.py
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_set_emergency.py
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_rcs_server.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/action/__init__.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/__init__.py
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/__init__.py
@@ -117,6 +120,9 @@ base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_p
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_car_status_s.c
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c
 base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_check_emergency_s.c
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_set_emergency_s.c
+base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_rcs_server_s.c
 
 
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/lib/rosidl_generator_py/rosidl_generator_py
@@ -161,6 +167,9 @@ rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_types
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/msg/CarStatus.idl
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/msg/HealthNode.idl
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/action/Pallet.idl
+rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/srv/CheckEmergency.idl
+rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/srv/SetEmergency.idl
+rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/base_interfaces_demo/srv/RcsServer.idl
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl
@@ -264,6 +273,15 @@ rosidl_generator_py/base_interfaces_demo/msg/_health_node.py: rosidl_generator_p
 rosidl_generator_py/base_interfaces_demo/action/_pallet.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/action/_pallet.py
 
+rosidl_generator_py/base_interfaces_demo/srv/_check_emergency.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_check_emergency.py
+
+rosidl_generator_py/base_interfaces_demo/srv/_set_emergency.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_set_emergency.py
+
+rosidl_generator_py/base_interfaces_demo/srv/_rcs_server.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_rcs_server.py
+
 rosidl_generator_py/base_interfaces_demo/action/__init__.py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/action/__init__.py
 
@@ -360,6 +378,15 @@ rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c: rosidl_generator_
 rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c
 
+rosidl_generator_py/base_interfaces_demo/srv/_check_emergency_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_check_emergency_s.c
+
+rosidl_generator_py/base_interfaces_demo/srv/_set_emergency_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_set_emergency_s.c
+
+rosidl_generator_py/base_interfaces_demo/srv/_rcs_server_s.c: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/base_interfaces_demo/srv/_rcs_server_s.c
+
 base_interfaces_demo__py: base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_fastrtps_c.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/_base_interfaces_demo_s.ep.rosidl_typesupport_introspection_c.c
@@ -393,6 +420,9 @@ base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_bt_statu
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_car_status.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_health_node.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/action/_pallet.py
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_check_emergency.py
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_set_emergency.py
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_rcs_server.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/action/__init__.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/__init__.py
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/__init__.py
@@ -425,6 +455,9 @@ base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_bt_statu
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_car_status_s.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/msg/_health_node_s.c
 base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/action/_pallet_s.c
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_check_emergency_s.c
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_set_emergency_s.c
+base_interfaces_demo__py: rosidl_generator_py/base_interfaces_demo/srv/_rcs_server_s.c
 base_interfaces_demo__py: base_interfaces_demo__py/CMakeFiles/base_interfaces_demo__py.dir/build.make
 
 .PHONY : base_interfaces_demo__py

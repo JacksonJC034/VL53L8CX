@@ -57,6 +57,26 @@ module base_interfaces_demo {
       double distancex;
 
       double distancey;
+
+      @verbatim (language="comment", text=
+        "舱位号x")
+      int32 storage_x;
+
+      @verbatim (language="comment", text=
+        "舱位号y")
+      int32 storage_y;
+
+      @verbatim (language="comment", text=
+        "舱位号z")
+      int32 storage_z;
+
+      @verbatim (language="comment", text=
+        "速度x")
+      int32 vx;
+
+      @verbatim (language="comment", text=
+        "速度y")
+      int32 vy;
     };
   };
 };

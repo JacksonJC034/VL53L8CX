@@ -20,16 +20,96 @@ namespace msg
 namespace builder
 {
 
+class Init_Location_vy
+{
+public:
+  explicit Init_Location_vy(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::msg::Location vy(::base_interfaces_demo::msg::Location::_vy_type arg)
+  {
+    msg_.vy = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
+class Init_Location_vx
+{
+public:
+  explicit Init_Location_vx(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  Init_Location_vy vx(::base_interfaces_demo::msg::Location::_vx_type arg)
+  {
+    msg_.vx = std::move(arg);
+    return Init_Location_vy(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
+class Init_Location_storage_z
+{
+public:
+  explicit Init_Location_storage_z(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  Init_Location_vx storage_z(::base_interfaces_demo::msg::Location::_storage_z_type arg)
+  {
+    msg_.storage_z = std::move(arg);
+    return Init_Location_vx(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
+class Init_Location_storage_y
+{
+public:
+  explicit Init_Location_storage_y(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  Init_Location_storage_z storage_y(::base_interfaces_demo::msg::Location::_storage_y_type arg)
+  {
+    msg_.storage_y = std::move(arg);
+    return Init_Location_storage_z(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
+class Init_Location_storage_x
+{
+public:
+  explicit Init_Location_storage_x(::base_interfaces_demo::msg::Location & msg)
+  : msg_(msg)
+  {}
+  Init_Location_storage_y storage_x(::base_interfaces_demo::msg::Location::_storage_x_type arg)
+  {
+    msg_.storage_x = std::move(arg);
+    return Init_Location_storage_y(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::Location msg_;
+};
+
 class Init_Location_distancey
 {
 public:
   explicit Init_Location_distancey(::base_interfaces_demo::msg::Location & msg)
   : msg_(msg)
   {}
-  ::base_interfaces_demo::msg::Location distancey(::base_interfaces_demo::msg::Location::_distancey_type arg)
+  Init_Location_storage_x distancey(::base_interfaces_demo::msg::Location::_distancey_type arg)
   {
     msg_.distancey = std::move(arg);
-    return std::move(msg_);
+    return Init_Location_storage_x(msg_);
   }
 
 private:

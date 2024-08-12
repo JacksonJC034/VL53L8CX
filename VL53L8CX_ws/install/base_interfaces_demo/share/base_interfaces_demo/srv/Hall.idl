@@ -7,6 +7,8 @@ module base_interfaces_demo {
   module srv {
     struct Hall_Request {
       int32 cmd;
+
+      double para3;
     };
     struct Hall_Response {
       int32 ret;

@@ -17,9 +17,22 @@ base_interfaces_demo__msg__CarStatus__init(base_interfaces_demo__msg__CarStatus 
   if (!msg) {
     return false;
   }
-  // stand_alone_state
   // task_state
-  // status
+  // initializing
+  // checking
+  // releasing
+  // driving
+  // fine_positioning
+  // on_tag
+  // on_track
+  // error
+  // warning
+  // estop
+  // sleeping
+  // load
+  // charging
+  // mode
+  // stand_alone_state
   return true;
 }
 
@@ -29,9 +42,22 @@ base_interfaces_demo__msg__CarStatus__fini(base_interfaces_demo__msg__CarStatus 
   if (!msg) {
     return;
   }
-  // stand_alone_state
   // task_state
-  // status
+  // initializing
+  // checking
+  // releasing
+  // driving
+  // fine_positioning
+  // on_tag
+  // on_track
+  // error
+  // warning
+  // estop
+  // sleeping
+  // load
+  // charging
+  // mode
+  // stand_alone_state
 }
 
 bool
@@ -40,16 +66,68 @@ base_interfaces_demo__msg__CarStatus__are_equal(const base_interfaces_demo__msg_
   if (!lhs || !rhs) {
     return false;
   }
-  // stand_alone_state
-  if (lhs->stand_alone_state != rhs->stand_alone_state) {
-    return false;
-  }
   // task_state
   if (lhs->task_state != rhs->task_state) {
     return false;
   }
-  // status
-  if (lhs->status != rhs->status) {
+  // initializing
+  if (lhs->initializing != rhs->initializing) {
+    return false;
+  }
+  // checking
+  if (lhs->checking != rhs->checking) {
+    return false;
+  }
+  // releasing
+  if (lhs->releasing != rhs->releasing) {
+    return false;
+  }
+  // driving
+  if (lhs->driving != rhs->driving) {
+    return false;
+  }
+  // fine_positioning
+  if (lhs->fine_positioning != rhs->fine_positioning) {
+    return false;
+  }
+  // on_tag
+  if (lhs->on_tag != rhs->on_tag) {
+    return false;
+  }
+  // on_track
+  if (lhs->on_track != rhs->on_track) {
+    return false;
+  }
+  // error
+  if (lhs->error != rhs->error) {
+    return false;
+  }
+  // warning
+  if (lhs->warning != rhs->warning) {
+    return false;
+  }
+  // estop
+  if (lhs->estop != rhs->estop) {
+    return false;
+  }
+  // sleeping
+  if (lhs->sleeping != rhs->sleeping) {
+    return false;
+  }
+  // load
+  if (lhs->load != rhs->load) {
+    return false;
+  }
+  // charging
+  if (lhs->charging != rhs->charging) {
+    return false;
+  }
+  // mode
+  if (lhs->mode != rhs->mode) {
+    return false;
+  }
+  // stand_alone_state
+  if (lhs->stand_alone_state != rhs->stand_alone_state) {
     return false;
   }
   return true;
@@ -63,12 +141,38 @@ base_interfaces_demo__msg__CarStatus__copy(
   if (!input || !output) {
     return false;
   }
-  // stand_alone_state
-  output->stand_alone_state = input->stand_alone_state;
   // task_state
   output->task_state = input->task_state;
-  // status
-  output->status = input->status;
+  // initializing
+  output->initializing = input->initializing;
+  // checking
+  output->checking = input->checking;
+  // releasing
+  output->releasing = input->releasing;
+  // driving
+  output->driving = input->driving;
+  // fine_positioning
+  output->fine_positioning = input->fine_positioning;
+  // on_tag
+  output->on_tag = input->on_tag;
+  // on_track
+  output->on_track = input->on_track;
+  // error
+  output->error = input->error;
+  // warning
+  output->warning = input->warning;
+  // estop
+  output->estop = input->estop;
+  // sleeping
+  output->sleeping = input->sleeping;
+  // load
+  output->load = input->load;
+  // charging
+  output->charging = input->charging;
+  // mode
+  output->mode = input->mode;
+  // stand_alone_state
+  output->stand_alone_state = input->stand_alone_state;
   return true;
 }
 

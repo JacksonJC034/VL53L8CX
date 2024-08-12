@@ -34,6 +34,10 @@ cdr_serialize(
 {
   // Member: color_type
   cdr << ros_message.color_type;
+  // Member: error_code
+  cdr << ros_message.error_code;
+  // Member: status
+  cdr << ros_message.status;
   return true;
 }
 
@@ -45,6 +49,12 @@ cdr_deserialize(
 {
   // Member: color_type
   cdr >> ros_message.color_type;
+
+  // Member: error_code
+  cdr >> ros_message.error_code;
+
+  // Member: status
+  cdr >> ros_message.status;
 
   return true;
 }
@@ -68,6 +78,18 @@ get_serialized_size(
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // Member: error_code
+  {
+    size_t item_size = sizeof(ros_message.error_code);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: status
+  {
+    size_t item_size = sizeof(ros_message.status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -88,6 +110,22 @@ max_serialized_size_ColorInfo(
 
 
   // Member: color_type
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+
+  // Member: error_code
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: status
   {
     size_t array_size = 1;
 

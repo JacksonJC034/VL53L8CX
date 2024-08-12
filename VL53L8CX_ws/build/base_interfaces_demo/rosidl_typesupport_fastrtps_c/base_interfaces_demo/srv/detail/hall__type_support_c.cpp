@@ -54,6 +54,11 @@ static bool _Hall_Request__cdr_serialize(
     cdr << ros_message->cmd;
   }
 
+  // Field name: para3
+  {
+    cdr << ros_message->para3;
+  }
+
   return true;
 }
 
@@ -69,6 +74,11 @@ static bool _Hall_Request__cdr_deserialize(
   // Field name: cmd
   {
     cdr >> ros_message->cmd;
+  }
+
+  // Field name: para3
+  {
+    cdr >> ros_message->para3;
   }
 
   return true;
@@ -91,6 +101,12 @@ size_t get_serialized_size_base_interfaces_demo__srv__Hall_Request(
   // field.name cmd
   {
     size_t item_size = sizeof(ros_message->cmd);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name para3
+  {
+    size_t item_size = sizeof(ros_message->para3);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -124,6 +140,13 @@ size_t max_serialized_size_base_interfaces_demo__srv__Hall_Request(
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: para3
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

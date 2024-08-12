@@ -27,7 +27,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_seek_ret_s.c.o"
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_system_status_s.c.o"
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/msg/_test_s.c.o"
+  "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/srv/_check_emergency_s.c.o"
   "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/srv/_hall_s.c.o"
+  "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/srv/_rcs_server_s.c.o"
+  "CMakeFiles/base_interfaces_demo__python.dir/rosidl_generator_py/base_interfaces_demo/srv/_set_emergency_s.c.o"
   "rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.pdb"
   "rosidl_generator_py/base_interfaces_demo/libbase_interfaces_demo__python.so"
 )

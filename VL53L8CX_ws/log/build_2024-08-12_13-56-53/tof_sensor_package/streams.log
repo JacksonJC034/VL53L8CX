@@ -1,0 +1,58 @@
+[0.080s] Invoking command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4
+[0.222s] -- Found ament_cmake: 0.9.12 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.295s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.761s] -- Found rclcpp: 2.4.3 (/opt/ros/foxy/share/rclcpp/cmake)
+[0.879s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.888s] -- Found rosidl_adapter: 1.3.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.171s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.308s] -- Found rmw_implementation_cmake: 1.0.4 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.322s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.719s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[2.014s] -- Found base_interfaces_demo: 0.0.0 (/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/share/base_interfaces_demo/cmake)
+[2.216s] -- Found ament_lint_auto: 0.9.8 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[2.406s] -- Added test 'copyright' to check source files copyright and LICENSE
+[2.412s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[2.413s] -- Configured cppcheck include dirs: /home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/include;/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/../install/base_interfaces_demo/include
+[2.413s] -- Configured cppcheck exclude dirs and/or files: 
+[2.419s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[2.420s] -- Configured cpplint exclude dirs and/or files: 
+[2.423s] -- Added test 'lint_cmake' to check CMake code style
+[2.429s] -- Added test 'uncrustify' to check C / C++ code style
+[2.429s] -- Configured uncrustify additional arguments: 
+[2.431s] -- Added test 'xmllint' to check XML markup files
+[2.450s] -- Configuring done
+[2.518s] -- Generating done
+[2.520s] -- Build files have been written to: /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package
+[2.654s] [35m[1mScanning dependencies of target pallet_detect_node[0m
+[3.059s] [ 20%] [32mBuilding CXX object CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o[0m
+[5.878s] In file included from [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:2[m[K:
+[5.878s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/BestFit.hpp:8:38:[m[K [01;31m[Kerror: [m[Kextra qualification ‘[01m[KBestFit::[m[K’ on member ‘[01m[KanalyzeTwoMatrices[m[K’ [[01;31m[K-fpermissive[m[K]
+[5.879s]     8 |     static std::pair<double, double> [01;31m[KBestFit[m[K::analyzeTwoMatrices(const cv::Mat &A, const cv::Mat &B, int threshold);
+[5.879s]       |                                      [01;31m[K^~~~~~~[m[K
+[7.857s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:[m[K In member function ‘[01m[Kvoid PalletDetectNode::timer_callback()[m[K’:
+[7.858s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:94:51:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kbase_interfaces_demo::msg::PalletInfo_<std::allocator<void> >::_sensor1_type[m[K’ {aka ‘[01m[Kstd::array<unsigned int, 64>[m[K’} to ‘[01m[Kstd::array<short unsigned int, 64>&[m[K’
+[7.858s]    94 |             populatePalletInfoMatrix([01;31m[Kpallet_info_.sensor1[m[K, A);
+[7.858s]       |                                      [01;31m[K~~~~~~~~~~~~~^~~~~~~[m[K
+[7.858s]       |                                                   [01;31m[K|[m[K
+[7.858s]       |                                                   [01;31m[Kbase_interfaces_demo::msg::PalletInfo_<std::allocator<void> >::_sensor1_type {aka std::array<unsigned int, 64>}[m[K
+[7.858s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:183:61:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid PalletDetectNode::populatePalletInfoMatrix(std::array<short unsigned int, 64>&, const cv::Mat&)[m[K’
+[7.859s]   183 |     void populatePalletInfoMatrix([01;36m[Kstd::array<uint16_t, 64>& sensor_array[m[K, const cv::Mat& matrix) {
+[7.859s]       |                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[7.859s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:95:51:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kbase_interfaces_demo::msg::PalletInfo_<std::allocator<void> >::_sensor2_type[m[K’ {aka ‘[01m[Kstd::array<unsigned int, 64>[m[K’} to ‘[01m[Kstd::array<short unsigned int, 64>&[m[K’
+[7.859s]    95 |             populatePalletInfoMatrix([01;31m[Kpallet_info_.sensor2[m[K, C);
+[7.859s]       |                                      [01;31m[K~~~~~~~~~~~~~^~~~~~~[m[K
+[7.860s]       |                                                   [01;31m[K|[m[K
+[7.860s]       |                                                   [01;31m[Kbase_interfaces_demo::msg::PalletInfo_<std::allocator<void> >::_sensor2_type {aka std::array<unsigned int, 64>}[m[K
+[7.860s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:183:61:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid PalletDetectNode::populatePalletInfoMatrix(std::array<short unsigned int, 64>&, const cv::Mat&)[m[K’
+[7.860s]   183 |     void populatePalletInfoMatrix([01;36m[Kstd::array<uint16_t, 64>& sensor_array[m[K, const cv::Mat& matrix) {
+[7.860s]       |                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[7.860s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:127:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[7.861s]   127 |                     auto [01;35m[K[[m[KangleA, driftA] = BestFit::analyze(A_8, distance_threshold);
+[7.861s]       |                          [01;35m[K^[m[K
+[7.862s] [01m[K/home/cjs/VL53L8CX/VL53L8CX_ws/src/tof_sensor_package/src/pallet_detect_node.cpp:128:26:[m[K [01;35m[Kwarning: [m[Kstructured bindings only available with ‘[01m[K-std=c++17[m[K’ or ‘[01m[K-std=gnu++17[m[K’
+[7.862s]   128 |                     auto [01;35m[K[[m[KangleC, driftC] = BestFit::analyze(C_8, distance_threshold);
+[7.862s]       |                          [01;35m[K^[m[K
+[11.616s] make[2]: *** [CMakeFiles/pallet_detect_node.dir/build.make:63: CMakeFiles/pallet_detect_node.dir/src/pallet_detect_node.cpp.o] Error 1
+[11.616s] make[1]: *** [CMakeFiles/Makefile2:78: CMakeFiles/pallet_detect_node.dir/all] Error 2
+[11.616s] make: *** [Makefile:141: all] Error 2
+[11.633s] Invoked command in '/home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package' returned '2': AMENT_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo:/opt/ros/foxy LD_LIBRARY_PATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/cjs/VL53L8CX/VL53L8CX_ws/install/base_interfaces_demo/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake --build /home/cjs/VL53L8CX/VL53L8CX_ws/build/tof_sensor_package -- -j4 -l4

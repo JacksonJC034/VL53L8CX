@@ -33,29 +33,14 @@ void SystemStatus__rosidl_typesupport_introspection_c__SystemStatus_fini_functio
 
 static rosidl_typesupport_introspection_c__MessageMember SystemStatus__rosidl_typesupport_introspection_c__SystemStatus_message_member_array[3] = {
   {
-    "system_mode",  // name
+    "selfcheck_status",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(base_interfaces_demo__msg__SystemStatus, system_mode),  // bytes offset in struct
-    NULL,  // default value
-    NULL,  // size() function pointer
-    NULL,  // get_const(index) function pointer
-    NULL,  // get(index) function pointer
-    NULL  // resize(index) function pointer
-  },
-  {
-    "work_status",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    NULL,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(base_interfaces_demo__msg__SystemStatus, work_status),  // bytes offset in struct
+    offsetof(base_interfaces_demo__msg__SystemStatus, selfcheck_status),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -71,6 +56,21 @@ static rosidl_typesupport_introspection_c__MessageMember SystemStatus__rosidl_ty
     0,  // array size
     false,  // is upper bound
     offsetof(base_interfaces_demo__msg__SystemStatus, init_status),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "error_code",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo__msg__SystemStatus, error_code),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer

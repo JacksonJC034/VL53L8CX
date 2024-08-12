@@ -20,15 +20,15 @@ namespace msg
 namespace builder
 {
 
-class Init_SystemStatus_init_status
+class Init_SystemStatus_error_code
 {
 public:
-  explicit Init_SystemStatus_init_status(::base_interfaces_demo::msg::SystemStatus & msg)
+  explicit Init_SystemStatus_error_code(::base_interfaces_demo::msg::SystemStatus & msg)
   : msg_(msg)
   {}
-  ::base_interfaces_demo::msg::SystemStatus init_status(::base_interfaces_demo::msg::SystemStatus::_init_status_type arg)
+  ::base_interfaces_demo::msg::SystemStatus error_code(::base_interfaces_demo::msg::SystemStatus::_error_code_type arg)
   {
-    msg_.init_status = std::move(arg);
+    msg_.error_code = std::move(arg);
     return std::move(msg_);
   }
 
@@ -36,32 +36,32 @@ private:
   ::base_interfaces_demo::msg::SystemStatus msg_;
 };
 
-class Init_SystemStatus_work_status
+class Init_SystemStatus_init_status
 {
 public:
-  explicit Init_SystemStatus_work_status(::base_interfaces_demo::msg::SystemStatus & msg)
+  explicit Init_SystemStatus_init_status(::base_interfaces_demo::msg::SystemStatus & msg)
   : msg_(msg)
   {}
-  Init_SystemStatus_init_status work_status(::base_interfaces_demo::msg::SystemStatus::_work_status_type arg)
+  Init_SystemStatus_error_code init_status(::base_interfaces_demo::msg::SystemStatus::_init_status_type arg)
   {
-    msg_.work_status = std::move(arg);
-    return Init_SystemStatus_init_status(msg_);
+    msg_.init_status = std::move(arg);
+    return Init_SystemStatus_error_code(msg_);
   }
 
 private:
   ::base_interfaces_demo::msg::SystemStatus msg_;
 };
 
-class Init_SystemStatus_system_mode
+class Init_SystemStatus_selfcheck_status
 {
 public:
-  Init_SystemStatus_system_mode()
+  Init_SystemStatus_selfcheck_status()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_SystemStatus_work_status system_mode(::base_interfaces_demo::msg::SystemStatus::_system_mode_type arg)
+  Init_SystemStatus_init_status selfcheck_status(::base_interfaces_demo::msg::SystemStatus::_selfcheck_status_type arg)
   {
-    msg_.system_mode = std::move(arg);
-    return Init_SystemStatus_work_status(msg_);
+    msg_.selfcheck_status = std::move(arg);
+    return Init_SystemStatus_init_status(msg_);
   }
 
 private:
@@ -79,7 +79,7 @@ template<>
 inline
 auto build<::base_interfaces_demo::msg::SystemStatus>()
 {
-  return base_interfaces_demo::msg::builder::Init_SystemStatus_system_mode();
+  return base_interfaces_demo::msg::builder::Init_SystemStatus_selfcheck_status();
 }
 
 }  // namespace base_interfaces_demo

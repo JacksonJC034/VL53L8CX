@@ -84,6 +84,15 @@ CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfa
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/CarStatus.msg
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/msg/HealthNode.msg
 CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Pallet.action
+CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/CheckEmergency.srv
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/CheckEmergency_Request.msg
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/CheckEmergency_Response.msg
+CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/SetEmergency.srv
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/SetEmergency_Request.msg
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/SetEmergency_Response.msg
+CMakeFiles/base_interfaces_demo: /home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/RcsServer.srv
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/RcsServer_Request.msg
+CMakeFiles/base_interfaces_demo: rosidl_cmake/srv/RcsServer_Response.msg
 CMakeFiles/base_interfaces_demo: /opt/ros/foxy/share/action_msgs/msg/GoalInfo.idl
 CMakeFiles/base_interfaces_demo: /opt/ros/foxy/share/action_msgs/msg/GoalStatus.idl
 CMakeFiles/base_interfaces_demo: /opt/ros/foxy/share/action_msgs/msg/GoalStatusArray.idl

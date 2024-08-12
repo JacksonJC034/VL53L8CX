@@ -27,7 +27,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/seek_ret__type_support.c.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/system_status__type_support.c.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/test__type_support.c.o"
+  "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c.o"
   "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__type_support.c.o"
+  "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c.o"
+  "CMakeFiles/base_interfaces_demo__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c.o"
   "libbase_interfaces_demo__rosidl_typesupport_introspection_c.pdb"
   "libbase_interfaces_demo__rosidl_typesupport_introspection_c.so"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/action/detail/nav__rosidl_typesupport_introspection_c.h"
@@ -86,8 +89,14 @@ file(REMOVE_RECURSE
   "rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/system_status__type_support.c"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/test__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/msg/detail/test__type_support.c"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/check_emergency__type_support.c"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__rosidl_typesupport_introspection_c.h"
   "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/hall__type_support.c"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/rcs_server__type_support.c"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__rosidl_typesupport_introspection_c.h"
+  "rosidl_typesupport_introspection_c/base_interfaces_demo/srv/detail/set_emergency__type_support.c"
 )
 
 # Per-language clean rules from dependency scanning.

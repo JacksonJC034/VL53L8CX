@@ -20,9 +20,9 @@ extern "C"
 // Struct defined in msg/SystemStatus in the package base_interfaces_demo.
 typedef struct base_interfaces_demo__msg__SystemStatus
 {
-  int32_t system_mode;
-  int32_t work_status;
+  int32_t selfcheck_status;
   int32_t init_status;
+  int64_t error_code;
 } base_interfaces_demo__msg__SystemStatus;
 
 // Struct for a sequence of base_interfaces_demo__msg__SystemStatus.

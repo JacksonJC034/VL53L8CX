@@ -50,22 +50,13 @@ bool base_interfaces_demo__msg__system_status__convert_from_py(PyObject * _pymsg
     assert(strncmp("base_interfaces_demo.msg._system_status.SystemStatus", full_classname_dest, 52) == 0);
   }
   base_interfaces_demo__msg__SystemStatus * ros_message = _ros_message;
-  {  // system_mode
-    PyObject * field = PyObject_GetAttrString(_pymsg, "system_mode");
+  {  // selfcheck_status
+    PyObject * field = PyObject_GetAttrString(_pymsg, "selfcheck_status");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->system_mode = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
-  {  // work_status
-    PyObject * field = PyObject_GetAttrString(_pymsg, "work_status");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->work_status = (int32_t)PyLong_AsLong(field);
+    ros_message->selfcheck_status = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
   {  // init_status
@@ -75,6 +66,15 @@ bool base_interfaces_demo__msg__system_status__convert_from_py(PyObject * _pymsg
     }
     assert(PyLong_Check(field));
     ros_message->init_status = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // error_code
+    PyObject * field = PyObject_GetAttrString(_pymsg, "error_code");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->error_code = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
 
@@ -99,22 +99,11 @@ PyObject * base_interfaces_demo__msg__system_status__convert_to_py(void * raw_ro
     }
   }
   base_interfaces_demo__msg__SystemStatus * ros_message = (base_interfaces_demo__msg__SystemStatus *)raw_ros_message;
-  {  // system_mode
+  {  // selfcheck_status
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->system_mode);
+    field = PyLong_FromLong(ros_message->selfcheck_status);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "system_mode", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
-  {  // work_status
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->work_status);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "work_status", field);
+      int rc = PyObject_SetAttrString(_pymessage, "selfcheck_status", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;
@@ -126,6 +115,17 @@ PyObject * base_interfaces_demo__msg__system_status__convert_to_py(void * raw_ro
     field = PyLong_FromLong(ros_message->init_status);
     {
       int rc = PyObject_SetAttrString(_pymessage, "init_status", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // error_code
+    PyObject * field = NULL;
+    field = PyLong_FromLongLong(ros_message->error_code);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

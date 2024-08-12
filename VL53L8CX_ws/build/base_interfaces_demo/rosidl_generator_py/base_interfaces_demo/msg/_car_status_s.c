@@ -50,15 +50,6 @@ bool base_interfaces_demo__msg__car_status__convert_from_py(PyObject * _pymsg, v
     assert(strncmp("base_interfaces_demo.msg._car_status.CarStatus", full_classname_dest, 46) == 0);
   }
   base_interfaces_demo__msg__CarStatus * ros_message = _ros_message;
-  {  // stand_alone_state
-    PyObject * field = PyObject_GetAttrString(_pymsg, "stand_alone_state");
-    if (!field) {
-      return false;
-    }
-    assert(PyLong_Check(field));
-    ros_message->stand_alone_state = (int32_t)PyLong_AsLong(field);
-    Py_DECREF(field);
-  }
   {  // task_state
     PyObject * field = PyObject_GetAttrString(_pymsg, "task_state");
     if (!field) {
@@ -68,13 +59,139 @@ bool base_interfaces_demo__msg__car_status__convert_from_py(PyObject * _pymsg, v
     ros_message->task_state = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
-  {  // status
-    PyObject * field = PyObject_GetAttrString(_pymsg, "status");
+  {  // initializing
+    PyObject * field = PyObject_GetAttrString(_pymsg, "initializing");
     if (!field) {
       return false;
     }
     assert(PyLong_Check(field));
-    ros_message->status = (int32_t)PyLong_AsLong(field);
+    ros_message->initializing = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // checking
+    PyObject * field = PyObject_GetAttrString(_pymsg, "checking");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->checking = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // releasing
+    PyObject * field = PyObject_GetAttrString(_pymsg, "releasing");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->releasing = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // driving
+    PyObject * field = PyObject_GetAttrString(_pymsg, "driving");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->driving = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // fine_positioning
+    PyObject * field = PyObject_GetAttrString(_pymsg, "fine_positioning");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->fine_positioning = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // on_tag
+    PyObject * field = PyObject_GetAttrString(_pymsg, "on_tag");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->on_tag = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // on_track
+    PyObject * field = PyObject_GetAttrString(_pymsg, "on_track");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->on_track = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // error
+    PyObject * field = PyObject_GetAttrString(_pymsg, "error");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->error = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // warning
+    PyObject * field = PyObject_GetAttrString(_pymsg, "warning");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->warning = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // estop
+    PyObject * field = PyObject_GetAttrString(_pymsg, "estop");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->estop = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // sleeping
+    PyObject * field = PyObject_GetAttrString(_pymsg, "sleeping");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->sleeping = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // load
+    PyObject * field = PyObject_GetAttrString(_pymsg, "load");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->load = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // charging
+    PyObject * field = PyObject_GetAttrString(_pymsg, "charging");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->charging = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // mode
+    PyObject * field = PyObject_GetAttrString(_pymsg, "mode");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->mode = (int32_t)PyLong_AsLong(field);
+    Py_DECREF(field);
+  }
+  {  // stand_alone_state
+    PyObject * field = PyObject_GetAttrString(_pymsg, "stand_alone_state");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->stand_alone_state = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
 
@@ -99,17 +216,6 @@ PyObject * base_interfaces_demo__msg__car_status__convert_to_py(void * raw_ros_m
     }
   }
   base_interfaces_demo__msg__CarStatus * ros_message = (base_interfaces_demo__msg__CarStatus *)raw_ros_message;
-  {  // stand_alone_state
-    PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->stand_alone_state);
-    {
-      int rc = PyObject_SetAttrString(_pymessage, "stand_alone_state", field);
-      Py_DECREF(field);
-      if (rc) {
-        return NULL;
-      }
-    }
-  }
   {  // task_state
     PyObject * field = NULL;
     field = PyLong_FromLong(ros_message->task_state);
@@ -121,11 +227,165 @@ PyObject * base_interfaces_demo__msg__car_status__convert_to_py(void * raw_ros_m
       }
     }
   }
-  {  // status
+  {  // initializing
     PyObject * field = NULL;
-    field = PyLong_FromLong(ros_message->status);
+    field = PyLong_FromLong(ros_message->initializing);
     {
-      int rc = PyObject_SetAttrString(_pymessage, "status", field);
+      int rc = PyObject_SetAttrString(_pymessage, "initializing", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // checking
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->checking);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "checking", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // releasing
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->releasing);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "releasing", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // driving
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->driving);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "driving", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // fine_positioning
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->fine_positioning);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "fine_positioning", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // on_tag
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->on_tag);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "on_tag", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // on_track
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->on_track);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "on_track", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // error
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->error);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "error", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // warning
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->warning);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "warning", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // estop
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->estop);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "estop", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // sleeping
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->sleeping);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "sleeping", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // load
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->load);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "load", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // charging
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->charging);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "charging", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // mode
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->mode);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "mode", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // stand_alone_state
+    PyObject * field = NULL;
+    field = PyLong_FromLong(ros_message->stand_alone_state);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "stand_alone_state", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

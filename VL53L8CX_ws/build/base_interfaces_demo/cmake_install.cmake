@@ -475,6 +475,18 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/srv/CheckEmergency.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/srv/SetEmergency.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_adapter/base_interfaces_demo/srv/RcsServer.idl")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Nav.action")
 endif()
 
@@ -596,6 +608,42 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/action" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/action/Pallet.action")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/CheckEmergency.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/CheckEmergency_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/CheckEmergency_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/SetEmergency.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/SetEmergency_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/SetEmergency_Response.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/src/base_interfaces_demo/srv/RcsServer.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/RcsServer_Request.msg")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/base_interfaces_demo/srv" TYPE FILE FILES "/home/cjs/VL53L8CX/VL53L8CX_ws/build/base_interfaces_demo/rosidl_cmake/srv/RcsServer_Response.msg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)

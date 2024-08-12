@@ -78,16 +78,32 @@ namespace action
 namespace builder
 {
 
+class Init_Reverse_Result_success
+{
+public:
+  explicit Init_Reverse_Result_success(::base_interfaces_demo::action::Reverse_Result & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::action::Reverse_Result success(::base_interfaces_demo::action::Reverse_Result::_success_type arg)
+  {
+    msg_.success = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::action::Reverse_Result msg_;
+};
+
 class Init_Reverse_Result_final_location
 {
 public:
   Init_Reverse_Result_final_location()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::base_interfaces_demo::action::Reverse_Result final_location(::base_interfaces_demo::action::Reverse_Result::_final_location_type arg)
+  Init_Reverse_Result_success final_location(::base_interfaces_demo::action::Reverse_Result::_final_location_type arg)
   {
     msg_.final_location = std::move(arg);
-    return std::move(msg_);
+    return Init_Reverse_Result_success(msg_);
   }
 
 private:

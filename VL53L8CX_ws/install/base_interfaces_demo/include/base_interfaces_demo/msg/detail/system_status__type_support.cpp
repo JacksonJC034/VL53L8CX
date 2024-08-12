@@ -39,29 +39,14 @@ void SystemStatus_fini_function(void * message_memory)
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMember SystemStatus_message_member_array[3] = {
   {
-    "system_mode",  // name
+    "selfcheck_status",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(base_interfaces_demo::msg::SystemStatus, system_mode),  // bytes offset in struct
-    nullptr,  // default value
-    nullptr,  // size() function pointer
-    nullptr,  // get_const(index) function pointer
-    nullptr,  // get(index) function pointer
-    nullptr  // resize(index) function pointer
-  },
-  {
-    "work_status",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
-    0,  // upper bound of string
-    nullptr,  // members of sub message
-    false,  // is array
-    0,  // array size
-    false,  // is upper bound
-    offsetof(base_interfaces_demo::msg::SystemStatus, work_status),  // bytes offset in struct
+    offsetof(base_interfaces_demo::msg::SystemStatus, selfcheck_status),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -77,6 +62,21 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember SystemStatus_
     0,  // array size
     false,  // is upper bound
     offsetof(base_interfaces_demo::msg::SystemStatus, init_status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "error_code",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::SystemStatus, error_code),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer

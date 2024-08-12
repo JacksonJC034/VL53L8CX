@@ -149,6 +149,15 @@ bool base_interfaces_demo__msg__motor_status__convert_from_py(PyObject * _pymsg,
     ros_message->error_code = PyLong_AsLongLong(field);
     Py_DECREF(field);
   }
+  {  // motor_current
+    PyObject * field = PyObject_GetAttrString(_pymsg, "motor_current");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->motor_current = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -286,6 +295,17 @@ PyObject * base_interfaces_demo__msg__motor_status__convert_to_py(void * raw_ros
     field = PyLong_FromLongLong(ros_message->error_code);
     {
       int rc = PyObject_SetAttrString(_pymessage, "error_code", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // motor_current
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->motor_current);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "motor_current", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

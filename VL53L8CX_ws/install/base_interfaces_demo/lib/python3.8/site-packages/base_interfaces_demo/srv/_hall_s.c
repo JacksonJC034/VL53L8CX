@@ -59,6 +59,15 @@ bool base_interfaces_demo__srv__hall__request__convert_from_py(PyObject * _pymsg
     ros_message->cmd = (int32_t)PyLong_AsLong(field);
     Py_DECREF(field);
   }
+  {  // para3
+    PyObject * field = PyObject_GetAttrString(_pymsg, "para3");
+    if (!field) {
+      return false;
+    }
+    assert(PyFloat_Check(field));
+    ros_message->para3 = PyFloat_AS_DOUBLE(field);
+    Py_DECREF(field);
+  }
 
   return true;
 }
@@ -86,6 +95,17 @@ PyObject * base_interfaces_demo__srv__hall__request__convert_to_py(void * raw_ro
     field = PyLong_FromLong(ros_message->cmd);
     {
       int rc = PyObject_SetAttrString(_pymessage, "cmd", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // para3
+    PyObject * field = NULL;
+    field = PyFloat_FromDouble(ros_message->para3);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "para3", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

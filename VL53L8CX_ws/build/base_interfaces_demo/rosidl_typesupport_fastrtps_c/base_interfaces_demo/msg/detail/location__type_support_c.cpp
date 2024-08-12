@@ -119,6 +119,31 @@ static bool _Location__cdr_serialize(
     cdr << ros_message->distancey;
   }
 
+  // Field name: storage_x
+  {
+    cdr << ros_message->storage_x;
+  }
+
+  // Field name: storage_y
+  {
+    cdr << ros_message->storage_y;
+  }
+
+  // Field name: storage_z
+  {
+    cdr << ros_message->storage_z;
+  }
+
+  // Field name: vx
+  {
+    cdr << ros_message->vx;
+  }
+
+  // Field name: vy
+  {
+    cdr << ros_message->vy;
+  }
+
   return true;
 }
 
@@ -199,6 +224,31 @@ static bool _Location__cdr_deserialize(
   // Field name: distancey
   {
     cdr >> ros_message->distancey;
+  }
+
+  // Field name: storage_x
+  {
+    cdr >> ros_message->storage_x;
+  }
+
+  // Field name: storage_y
+  {
+    cdr >> ros_message->storage_y;
+  }
+
+  // Field name: storage_z
+  {
+    cdr >> ros_message->storage_z;
+  }
+
+  // Field name: vx
+  {
+    cdr >> ros_message->vx;
+  }
+
+  // Field name: vy
+  {
+    cdr >> ros_message->vy;
   }
 
   return true;
@@ -299,6 +349,36 @@ size_t get_serialized_size_base_interfaces_demo__msg__Location(
   // field.name distancey
   {
     size_t item_size = sizeof(ros_message->distancey);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name storage_x
+  {
+    size_t item_size = sizeof(ros_message->storage_x);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name storage_y
+  {
+    size_t item_size = sizeof(ros_message->storage_y);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name storage_z
+  {
+    size_t item_size = sizeof(ros_message->storage_z);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name vx
+  {
+    size_t item_size = sizeof(ros_message->vx);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name vy
+  {
+    size_t item_size = sizeof(ros_message->vy);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -423,6 +503,41 @@ size_t max_serialized_size_base_interfaces_demo__msg__Location(
 
     current_alignment += array_size * sizeof(uint64_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: storage_x
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: storage_y
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: storage_z
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: vx
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: vy
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
 
   return current_alignment - initial_alignment;

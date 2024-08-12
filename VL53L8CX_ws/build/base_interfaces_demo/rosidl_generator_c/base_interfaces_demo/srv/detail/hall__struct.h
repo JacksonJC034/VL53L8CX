@@ -21,6 +21,7 @@ extern "C"
 typedef struct base_interfaces_demo__srv__Hall_Request
 {
   int32_t cmd;
+  double para3;
 } base_interfaces_demo__srv__Hall_Request;
 
 // Struct for a sequence of base_interfaces_demo__srv__Hall_Request.

@@ -49,19 +49,84 @@ static bool _CarStatus__cdr_serialize(
     return false;
   }
   const _CarStatus__ros_msg_type * ros_message = static_cast<const _CarStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: stand_alone_state
-  {
-    cdr << ros_message->stand_alone_state;
-  }
-
   // Field name: task_state
   {
     cdr << ros_message->task_state;
   }
 
-  // Field name: status
+  // Field name: initializing
   {
-    cdr << ros_message->status;
+    cdr << ros_message->initializing;
+  }
+
+  // Field name: checking
+  {
+    cdr << ros_message->checking;
+  }
+
+  // Field name: releasing
+  {
+    cdr << ros_message->releasing;
+  }
+
+  // Field name: driving
+  {
+    cdr << ros_message->driving;
+  }
+
+  // Field name: fine_positioning
+  {
+    cdr << ros_message->fine_positioning;
+  }
+
+  // Field name: on_tag
+  {
+    cdr << ros_message->on_tag;
+  }
+
+  // Field name: on_track
+  {
+    cdr << ros_message->on_track;
+  }
+
+  // Field name: error
+  {
+    cdr << ros_message->error;
+  }
+
+  // Field name: warning
+  {
+    cdr << ros_message->warning;
+  }
+
+  // Field name: estop
+  {
+    cdr << ros_message->estop;
+  }
+
+  // Field name: sleeping
+  {
+    cdr << ros_message->sleeping;
+  }
+
+  // Field name: load
+  {
+    cdr << ros_message->load;
+  }
+
+  // Field name: charging
+  {
+    cdr << ros_message->charging;
+  }
+
+  // Field name: mode
+  {
+    cdr << ros_message->mode;
+  }
+
+  // Field name: stand_alone_state
+  {
+    cdr << ros_message->stand_alone_state;
   }
 
   return true;
@@ -76,19 +141,84 @@ static bool _CarStatus__cdr_deserialize(
     return false;
   }
   _CarStatus__ros_msg_type * ros_message = static_cast<_CarStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: stand_alone_state
-  {
-    cdr >> ros_message->stand_alone_state;
-  }
-
   // Field name: task_state
   {
     cdr >> ros_message->task_state;
   }
 
-  // Field name: status
+  // Field name: initializing
   {
-    cdr >> ros_message->status;
+    cdr >> ros_message->initializing;
+  }
+
+  // Field name: checking
+  {
+    cdr >> ros_message->checking;
+  }
+
+  // Field name: releasing
+  {
+    cdr >> ros_message->releasing;
+  }
+
+  // Field name: driving
+  {
+    cdr >> ros_message->driving;
+  }
+
+  // Field name: fine_positioning
+  {
+    cdr >> ros_message->fine_positioning;
+  }
+
+  // Field name: on_tag
+  {
+    cdr >> ros_message->on_tag;
+  }
+
+  // Field name: on_track
+  {
+    cdr >> ros_message->on_track;
+  }
+
+  // Field name: error
+  {
+    cdr >> ros_message->error;
+  }
+
+  // Field name: warning
+  {
+    cdr >> ros_message->warning;
+  }
+
+  // Field name: estop
+  {
+    cdr >> ros_message->estop;
+  }
+
+  // Field name: sleeping
+  {
+    cdr >> ros_message->sleeping;
+  }
+
+  // Field name: load
+  {
+    cdr >> ros_message->load;
+  }
+
+  // Field name: charging
+  {
+    cdr >> ros_message->charging;
+  }
+
+  // Field name: mode
+  {
+    cdr >> ros_message->mode;
+  }
+
+  // Field name: stand_alone_state
+  {
+    cdr >> ros_message->stand_alone_state;
   }
 
   return true;
@@ -108,21 +238,99 @@ size_t get_serialized_size_base_interfaces_demo__msg__CarStatus(
   (void)padding;
   (void)wchar_size;
 
-  // field.name stand_alone_state
-  {
-    size_t item_size = sizeof(ros_message->stand_alone_state);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
   // field.name task_state
   {
     size_t item_size = sizeof(ros_message->task_state);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
-  // field.name status
+  // field.name initializing
   {
-    size_t item_size = sizeof(ros_message->status);
+    size_t item_size = sizeof(ros_message->initializing);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name checking
+  {
+    size_t item_size = sizeof(ros_message->checking);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name releasing
+  {
+    size_t item_size = sizeof(ros_message->releasing);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name driving
+  {
+    size_t item_size = sizeof(ros_message->driving);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name fine_positioning
+  {
+    size_t item_size = sizeof(ros_message->fine_positioning);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name on_tag
+  {
+    size_t item_size = sizeof(ros_message->on_tag);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name on_track
+  {
+    size_t item_size = sizeof(ros_message->on_track);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name error
+  {
+    size_t item_size = sizeof(ros_message->error);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name warning
+  {
+    size_t item_size = sizeof(ros_message->warning);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name estop
+  {
+    size_t item_size = sizeof(ros_message->estop);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name sleeping
+  {
+    size_t item_size = sizeof(ros_message->sleeping);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name load
+  {
+    size_t item_size = sizeof(ros_message->load);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name charging
+  {
+    size_t item_size = sizeof(ros_message->charging);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name mode
+  {
+    size_t item_size = sizeof(ros_message->mode);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name stand_alone_state
+  {
+    size_t item_size = sizeof(ros_message->stand_alone_state);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -150,13 +358,6 @@ size_t max_serialized_size_base_interfaces_demo__msg__CarStatus(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: stand_alone_state
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
   // member: task_state
   {
     size_t array_size = 1;
@@ -164,7 +365,105 @@ size_t max_serialized_size_base_interfaces_demo__msg__CarStatus(
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
-  // member: status
+  // member: initializing
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: checking
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: releasing
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: driving
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: fine_positioning
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: on_tag
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: on_track
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: error
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: warning
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: estop
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: sleeping
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: load
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: charging
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: mode
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint32_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: stand_alone_state
   {
     size_t array_size = 1;
 

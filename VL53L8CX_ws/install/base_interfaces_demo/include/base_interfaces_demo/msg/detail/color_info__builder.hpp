@@ -20,16 +20,48 @@ namespace msg
 namespace builder
 {
 
+class Init_ColorInfo_status
+{
+public:
+  explicit Init_ColorInfo_status(::base_interfaces_demo::msg::ColorInfo & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::msg::ColorInfo status(::base_interfaces_demo::msg::ColorInfo::_status_type arg)
+  {
+    msg_.status = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::ColorInfo msg_;
+};
+
+class Init_ColorInfo_error_code
+{
+public:
+  explicit Init_ColorInfo_error_code(::base_interfaces_demo::msg::ColorInfo & msg)
+  : msg_(msg)
+  {}
+  Init_ColorInfo_status error_code(::base_interfaces_demo::msg::ColorInfo::_error_code_type arg)
+  {
+    msg_.error_code = std::move(arg);
+    return Init_ColorInfo_status(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::ColorInfo msg_;
+};
+
 class Init_ColorInfo_color_type
 {
 public:
   Init_ColorInfo_color_type()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  ::base_interfaces_demo::msg::ColorInfo color_type(::base_interfaces_demo::msg::ColorInfo::_color_type_type arg)
+  Init_ColorInfo_error_code color_type(::base_interfaces_demo::msg::ColorInfo::_color_type_type arg)
   {
     msg_.color_type = std::move(arg);
-    return std::move(msg_);
+    return Init_ColorInfo_error_code(msg_);
   }
 
 private:

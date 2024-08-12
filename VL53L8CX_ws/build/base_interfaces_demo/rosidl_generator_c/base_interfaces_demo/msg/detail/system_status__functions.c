@@ -17,9 +17,9 @@ base_interfaces_demo__msg__SystemStatus__init(base_interfaces_demo__msg__SystemS
   if (!msg) {
     return false;
   }
-  // system_mode
-  // work_status
+  // selfcheck_status
   // init_status
+  // error_code
   return true;
 }
 
@@ -29,9 +29,9 @@ base_interfaces_demo__msg__SystemStatus__fini(base_interfaces_demo__msg__SystemS
   if (!msg) {
     return;
   }
-  // system_mode
-  // work_status
+  // selfcheck_status
   // init_status
+  // error_code
 }
 
 bool
@@ -40,16 +40,16 @@ base_interfaces_demo__msg__SystemStatus__are_equal(const base_interfaces_demo__m
   if (!lhs || !rhs) {
     return false;
   }
-  // system_mode
-  if (lhs->system_mode != rhs->system_mode) {
-    return false;
-  }
-  // work_status
-  if (lhs->work_status != rhs->work_status) {
+  // selfcheck_status
+  if (lhs->selfcheck_status != rhs->selfcheck_status) {
     return false;
   }
   // init_status
   if (lhs->init_status != rhs->init_status) {
+    return false;
+  }
+  // error_code
+  if (lhs->error_code != rhs->error_code) {
     return false;
   }
   return true;
@@ -63,12 +63,12 @@ base_interfaces_demo__msg__SystemStatus__copy(
   if (!input || !output) {
     return false;
   }
-  // system_mode
-  output->system_mode = input->system_mode;
-  // work_status
-  output->work_status = input->work_status;
+  // selfcheck_status
+  output->selfcheck_status = input->selfcheck_status;
   // init_status
   output->init_status = input->init_status;
+  // error_code
+  output->error_code = input->error_code;
   return true;
 }
 

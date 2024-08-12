@@ -166,6 +166,7 @@ struct Reverse_Result_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->final_location = 0.0f;
+      this->success = 0l;
     }
   }
 
@@ -176,6 +177,7 @@ struct Reverse_Result_
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
       this->final_location = 0.0f;
+      this->success = 0l;
     }
   }
 
@@ -183,12 +185,21 @@ struct Reverse_Result_
   using _final_location_type =
     float;
   _final_location_type final_location;
+  using _success_type =
+    int32_t;
+  _success_type success;
 
   // setters for named parameter idiom
   Type & set__final_location(
     const float & _arg)
   {
     this->final_location = _arg;
+    return *this;
+  }
+  Type & set__success(
+    const int32_t & _arg)
+  {
+    this->success = _arg;
     return *this;
   }
 
@@ -235,6 +246,9 @@ struct Reverse_Result_
   bool operator==(const Reverse_Result_ & other) const
   {
     if (this->final_location != other.final_location) {
+      return false;
+    }
+    if (this->success != other.success) {
       return false;
     }
     return true;

@@ -104,6 +104,11 @@ static bool _MotorStatus__cdr_serialize(
     cdr << ros_message->error_code;
   }
 
+  // Field name: motor_current
+  {
+    cdr << ros_message->motor_current;
+  }
+
   return true;
 }
 
@@ -169,6 +174,11 @@ static bool _MotorStatus__cdr_deserialize(
   // Field name: error_code
   {
     cdr >> ros_message->error_code;
+  }
+
+  // Field name: motor_current
+  {
+    cdr >> ros_message->motor_current;
   }
 
   return true;
@@ -251,6 +261,12 @@ size_t get_serialized_size_base_interfaces_demo__msg__MotorStatus(
   // field.name error_code
   {
     size_t item_size = sizeof(ros_message->error_code);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name motor_current
+  {
+    size_t item_size = sizeof(ros_message->motor_current);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -349,6 +365,13 @@ size_t max_serialized_size_base_interfaces_demo__msg__MotorStatus(
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
   // member: error_code
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+  // member: motor_current
   {
     size_t array_size = 1;
 

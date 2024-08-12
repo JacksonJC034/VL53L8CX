@@ -49,19 +49,19 @@ static bool _SystemStatus__cdr_serialize(
     return false;
   }
   const _SystemStatus__ros_msg_type * ros_message = static_cast<const _SystemStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: system_mode
+  // Field name: selfcheck_status
   {
-    cdr << ros_message->system_mode;
-  }
-
-  // Field name: work_status
-  {
-    cdr << ros_message->work_status;
+    cdr << ros_message->selfcheck_status;
   }
 
   // Field name: init_status
   {
     cdr << ros_message->init_status;
+  }
+
+  // Field name: error_code
+  {
+    cdr << ros_message->error_code;
   }
 
   return true;
@@ -76,19 +76,19 @@ static bool _SystemStatus__cdr_deserialize(
     return false;
   }
   _SystemStatus__ros_msg_type * ros_message = static_cast<_SystemStatus__ros_msg_type *>(untyped_ros_message);
-  // Field name: system_mode
+  // Field name: selfcheck_status
   {
-    cdr >> ros_message->system_mode;
-  }
-
-  // Field name: work_status
-  {
-    cdr >> ros_message->work_status;
+    cdr >> ros_message->selfcheck_status;
   }
 
   // Field name: init_status
   {
     cdr >> ros_message->init_status;
+  }
+
+  // Field name: error_code
+  {
+    cdr >> ros_message->error_code;
   }
 
   return true;
@@ -108,21 +108,21 @@ size_t get_serialized_size_base_interfaces_demo__msg__SystemStatus(
   (void)padding;
   (void)wchar_size;
 
-  // field.name system_mode
+  // field.name selfcheck_status
   {
-    size_t item_size = sizeof(ros_message->system_mode);
-    current_alignment += item_size +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
-  }
-  // field.name work_status
-  {
-    size_t item_size = sizeof(ros_message->work_status);
+    size_t item_size = sizeof(ros_message->selfcheck_status);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
   // field.name init_status
   {
     size_t item_size = sizeof(ros_message->init_status);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name error_code
+  {
+    size_t item_size = sizeof(ros_message->error_code);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -150,14 +150,7 @@ size_t max_serialized_size_base_interfaces_demo__msg__SystemStatus(
   (void)wchar_size;
   (void)full_bounded;
 
-  // member: system_mode
-  {
-    size_t array_size = 1;
-
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
-  }
-  // member: work_status
+  // member: selfcheck_status
   {
     size_t array_size = 1;
 
@@ -170,6 +163,13 @@ size_t max_serialized_size_base_interfaces_demo__msg__SystemStatus(
 
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+  }
+  // member: error_code
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
   }
 
   return current_alignment - initial_alignment;

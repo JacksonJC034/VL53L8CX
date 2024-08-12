@@ -1,0 +1,33 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from base_interfaces_demo/srv/RcsServer.srv
+// generated code does not contain a copyright notice
+
+
+module base_interfaces_demo {
+  module srv {
+    module RcsServer_Request_Constants {
+      const int32 CMD_BT = 0;
+      const int32 CMD_HARD_EMERGENCY = 1;
+      const int32 CMD_CANCEL = 2;
+      const int32 CMD_PAUSE = 3;
+    };
+    struct RcsServer_Request {
+      @verbatim (language="comment", text=
+        "rcs命令，行为树执行，急停，取消任务，暂停任务等")
+      int32 cmd;
+
+      @verbatim (language="comment", text=
+        "rcs行为树xml")
+      string rcsstring;
+    };
+    module RcsServer_Response_Constants {
+      const int32 RET_REJECT = 0;
+      const int32 RET_ACCEPT = 1;
+    };
+    struct RcsServer_Response {
+      @verbatim (language="comment", text=
+        "返回执行或者拒绝 =1执行，=0拒绝")
+      int32 ret;
+    };
+  };
+};

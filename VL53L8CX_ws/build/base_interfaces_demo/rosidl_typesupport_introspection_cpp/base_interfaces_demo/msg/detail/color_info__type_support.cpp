@@ -37,7 +37,7 @@ void ColorInfo_fini_function(void * message_memory)
   typed_message->~ColorInfo();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorInfo_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorInfo_message_member_array[3] = {
   {
     "color_type",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
@@ -52,13 +52,43 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember ColorInfo_mes
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "error_code",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT64,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::ColorInfo, error_code),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "status",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::msg::ColorInfo, status),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers ColorInfo_message_members = {
   "base_interfaces_demo::msg",  // message namespace
   "ColorInfo",  // message name
-  1,  // number of fields
+  3,  // number of fields
   sizeof(base_interfaces_demo::msg::ColorInfo),
   ColorInfo_message_member_array,  // message members
   ColorInfo_init_function,  // function to initialize message memory (memory has to be allocated)

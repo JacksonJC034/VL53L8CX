@@ -17,6 +17,7 @@ base_interfaces_demo__srv__Hall_Request__init(base_interfaces_demo__srv__Hall_Re
     return false;
   }
   // cmd
+  // para3
   return true;
 }
 
@@ -27,6 +28,7 @@ base_interfaces_demo__srv__Hall_Request__fini(base_interfaces_demo__srv__Hall_Re
     return;
   }
   // cmd
+  // para3
 }
 
 bool
@@ -37,6 +39,10 @@ base_interfaces_demo__srv__Hall_Request__are_equal(const base_interfaces_demo__s
   }
   // cmd
   if (lhs->cmd != rhs->cmd) {
+    return false;
+  }
+  // para3
+  if (lhs->para3 != rhs->para3) {
     return false;
   }
   return true;
@@ -52,6 +58,8 @@ base_interfaces_demo__srv__Hall_Request__copy(
   }
   // cmd
   output->cmd = input->cmd;
+  // para3
+  output->para3 = input->para3;
   return true;
 }
 

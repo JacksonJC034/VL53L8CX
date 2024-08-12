@@ -37,9 +37,22 @@ struct CarStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->stand_alone_state = 0l;
       this->task_state = 0l;
-      this->status = 0l;
+      this->initializing = 0l;
+      this->checking = 0l;
+      this->releasing = 0l;
+      this->driving = 0l;
+      this->fine_positioning = 0l;
+      this->on_tag = 0l;
+      this->on_track = 0l;
+      this->error = 0l;
+      this->warning = 0l;
+      this->estop = 0l;
+      this->sleeping = 0l;
+      this->load = 0l;
+      this->charging = 0l;
+      this->mode = 0l;
+      this->stand_alone_state = 0l;
     }
   }
 
@@ -49,40 +62,170 @@ struct CarStatus_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
-      this->stand_alone_state = 0l;
       this->task_state = 0l;
-      this->status = 0l;
+      this->initializing = 0l;
+      this->checking = 0l;
+      this->releasing = 0l;
+      this->driving = 0l;
+      this->fine_positioning = 0l;
+      this->on_tag = 0l;
+      this->on_track = 0l;
+      this->error = 0l;
+      this->warning = 0l;
+      this->estop = 0l;
+      this->sleeping = 0l;
+      this->load = 0l;
+      this->charging = 0l;
+      this->mode = 0l;
+      this->stand_alone_state = 0l;
     }
   }
 
   // field types and members
-  using _stand_alone_state_type =
-    int32_t;
-  _stand_alone_state_type stand_alone_state;
   using _task_state_type =
     int32_t;
   _task_state_type task_state;
-  using _status_type =
+  using _initializing_type =
     int32_t;
-  _status_type status;
+  _initializing_type initializing;
+  using _checking_type =
+    int32_t;
+  _checking_type checking;
+  using _releasing_type =
+    int32_t;
+  _releasing_type releasing;
+  using _driving_type =
+    int32_t;
+  _driving_type driving;
+  using _fine_positioning_type =
+    int32_t;
+  _fine_positioning_type fine_positioning;
+  using _on_tag_type =
+    int32_t;
+  _on_tag_type on_tag;
+  using _on_track_type =
+    int32_t;
+  _on_track_type on_track;
+  using _error_type =
+    int32_t;
+  _error_type error;
+  using _warning_type =
+    int32_t;
+  _warning_type warning;
+  using _estop_type =
+    int32_t;
+  _estop_type estop;
+  using _sleeping_type =
+    int32_t;
+  _sleeping_type sleeping;
+  using _load_type =
+    int32_t;
+  _load_type load;
+  using _charging_type =
+    int32_t;
+  _charging_type charging;
+  using _mode_type =
+    int32_t;
+  _mode_type mode;
+  using _stand_alone_state_type =
+    int32_t;
+  _stand_alone_state_type stand_alone_state;
 
   // setters for named parameter idiom
-  Type & set__stand_alone_state(
-    const int32_t & _arg)
-  {
-    this->stand_alone_state = _arg;
-    return *this;
-  }
   Type & set__task_state(
     const int32_t & _arg)
   {
     this->task_state = _arg;
     return *this;
   }
-  Type & set__status(
+  Type & set__initializing(
     const int32_t & _arg)
   {
-    this->status = _arg;
+    this->initializing = _arg;
+    return *this;
+  }
+  Type & set__checking(
+    const int32_t & _arg)
+  {
+    this->checking = _arg;
+    return *this;
+  }
+  Type & set__releasing(
+    const int32_t & _arg)
+  {
+    this->releasing = _arg;
+    return *this;
+  }
+  Type & set__driving(
+    const int32_t & _arg)
+  {
+    this->driving = _arg;
+    return *this;
+  }
+  Type & set__fine_positioning(
+    const int32_t & _arg)
+  {
+    this->fine_positioning = _arg;
+    return *this;
+  }
+  Type & set__on_tag(
+    const int32_t & _arg)
+  {
+    this->on_tag = _arg;
+    return *this;
+  }
+  Type & set__on_track(
+    const int32_t & _arg)
+  {
+    this->on_track = _arg;
+    return *this;
+  }
+  Type & set__error(
+    const int32_t & _arg)
+  {
+    this->error = _arg;
+    return *this;
+  }
+  Type & set__warning(
+    const int32_t & _arg)
+  {
+    this->warning = _arg;
+    return *this;
+  }
+  Type & set__estop(
+    const int32_t & _arg)
+  {
+    this->estop = _arg;
+    return *this;
+  }
+  Type & set__sleeping(
+    const int32_t & _arg)
+  {
+    this->sleeping = _arg;
+    return *this;
+  }
+  Type & set__load(
+    const int32_t & _arg)
+  {
+    this->load = _arg;
+    return *this;
+  }
+  Type & set__charging(
+    const int32_t & _arg)
+  {
+    this->charging = _arg;
+    return *this;
+  }
+  Type & set__mode(
+    const int32_t & _arg)
+  {
+    this->mode = _arg;
+    return *this;
+  }
+  Type & set__stand_alone_state(
+    const int32_t & _arg)
+  {
+    this->stand_alone_state = _arg;
     return *this;
   }
 
@@ -128,13 +271,52 @@ struct CarStatus_
   // comparison operators
   bool operator==(const CarStatus_ & other) const
   {
-    if (this->stand_alone_state != other.stand_alone_state) {
-      return false;
-    }
     if (this->task_state != other.task_state) {
       return false;
     }
-    if (this->status != other.status) {
+    if (this->initializing != other.initializing) {
+      return false;
+    }
+    if (this->checking != other.checking) {
+      return false;
+    }
+    if (this->releasing != other.releasing) {
+      return false;
+    }
+    if (this->driving != other.driving) {
+      return false;
+    }
+    if (this->fine_positioning != other.fine_positioning) {
+      return false;
+    }
+    if (this->on_tag != other.on_tag) {
+      return false;
+    }
+    if (this->on_track != other.on_track) {
+      return false;
+    }
+    if (this->error != other.error) {
+      return false;
+    }
+    if (this->warning != other.warning) {
+      return false;
+    }
+    if (this->estop != other.estop) {
+      return false;
+    }
+    if (this->sleeping != other.sleeping) {
+      return false;
+    }
+    if (this->load != other.load) {
+      return false;
+    }
+    if (this->charging != other.charging) {
+      return false;
+    }
+    if (this->mode != other.mode) {
+      return false;
+    }
+    if (this->stand_alone_state != other.stand_alone_state) {
       return false;
     }
     return true;

@@ -54,6 +54,8 @@ cdr_serialize(
   cdr << ros_message.enable;
   // Member: error_code
   cdr << ros_message.error_code;
+  // Member: motor_current
+  cdr << ros_message.motor_current;
   return true;
 }
 
@@ -95,6 +97,9 @@ cdr_deserialize(
 
   // Member: error_code
   cdr >> ros_message.error_code;
+
+  // Member: motor_current
+  cdr >> ros_message.motor_current;
 
   return true;
 }
@@ -175,6 +180,12 @@ get_serialized_size(
   // Member: error_code
   {
     size_t item_size = sizeof(ros_message.error_code);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // Member: motor_current
+  {
+    size_t item_size = sizeof(ros_message.motor_current);
     current_alignment += item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
@@ -278,6 +289,14 @@ max_serialized_size_MotorStatus(
   }
 
   // Member: error_code
+  {
+    size_t array_size = 1;
+
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
+  // Member: motor_current
   {
     size_t array_size = 1;
 

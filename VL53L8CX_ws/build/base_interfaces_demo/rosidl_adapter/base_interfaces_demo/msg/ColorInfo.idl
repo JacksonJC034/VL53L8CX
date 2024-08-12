@@ -7,6 +7,10 @@ module base_interfaces_demo {
   module msg {
     struct ColorInfo {
       int32 color_type;
+
+      int64 error_code;
+
+      int32 status;
     };
   };
 };

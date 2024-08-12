@@ -31,6 +31,11 @@ base_interfaces_demo__msg__Location__init(base_interfaces_demo__msg__Location * 
   // hall_rfid_en
   // distancex
   // distancey
+  // storage_x
+  // storage_y
+  // storage_z
+  // vx
+  // vy
   return true;
 }
 
@@ -54,6 +59,11 @@ base_interfaces_demo__msg__Location__fini(base_interfaces_demo__msg__Location * 
   // hall_rfid_en
   // distancex
   // distancey
+  // storage_x
+  // storage_y
+  // storage_z
+  // vx
+  // vy
 }
 
 bool
@@ -118,6 +128,26 @@ base_interfaces_demo__msg__Location__are_equal(const base_interfaces_demo__msg__
   if (lhs->distancey != rhs->distancey) {
     return false;
   }
+  // storage_x
+  if (lhs->storage_x != rhs->storage_x) {
+    return false;
+  }
+  // storage_y
+  if (lhs->storage_y != rhs->storage_y) {
+    return false;
+  }
+  // storage_z
+  if (lhs->storage_z != rhs->storage_z) {
+    return false;
+  }
+  // vx
+  if (lhs->vx != rhs->vx) {
+    return false;
+  }
+  // vy
+  if (lhs->vy != rhs->vy) {
+    return false;
+  }
   return true;
 }
 
@@ -157,6 +187,16 @@ base_interfaces_demo__msg__Location__copy(
   output->distancex = input->distancex;
   // distancey
   output->distancey = input->distancey;
+  // storage_x
+  output->storage_x = input->storage_x;
+  // storage_y
+  output->storage_y = input->storage_y;
+  // storage_z
+  output->storage_z = input->storage_z;
+  // vx
+  output->vx = input->vx;
+  // vy
+  output->vy = input->vy;
   return true;
 }
 

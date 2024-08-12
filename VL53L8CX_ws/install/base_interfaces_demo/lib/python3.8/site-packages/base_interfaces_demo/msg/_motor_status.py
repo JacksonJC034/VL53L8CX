@@ -64,6 +64,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         '_jerk',
         '_enable',
         '_error_code',
+        '_motor_current',
     ]
 
     _fields_and_field_types = {
@@ -78,6 +79,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         'jerk': 'int32',
         'enable': 'int32',
         'error_code': 'int64',
+        'motor_current': 'double',
     }
 
     SLOT_TYPES = (
@@ -92,6 +94,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
         rosidl_parser.definition.BasicType('int64'),  # noqa: E501
+        rosidl_parser.definition.BasicType('double'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -109,6 +112,7 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         self.jerk = kwargs.get('jerk', int())
         self.enable = kwargs.get('enable', int())
         self.error_code = kwargs.get('error_code', int())
+        self.motor_current = kwargs.get('motor_current', float())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -160,6 +164,8 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
         if self.enable != other.enable:
             return False
         if self.error_code != other.error_code:
+            return False
+        if self.motor_current != other.motor_current:
             return False
         return True
 
@@ -332,3 +338,16 @@ class MotorStatus(metaclass=Metaclass_MotorStatus):
             assert value >= -9223372036854775808 and value < 9223372036854775808, \
                 "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
         self._error_code = value
+
+    @property
+    def motor_current(self):
+        """Message field 'motor_current'."""
+        return self._motor_current
+
+    @motor_current.setter
+    def motor_current(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, float), \
+                "The 'motor_current' field must be of type 'float'"
+        self._motor_current = value

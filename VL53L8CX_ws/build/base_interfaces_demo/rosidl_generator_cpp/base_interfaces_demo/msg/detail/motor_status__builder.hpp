@@ -20,16 +20,32 @@ namespace msg
 namespace builder
 {
 
+class Init_MotorStatus_motor_current
+{
+public:
+  explicit Init_MotorStatus_motor_current(::base_interfaces_demo::msg::MotorStatus & msg)
+  : msg_(msg)
+  {}
+  ::base_interfaces_demo::msg::MotorStatus motor_current(::base_interfaces_demo::msg::MotorStatus::_motor_current_type arg)
+  {
+    msg_.motor_current = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::base_interfaces_demo::msg::MotorStatus msg_;
+};
+
 class Init_MotorStatus_error_code
 {
 public:
   explicit Init_MotorStatus_error_code(::base_interfaces_demo::msg::MotorStatus & msg)
   : msg_(msg)
   {}
-  ::base_interfaces_demo::msg::MotorStatus error_code(::base_interfaces_demo::msg::MotorStatus::_error_code_type arg)
+  Init_MotorStatus_motor_current error_code(::base_interfaces_demo::msg::MotorStatus::_error_code_type arg)
   {
     msg_.error_code = std::move(arg);
-    return std::move(msg_);
+    return Init_MotorStatus_motor_current(msg_);
   }
 
 private:

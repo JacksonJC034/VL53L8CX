@@ -54,13 +54,19 @@ class ColorInfo(metaclass=Metaclass_ColorInfo):
 
     __slots__ = [
         '_color_type',
+        '_error_code',
+        '_status',
     ]
 
     _fields_and_field_types = {
         'color_type': 'int32',
+        'error_code': 'int64',
+        'status': 'int32',
     }
 
     SLOT_TYPES = (
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int64'),  # noqa: E501
         rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
@@ -69,6 +75,8 @@ class ColorInfo(metaclass=Metaclass_ColorInfo):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.color_type = kwargs.get('color_type', int())
+        self.error_code = kwargs.get('error_code', int())
+        self.status = kwargs.get('status', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -101,6 +109,10 @@ class ColorInfo(metaclass=Metaclass_ColorInfo):
             return False
         if self.color_type != other.color_type:
             return False
+        if self.error_code != other.error_code:
+            return False
+        if self.status != other.status:
+            return False
         return True
 
     @classmethod
@@ -122,3 +134,33 @@ class ColorInfo(metaclass=Metaclass_ColorInfo):
             assert value >= -2147483648 and value < 2147483648, \
                 "The 'color_type' field must be an integer in [-2147483648, 2147483647]"
         self._color_type = value
+
+    @property
+    def error_code(self):
+        """Message field 'error_code'."""
+        return self._error_code
+
+    @error_code.setter
+    def error_code(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'error_code' field must be of type 'int'"
+            assert value >= -9223372036854775808 and value < 9223372036854775808, \
+                "The 'error_code' field must be an integer in [-9223372036854775808, 9223372036854775807]"
+        self._error_code = value
+
+    @property
+    def status(self):
+        """Message field 'status'."""
+        return self._status
+
+    @status.setter
+    def status(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'status' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'status' field must be an integer in [-2147483648, 2147483647]"
+        self._status = value

@@ -169,7 +169,7 @@ void Reverse_Result_fini_function(void * message_memory)
   typed_message->~Reverse_Result();
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember Reverse_Result_message_member_array[1] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember Reverse_Result_message_member_array[2] = {
   {
     "final_location",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_FLOAT,  // type
@@ -184,13 +184,28 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember Reverse_Resul
     nullptr,  // get_const(index) function pointer
     nullptr,  // get(index) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "success",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(base_interfaces_demo::action::Reverse_Result, success),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers Reverse_Result_message_members = {
   "base_interfaces_demo::action",  // message namespace
   "Reverse_Result",  // message name
-  1,  // number of fields
+  2,  // number of fields
   sizeof(base_interfaces_demo::action::Reverse_Result),
   Reverse_Result_message_member_array,  // message members
   Reverse_Result_init_function,  // function to initialize message memory (memory has to be allocated)

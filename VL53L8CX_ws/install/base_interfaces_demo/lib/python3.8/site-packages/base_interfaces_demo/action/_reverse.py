@@ -195,14 +195,17 @@ class Reverse_Result(metaclass=Metaclass_Reverse_Result):
 
     __slots__ = [
         '_final_location',
+        '_success',
     ]
 
     _fields_and_field_types = {
         'final_location': 'float',
+        'success': 'int32',
     }
 
     SLOT_TYPES = (
         rosidl_parser.definition.BasicType('float'),  # noqa: E501
+        rosidl_parser.definition.BasicType('int32'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -210,6 +213,7 @@ class Reverse_Result(metaclass=Metaclass_Reverse_Result):
             'Invalid arguments passed to constructor: %s' % \
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         self.final_location = kwargs.get('final_location', float())
+        self.success = kwargs.get('success', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -242,6 +246,8 @@ class Reverse_Result(metaclass=Metaclass_Reverse_Result):
             return False
         if self.final_location != other.final_location:
             return False
+        if self.success != other.success:
+            return False
         return True
 
     @classmethod
@@ -261,6 +267,21 @@ class Reverse_Result(metaclass=Metaclass_Reverse_Result):
                 isinstance(value, float), \
                 "The 'final_location' field must be of type 'float'"
         self._final_location = value
+
+    @property
+    def success(self):
+        """Message field 'success'."""
+        return self._success
+
+    @success.setter
+    def success(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'success' field must be of type 'int'"
+            assert value >= -2147483648 and value < 2147483648, \
+                "The 'success' field must be an integer in [-2147483648, 2147483647]"
+        self._success = value
 
 
 # Import statements for member types
